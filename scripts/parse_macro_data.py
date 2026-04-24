@@ -458,106 +458,88 @@ def worker_payload(
 
 
 def read_calendar_view(wb, client_lookup: dict[str, str]) -> list[CalendarEntry]:
-    """Read xpbi02 PersonnelCalendarView for assignment date ranges.
-
-    The CalendarView retains entries for closed jobs that disappear from the
-    RosterView, so it fills historical headcount gaps caused by those closures.
-    Each row represents a worker's assignment period (start → end) on a client.
+    """DEPRECATED: PersonnelCalendarView is an unavailability calendar
+    (Medical / Training / Accom / Travel), not a work assignment log.
+    Retained as a no-op for backward compatibility; real historical
+    work data now comes from xpbipr DailyEmployeeSchedule.
     """
-    sheet = "xpbi02 PersonnelCalendarView"
-    if sheet not in wb.sheetnames:
+    return []
+
+
+def read_daily_employee_schedule(wb, client_lookup: dict[str, str]) -> list[RosterRow]:
+    """Read xpbipr DailyEmployeeSchedule — daily roster rows for all jobs
+    including closed shutdowns.
+
+    PersonnelRosterView is filtered to active jobs only, so historical rows
+    for workers on completed shutdowns disappear there.  DailyEmployeeSchedule
+    is the long-tail view that keeps them.
+
+    Columns used: EmployeeId, ReportDate, Status, OnSite, Client / ClientId,
+    EmployeeActive.  Schedule Type is absent so we credit 12 h per on-site day.
+    """
+    sheet_name = None
+    for candidate in (
+        "xpbipr DailyEmployeeSchedule",
+        "xpbi0r DailyEmployeeSchedule",
+        "xpbi02 DailyEmployeeSchedule",
+        "DailyEmployeeSchedule",
+    ):
+        if candidate in wb.sheetnames:
+            sheet_name = candidate
+            break
+    if sheet_name is None:
         return []
-    ws = wb[sheet]
+
+    ws = wb[sheet_name]
     headers, it = _read_headers(ws)
-    i_pid    = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
-    i_start  = _pick_header(headers, "Schedule Start", "ScheduleStart", "Start Date", "StartDate")
-    i_end    = _pick_header(headers, "Schedule End",   "ScheduleEnd",   "End Date",   "EndDate")
-    i_cname  = _pick_header(headers, "Client Name", "ClientName")
-    i_cid    = _pick_header(headers, "Client Id",   "ClientId", "Client ID")
-    i_cany   = _pick_header(headers, "Client", "Company")
 
-    if None in (i_pid, i_start, i_end):
+    i_pid    = _pick_header(headers, "EmployeeId", "Employee Id", "Personnel Id", "PersonnelId")
+    i_dt     = _pick_header(headers, "ReportDate", "Report Date", "Date", "Schedule Date")
+    i_status = _pick_header(headers, "Status")
+    i_onsite = _pick_header(headers, "OnSite", "On Site", "IsOnLocation")
+    i_cname  = _pick_header(headers, "Client Name", "ClientName", "Client", "Company")
+    i_cid    = _pick_header(headers, "ClientId", "Client Id", "Client ID")
+    i_active = _pick_header(headers, "EmployeeActive", "Employee Active")
+
+    if i_pid is None or i_dt is None:
         return []
 
-    def _client(row) -> str | None:
-        for ci in (i_cname, i_cid, i_cany):
-            if ci is not None:
-                r = _resolve_client(row[ci], client_lookup)
-                if r:
-                    return r
-        return None
-
-    out: list[CalendarEntry] = []
+    out: list[RosterRow] = []
     for row in it:
         if row is None:
             continue
         pid = _norm_text(row[i_pid])
         if not pid:
             continue
-        start = _coerce_date(row[i_start])
-        end   = _coerce_date(row[i_end])
-        if start is None or end is None or end < start:
+        d = _coerce_date(row[i_dt])
+        if d is None:
             continue
-        client = _client(row)
+        if i_status is not None:
+            status = _norm_text(row[i_status]).lower()
+            if status == "rejected":
+                continue
+        if i_active is not None and row[i_active] is not None and not _truthy(row[i_active]):
+            continue
+        if i_onsite is not None and row[i_onsite] is not None and not _truthy(row[i_onsite]):
+            continue
+
+        client = None
+        for ci in (i_cname, i_cid):
+            if ci is not None:
+                client = _resolve_client(row[ci], client_lookup)
+                if client:
+                    break
         if client is None:
             continue
-        out.append(CalendarEntry(pid, start, end, client))
+
+        out.append(RosterRow(
+            personnel_id=pid,
+            schedule_date=d,
+            schedule_type="Day Shift",
+            client=client,
+            job_no=None,
+        ))
     return out
-
-
-def _overlap_days(range_start: date, range_end: date, month: date) -> int:
-    """Calendar days the assignment range [range_start, range_end] overlaps month."""
-    from dateutil.relativedelta import relativedelta as rd
-    m_end = month + rd(months=1) - rd(days=1)
-    lo = max(range_start, month)
-    hi = min(range_end, m_end)
-    return max(0, (hi - lo).days + 1)
-
-
-def supplement_from_calendar(
-    aggs: dict[str, WorkerAgg],
-    calendar: list[CalendarEntry],
-    months: list[date],
-    current_month: date,
-    personnel: dict[str, WorkerMaster],
-) -> None:
-    """Add CalendarView entries for historical months missing from RosterView.
-
-    For any worker-month where the RosterView has no data (because the job
-    closed), we inject an estimated entry from the CalendarView assignment range.
-    Hours are estimated at 6 h/overlap-day (12 h shift × ~50 % on-swing for
-    typical NW FIFO) — accurate enough for utilisation trends; headcount is exact.
-    Only historical months (before current_month) are supplemented; the
-    RosterView remains authoritative for current and forward months.
-    """
-    historical = [m for m in months if m < current_month]
-
-    for entry in calendar:
-        a = aggs.get(entry.personnel_id)
-        if a is None:
-            master = personnel.get(entry.personnel_id) or WorkerMaster(
-                personnel_id=entry.personnel_id,
-                name=entry.personnel_id,
-                primary_role="Unknown",
-                hire_company=None,
-                start_date=None,
-            )
-            a = WorkerAgg(master=master)
-            aggs[entry.personnel_id] = a
-        if a.first_seen is None or entry.start < a.first_seen:
-            a.first_seen = entry.start
-
-        for m in historical:
-            mk = _month_key(m)
-            if a.buckets.get(mk):
-                continue  # RosterView already has data for this worker-month
-            days = _overlap_days(entry.start, entry.end, m)
-            if days == 0:
-                continue
-            estimated_hours = days * 6
-            bucket = a.buckets[mk][entry.client]
-            bucket["days"] += days
-            bucket["hours"] += estimated_hours
 
 
 def dedupe_ids(workers: list[dict]) -> list[dict]:
@@ -577,12 +559,20 @@ def dedupe_ids(workers: list[dict]) -> list[dict]:
 def build_payload(excel_path: Path, current_month: date) -> dict:
     wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
     client_lookup = read_client_lookup(wb)
+    # PersonnelRosterView: active jobs only, but carries Schedule Type
+    # detail (Day Shift / Night Shift / RNR) so gives accurate hours.
     roster = read_roster(wb, client_lookup)
+    # DailyEmployeeSchedule: long-tail view including closed shutdowns.
+    # Fills historical gaps the RosterView leaves behind.
+    daily_extra = read_daily_employee_schedule(wb, client_lookup)
+    # Dedupe: prefer roster rows for any (worker, date, client) key.
+    seen = {(r.personnel_id, r.schedule_date, r.client) for r in roster}
+    extra = [r for r in daily_extra if (r.personnel_id, r.schedule_date, r.client) not in seen]
+    all_rows = roster + extra
+
     personnel = read_personnel(wb)
     months = build_months(current_month)
-    aggs = aggregate(roster, personnel, months, current_month)
-    calendar = read_calendar_view(wb, client_lookup)
-    supplement_from_calendar(aggs, calendar, months, current_month, personnel)
+    aggs = aggregate(all_rows, personnel, months, current_month)
 
     top_positions = pick_top_positions(aggs)
     # If the workbook lacks enough roles, pad with an empty placeholder so
