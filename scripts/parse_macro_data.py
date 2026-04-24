@@ -333,7 +333,7 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
         if d is None:
             continue
         status_str = _norm_text(row[i_status]).lower() if i_status is not None else ""
-        if status_str == "rejected":
+        if status_str in ("rejected", "declined", "late withdrawal"):
             continue
         if i_active is not None and row[i_active] is not None and not _truthy(row[i_active]):
             continue
