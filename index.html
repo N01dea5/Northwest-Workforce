@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Northwest Workforce — SRG Global</title>
+  <title>Utilisation — Northwest Workforce — SRG Global</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=3" />
+  <link rel="stylesheet" href="assets/styles.css?v=4" />
 </head>
 <body>
 
@@ -26,8 +26,9 @@
         Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
       </div>
       <nav class="page-nav">
-        <span class="page-nav-active">Dashboard</span>
-        <a href="fatigue.html">Fatigue &amp; Compliance</a>
+        <span class="page-nav-active">Utilisation</span>
+        <a href="retention.html">Retention</a>
+        <a href="fatigue.html">Fatigue</a>
       </nav>
     </div>
     <div class="brand-right">
@@ -62,9 +63,9 @@
   <!-- Section 01 — KPI tiles -->
   <section class="card" id="sec-kpi">
     <header>
-      <h2><span class="section-number">01</span> Key metrics</h2>
+      <h2><span class="section-number">01</span> Utilisation — key metrics</h2>
       <span class="hint">Filtered by client &amp; position selections above</span>
-      <p class="section-desc">Snapshot of the workforce matching the current filter. <strong>Active workforce</strong> counts workers with any recorded hours this month. <strong>Avg hrs/worker</strong> and <strong>churn rate</strong> are trailing 3-month averages. <strong>Forward committed</strong> is the sum of all scheduled hours across the next 3 months. <strong>At-risk</strong> flags individuals averaging ≥ 120 h/month over the past 3 months but with ≤ 40 h booked next month — click the tile to jump to the detail list.</p>
+      <p class="section-desc">Snapshot of workforce utilisation for the current filter. <strong>Active workforce</strong> counts workers with any recorded hours this month. <strong>Avg hrs / worker</strong> is the trailing 3-month average — hours are summed across the window and divided by distinct workers × months, so workers with gaps count as zero for those months. <strong>Forward committed</strong> is the total of all scheduled hours in the next 3 months sourced from confirmed and mobilising roster bookings.</p>
     </header>
     <div class="body">
       <div class="kpi-grid">
@@ -83,21 +84,6 @@
           <div class="value">—</div>
           <div class="delta">next 3 months</div>
         </div>
-        <div class="kpi-tile" id="kpi-newstart">
-          <div class="label">New starts</div>
-          <div class="value">—</div>
-          <div class="delta">this month</div>
-        </div>
-        <div class="kpi-tile" id="kpi-churn">
-          <div class="label">Churn rate</div>
-          <div class="value">—</div>
-          <div class="delta">trailing 3mo avg</div>
-        </div>
-        <div class="kpi-tile clickable" id="kpi-atrisk">
-          <div class="label">At-risk dropoffs</div>
-          <div class="value">—</div>
-          <div class="delta">≥120h past / ≤40h next</div>
-        </div>
       </div>
     </div>
   </section>
@@ -105,7 +91,7 @@
   <!-- Section 02 — Summary position × month table -->
   <section class="card" id="sec-summary">
     <header>
-      <h2><span class="section-number">02</span> Retention &amp; utilisation — Position × Month</h2>
+      <h2><span class="section-number">02</span> Utilisation — Position × Month</h2>
       <span class="hint">3 months behind, current, 3 months forward. Cell tint = MoM retention %.</span>
       <p class="section-desc">Each row is a position group; each column is a month. The large number is the headcount of workers with hours that month; the smaller italic is the total hours worked. Cell colour reflects month-on-month retention — the share of last month's workers still active this month (green ≥ 70 %, amber 50–70 %, red &lt; 50 %). Forward months (teal/dashed) show scheduled bookings sourced from the roster; they carry no retention tint. Positions are grouped by discipline.</p>
     </header>
@@ -125,93 +111,25 @@
     </div>
   </section>
 
-  <!-- Section 02b — Position flow -->
-  <section class="card" id="sec-flow">
-    <header>
-      <h2><span class="section-number">02b</span> Position flow — Headcount, new &amp; churn</h2>
-      <span class="hint">Click a row to expand per-client breakdown</span>
-      <p class="section-desc">Summarises workforce movement per position. <strong>Current headcount</strong> is workers active in the current month. The <strong>trend sparkline</strong> shows headcount across all 7 reporting months. <strong>New starts</strong> and <strong>drops</strong> are 3-month averages of workers appearing or disappearing month-to-month. <strong>Churn rate</strong> is drops ÷ average headcount. Click any row to expand a breakdown by client.</p>
-    </header>
-    <div class="body">
-      <div class="table-scroll">
-        <table class="tbl" id="flow-table">
-          <thead>
-            <tr>
-              <th class="cell-left">Position</th>
-              <th class="num">Current headcount</th>
-              <th>7mo trend</th>
-              <th class="num">New / mo (3mo avg)</th>
-              <th class="num">Drops / mo (3mo avg)</th>
-              <th class="num">Churn rate</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
   <!-- Section 03 — Per-client tables -->
   <section class="card" id="sec-client-tables">
     <header>
       <h2><span class="section-number">03</span> By client</h2>
       <span class="hint">Same structure as Section 02, scoped to each client</span>
-      <p class="section-desc">The same position × month retention table as Section 02, repeated independently for each of the four clients. A worker appears in a client's table only in the months they were assigned to that client. Useful for comparing utilisation patterns and retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock. Click a client panel to expand it.</p>
+      <p class="section-desc">The same position × month utilisation table as Section 02, repeated independently for each of the four clients. A worker appears in a client's table only in the months they were assigned to that client. Useful for comparing utilisation patterns across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock. Click a client panel to expand it.</p>
     </header>
     <div class="body" id="client-tables"></div>
   </section>
 
-  <!-- Section 04 — At-risk list -->
-  <section class="card" id="sec-atrisk">
-    <header>
-      <h2><span class="section-number">04</span> At-risk dropoffs</h2>
-      <span class="hint">Trailing 3mo avg ≥ 120h AND next-month committed ≤ 40h</span>
-      <p class="section-desc">Workers who have been consistently active but whose forward bookings suggest an imminent drop-off. The threshold is a 3-month trailing average of at least 120 h/month (roughly a standard swing cycle) combined with fewer than 40 h scheduled in the coming month. <strong>Drop size</strong> is the difference between the trailing average and next month's hours — a proxy for how sharp the utilisation fall will be.</p>
-    </header>
-    <div class="body">
-      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
-        <span id="atrisk-summary" class="muted small">—</span>
-        <button id="atrisk-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
-      </div>
-      <div class="table-scroll">
-        <table class="tbl" id="atrisk-table">
-          <thead>
-            <tr>
-              <th class="cell-left">Name</th>
-              <th class="cell-left">Position</th>
-              <th class="cell-left">Current client</th>
-              <th class="num">Trailing 3mo avg</th>
-              <th class="num">Next month committed</th>
-              <th class="num">Drop size</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 05 — Utilisation trend chart -->
+  <!-- Section 04 — Utilisation trend chart -->
   <section class="card" id="sec-trend">
     <header>
-      <h2><span class="section-number">05</span> Utilisation trend</h2>
+      <h2><span class="section-number">04</span> Utilisation trend</h2>
       <span class="hint">Avg hours / worker across the reporting window</span>
       <p class="section-desc">Line chart of average hours per active worker by month, across the full 7-month reporting window. Each client is plotted as a separate line so cross-client utilisation patterns are visible side by side. Months with no active workers for a client are shown as a gap. Reflects the current client and position filter selections.</p>
     </header>
     <div class="body">
       <div class="chart-box"><canvas id="trend-chart"></canvas></div>
-    </div>
-  </section>
-
-  <!-- Section 06 — New starts vs drop-offs chart -->
-  <section class="card" id="sec-churn">
-    <header>
-      <h2><span class="section-number">06</span> New starts vs drop-offs</h2>
-      <span class="hint">Bars show monthly movement, line shows churn rate %</span>
-      <p class="section-desc">Grouped bars show the count of workers appearing for the first time in a month (new starts, green) versus workers who were active the previous month but not this month (drop-offs, red). The overlaid line tracks the monthly churn rate — drop-offs as a percentage of the prior month's headcount. Forward months reflect scheduled roster data and may undercount starts/drops that haven't been formally booked yet.</p>
-    </header>
-    <div class="body">
-      <div class="chart-box"><canvas id="churn-chart"></canvas></div>
     </div>
   </section>
 
@@ -221,10 +139,7 @@
 <script src="assets/format.js"></script>
 <script src="assets/kpi.js"></script>
 <script src="assets/retention-table.js"></script>
-<script src="assets/position-flow.js"></script>
-<script src="assets/at-risk.js"></script>
 <script src="assets/utilisation-chart.js"></script>
-<script src="assets/churn-chart.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

@@ -114,11 +114,8 @@
     };
     NW.renderKpis(view);
     NW.renderSummaryTable(view);
-    NW.renderPositionFlow(view);
     NW.renderClientTables(view);
-    NW.renderAtRisk(view);
     NW.renderTrendChart(view);
-    NW.renderChurnChart(view);
   }
 
   async function boot() {

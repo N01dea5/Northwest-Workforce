@@ -1,4 +1,4 @@
-// Bootstrap for the standalone fatigue / hours-compliance page.
+// Bootstrap for the standalone retention page.
 (function () {
   const state = {
     data: null,
@@ -111,8 +111,10 @@
       data: state.data,
       workers: filteredWorkers(),
     };
-    NW.renderFatigueKpis(view);
-    NW.renderCompliance(view);
+    NW.renderKpis(view);
+    NW.renderChurnChart(view);
+    NW.renderPositionFlow(view);
+    NW.renderAtRisk(view);
   }
 
   async function boot() {

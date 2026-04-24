@@ -44,6 +44,30 @@
     return rows;
   }
 
+  NW.renderFatigueKpis = function (view) {
+    const rows = compute(view);
+    const over = rows.filter((r) => r.status === "over");
+    const warn = rows.filter((r) => r.status === "warn");
+    const worstOverage = over.length ? Math.max(...over.map((r) => r.overage)) : 0;
+
+    const set = (id, fn) => { const el = document.getElementById(id); if (el) fn(el); };
+
+    set("kpi-fatigue-breach", (el) => {
+      el.querySelector(".value").textContent = over.length;
+      el.classList.toggle("alert", over.length > 0);
+    });
+
+    set("kpi-fatigue-close", (el) => {
+      el.querySelector(".value").textContent = warn.length;
+    });
+
+    set("kpi-fatigue-worst", (el) => {
+      el.querySelector(".value").innerHTML = over.length
+        ? `+${NW.fmtInt(worstOverage)}<span class="unit">h</span>`
+        : `<span class="unit">—</span>`;
+    });
+  };
+
   NW.renderCompliance = function (view) {
     const rows = compute(view);
     const months = view.data.reporting_months;

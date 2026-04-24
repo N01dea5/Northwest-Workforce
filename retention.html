@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Retention — Northwest Workforce — SRG Global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=4" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-row">
+    <div class="brand-block">
+      <div class="breadcrumb">
+        <span>Fulfilment &amp; Retention</span>
+        <span class="sep">/</span>
+        <span>Northwest Workforce</span>
+        <span class="sep">/</span>
+        <span id="hdr-fy">FY26</span>
+      </div>
+      <h1>Northwest Workforce</h1>
+      <div class="subtitle">
+        Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
+      </div>
+      <nav class="page-nav">
+        <a href="index.html">Utilisation</a>
+        <span class="page-nav-active">Retention</span>
+        <a href="fatigue.html">Fatigue</a>
+      </nav>
+    </div>
+    <div class="brand-right">
+      <img src="assets/srg_logo.png" alt="SRG Global" class="srg-logo-img" />
+      <div class="meta">
+        <div>Reporting window <strong id="hdr-window">—</strong></div>
+        <div>Current month <strong id="hdr-current">—</strong></div>
+        <div>Last refreshed <strong id="hdr-refreshed">—</strong></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="filter-strip">
+  <div class="filter-group">
+    <label>Client</label>
+    <div id="client-chips"></div>
+  </div>
+  <div class="filter-group">
+    <label>Position</label>
+    <select id="position-select"></select>
+  </div>
+  <label class="toggle">
+    <input type="checkbox" id="hide-zero" />
+    Hide zero-hour workers
+  </label>
+  <button id="reset-filters" class="btn small" style="margin-left:auto;">Reset filters</button>
+</div>
+
+<main>
+
+  <!-- Section 01 — KPI tiles -->
+  <section class="card" id="sec-kpi">
+    <header>
+      <h2><span class="section-number">01</span> Retention — key metrics</h2>
+      <span class="hint">Filtered by client &amp; position selections above</span>
+      <p class="section-desc">Workforce movement snapshot for the current month. <strong>New starts</strong> counts workers whose recorded employment start falls in the current month, with a delta against last month. <strong>Drop-offs</strong> counts workers who had hours last month but none this month. <strong>Churn rate</strong> is the trailing 3-month average of monthly drop-offs as a share of the prior month's headcount. <strong>At-risk</strong> flags workers averaging ≥ 120 h/month over the past 3 months with ≤ 40 h booked next month — click the tile to jump to the detail list.</p>
+    </header>
+    <div class="body">
+      <div class="kpi-grid">
+        <div class="kpi-tile" id="kpi-newstart">
+          <div class="label">New starts</div>
+          <div class="value">—</div>
+          <div class="delta">this month</div>
+        </div>
+        <div class="kpi-tile" id="kpi-drops">
+          <div class="label">Drop-offs</div>
+          <div class="value">—</div>
+          <div class="delta">this month</div>
+        </div>
+        <div class="kpi-tile" id="kpi-churn">
+          <div class="label">Churn rate</div>
+          <div class="value">—</div>
+          <div class="delta">trailing 3mo avg</div>
+        </div>
+        <div class="kpi-tile clickable" id="kpi-atrisk">
+          <div class="label">At-risk dropoffs</div>
+          <div class="value">—</div>
+          <div class="delta">≥120h past / ≤40h next</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02 — New starts vs drop-offs chart -->
+  <section class="card" id="sec-churn">
+    <header>
+      <h2><span class="section-number">02</span> New starts vs drop-offs</h2>
+      <span class="hint">Bars show monthly movement, line shows churn rate %</span>
+      <p class="section-desc">Grouped bars show the count of workers appearing for the first time in a month (new starts, green) versus workers who were active the previous month but not this month (drop-offs, red). The overlaid line tracks the monthly churn rate — drop-offs as a percentage of the prior month's headcount. Forward months reflect scheduled roster data and may undercount starts/drops that haven't been formally booked yet.</p>
+    </header>
+    <div class="body">
+      <div class="chart-box"><canvas id="churn-chart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- Section 03 — Position flow -->
+  <section class="card" id="sec-flow">
+    <header>
+      <h2><span class="section-number">03</span> Position flow — Headcount, new &amp; churn</h2>
+      <span class="hint">Click a row to expand per-client breakdown</span>
+      <p class="section-desc">Summarises workforce movement per position. <strong>Current headcount</strong> is workers active in the current month. The <strong>trend sparkline</strong> shows headcount across all 7 reporting months. <strong>New starts</strong> and <strong>drops</strong> are 3-month averages of workers appearing or disappearing month-to-month. <strong>Churn rate</strong> is drops ÷ average headcount. Click any row to expand a breakdown by client.</p>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl" id="flow-table">
+          <thead>
+            <tr>
+              <th class="cell-left">Position</th>
+              <th class="num">Current headcount</th>
+              <th>7mo trend</th>
+              <th class="num">New / mo (3mo avg)</th>
+              <th class="num">Drops / mo (3mo avg)</th>
+              <th class="num">Churn rate</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 04 — At-risk list -->
+  <section class="card" id="sec-atrisk">
+    <header>
+      <h2><span class="section-number">04</span> At-risk dropoffs</h2>
+      <span class="hint">Trailing 3mo avg ≥ 120h AND next-month committed ≤ 40h</span>
+      <p class="section-desc">Workers who have been consistently active but whose forward bookings suggest an imminent drop-off. The threshold is a 3-month trailing average of at least 120 h/month (roughly a standard swing cycle) combined with fewer than 40 h scheduled in the coming month. <strong>Drop size</strong> is the difference between the trailing average and next month's hours — a proxy for how sharp the utilisation fall will be.</p>
+    </header>
+    <div class="body">
+      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
+        <span id="atrisk-summary" class="muted small">—</span>
+        <button id="atrisk-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
+      </div>
+      <div class="table-scroll">
+        <table class="tbl" id="atrisk-table">
+          <thead>
+            <tr>
+              <th class="cell-left">Name</th>
+              <th class="cell-left">Position</th>
+              <th class="cell-left">Current client</th>
+              <th class="num">Trailing 3mo avg</th>
+              <th class="num">Next month committed</th>
+              <th class="num">Drop size</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/format.js"></script>
+<script src="assets/kpi.js"></script>
+<script src="assets/position-flow.js"></script>
+<script src="assets/at-risk.js"></script>
+<script src="assets/churn-chart.js"></script>
+<script src="assets/retention-app.js"></script>
+</body>
+</html>

@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=3" />
+  <link rel="stylesheet" href="assets/styles.css?v=4" />
 </head>
 <body>
 
@@ -26,8 +26,9 @@
         Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
       </div>
       <nav class="page-nav">
-        <a href="index.html">Dashboard</a>
-        <span class="page-nav-active">Fatigue &amp; Compliance</span>
+        <a href="index.html">Utilisation</a>
+        <a href="retention.html">Retention</a>
+        <span class="page-nav-active">Fatigue</span>
       </nav>
     </div>
     <div class="brand-right">
@@ -59,10 +60,38 @@
 
 <main>
 
-  <!-- Hours compliance -->
+  <!-- KPI tiles -->
+  <section class="card" id="sec-kpi">
+    <header>
+      <h2><span class="section-number">01</span> Fatigue compliance — key metrics</h2>
+      <span class="hint">Filtered by client &amp; position selections above</span>
+      <p class="section-desc">Summary counts from the 724 h rolling 3-month limit check below. <strong>In breach</strong> are workers whose worst 3-month window has already exceeded the limit. <strong>Approaching</strong> are workers between 652 h and 724 h — the 90 % warning threshold. <strong>Worst overage</strong> is the single largest excess above 724 h across all flagged workers.</p>
+    </header>
+    <div class="body">
+      <div class="kpi-grid">
+        <div class="kpi-tile" id="kpi-fatigue-breach">
+          <div class="label">In breach</div>
+          <div class="value">—</div>
+          <div class="delta">≥ 724h in worst window</div>
+        </div>
+        <div class="kpi-tile" id="kpi-fatigue-close">
+          <div class="label">Approaching limit</div>
+          <div class="value">—</div>
+          <div class="delta">652 – 724h</div>
+        </div>
+        <div class="kpi-tile" id="kpi-fatigue-worst">
+          <div class="label">Worst overage</div>
+          <div class="value">—</div>
+          <div class="delta">above 724h limit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours compliance table -->
   <section class="card" id="sec-compliance">
     <header>
-      <h2><span class="section-number">01</span> Hours compliance — 724h rolling 3-month limit</h2>
+      <h2><span class="section-number">02</span> Hours compliance — 724h rolling 3-month limit</h2>
       <span class="hint">Flagged workers: any consecutive 3-month window ≥ 652h (close) or ≥ 724h (breach). Highlighted cells = worst window.</span>
       <p class="section-desc">Checks every possible consecutive 3-month window within the reporting period against the 724 h limit. Only workers whose worst window reaches the warning threshold (652 h, 90 % of limit) are listed. The highlighted month cells show which 3-month window is the worst for each worker; the remaining months are dimmed. Workers already in breach are shown in red with the overage amount; those approaching the limit are shown in amber. Hours are calculated after removing stand-down days (any 14th consecutive working day in an unbroken roster run).</p>
     </header>
@@ -89,6 +118,7 @@
 </main>
 
 <script src="assets/format.js"></script>
+<script src="assets/kpi.js"></script>
 <script src="assets/compliance.js"></script>
 <script src="assets/fatigue-app.js"></script>
 </body>
