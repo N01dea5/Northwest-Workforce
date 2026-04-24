@@ -338,9 +338,10 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
         if i_active is not None and row[i_active] is not None and not _truthy(row[i_active]):
             continue
         if i_on is not None and row[i_on] is not None and not _truthy(row[i_on]):
-            # Future mobilising/confirmed rows always have OnSite=0 (worker
-            # hasn't arrived yet), but they represent real booked shifts.
-            if not (d >= date.today() and status_str in ("mobilising", "confirmed")):
+            # Past rows with OnSite=0 are genuinely absent. Future rows have
+            # OnSite=0 simply because the date hasn't arrived yet — any
+            # non-rejected status (already filtered above) is a valid booking.
+            if d < date.today():
                 continue
 
         if i_type is not None:
