@@ -354,7 +354,6 @@ section.card > .body { padding: 18px 20px 20px; }
   border-right: 1px solid var(--srg-border);
 }
 .ret-cell .hc {
-  font-weight: 700;
   font-size: 14px;
   font-variant-numeric: tabular-nums;
 }
@@ -442,8 +441,8 @@ details.client-block .body { padding: 14px 16px 18px; overflow-x: auto; }
 
 /* ---------- Compliance table ---------- */
 
-.compliance-cell-over  { background: rgba(220,38,38,0.14); font-weight: 700; color: #7f1d1d; }
-.compliance-cell-warn  { background: rgba(245,158,11,0.14); font-weight: 700; color: #78350f; }
+.compliance-cell-over  { background: rgba(220,38,38,0.14); color: #7f1d1d; }
+.compliance-cell-warn  { background: rgba(245,158,11,0.14); color: #78350f; }
 .compliance-cell-dim   { color: var(--srg-grey-2); }
 td.compliance-total    { font-variant-numeric: tabular-nums; }
 tr.compliance-over td  { border-left-color: transparent; }
