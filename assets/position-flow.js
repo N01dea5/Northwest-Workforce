@@ -8,7 +8,7 @@
       const mm = w.monthly[month];
       if (!mm) return;
       if (client && mm.client !== client) return;
-      if ((mm.hours || 0) > 0 || mm.committed) n += 1;
+      if ((mm.hours || 0) > 0) n += 1;
     });
     return n;
   }
@@ -35,7 +35,7 @@
     const newPerMo = newCount / (trailing.length || 1);
 
     // Drops / mo: workers who had hours in trailing[i] (at client) but 0
-    // hours and no committed in trailing[i+1] onwards
+    // hours > 0 in any later month
     let dropCount = 0;
     trailing.forEach((m, i) => {
       const later = months.slice(months.indexOf(m) + 1);
@@ -48,7 +48,7 @@
           const lmm = w.monthly[lm];
           if (!lmm) return false;
           if (client && lmm.client !== client) return false;
-          return (lmm.hours || 0) > 0 || lmm.committed;
+          return (lmm.hours || 0) > 0;
         });
         if (!hasLater) dropCount += 1;
       });
@@ -74,7 +74,7 @@
           const lmm = w.monthly[lm];
           if (!lmm) return false;
           if (client && lmm.client !== client) return false;
-          return (lmm.hours || 0) > 0 || lmm.committed;
+          return (lmm.hours || 0) > 0;
         });
         if (!hasLater) drops += 1;
       });
