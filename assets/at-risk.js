@@ -12,7 +12,7 @@
       const ph = trailing.map((m) => w.monthly[m]?.hours || 0);
       const avg = ph.reduce((a, b) => a + b, 0) / (ph.length || 1);
       const nextH = w.monthly[nextMonth]?.hours || 0;
-      if (avg >= 120 && nextH <= 40) {
+      if (avg >= NW.ATRISK_MIN_TRAILING && nextH <= NW.ATRISK_MAX_NEXT) {
         const curClient = w.monthly[data.current_month]?.client || w.primary_client;
         rows.push({
           id: w.id,

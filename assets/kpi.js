@@ -70,7 +70,7 @@
       const ph = trailing.map((m) => w.monthly[m]?.hours || 0);
       const avg = ph.reduce((a, b) => a + b, 0) / (ph.length || 1);
       const nextH = w.monthly[forward[0]]?.hours || 0;
-      return avg >= 120 && nextH <= 40;
+      return avg >= NW.ATRISK_MIN_TRAILING && nextH <= NW.ATRISK_MAX_NEXT;
     }).length;
 
     // Total unique workers engaged anywhere in the reporting window

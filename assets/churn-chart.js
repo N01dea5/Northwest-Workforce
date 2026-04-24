@@ -38,7 +38,9 @@
 
   NW.renderChurnChart = function (view) {
     const { labels, newStarts, dropoffs, churnRate } = compute(view);
-    const ctx = document.getElementById("churn-chart").getContext("2d");
+    const canvas = document.getElementById("churn-chart");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
 
     if (chart) chart.destroy();
     chart = new Chart(ctx, {

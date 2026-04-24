@@ -94,7 +94,7 @@
       <td class="num">${row.dropsPerMo.toFixed(1)}</td>
       <td class="num">
         <span class="badge ${
-          row.churn < 0.05 ? "ok" : row.churn < 0.12 ? "warn" : "risk"
+          row.churn < NW.CHURN_OK ? "ok" : row.churn < NW.CHURN_WARN ? "warn" : "risk"
         }">${(row.churn * 100).toFixed(1)}%</span>
       </td>`;
   }
@@ -144,7 +144,7 @@
         <td class="num">${r.newPerMo.toFixed(1)}</td>
         <td class="num">${r.dropsPerMo.toFixed(1)}</td>
         <td class="num"><span class="badge ${
-          r.churn < 0.05 ? "ok" : r.churn < 0.12 ? "warn" : "risk"
+          r.churn < NW.CHURN_OK ? "ok" : r.churn < NW.CHURN_WARN ? "warn" : "risk"
         }">${(r.churn * 100).toFixed(1)}%</span></td>`;
       tbody.appendChild(ctr);
     });

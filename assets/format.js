@@ -97,7 +97,29 @@ window.NW = window.NW || {};
     </svg>`;
   };
 
-  // CSV export helper.
+  // ---- Shared thresholds ----
+  // Centralised here so compliance.js, worker-app.js, kpi.js, at-risk.js,
+  // and position-flow.js all reference the same values.
+
+  NW.FATIGUE_LIMIT = 724;       // h — max in any rolling 3-month window
+  NW.FATIGUE_WARN  = 652;       // h — 90% warning threshold
+  NW.ATRISK_MIN_TRAILING = 120; // h/month — trailing avg to be considered at-risk
+  NW.ATRISK_MAX_NEXT     = 40;  // h — next-month committed ceiling to be flagged
+  NW.CHURN_OK   = 0.05;         // churn rate below this → green
+  NW.CHURN_WARN = 0.12;         // churn rate below this → amber; above → red
+
+  // Returns { total, start } for the worker's worst consecutive 3-month window.
+  NW.worstWindow = function (worker, months) {
+    let best = { total: 0, start: 0 };
+    for (let i = 0; i <= months.length - 3; i++) {
+      const total = months.slice(i, i + 3)
+        .reduce((s, m) => s + (worker.monthly[m]?.hours || 0), 0);
+      if (total > best.total) best = { total, start: i };
+    }
+    return best;
+  };
+
+  // ---- CSV export helper ----
   NW.downloadCsv = (filename, rows) => {
     const esc = (v) => {
       if (v === null || v === undefined) return "";

@@ -1,18 +1,5 @@
 // Worker detail page bootstrap.
 (function () {
-  const LIMIT = 724;
-  const WARN  = 652;
-
-  function worstWindow(worker, months) {
-    let best = { total: 0, start: 0 };
-    for (let i = 0; i <= months.length - 3; i++) {
-      const total = months.slice(i, i + 3)
-        .reduce((s, m) => s + (worker.monthly[m]?.hours || 0), 0);
-      if (total > best.total) best = { total, start: i };
-    }
-    return best;
-  }
-
   function render(worker, data) {
     const months = data.reporting_months;
     const cur = data.current_month;
@@ -32,12 +19,12 @@
     ].join(" ");
 
     // Compliance check
-    const { total: wTotal, start: wStart } = worstWindow(worker, months);
+    const { total: wTotal, start: wStart } = NW.worstWindow(worker, months);
     const complianceEl = document.getElementById("worker-compliance");
-    if (wTotal >= WARN) {
+    if (wTotal >= NW.FATIGUE_WARN) {
       const wWindow = months.slice(wStart, wStart + 3);
-      const label = wTotal >= LIMIT
-        ? `<span class="badge risk">Breach — ${NW.fmtInt(wTotal)}h in ${NW.fmtMonth(wWindow[0])}–${NW.fmtMonth(wWindow[2])} (+${NW.fmtInt(wTotal - LIMIT)}h over limit)</span>`
+      const label = wTotal >= NW.FATIGUE_LIMIT
+        ? `<span class="badge risk">Breach — ${NW.fmtInt(wTotal)}h in ${NW.fmtMonth(wWindow[0])}–${NW.fmtMonth(wWindow[2])} (+${NW.fmtInt(wTotal - NW.FATIGUE_LIMIT)}h over limit)</span>`
         : `<span class="badge warn">Approaching limit — ${NW.fmtInt(wTotal)}h in ${NW.fmtMonth(wWindow[0])}–${NW.fmtMonth(wWindow[2])}</span>`;
       complianceEl.innerHTML = label;
     } else {
@@ -49,7 +36,7 @@
     const trailingAvg = trailingHrs.reduce((a, b) => a + b, 0) / (trailing.length || 1);
     const nextHrs = worker.monthly[forward[0]]?.hours || 0;
     const atRiskEl = document.getElementById("worker-atrisk");
-    if (trailingAvg >= 120 && nextHrs <= 40) {
+    if (trailingAvg >= NW.ATRISK_MIN_TRAILING && nextHrs <= NW.ATRISK_MAX_NEXT) {
       atRiskEl.innerHTML = `<span class="badge risk">At-risk — avg ${NW.fmtInt(trailingAvg)}h/mo trailing, only ${NW.fmtInt(nextHrs)}h next month</span>`;
     } else {
       atRiskEl.innerHTML = `<span class="badge ok">Not at risk</span>`;

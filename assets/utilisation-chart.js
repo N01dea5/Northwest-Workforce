@@ -17,7 +17,9 @@
   }
 
   NW.renderTrendChart = function (view) {
-    const ctx = document.getElementById("trend-chart").getContext("2d");
+    const canvas = document.getElementById("trend-chart");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
     const labels = view.data.reporting_months.map(NW.fmtMonth);
     const curIdx = view.data.reporting_months.indexOf(view.data.current_month);
 

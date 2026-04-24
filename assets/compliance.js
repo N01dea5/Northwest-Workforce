@@ -1,29 +1,15 @@
 // Section 04b — Hours compliance: 724h per any rolling 3-month window.
 (function (NW) {
-  const LIMIT = 724;
-  const WARN  = Math.ceil(LIMIT * 0.9); // 652h — "close"
-
-  // Returns { total, start } for the worst consecutive 3-month window.
-  function worstWindow(worker, months) {
-    let best = { total: 0, start: 0 };
-    for (let i = 0; i <= months.length - 3; i++) {
-      const total = months.slice(i, i + 3)
-        .reduce((s, m) => s + (worker.monthly[m]?.hours || 0), 0);
-      if (total > best.total) best = { total, start: i };
-    }
-    return best;
-  }
-
   function compute(view) {
     const { data, workers } = view;
     const months = data.reporting_months;
     const rows = [];
 
     workers.forEach((w) => {
-      const { total, start } = worstWindow(w, months);
-      if (total < WARN) return;
+      const { total, start } = NW.worstWindow(w, months);
+      if (total < NW.FATIGUE_WARN) return;
       const window = months.slice(start, start + 3);
-      const status = total >= LIMIT ? "over" : "warn";
+      const status = total >= NW.FATIGUE_NW.FATIGUE_LIMIT ? "over" : "warn";
       rows.push({
         id: w.id,
         name: w.name,
@@ -31,7 +17,7 @@
         discipline: w.discipline || "—",
         client: w.monthly[data.current_month]?.client || w.primary_client || "—",
         total,
-        overage: total - LIMIT,
+        overage: total - NW.FATIGUE_LIMIT,
         window,
         windowLabel: `${NW.fmtMonth(window[0])} – ${NW.fmtMonth(window[2])}`,
         status,
@@ -160,7 +146,7 @@
         "Worst window", "Window total (h)", "Limit (h)", "Over/under (h)"];
       const body = rows.map((r) => [
         r.name, r.position, r.discipline, r.client,
-        r.windowLabel, Math.round(r.total), LIMIT, Math.round(r.total - LIMIT),
+        r.windowLabel, Math.round(r.total), NW.FATIGUE_LIMIT, Math.round(r.total - NW.FATIGUE_LIMIT),
       ]);
       NW.downloadCsv(`northwest-compliance-${view.data.current_month}.csv`, [header, ...body]);
     };

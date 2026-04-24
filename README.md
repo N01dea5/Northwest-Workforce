@@ -1,189 +1,206 @@
 # Northwest Workforce Dashboard
 
-Utilisation & retention view for SRG Global's workforce supporting the four
-Northwest iron-ore majors: **Fortescue, Rio Tinto, BHP, Roy Hill/Hancock**.
+Utilisation, retention, and fatigue compliance view for SRG Global's workforce
+supporting the four Northwest iron-ore majors:
+**Fortescue, Rio Tinto, BHP, Roy Hill/Hancock**.
 
-Sibling to the Southwest Shutdowns dashboard, but this region is too
-high-volume for shutdown-by-shutdown reporting — so the lens is
-**month-by-month retention and utilisation by position and by client**.
+Month-by-month headcount, hours, retention, and forward bookings across a
+7-month reporting window (3 months back, current month, 3 months forward).
 
-## What's on the dashboard
+---
 
-| Section | What it shows |
-|---|---|
-| 01 — Key metrics | Active workforce · Avg hrs/worker (trailing 3mo) · Forward committed (next 3mo) · New starts this month · Churn rate · At-risk dropoffs |
-| 02 — Retention & utilisation matrix | Top 20 positions × 7 months (3 back, current, 3 forward). Cell tint = month-over-month retention % |
-| 02b — Position flow | Per-position headcount, 7-month trend sparkline, new/drops per month, churn rate. Click a row for the per-client split |
-| 03 — By client | Same matrix scoped to each major (collapsible) |
-| 04 — At-risk dropoffs | Workers with trailing 3mo avg ≥ 120h AND next-month committed ≤ 40h. CSV export. Click a name for worker drill-down |
-| 05 — Utilisation trend | Line chart of avg hours/worker per client + overall |
-| 06 — New starts vs drop-offs | Grouped bar chart + churn rate overlay |
-| Worker page | Per-worker hours history, client timeline, month-by-month breakdown |
+## Pages
 
-Filters (client, position, hide-zero-hour) apply to every section and are
-encoded in the URL hash so views are shareable.
+| Page | File | What it shows |
+|---|---|---|
+| **Utilisation** | `index.html` | Active workforce · Total engaged · Avg hrs/worker · Forward committed · Position × month matrix · By-client tables · Trend chart |
+| **Retention** | `retention.html` | New starts · Drop-offs · Churn rate · At-risk list · New starts vs drop-offs chart · Position flow table · Cohort survival table |
+| **Fatigue** | `fatigue.html` | Breach count · Close count · Worst overage · Breach by discipline · Full 724 h rolling compliance table |
+| **Worker detail** | `worker.html?id=…` | Individual hours history · Month-by-month client · Compliance flag · At-risk flag |
+
+All pages share a sticky filter strip (client chips, position dropdown, name
+search, hide-zero toggle). Filter state is encoded in the URL hash so views
+can be bookmarked and shared.
+
+---
 
 ## Metric definitions
 
-- **Retention %** (position `p`, month `m`, optional client `c`) —
-  `|workers present in m-1 and m for p[,c]| / |workers present in m-1 for p[,c]|`.
-  Undefined when prior month has zero headcount.
-- **Avg hours / worker / month (trailing 3mo)** — total hours across months
-  m-3..m-1 divided by (distinct workers with any hours in the window × 3).
-  Off-months count as zero, so the metric reflects consistency as well as
-  peak intensity.
-- **Forward committed hours** — sum of `hours` over future months where
-  `committed = true`.
-- **Headcount (month m[, client c])** — distinct workers with `hours > 0` or
-  `committed` in that month.
-- **New start (month m)** — worker whose `employment_start` falls in `m`.
-- **Drop-off (month m)** — worker with hours > 0 in `m` but no hours and no
-  committed work in `m+1 … m+3` (terminal for the visible window).
-- **Churn rate (month m)** — drops(m) / headcount(m-1). Trailing-3mo churn
-  averages the last 3 monthly values.
-- **At-risk** — trailing-3mo avg ≥ 120h AND next-month committed ≤ 40h.
+| Metric | Definition |
+|---|---|
+| **Active workforce** | Workers with hours > 0 in the current month |
+| **Total engaged** | Distinct workers with any hours across the full reporting window |
+| **Avg hrs / worker** | Trailing 3-month: total hours ÷ (distinct workers × months). Off-months count as zero — reflects consistency, not just peak intensity |
+| **Forward committed** | Sum of hours in the next 3 months where `committed = true` (confirmed / mobilising bookings only) |
+| **Retention %** | Workers present in both month m−1 and month m ÷ workers in month m−1 |
+| **New start** | Worker whose `employment_start` falls in month m |
+| **Drop-off** | Worker with hours > 0 in month m but zero in the current month and no forward bookings |
+| **Churn rate** | Drop-offs ÷ prior month headcount; trailing-3mo average on KPI tiles |
+| **At-risk** | Trailing-3mo avg ≥ 120 h/month **and** next-month committed ≤ 40 h |
+| **Compliance** | Worst consecutive 3-month window of hours vs 724 h limit; flagged at 652 h (90 %) |
+| **Cohort survival** | % of a start-month cohort still active at +1, +2 … months after joining |
 
-## Run locally
+---
+
+## Data pipeline
+
+`scripts/parse_macro_data.py` reads `data/raw/Rapidcrews Macro Data.xlsx`
+(dropped there by Power Automate) and produces `data/workforce.json` plus
+one JSON file per client.
+
+### Source sheets
+
+| Sheet | Used for |
+|---|---|
+| `xpbi02 DailyPersonnelSchedule` | Primary: one row per worker per day. Provides actual historical onsite days and forward roster bookings |
+| `xll01 Personnel` | Worker master: name, position, discipline, employment start |
+| `xpbi02 DisciplineTrade` | Discipline lookup for position grouping |
+
+### Row filtering (DailyPersonnelSchedule)
+
+1. **Hard-exclude** rows with status `rejected`, `declined`, or `late withdrawal`.
+2. **Active flag** — rows with `jobActive = false` are skipped.
+3. **OnSite flag** — rows with `OnSite = false` are skipped **unless** the date
+   is in the future **and** the status is `mobilising` or `confirmed`. This
+   allows forward bookings (which haven't happened yet, so OnSite is 0) to
+   appear in the forward months. Soft statuses (`contacted`, `planning`,
+   `short list`) are excluded for future dates — they represent intent,
+   not committed shifts.
+
+### Hours per row
+
+All rows that pass filtering are credited **12 h/shift** regardless of status
+(`onsite`, `demobilised`, `mobilising`, `confirmed`). There is no Schedule Type
+column in this sheet; 12 h is the standard iron-ore shift length.
+
+### Post-processing rules
+
+| Rule | What it does |
+|---|---|
+| **13-day stand-down** | Scans each worker's working days in date order. When a consecutive run reaches day 14, that day is zeroed out and the streak resets. This represents the mandatory fatigue rest after 13 consecutive days. |
+| **Full-calendar halving** | If a worker has a roster entry for every calendar day of a month, their hours for that month are halved (÷ 2). These workers are assumed to be on a continuous-availability maintenance contract with ~50 % actual on-site attendance. |
+| **Dominant-client attribution** | A worker's monthly hours are attributed to whichever client had the most rostered days that month. Workers split across clients in a month are not double-counted. |
+
+### Fallback seed
+
+When no Excel file is present, `scripts/seed_workforce.py` generates
+deterministic mock data. Both paths produce the same JSON schema.
+
+---
+
+## Running locally
 
 ```bash
 pip install -r scripts/requirements.txt
 
-# Build whichever data source is available
-python3 scripts/build_dashboard_data.py
+# Parse real data (requires data/raw/Rapidcrews Macro Data.xlsx)
+python3 scripts/parse_macro_data.py
 
-# Serve the static dashboard
+# Or generate mock data
+python3 scripts/seed_workforce.py
+
+# Serve
 python3 -m http.server 8000
 # → open http://localhost:8000
 ```
 
-To force the mock path, leave `data/raw/` empty. To exercise the real
-parser, drop a `Rapidcrews Macro Data.xlsx` into `data/raw/` and rerun.
-
 No backend, no build step. Everything is static HTML + vanilla JS +
-Chart.js loaded from a CDN.
+Chart.js from a CDN.
 
-## Data pipeline
+---
 
-`scripts/build_dashboard_data.py` is the single entry point:
+## Hooking up Power Automate
 
-1. If `data/raw/Rapidcrews Macro Data.xlsx` exists, run
-   `scripts/parse_macro_data.py` — reads the same workbook the Southwest
-   Shutdowns dashboard uses, filters to the four NW majors (Fortescue,
-   Rio Tinto, BHP, Roy Hill/Hancock), aggregates the daily
-   `xpbi02 PersonnelRosterView` rows into monthly hours per worker/client.
-2. Otherwise, run `scripts/seed_workforce.py` — deterministic mock data so
-   the dashboard stays demo-able before a real workbook has been dropped in.
-
-Both paths produce the same JSON schema, so the frontend doesn't care which
-branch ran.
-
-### Hooking up Power Automate
-
-The Southwest dashboard's existing Power Automate flow already drops
-`Rapidcrews Macro Data.xlsx` into the Southwest repo's `data/raw/`. To fire
-this repo at the same time, duplicate the "Create file" step in that flow:
+Duplicate the "Create file" step from the Southwest Shutdowns flow:
 
 | Field | Value |
 |---|---|
-| Repository owner | `n01dea5` |
-| Repository name | `Northwest-Workforce` |
+| Repository | `n01dea5 / Northwest-Workforce` |
 | Branch | `main` |
 | File path | `data/raw/Rapidcrews Macro Data.xlsx` |
 | File content | *(same as Southwest step)* |
 
-Pushing the workbook to `data/raw/` triggers `.github/workflows/refresh-data.yml`,
-which runs the orchestrator, commits the refreshed JSON, and serves the
-updated dashboard on the next page load. No secrets, no API keys — the GitHub
-connector already has write access.
+Pushing the workbook triggers `.github/workflows/refresh-data.yml`, which
+runs the parser, commits the refreshed JSON, and serves the updated dashboard
+on the next page load.
 
-### Shift → hours
+---
 
-Each row in `xpbi02 PersonnelRosterView` becomes hours for that worker/month:
-
-| Schedule Type | Hours credited |
-|---|---|
-| Day Shift   | 12 |
-| Night Shift | 12 |
-| RNR         | 0 (rest day on-swing; worker still counts as rostered) |
-| anything else | row is ignored |
-
-A row is also ignored if `IsOnLocation` is explicitly false, or if the
-`Client` column doesn't map to one of the four majors (aliases for
-"FMG", "Rio Tinto", "BHP WAIO", "Roy Hill", "Hancock" are recognised).
-
-### Seed fallback
-
-v1 uses a deterministic Python seed (`scripts/seed_workforce.py`) that
-produces:
+## Project layout
 
 ```
-data/workforce.json      # full dataset (all 420 workers)
-data/fortescue.json      # pre-filtered per client
-data/rio-tinto.json
-data/bhp.json
-data/roy-hill.json
+index.html                  # Utilisation page
+retention.html              # Retention page
+fatigue.html                # Fatigue & compliance page
+worker.html                 # Per-worker drill-down
+
+assets/
+  boot.js                   # Shared page bootstrap (filter state, hash sync, stale banner)
+  app.js                    # Utilisation page render orchestration
+  retention-app.js          # Retention page render orchestration
+  fatigue-app.js            # Fatigue page render orchestration
+  worker-app.js             # Worker detail page bootstrap
+
+  format.js                 # Shared formatters, slugs, colours, and threshold constants
+  kpi.js                    # KPI tile computation & rendering
+  retention-table.js        # Position × month matrix (summary + per-client)
+  position-flow.js          # Headcount / new / drops / churn table
+  at-risk.js                # At-risk dropoff list + CSV export
+  retention-cohort.js       # Cohort survival table
+  compliance.js             # 724 h rolling compliance table + discipline rollup
+  utilisation-chart.js      # Chart.js avg-hours trend line
+  churn-chart.js            # New starts vs drop-offs bar chart + churn rate line
+  styles.css                # SRG palette and all component styles
+
+scripts/
+  parse_macro_data.py       # Rapidcrews Macro Data.xlsx → workforce.json
+  seed_workforce.py         # Deterministic mock-data fallback
+  build_dashboard_data.py   # Orchestrator: parser if Excel present, else seed
+  test_parse_macro_data.py  # Parser unit tests
+  requirements.txt
+
+data/
+  raw/                      # Power Automate drops the Excel file here
+  workforce.json            # Full dataset (all workers, all months)
+  fortescue.json            # Pre-filtered per-client views
+  rio-tinto.json
+  bhp.json
+  roy-hill.json
+
+.github/workflows/
+  refresh-data.yml          # Regenerates JSON on push to data/raw/ or manual dispatch
 ```
 
-The `refresh-data.yml` GitHub Actions workflow regenerates these files on
-push and can be triggered manually. When a real data source (Rapidcrews,
-SharePoint, SAP etc.) is wired in later, it slots into the seed's place —
-the JSON schema becomes the stable contract.
+---
 
-### JSON shape
+## JSON schema
 
 ```jsonc
 {
   "generated_at": "2026-04-24",
   "current_month": "2026-04",
-  "reporting_months": ["2026-01", ..., "2026-07"],
+  "reporting_months": ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07"],
   "months_behind": 3,
   "months_ahead": 3,
-  "positions_top20": ["Boilermaker", ...],
+  "positions_top20": ["Scaffold Supervisor", "Boilermaker", ...],
   "clients": ["Fortescue", "Rio Tinto", "BHP", "Roy Hill/Hancock"],
   "workers": [
     {
       "id": "w-janesmith",
       "name": "Jane Smith",
       "position": "Boilermaker",
+      "discipline": "Mechanical",
       "primary_client": "Fortescue",
       "employment_start": "2024-06-01",
       "employment_end": null,
       "monthly": {
         "2026-01": { "client": "Fortescue", "hours": 168, "committed": false },
-        "2026-04": { "client": "BHP",       "hours": 160, "committed": false },
-        "2026-05": { "client": "BHP",       "hours":  32, "committed": true }
+        "2026-05": { "client": "BHP",       "hours":  96, "committed": true }
       }
     }
   ]
 }
 ```
 
-## Project layout
-
-```
-index.html                 # dashboard
-worker.html                # per-worker drill-down
-assets/
-  app.js                   # bootstrap, filter state, orchestration
-  kpi.js                   # 6 KPI tiles
-  retention-table.js       # position × month matrix (summary + per client)
-  position-flow.js         # headcount / new / drops / churn table
-  at-risk.js               # at-risk dropoff list + CSV export
-  utilisation-chart.js     # Chart.js line trend
-  churn-chart.js           # new starts vs drop-offs bar + churn-rate line
-  worker.js                # worker drill-down renderer
-  format.js                # shared formatters, slugs, colours
-  styles.css               # SRG palette and components
-scripts/
-  build_dashboard_data.py  # orchestrator: Excel parser or seed fallback
-  parse_macro_data.py      # Rapidcrews Macro Data.xlsx → workforce.json
-  seed_workforce.py        # deterministic mock-data generator
-  test_parse_macro_data.py # in-memory fixture + parser assertions
-  requirements.txt
-data/
-  raw/                     # Power Automate drops Rapidcrews Macro Data.xlsx here
-  workforce.json           # full dataset
-  fortescue.json | rio-tinto.json | bhp.json | roy-hill.json
-.github/workflows/
-  refresh-data.yml         # regenerate data on push / manual dispatch
-```
+Months with no hours for a worker are simply absent from `monthly`.
+Forward months have `committed: true`; past months have `committed: false`.
