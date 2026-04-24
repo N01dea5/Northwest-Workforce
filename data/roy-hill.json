@@ -21,18 +21,18 @@
     "Scaffolder - Intermediate",
     "Supervisor - Rope Access",
     "Supervisor - Scaffold",
-    "Electrician - Trade Assistant",
-    "Rope Access - Boilermaker / L3",
     "Scaffolder - Leading Hand",
+    "Rope Access - Boilermaker / L3",
+    "Electrician - Trade Assistant",
     "Supervisor - Electrical",
     "Rope Access - NDT",
     "Scaffolder - Basic",
     "Superintendent - Rope Access",
-    "Superintendent - Electrical",
     "Apprentice - Electrician",
+    "Superintendent - Electrical",
     "MLO",
-    "Site Administration",
-    "Superintendent - Scaffold"
+    "Rope Access - Mech Fitter",
+    "Site Administration"
   ],
   "clients": [
     "Fortescue",
@@ -72,7 +72,7 @@
         },
         "2026-05": {
           "client": "BHP",
-          "hours": 192,
+          "hours": 204,
           "committed": true
         },
         "2026-06": {
@@ -128,7 +128,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 348,
+          "hours": 186,
           "committed": true
         }
       }
@@ -164,17 +164,17 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 300,
           "committed": true
         },
         "2026-06": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 24,
           "committed": true
         },
         "2026-07": {
           "client": "Roy Hill/Hancock",
-          "hours": 180,
+          "hours": 324,
           "committed": true
         }
       }
@@ -205,22 +205,22 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 84,
+          "hours": 168,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 312,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 120,
+          "hours": 144,
           "committed": true
         },
         "2026-07": {
           "client": "Roy Hill/Hancock",
-          "hours": 312,
+          "hours": 348,
           "committed": true
         }
       }
@@ -255,8 +255,8 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 312,
           "committed": true
         },
         "2026-06": {
@@ -348,12 +348,12 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 348,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 12,
+          "hours": 156,
           "committed": true
         },
         "2026-07": {
@@ -394,17 +394,17 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 324,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 240,
           "committed": true
         },
         "2026-07": {
           "client": "Roy Hill/Hancock",
-          "hours": 180,
+          "hours": 324,
           "committed": true
         }
       }
@@ -435,17 +435,17 @@
         },
         "2026-04": {
           "client": "BHP",
-          "hours": 168,
+          "hours": 204,
           "committed": false
         },
         "2026-05": {
           "client": "BHP",
-          "hours": 216,
+          "hours": 186,
           "committed": true
         },
         "2026-06": {
           "client": "BHP",
-          "hours": 48,
+          "hours": 84,
           "committed": true
         },
         "2026-07": {
@@ -531,18 +531,18 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 156,
           "committed": true
         },
         "2026-06": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 24,
           "committed": true
         },
         "2026-07": {
-          "client": null,
-          "hours": 0,
+          "client": "Roy Hill/Hancock",
+          "hours": 324,
           "committed": true
         }
       }
@@ -578,12 +578,12 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 324,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 252,
           "committed": true
         },
         "2026-07": {
@@ -1038,7 +1038,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 72,
+          "hours": 216,
           "committed": true
         },
         "2026-06": {
@@ -1084,7 +1084,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 324,
           "committed": true
         },
         "2026-06": {
@@ -1232,7 +1232,7 @@
         },
         "2026-07": {
           "client": "Roy Hill/Hancock",
-          "hours": 312,
+          "hours": 186,
           "committed": true
         }
       }
@@ -1273,7 +1273,7 @@
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 24,
+          "hours": 156,
           "committed": true
         },
         "2026-07": {
@@ -1355,22 +1355,22 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 252,
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 216,
           "committed": true
         },
         "2026-06": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 12,
           "committed": true
         },
         "2026-07": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 192,
           "committed": true
         }
       }
@@ -1380,8 +1380,8 @@
       "name": "Kevin Moore \u2b50",
       "position": "Rope Access - Boilermaker",
       "discipline": "Rope Access",
-      "primary_client": "Roy Hill/Hancock",
-      "employment_start": "2026-06-30",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-05-22",
       "employment_end": null,
       "monthly": {
         "2026-01": {
@@ -1405,13 +1405,13 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 120,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 12,
+          "hours": 96,
           "committed": true
         },
         "2026-07": {
@@ -1447,12 +1447,12 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 84,
+          "hours": 168,
           "committed": false
         },
         "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 180,
+          "client": "Fortescue",
+          "hours": 216,
           "committed": true
         },
         "2026-06": {
@@ -1498,7 +1498,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 312,
           "committed": true
         },
         "2026-06": {
@@ -1544,7 +1544,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 240,
           "committed": true
         },
         "2026-06": {
@@ -1682,7 +1682,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 324,
           "committed": true
         },
         "2026-06": {
@@ -1723,12 +1723,12 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 228,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 240,
           "committed": true
         },
         "2026-06": {
@@ -1737,8 +1737,8 @@
           "committed": true
         },
         "2026-07": {
-          "client": "Roy Hill/Hancock",
-          "hours": 312,
+          "client": "Fortescue",
+          "hours": 186,
           "committed": true
         }
       }
@@ -1774,12 +1774,12 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 276,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 168,
           "committed": true
         },
         "2026-07": {
@@ -1814,13 +1814,13 @@
           "committed": false
         },
         "2026-04": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 12,
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 156,
           "committed": true
         },
         "2026-06": {
@@ -1860,8 +1860,8 @@
           "committed": false
         },
         "2026-04": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 12,
           "committed": false
         },
         "2026-05": {
@@ -1871,7 +1871,7 @@
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 36,
+          "hours": 276,
           "committed": true
         },
         "2026-07": {
@@ -1963,12 +1963,12 @@
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 276,
+          "hours": 348,
           "committed": true
         },
         "2026-07": {
-          "client": "Roy Hill/Hancock",
-          "hours": 312,
+          "client": "Fortescue",
+          "hours": 186,
           "committed": true
         }
       }
@@ -2050,17 +2050,17 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 312,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 108,
+          "hours": 132,
           "committed": true
         },
         "2026-07": {
           "client": "Roy Hill/Hancock",
-          "hours": 180,
+          "hours": 324,
           "committed": true
         }
       }
@@ -2096,12 +2096,12 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 312,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 120,
+          "hours": 144,
           "committed": true
         },
         "2026-07": {
@@ -2162,7 +2162,7 @@
       "name": "Steven HAWKES",
       "position": "Rope Access - Boilermaker",
       "discipline": "Rope Access",
-      "primary_client": "Roy Hill/Hancock",
+      "primary_client": "Fortescue",
       "employment_start": "2026-03-17",
       "employment_end": null,
       "monthly": {
@@ -2182,13 +2182,13 @@
           "committed": false
         },
         "2026-04": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 84,
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 84,
           "committed": true
         },
         "2026-06": {
@@ -2326,7 +2326,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 72,
+          "hours": 228,
           "committed": true
         },
         "2026-06": {

@@ -21,18 +21,18 @@
     "Scaffolder - Intermediate",
     "Supervisor - Rope Access",
     "Supervisor - Scaffold",
-    "Electrician - Trade Assistant",
-    "Rope Access - Boilermaker / L3",
     "Scaffolder - Leading Hand",
+    "Rope Access - Boilermaker / L3",
+    "Electrician - Trade Assistant",
     "Supervisor - Electrical",
     "Rope Access - NDT",
     "Scaffolder - Basic",
     "Superintendent - Rope Access",
-    "Superintendent - Electrical",
     "Apprentice - Electrician",
+    "Superintendent - Electrical",
     "MLO",
-    "Site Administration",
-    "Superintendent - Scaffold"
+    "Rope Access - Mech Fitter",
+    "Site Administration"
   ],
   "clients": [
     "Fortescue",
@@ -118,7 +118,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 288,
           "committed": true
         },
         "2026-06": {
@@ -164,63 +164,17 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 156,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 108,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 348,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-baolacleondu",
-      "name": "Bao-Lac (Leon) DU",
-      "position": "Rope Access - Boilermaker",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2025-01-30",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 204,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 228,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
           "hours": 324,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Fortescue",
-          "hours": 216,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 120,
+          "hours": 264,
           "committed": true
         },
         "2026-07": {
-          "client": "Rio Tinto",
-          "hours": 180,
+          "client": "Fortescue",
+          "hours": 186,
           "committed": true
         }
       }
@@ -230,7 +184,7 @@
       "name": "Benjamin HERMAN",
       "position": "Rope Access - Level 3",
       "discipline": "Rope Access",
-      "primary_client": "Rio Tinto",
+      "primary_client": "Fortescue",
       "employment_start": "2026-03-23",
       "employment_end": null,
       "monthly": {
@@ -255,8 +209,8 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 156,
           "committed": true
         },
         "2026-06": {
@@ -276,7 +230,7 @@
       "name": "Billy CONNOR",
       "position": "Rope Access - Level 3",
       "discipline": "Rope Access",
-      "primary_client": "Rio Tinto",
+      "primary_client": "Fortescue",
       "employment_start": "2025-01-13",
       "employment_end": null,
       "monthly": {
@@ -301,18 +255,18 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 348,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 108,
+          "hours": 168,
           "committed": true
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 276,
           "committed": true
         }
       }
@@ -364,98 +318,6 @@
       }
     },
     {
-      "id": "w-brockatkins",
-      "name": "Brock ATKINS",
-      "position": "Rope Access - Boilermaker",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2023-04-21",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": "Fortescue",
-          "hours": 192,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 204,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 192,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 204,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 96,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 120,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 108,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-coreyfooter",
-      "name": "Corey FOOTER \ud83d\udea9",
-      "position": "Rope Access - Rigger",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2025-01-09",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 132,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 72,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 156,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 132,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 144,
-          "committed": true
-        }
-      }
-    },
-    {
       "id": "w-danielrazzino",
       "name": "Daniel RAZZINO",
       "position": "Rope Access - Level 3",
@@ -485,8 +347,8 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 264,
           "committed": true
         },
         "2026-06": {
@@ -594,52 +456,6 @@
       }
     },
     {
-      "id": "w-erwantipaka",
-      "name": "Erwan TIPAKA",
-      "position": "Rope Access - Rigger",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2025-04-14",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": "Fortescue",
-          "hours": 156,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 12,
-          "committed": false
-        },
-        "2026-03": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-04": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 156,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 36,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 300,
-          "committed": true
-        }
-      }
-    },
-    {
       "id": "w-felipenunes",
       "name": "Felipe NUNES",
       "position": "Rope Access - Level 3",
@@ -669,8 +485,54 @@
           "committed": false
         },
         "2026-05": {
+          "client": "Fortescue",
+          "hours": 252,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 96,
+          "committed": true
+        },
+        "2026-07": {
           "client": "Rio Tinto",
-          "hours": 156,
+          "hours": 180,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-fredericweder",
+      "name": "Frederic WEDER",
+      "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
+      "primary_client": "Fortescue",
+      "employment_start": "2024-12-06",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 48,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 336,
           "committed": true
         },
         "2026-06": {
@@ -690,7 +552,7 @@
       "name": "Giovanni GARBOLINO \ud83d\udea9",
       "position": "Rope Access - Boilermaker",
       "discipline": "Rope Access",
-      "primary_client": "Fortescue",
+      "primary_client": "Rio Tinto",
       "employment_start": "2026-02-04",
       "employment_end": null,
       "monthly": {
@@ -725,8 +587,8 @@
           "committed": true
         },
         "2026-07": {
-          "client": null,
-          "hours": 0,
+          "client": "Rio Tinto",
+          "hours": 180,
           "committed": true
         }
       }
@@ -778,52 +640,6 @@
       }
     },
     {
-      "id": "w-harrisoncusack",
-      "name": "Harrison CUSACK",
-      "position": "Rope Access - Level 3",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2026-03-17",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 60,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 24,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 84,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 36,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 144,
-          "committed": true
-        }
-      }
-    },
-    {
       "id": "w-hichamkettab",
       "name": "Hicham KETTAB",
       "position": "Rope Access - Boilermaker",
@@ -854,7 +670,7 @@
         },
         "2026-05": {
           "client": "Rio Tinto",
-          "hours": 156,
+          "hours": 180,
           "committed": true
         },
         "2026-06": {
@@ -874,7 +690,7 @@
       "name": "Hippolyte Levasseur \u2b50 \ud83d\udea9",
       "position": "Rope Access - Boilermaker",
       "discipline": "Rope Access",
-      "primary_client": "Rio Tinto",
+      "primary_client": "Fortescue",
       "employment_start": "2026-04-20",
       "employment_end": null,
       "monthly": {
@@ -900,7 +716,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 324,
           "committed": true
         },
         "2026-06": {
@@ -911,52 +727,6 @@
         "2026-07": {
           "client": "Rio Tinto",
           "hours": 180,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-jacksonbrunton",
-      "name": "Jackson BRUNTON",
-      "position": "Rope Access - Boilermaker",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2024-06-04",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": "Fortescue",
-          "hours": 156,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 180,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 228,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 228,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 72,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 240,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 120,
           "committed": true
         }
       }
@@ -967,7 +737,7 @@
       "position": "Rope Access - Mech Fitter",
       "discipline": "Rope Access",
       "primary_client": "Rio Tinto",
-      "employment_start": "2026-07-09",
+      "employment_start": "2026-05-04",
       "employment_end": null,
       "monthly": {
         "2026-01": {
@@ -991,8 +761,8 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 108,
           "committed": true
         },
         "2026-06": {
@@ -1003,6 +773,52 @@
         "2026-07": {
           "client": "Rio Tinto",
           "hours": 180,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jasonread",
+      "name": "Jason READ \ud83d\udea9",
+      "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
+      "primary_client": "Fortescue",
+      "employment_start": "2021-01-19",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 48,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 120,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 24,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 84,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
           "committed": true
         }
       }
@@ -1037,8 +853,8 @@
           "committed": false
         },
         "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 168,
+          "client": "Fortescue",
+          "hours": 228,
           "committed": true
         },
         "2026-06": {
@@ -1049,6 +865,98 @@
         "2026-07": {
           "client": "Fortescue",
           "hours": 144,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-joshuawickers",
+      "name": "Joshua WICKERS",
+      "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-10-28",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 300,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 180,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-junheejo",
+      "name": "Junhee JO",
+      "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-07-17",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 168,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 180,
           "committed": true
         }
       }
@@ -1146,6 +1054,52 @@
       }
     },
     {
+      "id": "w-kylejohnson",
+      "name": "Kyle JOHNSON",
+      "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-02-26",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 48,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 84,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 180,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 180,
+          "committed": true
+        }
+      }
+    },
+    {
       "id": "w-kylianmeynelly",
       "name": "Kylian MEYNELLY",
       "position": "Rope Access - Boilermaker",
@@ -1176,74 +1130,74 @@
         },
         "2026-05": {
           "client": "Rio Tinto",
-          "hours": 72,
+          "hours": 156,
           "committed": true
         },
         "2026-06": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 12,
           "committed": true
         },
         "2026-07": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 276,
           "committed": true
         }
       }
     },
     {
-      "id": "w-lochlanamos",
-      "name": "Lochlan AMOS",
-      "position": "Rope Access - Boilermaker",
+      "id": "w-lewisfreeman",
+      "name": "Lewis FREEMAN",
+      "position": "Rope Access - Level 3",
       "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2023-10-26",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-11-18",
       "employment_end": null,
       "monthly": {
         "2026-01": {
-          "client": "Fortescue",
-          "hours": 216,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-02": {
-          "client": "Fortescue",
-          "hours": 228,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 192,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
-          "client": "Fortescue",
-          "hours": 156,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-05": {
           "client": "Rio Tinto",
-          "hours": 204,
+          "hours": 84,
           "committed": true
         },
         "2026-06": {
-          "client": "Fortescue",
-          "hours": 108,
+          "client": null,
+          "hours": 0,
           "committed": true
         },
         "2026-07": {
-          "client": "Fortescue",
-          "hours": 204,
+          "client": "Rio Tinto",
+          "hours": 180,
           "committed": true
         }
       }
     },
     {
-      "id": "w-lukecowley",
-      "name": "Luke COWLEY",
-      "position": "Rope Access - Boilermaker",
+      "id": "w-michaelmikeroc",
+      "name": "Michael (Mike) ROCKS",
+      "position": "Rope Access - Boilermaker / L3",
       "discipline": "Rope Access",
       "primary_client": "Fortescue",
-      "employment_start": "2026-01-13",
+      "employment_start": "2021-02-09",
       "employment_end": null,
       "monthly": {
         "2026-01": {
@@ -1252,79 +1206,33 @@
           "committed": false
         },
         "2026-02": {
-          "client": "Fortescue",
-          "hours": 36,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 252,
-          "committed": false
-        },
-        "2026-04": {
           "client": "Fortescue",
           "hours": 84,
           "committed": false
         },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 180,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 120,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Roy Hill/Hancock",
-          "hours": 312,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-michaeljobson",
-      "name": "Michael JOBSON",
-      "position": "Rope Access - Level 3",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2025-12-11",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 204,
-          "committed": false
-        },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 348,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 96,
+          "hours": 24,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 228,
           "committed": true
         },
         "2026-06": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 144,
           "committed": true
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 240,
+          "hours": 276,
           "committed": true
         }
       }
@@ -1355,17 +1263,17 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 192,
           "committed": false
         },
         "2026-05": {
           "client": "Rio Tinto",
-          "hours": 96,
+          "hours": 216,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 36,
+          "hours": 132,
           "committed": true
         },
         "2026-07": {
@@ -1405,8 +1313,8 @@
           "committed": false
         },
         "2026-05": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 264,
           "committed": true
         },
         "2026-06": {
@@ -1549,7 +1457,7 @@
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 288,
           "committed": true
         },
         "2026-07": {
@@ -1601,6 +1509,52 @@
         "2026-07": {
           "client": "Fortescue",
           "hours": 186,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-seanhowells",
+      "name": "Sean Howells \u2b50",
+      "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-07-09",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 276,
           "committed": true
         }
       }
@@ -1692,7 +1646,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 288,
           "committed": true
         }
       }
@@ -1744,98 +1698,6 @@
       }
     },
     {
-      "id": "w-terencevaz",
-      "name": "Terence VAZ",
-      "position": "Rope Access - Boilermaker",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2020-12-15",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": "Fortescue",
-          "hours": 120,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 24,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 60,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 24,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 72,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 12,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 192,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-thomasleggatt",
-      "name": "Thomas LEGGATT",
-      "position": "Rope Access - Rigger",
-      "discipline": "Rope Access",
-      "primary_client": "Fortescue",
-      "employment_start": "2026-02-16",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 48,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 108,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 156,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Rio Tinto",
-          "hours": 72,
-          "committed": true
-        },
-        "2026-06": {
-          "client": "Fortescue",
-          "hours": 36,
-          "committed": true
-        },
-        "2026-07": {
-          "client": "Fortescue",
-          "hours": 228,
-          "committed": true
-        }
-      }
-    },
-    {
       "id": "w-thomaswright",
       "name": "Thomas WRIGHT",
       "position": "Rope Access - Rigger",
@@ -1866,17 +1728,63 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 360,
           "committed": true
         },
         "2026-06": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 144,
           "committed": true
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 216,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-torincavanagh",
+      "name": "Torin CAVANAGH",
+      "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
+      "primary_client": "Fortescue",
+      "employment_start": "2021-03-23",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 96,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 84,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 12,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 192,
           "committed": true
         }
       }
@@ -1916,13 +1824,13 @@
           "committed": true
         },
         "2026-06": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 276,
           "committed": true
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 216,
           "committed": true
         }
       }
