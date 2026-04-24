@@ -15,8 +15,8 @@
   "positions_top20": [
     "Rope Access - Boilermaker",
     "Electrician",
-    "Rope Access - Level 3",
     "Scaffolder - Advanced",
+    "Rope Access - Level 3",
     "Rope Access - Rigger",
     "Scaffolder - Intermediate",
     "Supervisor - Rope Access",
@@ -28,11 +28,11 @@
     "Superintendent - Rope Access",
     "Superintendent - Electrical",
     "Rope Access - NDT",
+    "Superintendent - Scaffold",
     "MLO",
     "Scaffolder - Basic",
-    "Superintendent - Scaffold",
-    "Apprentice - Electrician",
-    "Trade Assistant"
+    "Trade Assistant",
+    "Apprentice - Electrician"
   ],
   "clients": [
     "Fortescue",
@@ -60,8 +60,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -150,8 +150,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -240,8 +240,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -285,8 +285,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -330,8 +330,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 12,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -375,8 +375,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -420,8 +420,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -510,8 +510,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -600,8 +600,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 6,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -612,51 +612,6 @@
         "2026-05": {
           "client": null,
           "hours": 0,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-davidhenry",
-      "name": "David HENRY",
-      "position": "Scaffolder - Advanced",
-      "primary_client": "Fortescue",
-      "employment_start": "2026-03-17",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "BHP",
-          "hours": 42,
-          "committed": false
-        },
-        "2026-04": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Fortescue",
-          "hours": 264,
           "committed": true
         },
         "2026-06": {
@@ -690,8 +645,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -735,8 +690,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -780,8 +735,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -825,8 +780,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -852,51 +807,6 @@
       }
     },
     {
-      "id": "w-hechamelmediou",
-      "name": "Hecham EL MEDIOUNI",
-      "position": "Scaffolder - Intermediate",
-      "primary_client": "Fortescue",
-      "employment_start": "2026-03-30",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "BHP",
-          "hours": 6,
-          "committed": false
-        },
-        "2026-04": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Fortescue",
-          "hours": 168,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
       "id": "w-herewinibarlow",
       "name": "Herewini BARLOW",
       "position": "Scaffolder - Intermediate",
@@ -915,8 +825,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -960,8 +870,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1005,8 +915,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 12,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1095,8 +1005,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1185,8 +1095,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1230,8 +1140,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1320,8 +1230,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 6,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1410,8 +1320,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1455,8 +1365,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 30,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1500,8 +1410,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1545,8 +1455,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "BHP",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1590,8 +1500,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 24,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1680,8 +1590,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 12,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1797,51 +1707,6 @@
       }
     },
     {
-      "id": "w-taureankereopa",
-      "name": "Taurean KEREOPA",
-      "position": "Scaffolder - Intermediate",
-      "primary_client": "Fortescue",
-      "employment_start": "2026-01-23",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": "Fortescue",
-          "hours": 60,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 120,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "BHP",
-          "hours": 42,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 108,
-          "committed": false
-        },
-        "2026-05": {
-          "client": "Fortescue",
-          "hours": 252,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
       "id": "w-thomasdavies",
       "name": "Thomas DAVIES",
       "position": "Supervisor - Scaffold",
@@ -1860,8 +1725,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 30,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -1872,96 +1737,6 @@
         "2026-05": {
           "client": "Fortescue",
           "hours": 264,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-thomaswilliams",
-      "name": "Thomas WILLIAMS",
-      "position": "Scaffolder - Advanced",
-      "primary_client": "BHP",
-      "employment_start": "2026-02-23",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "BHP",
-          "hours": 42,
-          "committed": false
-        },
-        "2026-04": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-05": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-tompaternoga",
-      "name": "Tom PATERNOGA \ud83d\udea9",
-      "position": "Scaffolder - Intermediate",
-      "primary_client": "BHP",
-      "employment_start": "2025-07-02",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "BHP",
-          "hours": 12,
-          "committed": false
-        },
-        "2026-04": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-05": {
-          "client": null,
-          "hours": 0,
           "committed": true
         },
         "2026-06": {
@@ -1995,8 +1770,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 12,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
@@ -2040,8 +1815,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Roy Hill/Hancock",
-          "hours": 42,
+          "client": null,
+          "hours": 0,
           "committed": false
         },
         "2026-04": {
