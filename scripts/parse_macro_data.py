@@ -169,6 +169,14 @@ class RosterRow:
 
 
 @dataclass
+class CalendarEntry:
+    personnel_id: str
+    start: date
+    end: date
+    client: str
+
+
+@dataclass
 class WorkerMaster:
     personnel_id: str
     name: str
@@ -187,7 +195,50 @@ def _read_headers(ws) -> tuple[list[str], Iterable]:
     return headers, it
 
 
-def read_roster(wb) -> list[RosterRow]:
+def read_client_lookup(wb) -> dict[str, str]:
+    """Build {client_id_guid: canonical_client_name} from xpbi02 ClientView.
+
+    The PersonnelRosterView stores ClientId (GUID) in its Client column for
+    historical rows.  We join via this lookup so alias matching works on the
+    text name regardless of whether the roster cell holds a GUID or a name.
+    """
+    sheet = "xpbi02 ClientView"
+    if sheet not in wb.sheetnames:
+        return {}
+    ws = wb[sheet]
+    headers, it = _read_headers(ws)
+    i_id   = _pick_header(headers, "ClientId", "Client Id", "Client ID", "Id")
+    i_name = _pick_header(headers, "ClientName", "Client Name", "Name")
+    if i_id is None or i_name is None:
+        return {}
+    lookup: dict[str, str] = {}
+    for row in it:
+        if row is None:
+            continue
+        cid  = _norm_text(row[i_id]).lower()
+        name = _norm_text(row[i_name])
+        if cid and name:
+            lookup[cid] = name
+    return lookup
+
+
+def _resolve_client(raw, client_lookup: dict[str, str]) -> str | None:
+    """Classify a Client cell that may be a text name or a GUID."""
+    text = _norm_text(raw)
+    # Try direct alias match first (text name in cell).
+    result = _classify_client(text)
+    if result:
+        return result
+    # Fall back: treat cell value as a ClientId GUID and look up the name.
+    resolved_name = client_lookup.get(text.lower())
+    if resolved_name:
+        return _classify_client(resolved_name)
+    return None
+
+
+def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterRow]:
+    if client_lookup is None:
+        client_lookup = {}
     if "xpbi02 PersonnelRosterView" not in wb.sheetnames:
         raise ValueError(
             "Workbook missing sheet 'xpbi02 PersonnelRosterView' — "
@@ -195,18 +246,41 @@ def read_roster(wb) -> list[RosterRow]:
         )
     ws = wb["xpbi02 PersonnelRosterView"]
     headers, it = _read_headers(ws)
-    i_pid = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
-    i_dt = _pick_header(headers, "Schedule Date", "ScheduleDate", "Date")
-    i_type = _pick_header(headers, "Schedule Type", "ScheduleType", "Shift Type")
-    i_client = _pick_header(headers, "Client", "Company")
-    i_job = _pick_header(headers, "Job No", "JobNo", "Job Number")
-    i_on = _pick_header(headers, "IsOnLocation", "Is On Location", "On Location", "OnSite")
+    i_pid    = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
+    i_dt     = _pick_header(headers, "Schedule Date", "ScheduleDate", "Date")
+    i_type   = _pick_header(headers, "Schedule Type", "ScheduleType", "Shift Type")
+    i_job    = _pick_header(headers, "Job No", "JobNo", "Job Number")
+    i_on     = _pick_header(headers, "IsOnLocation", "Is On Location", "On Location", "OnSite")
+    # Locate both the text-name column and the GUID column independently so we
+    # can try both when one is blank — historical rows often carry the GUID only.
+    i_client_name = _pick_header(headers, "Client Name", "ClientName")
+    i_client_id   = _pick_header(headers, "ClientId", "Client Id", "Client ID")
+    # Fallback: a plain "Client" column that might hold either text or a GUID.
+    i_client_any  = _pick_header(headers, "Client", "Company")
 
-    if None in (i_pid, i_dt, i_type, i_client):
+    if None in (i_pid, i_dt, i_type):
         raise ValueError(
             "RosterView is missing one of Personnel Id / Schedule Date / "
-            f"Schedule Type / Client. Headers: {headers!r}"
+            f"Schedule Type. Headers: {headers!r}"
         )
+    if i_client_name is None and i_client_id is None and i_client_any is None:
+        raise ValueError(f"RosterView has no recognisable Client column. Headers: {headers!r}")
+
+    def _client_from_row(row) -> str | None:
+        # Try dedicated text-name column first.
+        if i_client_name is not None:
+            result = _resolve_client(row[i_client_name], client_lookup)
+            if result:
+                return result
+        # Try dedicated GUID column.
+        if i_client_id is not None:
+            result = _resolve_client(row[i_client_id], client_lookup)
+            if result:
+                return result
+        # Fall back to the generic "Client" column (may be text or GUID).
+        if i_client_any is not None:
+            return _resolve_client(row[i_client_any], client_lookup)
+        return None
 
     out: list[RosterRow] = []
     for row in it:
@@ -225,7 +299,7 @@ def read_roster(wb) -> list[RosterRow]:
         # missing we trust the on-site schedule type.
         if i_on is not None and row[i_on] is not None and not _truthy(row[i_on]):
             continue
-        client = _classify_client(row[i_client])
+        client = _client_from_row(row)
         if client is None:
             continue  # not one of the four NW majors
         job_no = _norm_text(row[i_job]) if i_job is not None else None
@@ -383,6 +457,93 @@ def worker_payload(
     }
 
 
+def read_calendar_view(wb, client_lookup: dict[str, str]) -> list[CalendarEntry]:
+    """DEPRECATED: PersonnelCalendarView is an unavailability calendar
+    (Medical / Training / Accom / Travel), not a work assignment log.
+    Retained as a no-op for backward compatibility; real historical
+    work data now comes from xpbipr DailyEmployeeSchedule.
+    """
+    return []
+
+
+def read_daily_employee_schedule(wb, client_lookup: dict[str, str]) -> list[RosterRow]:
+    """Read xpbipr DailyEmployeeSchedule — daily roster rows for all jobs
+    including closed shutdowns.
+
+    PersonnelRosterView is filtered to active jobs only, so historical rows
+    for workers on completed shutdowns disappear there.  DailyEmployeeSchedule
+    is the long-tail view that keeps them.
+
+    Columns used: EmployeeId, ReportDate, Status, OnSite, Client / ClientId,
+    EmployeeActive.  Schedule Type is absent so we credit 12 h per on-site day.
+    """
+    sheet_name = None
+    for candidate in (
+        "ACTIVE_SHUTDOWNS",
+        "ACTIVE_SHUTDOWN",
+        "xpbipr DailyEmployeeSchedule",
+        "xpbi0r DailyEmployeeSchedule",
+        "xpbi02 DailyEmployeeSchedule",
+        "DailyEmployeeSchedule",
+    ):
+        if candidate in wb.sheetnames:
+            sheet_name = candidate
+            break
+    if sheet_name is None:
+        return []
+
+    ws = wb[sheet_name]
+    headers, it = _read_headers(ws)
+
+    i_pid    = _pick_header(headers, "EmployeeId", "Employee Id", "Personnel Id", "PersonnelId")
+    i_dt     = _pick_header(headers, "ReportDate", "Report Date", "Date", "Schedule Date")
+    i_status = _pick_header(headers, "Status")
+    i_onsite = _pick_header(headers, "OnSite", "On Site", "IsOnLocation")
+    i_cname  = _pick_header(headers, "Client Name", "ClientName", "Client", "Company")
+    i_cid    = _pick_header(headers, "ClientId", "Client Id", "Client ID")
+    i_active = _pick_header(headers, "EmployeeActive", "Employee Active")
+
+    if i_pid is None or i_dt is None:
+        return []
+
+    out: list[RosterRow] = []
+    for row in it:
+        if row is None:
+            continue
+        pid = _norm_text(row[i_pid])
+        if not pid:
+            continue
+        d = _coerce_date(row[i_dt])
+        if d is None:
+            continue
+        if i_status is not None:
+            status = _norm_text(row[i_status]).lower()
+            if status == "rejected":
+                continue
+        if i_active is not None and row[i_active] is not None and not _truthy(row[i_active]):
+            continue
+        if i_onsite is not None and row[i_onsite] is not None and not _truthy(row[i_onsite]):
+            continue
+
+        client = None
+        for ci in (i_cname, i_cid):
+            if ci is not None:
+                client = _resolve_client(row[ci], client_lookup)
+                if client:
+                    break
+        if client is None:
+            continue
+
+        out.append(RosterRow(
+            personnel_id=pid,
+            schedule_date=d,
+            schedule_type="Day Shift",
+            client=client,
+            job_no=None,
+        ))
+    return out
+
+
 def dedupe_ids(workers: list[dict]) -> list[dict]:
     seen: set[str] = set()
     for w in workers:
@@ -399,10 +560,21 @@ def dedupe_ids(workers: list[dict]) -> list[dict]:
 
 def build_payload(excel_path: Path, current_month: date) -> dict:
     wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
-    roster = read_roster(wb)
+    client_lookup = read_client_lookup(wb)
+    # PersonnelRosterView: active jobs only, but carries Schedule Type
+    # detail (Day Shift / Night Shift / RNR) so gives accurate hours.
+    roster = read_roster(wb, client_lookup)
+    # DailyEmployeeSchedule: long-tail view including closed shutdowns.
+    # Fills historical gaps the RosterView leaves behind.
+    daily_extra = read_daily_employee_schedule(wb, client_lookup)
+    # Dedupe: prefer roster rows for any (worker, date, client) key.
+    seen = {(r.personnel_id, r.schedule_date, r.client) for r in roster}
+    extra = [r for r in daily_extra if (r.personnel_id, r.schedule_date, r.client) not in seen]
+    all_rows = roster + extra
+
     personnel = read_personnel(wb)
     months = build_months(current_month)
-    aggs = aggregate(roster, personnel, months, current_month)
+    aggs = aggregate(all_rows, personnel, months, current_month)
 
     top_positions = pick_top_positions(aggs)
     # If the workbook lacks enough roles, pad with an empty placeholder so
