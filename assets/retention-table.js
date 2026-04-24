@@ -9,6 +9,34 @@
     return map;
   }
 
+  // Aggregate stats across a set of positions (discipline subtotal).
+  function discCellStats(workers, positions, month, monthPrev) {
+    const posSet = new Set(positions);
+    const inThis = new Set();
+    let hrsSum = 0;
+    workers.forEach((w) => {
+      if (!posSet.has(w.position)) return;
+      const mm = w.monthly[month];
+      if (mm && (mm.hours || 0) > 0) { inThis.add(w.id); hrsSum += mm.hours; }
+    });
+    const hc = inThis.size;
+    const avg = hc ? hrsSum / hc : 0;
+    let retention = null;
+    if (monthPrev) {
+      const inPrev = new Set();
+      workers.forEach((w) => {
+        if (!posSet.has(w.position)) return;
+        if ((w.monthly[monthPrev]?.hours || 0) > 0) inPrev.add(w.id);
+      });
+      if (inPrev.size) {
+        let intersect = 0;
+        inPrev.forEach((id) => { if (inThis.has(id)) intersect++; });
+        retention = intersect / inPrev.size;
+      }
+    }
+    return { hc, avg, retention };
+  }
+
   // For each (position, client-filter, month): compute headcount,
   // avg hours, and retention % from prior month.
   function cellStats(workers, position, month, monthPrev) {
@@ -127,6 +155,31 @@
         tr.innerHTML = cells.join("");
         tbody.appendChild(tr);
       });
+
+      // Discipline subtotal row
+      if (groupPositions[disc].length > 1) {
+        const subTr = document.createElement("tr");
+        subTr.className = "disc-subtotal";
+        const subCells = [`<td class="subtotal-label">${disc} total</td>`];
+        months.forEach((m, i) => {
+          const mPrev = i > 0 ? months[i - 1] : null;
+          const { hc, avg, retention } = discCellStats(effectiveWorkers, groupPositions[disc], m, mPrev);
+          const clsBits = ["ret-cell"];
+          if (i > curIdx) clsBits.push("future");
+          if (i === curIdx) clsBits.push("current");
+          if (i === curIdx + 1) clsBits.push("div-future");
+          clsBits.push(NW.retentionClass(retention));
+          const retTxt = retention == null ? "" : ` · ret ${NW.fmtPct(retention)}`;
+          subCells.push(
+            `<td class="${clsBits.join(" ")}" title="${disc} total · ${hc} workers · avg ${NW.fmtHours(avg)}${retTxt}">
+              <div class="hc">${hc || "·"}</div>
+              <div class="hrs">${hc ? NW.fmtInt(avg) + "h" : ""}</div>
+            </td>`
+          );
+        });
+        subTr.innerHTML = subCells.join("");
+        tbody.appendChild(subTr);
+      }
     });
   }
 

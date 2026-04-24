@@ -103,27 +103,10 @@ a:hover { color: var(--srg-red-dark); text-decoration: underline; }
   align-items: flex-end;
   gap: 10px;
 }
-.site-header .srg-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  line-height: 1;
-  gap: 1px;
-}
-.site-header .logo-srg {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--srg-red);
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-.site-header .logo-global {
-  font-size: 9px;
-  font-weight: 700;
-  color: var(--srg-dark);
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  margin-right: -0.32em; /* optical: cancel trailing letter-spacing */
+.site-header .srg-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 .site-header .meta {
   display: flex;
@@ -345,6 +328,18 @@ section.card > .body { padding: 18px 20px 20px; }
   padding: 6px 10px 5px;
   border-top: 1px solid var(--srg-border);
 }
+.tbl tr.disc-subtotal { background: var(--srg-light); border-top: 1px solid var(--srg-border); }
+.tbl tr.disc-subtotal td { border-top: 1px solid var(--srg-border); font-style: normal; }
+.tbl tr.disc-subtotal td.subtotal-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--srg-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-left: 10px;
+}
+.tbl tr.disc-subtotal .hc { font-weight: 700; color: var(--srg-dark); }
+.tbl tr.disc-subtotal .hrs { color: var(--srg-grey-2); }
 .tbl td.pos-indent { padding-left: 22px; }
 .tbl td.worker-name { font-weight: 600; }
 .tbl td.worker-name a { color: var(--srg-dark); }
