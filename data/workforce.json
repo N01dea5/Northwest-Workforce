@@ -291,7 +291,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 48,
+          "hours": 24,
           "committed": false
         },
         "2026-05": {
@@ -1196,7 +1196,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 288,
           "committed": true
         },
         "2026-06": {
@@ -2428,7 +2428,7 @@
     },
     {
       "id": "w-bentomkins",
-      "name": "Ben TOMKINS \ud83d\udea9",
+      "name": "Ben TOMKINS",
       "position": "Rope Access - Level 3",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
@@ -4076,7 +4076,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 120,
           "committed": true
         },
         "2026-06": {
@@ -4761,7 +4761,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 360,
           "committed": true
         }
       }
@@ -6028,7 +6028,7 @@
     },
     {
       "id": "w-davidnietoroge",
-      "name": "David NIETO ROGER \ud83d\udea9",
+      "name": "David NIETO ROGER",
       "position": "Rope Access - Boilermaker",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-04",
@@ -6101,7 +6101,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 336,
+          "hours": 228,
           "committed": true
         },
         "2026-06": {
@@ -6703,7 +6703,7 @@
     },
     {
       "id": "w-dylanthomas",
-      "name": "Dylan THOMAS \u274c",
+      "name": "Dylan THOMAS",
       "position": "Supervisor - Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-13",
@@ -7957,6 +7957,51 @@
         "2026-07": {
           "client": "Fortescue",
           "hours": 180,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-guidoflores",
+      "name": "Guido Flores \u2b50",
+      "position": "Rope Access - Boilermaker",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-05-03",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 144,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
           "committed": true
         }
       }
@@ -13306,12 +13351,12 @@
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 108,
+          "hours": 132,
           "committed": true
         },
         "2026-07": {
-          "client": null,
-          "hours": 0,
+          "client": "Fortescue",
+          "hours": 144,
           "committed": true
         }
       }
@@ -13976,7 +14021,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 60,
+          "hours": 240,
           "committed": true
         },
         "2026-06": {
@@ -17486,12 +17531,12 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 180,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 192,
+          "hours": 12,
           "committed": true
         },
         "2026-07": {
@@ -18566,7 +18611,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 360,
+          "hours": 264,
           "committed": true
         },
         "2026-06": {
@@ -19826,12 +19871,12 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 84,
+          "hours": 132,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 228,
           "committed": true
         },
         "2026-07": {
@@ -22341,7 +22386,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 108,
+          "hours": 120,
           "committed": false
         },
         "2026-05": {

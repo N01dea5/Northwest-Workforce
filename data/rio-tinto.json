@@ -396,7 +396,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 360,
           "committed": true
         }
       }
