@@ -169,6 +169,14 @@ class RosterRow:
 
 
 @dataclass
+class CalendarEntry:
+    personnel_id: str
+    start: date
+    end: date
+    client: str
+
+
+@dataclass
 class WorkerMaster:
     personnel_id: str
     name: str
@@ -449,6 +457,109 @@ def worker_payload(
     }
 
 
+def read_calendar_view(wb, client_lookup: dict[str, str]) -> list[CalendarEntry]:
+    """Read xpbi02 PersonnelCalendarView for assignment date ranges.
+
+    The CalendarView retains entries for closed jobs that disappear from the
+    RosterView, so it fills historical headcount gaps caused by those closures.
+    Each row represents a worker's assignment period (start → end) on a client.
+    """
+    sheet = "xpbi02 PersonnelCalendarView"
+    if sheet not in wb.sheetnames:
+        return []
+    ws = wb[sheet]
+    headers, it = _read_headers(ws)
+    i_pid    = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
+    i_start  = _pick_header(headers, "Schedule Start", "ScheduleStart", "Start Date", "StartDate")
+    i_end    = _pick_header(headers, "Schedule End",   "ScheduleEnd",   "End Date",   "EndDate")
+    i_cname  = _pick_header(headers, "Client Name", "ClientName")
+    i_cid    = _pick_header(headers, "Client Id",   "ClientId", "Client ID")
+    i_cany   = _pick_header(headers, "Client", "Company")
+
+    if None in (i_pid, i_start, i_end):
+        return []
+
+    def _client(row) -> str | None:
+        for ci in (i_cname, i_cid, i_cany):
+            if ci is not None:
+                r = _resolve_client(row[ci], client_lookup)
+                if r:
+                    return r
+        return None
+
+    out: list[CalendarEntry] = []
+    for row in it:
+        if row is None:
+            continue
+        pid = _norm_text(row[i_pid])
+        if not pid:
+            continue
+        start = _coerce_date(row[i_start])
+        end   = _coerce_date(row[i_end])
+        if start is None or end is None or end < start:
+            continue
+        client = _client(row)
+        if client is None:
+            continue
+        out.append(CalendarEntry(pid, start, end, client))
+    return out
+
+
+def _overlap_days(range_start: date, range_end: date, month: date) -> int:
+    """Calendar days the assignment range [range_start, range_end] overlaps month."""
+    from dateutil.relativedelta import relativedelta as rd
+    m_end = month + rd(months=1) - rd(days=1)
+    lo = max(range_start, month)
+    hi = min(range_end, m_end)
+    return max(0, (hi - lo).days + 1)
+
+
+def supplement_from_calendar(
+    aggs: dict[str, WorkerAgg],
+    calendar: list[CalendarEntry],
+    months: list[date],
+    current_month: date,
+    personnel: dict[str, WorkerMaster],
+) -> None:
+    """Add CalendarView entries for historical months missing from RosterView.
+
+    For any worker-month where the RosterView has no data (because the job
+    closed), we inject an estimated entry from the CalendarView assignment range.
+    Hours are estimated at 6 h/overlap-day (12 h shift × ~50 % on-swing for
+    typical NW FIFO) — accurate enough for utilisation trends; headcount is exact.
+    Only historical months (before current_month) are supplemented; the
+    RosterView remains authoritative for current and forward months.
+    """
+    historical = [m for m in months if m < current_month]
+
+    for entry in calendar:
+        a = aggs.get(entry.personnel_id)
+        if a is None:
+            master = personnel.get(entry.personnel_id) or WorkerMaster(
+                personnel_id=entry.personnel_id,
+                name=entry.personnel_id,
+                primary_role="Unknown",
+                hire_company=None,
+                start_date=None,
+            )
+            a = WorkerAgg(master=master)
+            aggs[entry.personnel_id] = a
+        if a.first_seen is None or entry.start < a.first_seen:
+            a.first_seen = entry.start
+
+        for m in historical:
+            mk = _month_key(m)
+            if a.buckets.get(mk):
+                continue  # RosterView already has data for this worker-month
+            days = _overlap_days(entry.start, entry.end, m)
+            if days == 0:
+                continue
+            estimated_hours = days * 6
+            bucket = a.buckets[mk][entry.client]
+            bucket["days"] += days
+            bucket["hours"] += estimated_hours
+
+
 def dedupe_ids(workers: list[dict]) -> list[dict]:
     seen: set[str] = set()
     for w in workers:
@@ -470,6 +581,8 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
     personnel = read_personnel(wb)
     months = build_months(current_month)
     aggs = aggregate(roster, personnel, months, current_month)
+    calendar = read_calendar_view(wb, client_lookup)
+    supplement_from_calendar(aggs, calendar, months, current_month, personnel)
 
     top_positions = pick_top_positions(aggs)
     # If the workbook lacks enough roles, pad with an empty placeholder so
