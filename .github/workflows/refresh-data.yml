@@ -3,14 +3,23 @@ name: Refresh workforce data
 on:
   push:
     paths:
+      - 'data/raw/**'
+      - 'scripts/parse_macro_data.py'
+      - 'scripts/build_dashboard_data.py'
       - 'scripts/seed_workforce.py'
       - 'scripts/requirements.txt'
       - '.github/workflows/refresh-data.yml'
   workflow_dispatch:
 
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    # Prevent the auto-commit below from looping.
+    if: github.actor != 'github-actions[bot]'
     permissions:
       contents: write
     steps:
@@ -18,13 +27,13 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install deps
         run: pip install -r scripts/requirements.txt
 
-      - name: Regenerate data
-        run: python scripts/seed_workforce.py
+      - name: Build dashboard data
+        run: python scripts/build_dashboard_data.py
 
       - name: Commit refreshed data
         run: |
@@ -34,6 +43,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes."
           else
-            git commit -m "chore: refresh workforce data"
+            git commit -m "chore: refresh workforce data [skip ci]"
             git push
           fi

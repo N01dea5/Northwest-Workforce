@@ -46,19 +46,72 @@ encoded in the URL hash so views are shareable.
 ## Run locally
 
 ```bash
-# Generate mock data (~400 workers, 7 months)
 pip install -r scripts/requirements.txt
-python3 scripts/seed_workforce.py
+
+# Build whichever data source is available
+python3 scripts/build_dashboard_data.py
 
 # Serve the static dashboard
 python3 -m http.server 8000
 # → open http://localhost:8000
 ```
 
+To force the mock path, leave `data/raw/` empty. To exercise the real
+parser, drop a `Rapidcrews Macro Data.xlsx` into `data/raw/` and rerun.
+
 No backend, no build step. Everything is static HTML + vanilla JS +
 Chart.js loaded from a CDN.
 
 ## Data pipeline
+
+`scripts/build_dashboard_data.py` is the single entry point:
+
+1. If `data/raw/Rapidcrews Macro Data.xlsx` exists, run
+   `scripts/parse_macro_data.py` — reads the same workbook the Southwest
+   Shutdowns dashboard uses, filters to the four NW majors (Fortescue,
+   Rio Tinto, BHP, Roy Hill/Hancock), aggregates the daily
+   `xpbi02 PersonnelRosterView` rows into monthly hours per worker/client.
+2. Otherwise, run `scripts/seed_workforce.py` — deterministic mock data so
+   the dashboard stays demo-able before a real workbook has been dropped in.
+
+Both paths produce the same JSON schema, so the frontend doesn't care which
+branch ran.
+
+### Hooking up Power Automate
+
+The Southwest dashboard's existing Power Automate flow already drops
+`Rapidcrews Macro Data.xlsx` into the Southwest repo's `data/raw/`. To fire
+this repo at the same time, duplicate the "Create file" step in that flow:
+
+| Field | Value |
+|---|---|
+| Repository owner | `n01dea5` |
+| Repository name | `Northwest-Workforce` |
+| Branch | `main` |
+| File path | `data/raw/Rapidcrews Macro Data.xlsx` |
+| File content | *(same as Southwest step)* |
+
+Pushing the workbook to `data/raw/` triggers `.github/workflows/refresh-data.yml`,
+which runs the orchestrator, commits the refreshed JSON, and serves the
+updated dashboard on the next page load. No secrets, no API keys — the GitHub
+connector already has write access.
+
+### Shift → hours
+
+Each row in `xpbi02 PersonnelRosterView` becomes hours for that worker/month:
+
+| Schedule Type | Hours credited |
+|---|---|
+| Day Shift   | 12 |
+| Night Shift | 12 |
+| RNR         | 0 (rest day on-swing; worker still counts as rostered) |
+| anything else | row is ignored |
+
+A row is also ignored if `IsOnLocation` is explicitly false, or if the
+`Client` column doesn't map to one of the four majors (aliases for
+"FMG", "Rio Tinto", "BHP WAIO", "Roy Hill", "Hancock" are recognised).
+
+### Seed fallback
 
 v1 uses a deterministic Python seed (`scripts/seed_workforce.py`) that
 produces:
@@ -122,9 +175,13 @@ assets/
   format.js                # shared formatters, slugs, colours
   styles.css               # SRG palette and components
 scripts/
+  build_dashboard_data.py  # orchestrator: Excel parser or seed fallback
+  parse_macro_data.py      # Rapidcrews Macro Data.xlsx → workforce.json
   seed_workforce.py        # deterministic mock-data generator
+  test_parse_macro_data.py # in-memory fixture + parser assertions
   requirements.txt
 data/
+  raw/                     # Power Automate drops Rapidcrews Macro Data.xlsx here
   workforce.json           # full dataset
   fortescue.json | rio-tinto.json | bhp.json | roy-hill.json
 .github/workflows/
