@@ -422,10 +422,15 @@ def aggregate(
     months: list[date],
     current_month: date,
 ) -> dict[str, WorkerAgg]:
+    from calendar import monthrange
+
     start = months[0]
     end = months[-1] + relativedelta(months=1) - relativedelta(days=1)
 
     aggs: dict[str, WorkerAgg] = {}
+    # Track distinct dates per (pid, month_key) for full-roster detection.
+    dates_seen: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
+
     for r in roster:
         if r.schedule_date < start or r.schedule_date > end:
             continue
@@ -440,9 +445,24 @@ def aggregate(
         if a.first_seen is None or r.schedule_date < a.first_seen:
             a.first_seen = r.schedule_date
         mk = _month_key(r.schedule_date)
+        dates_seen[r.personnel_id][mk].add(r.schedule_date)
         bucket = a.buckets[mk][r.client]
         bucket["days"] += 1
         bucket["hours"] += HOURS_PER_SHIFT.get(r.schedule_type, 0)
+
+    # If a worker has an entry for every calendar day of a month, the
+    # scheduling system is recording them as on-roster continuously (e.g. a
+    # maintenance contract). Assume 50% actual on-site attendance and halve
+    # the hours for that month.
+    for pid, agg in aggs.items():
+        for mk, by_client in agg.buckets.items():
+            yr, mo = int(mk[:4]), int(mk[5:7])
+            _, days_in_month = monthrange(yr, mo)
+            if len(dates_seen[pid][mk]) >= days_in_month:
+                for b in by_client.values():
+                    b["hours"] = b["hours"] // 2
+                    b["days"]  = b["days"]  // 2
+
     return aggs
 
 
