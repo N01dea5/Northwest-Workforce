@@ -3,37 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Worker profile — Northwest Workforce</title>
+  <title>Worker — Northwest Workforce — SRG Global</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css?v=5" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="brand-row">
-    <div>
-      <div class="brand">
-        <span class="brand-mark">SRG Global</span>
-        <h1>Worker profile</h1>
+    <div class="brand-block">
+      <div class="breadcrumb">
+        <span>Fulfilment &amp; Retention</span>
+        <span class="sep">/</span>
+        <span>Northwest Workforce</span>
+        <span class="sep">/</span>
+        <span id="hdr-fy">FY26</span>
       </div>
-      <div class="subtitle">Utilisation history &amp; forward commitments</div>
+      <h1>Northwest Workforce</h1>
+      <div class="subtitle">
+        Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
+      </div>
+      <nav class="page-nav">
+        <a href="index.html">Utilisation</a>
+        <a href="retention.html">Retention</a>
+        <a href="fatigue.html">Fatigue</a>
+      </nav>
     </div>
-    <div class="meta">
-      <div><a href="index.html" class="btn">← Back to dashboard</a></div>
+    <div class="brand-right">
+      <img src="assets/srg_logo.png" alt="SRG Global" class="srg-logo-img" />
+      <div class="meta">
+        <div>Reporting window <strong id="hdr-window">—</strong></div>
+        <div>Current month <strong id="hdr-current">—</strong></div>
+        <div>Last refreshed <strong id="hdr-refreshed">—</strong></div>
+      </div>
     </div>
   </div>
 </header>
 
 <main>
-  <div id="worker-root">
-    <div class="card" style="padding:30px;">Loading…</div>
-  </div>
+
+  <section class="card">
+    <header>
+      <div>
+        <a href="javascript:history.back()" class="back-link">← Back</a>
+        <h2 id="worker-name" style="margin-top:6px;">—</h2>
+        <div id="worker-meta" class="worker-meta-row"></div>
+      </div>
+      <div class="worker-flags">
+        <div id="worker-compliance">—</div>
+        <div id="worker-atrisk" style="margin-top:4px;">—</div>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="worker-info-row">
+        <span class="muted small">Employment start</span>
+        <span id="worker-start" class="small">—</span>
+      </div>
+
+      <h3 class="section-subhead">Month-by-month hours</h3>
+      <p class="section-desc">Hours from the DailyPersonnelSchedule roster. Past months reflect actual onsite days at 12 h/shift; future months show confirmed and mobilising bookings only. Stand-down days (day 14+ in any unbroken consecutive working run) are excluded from the total.</p>
+      <div class="table-scroll">
+        <table class="tbl" id="worker-hours-table">
+          <thead>
+            <tr>
+              <th class="cell-left">Month</th>
+              <th class="cell-left">Client</th>
+              <th class="num">Hours</th>
+              <th class="cell-left">Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="assets/format.js"></script>
-<script src="assets/worker.js"></script>
+<script src="assets/worker-app.js"></script>
 </body>
 </html>

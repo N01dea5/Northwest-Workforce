@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=4" />
+  <link rel="stylesheet" href="assets/styles.css?v=5" />
 </head>
 <body>
 
@@ -42,6 +42,8 @@
   </div>
 </header>
 
+<div class="stale-banner" id="stale-banner"></div>
+
 <div class="filter-strip">
   <div class="filter-group">
     <label>Client</label>
@@ -50,6 +52,10 @@
   <div class="filter-group">
     <label>Position</label>
     <select id="position-select"></select>
+  </div>
+  <div class="filter-group">
+    <label>Search</label>
+    <input type="text" id="name-search" class="search-input" placeholder="Worker name…" />
   </div>
   <label class="toggle">
     <input type="checkbox" id="hide-zero" />
@@ -64,8 +70,8 @@
   <section class="card" id="sec-kpi">
     <header>
       <h2><span class="section-number">01</span> Retention — key metrics</h2>
-      <span class="hint">Filtered by client &amp; position selections above</span>
-      <p class="section-desc">Workforce movement snapshot for the current month. <strong>New starts</strong> counts workers whose recorded employment start falls in the current month, with a delta against last month. <strong>Drop-offs</strong> counts workers who had hours last month but none this month. <strong>Churn rate</strong> is the trailing 3-month average of monthly drop-offs as a share of the prior month's headcount. <strong>At-risk</strong> flags workers averaging ≥ 120 h/month over the past 3 months with ≤ 40 h booked next month — click the tile to jump to the detail list.</p>
+      <span class="hint">Filtered by client, position &amp; name above</span>
+      <p class="section-desc"><strong>New starts</strong> — workers whose recorded employment start date falls in the current month. <strong>Drop-offs</strong> — workers who had hours last month but zero this month; this is a point-in-time count and will revise as future months fill in. <strong>Churn rate</strong> — trailing 3-month average of monthly drop-offs divided by the prior month's headcount. <strong>At-risk</strong> — workers with a trailing 3-month average ≥ 120 h/month but ≤ 40 h booked in the coming month; click the tile to jump to the detail list.</p>
     </header>
     <div class="body">
       <div class="kpi-grid">
@@ -98,7 +104,7 @@
     <header>
       <h2><span class="section-number">02</span> New starts vs drop-offs</h2>
       <span class="hint">Bars show monthly movement, line shows churn rate %</span>
-      <p class="section-desc">Grouped bars show the count of workers appearing for the first time in a month (new starts, green) versus workers who were active the previous month but not this month (drop-offs, red). The overlaid line tracks the monthly churn rate — drop-offs as a percentage of the prior month's headcount. Forward months reflect scheduled roster data and may undercount starts/drops that haven't been formally booked yet.</p>
+      <p class="section-desc">Green bars = workers appearing for the first time in a month (employment start date in that month). Red bars = workers who had hours in the prior month but none in this one. The line shows monthly churn rate: drop-offs ÷ prior month's headcount. Only past and current months are shown — forward months are excluded as starts and drops are not yet reliably recorded for future dates.</p>
     </header>
     <div class="body">
       <div class="chart-box"><canvas id="churn-chart"></canvas></div>
@@ -108,9 +114,9 @@
   <!-- Section 03 — Position flow -->
   <section class="card" id="sec-flow">
     <header>
-      <h2><span class="section-number">03</span> Position flow — Headcount, new &amp; churn</h2>
+      <h2><span class="section-number">03</span> Position flow — headcount, new &amp; churn</h2>
       <span class="hint">Click a row to expand per-client breakdown</span>
-      <p class="section-desc">Summarises workforce movement per position. <strong>Current headcount</strong> is workers active in the current month. The <strong>trend sparkline</strong> shows headcount across all 7 reporting months. <strong>New starts</strong> and <strong>drops</strong> are 3-month averages of workers appearing or disappearing month-to-month. <strong>Churn rate</strong> is drops ÷ average headcount. Click any row to expand a breakdown by client.</p>
+      <p class="section-desc">New starts per month = workers whose employment start falls in the trailing 3-month window and are assigned to this position. Drops per month = workers active in a trailing month who have no hours in any later month (i.e., have since left). Churn rate = drops ÷ prior headcount, averaged across the trailing 3 months. Numbers reflect the filtered worker set. Click any row to see a breakdown by client.</p>
     </header>
     <div class="body">
       <div class="table-scroll">
@@ -136,7 +142,7 @@
     <header>
       <h2><span class="section-number">04</span> At-risk dropoffs</h2>
       <span class="hint">Trailing 3mo avg ≥ 120h AND next-month committed ≤ 40h</span>
-      <p class="section-desc">Workers who have been consistently active but whose forward bookings suggest an imminent drop-off. The threshold is a 3-month trailing average of at least 120 h/month (roughly a standard swing cycle) combined with fewer than 40 h scheduled in the coming month. <strong>Drop size</strong> is the difference between the trailing average and next month's hours — a proxy for how sharp the utilisation fall will be.</p>
+      <p class="section-desc">Workers who have been consistently active (trailing 3-month average ≥ 120 h, roughly a standard swing cycle) but whose roster shows ≤ 40 h committed in the coming month. Forward hours include only confirmed and mobilising bookings. <strong>Drop size</strong> is trailing average minus next month's hours — the larger this is, the sharper the expected fall in utilisation. Workers are sorted by drop size descending.</p>
     </header>
     <div class="body">
       <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
@@ -161,14 +167,38 @@
     </div>
   </section>
 
+  <!-- Section 05 — Cohort survival -->
+  <section class="card" id="sec-cohort">
+    <header>
+      <h2><span class="section-number">05</span> Cohort survival</h2>
+      <span class="hint">What % of each month's new starters are still active at +1, +2 … months</span>
+      <p class="section-desc">Each row is a cohort of workers who started in a given month (employment start date falls in that month). Columns show what share of that cohort is still active — hours &gt; 0 — at each subsequent month. A worker's hours are treated as zero in months where they have no roster entry. Cohorts with fewer than 3 months of follow-up are included but the later columns are marked as not yet available (—). Only cohorts with start dates within the reporting window are shown.</p>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl" id="cohort-table">
+          <thead id="cohort-thead"></thead>
+          <tbody id="cohort-tbody"></tbody>
+        </table>
+      </div>
+      <div class="small muted" style="margin-top:8px;">
+        <span class="badge ok">Green</span> ≥ 70% retained &nbsp;
+        <span class="badge warn">Amber</span> 50–70% &nbsp;
+        <span class="badge risk">Red</span> &lt; 50%
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="assets/format.js"></script>
+<script src="assets/boot.js"></script>
 <script src="assets/kpi.js"></script>
 <script src="assets/position-flow.js"></script>
 <script src="assets/at-risk.js"></script>
 <script src="assets/churn-chart.js"></script>
+<script src="assets/retention-cohort.js"></script>
 <script src="assets/retention-app.js"></script>
 </body>
 </html>

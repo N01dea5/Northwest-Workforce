@@ -73,7 +73,12 @@
       return avg >= 120 && nextH <= 40;
     }).length;
 
-    return { active, avgHrs, committedSum, newThis, newPrev, dropsThis, dropsPrev, churnRate, atRisk };
+    // Total unique workers engaged anywhere in the reporting window
+    const totalEngaged = workers.filter((w) =>
+      months.some((m) => (w.monthly[m]?.hours || 0) > 0)
+    ).length;
+
+    return { active, avgHrs, committedSum, newThis, newPrev, dropsThis, dropsPrev, churnRate, atRisk, totalEngaged };
   };
 
   // Renders whichever KPI tiles are present in the DOM — missing tiles are skipped.
@@ -121,6 +126,10 @@
         const sec = document.getElementById("sec-atrisk");
         if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
       };
+    });
+
+    set("kpi-total-engaged", (el) => {
+      el.querySelector(".value").textContent = NW.fmtInt(k.totalEngaged);
     });
   };
 })(window.NW);

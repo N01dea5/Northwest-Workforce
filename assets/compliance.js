@@ -68,6 +68,32 @@
     });
   };
 
+  NW.renderDisciplineRollup = function (view) {
+    const el = document.getElementById("discipline-rollup");
+    if (!el) return;
+    const rows = compute(view);
+    if (!rows.length) { el.innerHTML = ""; return; }
+
+    // Group by discipline
+    const byDisc = {};
+    rows.forEach((r) => {
+      const disc = r.discipline || "Other";
+      if (!byDisc[disc]) byDisc[disc] = { over: 0, warn: 0 };
+      byDisc[disc][r.status === "over" ? "over" : "warn"] += 1;
+    });
+
+    const sorted = Object.entries(byDisc).sort((a, b) => (b[1].over + b[1].warn) - (a[1].over + a[1].warn));
+
+    el.innerHTML = sorted.map(([disc, counts]) => `
+      <div class="disc-rollup-tile">
+        <div class="disc-rollup-name">${disc}</div>
+        <div class="disc-rollup-counts">
+          ${counts.over ? `<span class="badge risk">${counts.over} breach</span>` : ""}
+          ${counts.warn ? `<span class="badge warn">${counts.warn} close</span>` : ""}
+        </div>
+      </div>`).join("");
+  };
+
   NW.renderCompliance = function (view) {
     const rows = compute(view);
     const months = view.data.reporting_months;

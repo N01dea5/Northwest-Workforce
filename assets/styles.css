@@ -217,6 +217,32 @@ a:hover { color: var(--srg-red-dark); text-decoration: underline; }
   color: var(--srg-grey);
   cursor: pointer;
 }
+.search-input {
+  padding: 4px 8px;
+  border: 1px solid var(--srg-border);
+  border-radius: 4px;
+  font: inherit;
+  font-size: 12px;
+  background: var(--surface);
+  width: 160px;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--srg-red);
+}
+
+/* ---------- Stale data banner ---------- */
+
+.stale-banner {
+  display: none;
+  background: var(--warn-soft);
+  border-bottom: 1px solid var(--warn);
+  color: #92400e;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 32px;
+  text-align: center;
+}
 
 /* ---------- Main layout ---------- */
 
@@ -573,6 +599,76 @@ button.primary:hover, .btn.primary:hover { background: var(--srg-red-dark); colo
   text-transform: uppercase;
   letter-spacing: 0.04em;
   text-align: center;
+}
+
+/* ---------- Discipline rollup (fatigue page) ---------- */
+
+.discipline-rollup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.disc-rollup-tile {
+  background: var(--surface-2);
+  border: 1px solid var(--srg-border);
+  border-radius: 6px;
+  padding: 8px 14px;
+  min-width: 180px;
+  flex: 1 1 180px;
+}
+.disc-rollup-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--srg-dark);
+  margin-bottom: 5px;
+}
+.disc-rollup-counts {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Worker detail page ---------- */
+
+.back-link {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--srg-grey);
+}
+.back-link:hover { color: var(--srg-red); }
+.worker-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--srg-grey);
+  margin-top: 4px;
+}
+.worker-meta-row .sep { color: var(--srg-border); }
+.worker-flags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.worker-info-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--srg-border);
+}
+.section-subhead {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--srg-grey);
+  margin: 0 0 6px;
 }
 
 /* ---------- Utility ---------- */

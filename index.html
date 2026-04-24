@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=4" />
+  <link rel="stylesheet" href="assets/styles.css?v=5" />
 </head>
 <body>
 
@@ -42,6 +42,8 @@
   </div>
 </header>
 
+<div class="stale-banner" id="stale-banner"></div>
+
 <div class="filter-strip">
   <div class="filter-group">
     <label>Client</label>
@@ -50,6 +52,10 @@
   <div class="filter-group">
     <label>Position</label>
     <select id="position-select"></select>
+  </div>
+  <div class="filter-group">
+    <label>Search</label>
+    <input type="text" id="name-search" class="search-input" placeholder="Worker name…" />
   </div>
   <label class="toggle">
     <input type="checkbox" id="hide-zero" />
@@ -64,8 +70,8 @@
   <section class="card" id="sec-kpi">
     <header>
       <h2><span class="section-number">01</span> Utilisation — key metrics</h2>
-      <span class="hint">Filtered by client &amp; position selections above</span>
-      <p class="section-desc">Snapshot of workforce utilisation for the current filter. <strong>Active workforce</strong> counts workers with any recorded hours this month. <strong>Avg hrs / worker</strong> is the trailing 3-month average — hours are summed across the window and divided by distinct workers × months, so workers with gaps count as zero for those months. <strong>Forward committed</strong> is the total of all scheduled hours in the next 3 months sourced from confirmed and mobilising roster bookings.</p>
+      <span class="hint">Filtered by client, position &amp; name above</span>
+      <p class="section-desc"><strong>Active workforce</strong> — workers with hours &gt; 0 in the current month, sourced from the DailyPersonnelSchedule roster. <strong>Total engaged</strong> — distinct workers with any hours across the full 7-month reporting window; this is the broadest measure of the pool SRG has drawn on for Northwest. <strong>Avg hrs / worker</strong> — trailing 3-month average; hours are summed and divided by distinct workers × months so gaps count as zero, reflecting consistency rather than peak intensity. <strong>Forward committed</strong> — total hours in the next 3 months from confirmed and mobilising bookings only; contacted, planning, and short-list entries are excluded.</p>
     </header>
     <div class="body">
       <div class="kpi-grid">
@@ -73,6 +79,11 @@
           <div class="label">Active workforce</div>
           <div class="value">—</div>
           <div class="delta">in current month</div>
+        </div>
+        <div class="kpi-tile" id="kpi-total-engaged">
+          <div class="label">Total engaged</div>
+          <div class="value">—</div>
+          <div class="delta">across reporting window</div>
         </div>
         <div class="kpi-tile" id="kpi-avg-hours">
           <div class="label">Avg hrs / worker</div>
@@ -93,7 +104,7 @@
     <header>
       <h2><span class="section-number">02</span> Utilisation — Position × Month</h2>
       <span class="hint">3 months behind, current, 3 months forward. Cell tint = MoM retention %.</span>
-      <p class="section-desc">Each row is a position group; each column is a month. The large number is the headcount of workers with hours that month; the smaller italic is the total hours worked. Cell colour reflects month-on-month retention — the share of last month's workers still active this month (green ≥ 70 %, amber 50–70 %, red &lt; 50 %). Forward months (teal/dashed) show scheduled bookings sourced from the roster; they carry no retention tint. Positions are grouped by discipline.</p>
+      <p class="section-desc">Source: DailyPersonnelSchedule (historical) and roster bookings (forward). Each cell shows headcount (workers with hours &gt; 0) and total hours. Colour reflects month-on-month retention — the share of last month's workers who also appear this month: green ≥ 70 %, amber 50–70 %, red &lt; 50 %. Forward months (hatched background) include only confirmed and mobilising bookings — soft statuses such as contacted, planning, and short list are excluded. Positions are ordered by discipline group.</p>
     </header>
     <div class="body">
       <div class="table-scroll">
@@ -116,7 +127,7 @@
     <header>
       <h2><span class="section-number">03</span> By client</h2>
       <span class="hint">Same structure as Section 02, scoped to each client</span>
-      <p class="section-desc">The same position × month utilisation table as Section 02, repeated independently for each of the four clients. A worker appears in a client's table only in the months they were assigned to that client. Useful for comparing utilisation patterns across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock. Click a client panel to expand it.</p>
+      <p class="section-desc">The same position × month utilisation table repeated for each client. A worker's hours appear under a client only in months where that client is their dominant assignment (most rostered days). Workers who split time between clients in a month are attributed to whichever client had more days. Click a client panel to expand it.</p>
     </header>
     <div class="body" id="client-tables"></div>
   </section>
@@ -126,7 +137,7 @@
     <header>
       <h2><span class="section-number">04</span> Utilisation trend</h2>
       <span class="hint">Avg hours / worker across the reporting window</span>
-      <p class="section-desc">Line chart of average hours per active worker by month, across the full 7-month reporting window. Each client is plotted as a separate line so cross-client utilisation patterns are visible side by side. Months with no active workers for a client are shown as a gap. Reflects the current client and position filter selections.</p>
+      <p class="section-desc">Average hours per active worker by month. A worker must have hours &gt; 0 in that month to be included in the average — workers on zero hours do not dilute the figure. Months with no active workers for a client are shown as a gap in that client's line. Reflects the current filter selections.</p>
     </header>
     <div class="body">
       <div class="chart-box"><canvas id="trend-chart"></canvas></div>
@@ -137,6 +148,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="assets/format.js"></script>
+<script src="assets/boot.js"></script>
 <script src="assets/kpi.js"></script>
 <script src="assets/retention-table.js"></script>
 <script src="assets/utilisation-chart.js"></script>
