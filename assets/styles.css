@@ -105,22 +105,25 @@ a:hover { color: var(--srg-red-dark); text-decoration: underline; }
 }
 .site-header .srg-logo {
   display: flex;
-  align-items: baseline;
-  gap: 3px;
+  flex-direction: column;
+  align-items: flex-end;
   line-height: 1;
+  gap: 1px;
 }
 .site-header .logo-srg {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--srg-red);
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
+  line-height: 1;
 }
 .site-header .logo-global {
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 700;
   color: var(--srg-dark);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
+  margin-right: -0.32em; /* optical: cancel trailing letter-spacing */
 }
 .site-header .meta {
   display: flex;
@@ -243,6 +246,16 @@ section.card > header .hint {
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0;
+}
+section.card > header .section-desc {
+  flex-basis: 100%;
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--srg-grey);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.5;
 }
 section.card > .body { padding: 18px 20px 20px; }
 
