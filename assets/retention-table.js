@@ -73,7 +73,7 @@
         const future = i > curIdx;
         const cls = past ? "month-past" : cur ? "month-cur" : "month-future";
         const div = i === curIdx + 1 ? " div-future" : "";
-        return `<th class="${cls}${div}" style="text-align:center;">${NW.fmtMonth(m)}${cur ? " <span class='pill'>now</span>" : ""}${future ? " <span class='pill'>fwd</span>" : ""}</th>`;
+        return `<th class="${cls}${div}" style="text-align:center;">${NW.fmtMonth(m)}${cur ? " <span class='pill now'>now</span>" : ""}${future ? " <span class='pill fwd'>fwd</span>" : ""}</th>`;
       }).join("");
     thead.appendChild(topRow);
 

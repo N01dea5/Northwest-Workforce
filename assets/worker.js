@@ -219,7 +219,7 @@
       const h = mm.hours || 0;
       const delta = prevH == null ? null : h - prevH;
       tr.innerHTML = `
-        <td class="nowrap">${NW.fmtMonth(m)} ${i === curIdx ? "<span class='pill'>now</span>" : i > curIdx ? "<span class='pill'>fwd</span>" : ""}</td>
+        <td class="nowrap">${NW.fmtMonth(m)} ${i === curIdx ? "<span class='pill now'>now</span>" : i > curIdx ? "<span class='pill fwd'>fwd</span>" : ""}</td>
         <td>${mm.client ? `<span class="dot ${NW.clientSlug(mm.client)}"></span> ${mm.client}` : "<span class='muted'>—</span>"}</td>
         <td class="num">${NW.fmtInt(h)}h</td>
         <td>${mm.committed ? "Yes" : "No"}</td>
