@@ -1,10 +1,10 @@
-// Bootstrap: load data, manage filter state, render every section.
+// Bootstrap for the standalone fatigue / hours-compliance page.
 (function () {
   const state = {
     data: null,
     filters: {
-      clients: new Set(),   // empty = all
-      position: "",         // "" = all
+      clients: new Set(),
+      position: "",
       hideZero: false,
     },
   };
@@ -38,7 +38,6 @@
     return workers.filter((w) => {
       if (state.filters.position && w.position !== state.filters.position) return false;
       if (state.filters.clients.size) {
-        // Keep if they touched any selected client in the window
         const touched = months.some((m) => state.filters.clients.has(w.monthly[m]?.client));
         if (!touched) return false;
       }
@@ -112,13 +111,7 @@
       data: state.data,
       workers: filteredWorkers(),
     };
-    NW.renderKpis(view);
-    NW.renderSummaryTable(view);
-    NW.renderPositionFlow(view);
-    NW.renderClientTables(view);
-    NW.renderAtRisk(view);
-    NW.renderTrendChart(view);
-    NW.renderChurnChart(view);
+    NW.renderCompliance(view);
   }
 
   async function boot() {
@@ -131,8 +124,6 @@
         `<div class="card" style="padding:30px;">
           <h2>Could not load data</h2>
           <p class="muted">${err.message}</p>
-          <p>Run <code>python3 scripts/seed_workforce.py</code> and serve via
-          <code>python -m http.server 8000</code>.</p>
         </div>`;
       return;
     }
@@ -150,6 +141,5 @@
 
   document.addEventListener("DOMContentLoaded", boot);
 
-  // Expose state for debugging + worker page hash preservation.
   window.NW_APP = { state, renderAll };
 })();

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fatigue &amp; Compliance — Northwest Workforce — SRG Global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=3" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-row">
+    <div class="brand-block">
+      <div class="breadcrumb">
+        <span>Fulfilment &amp; Retention</span>
+        <span class="sep">/</span>
+        <span>Northwest Workforce</span>
+        <span class="sep">/</span>
+        <span id="hdr-fy">FY26</span>
+      </div>
+      <h1>Northwest Workforce</h1>
+      <div class="subtitle">
+        Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
+      </div>
+      <nav class="page-nav">
+        <a href="index.html">Dashboard</a>
+        <span class="page-nav-active">Fatigue &amp; Compliance</span>
+      </nav>
+    </div>
+    <div class="brand-right">
+      <img src="assets/srg_logo.png" alt="SRG Global" class="srg-logo-img" />
+      <div class="meta">
+        <div>Reporting window <strong id="hdr-window">—</strong></div>
+        <div>Current month <strong id="hdr-current">—</strong></div>
+        <div>Last refreshed <strong id="hdr-refreshed">—</strong></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="filter-strip">
+  <div class="filter-group">
+    <label>Client</label>
+    <div id="client-chips"></div>
+  </div>
+  <div class="filter-group">
+    <label>Position</label>
+    <select id="position-select"></select>
+  </div>
+  <label class="toggle">
+    <input type="checkbox" id="hide-zero" />
+    Hide zero-hour workers
+  </label>
+  <button id="reset-filters" class="btn small" style="margin-left:auto;">Reset filters</button>
+</div>
+
+<main>
+
+  <!-- Hours compliance -->
+  <section class="card" id="sec-compliance">
+    <header>
+      <h2><span class="section-number">01</span> Hours compliance — 724h rolling 3-month limit</h2>
+      <span class="hint">Flagged workers: any consecutive 3-month window ≥ 652h (close) or ≥ 724h (breach). Highlighted cells = worst window.</span>
+      <p class="section-desc">Checks every possible consecutive 3-month window within the reporting period against the 724 h limit. Only workers whose worst window reaches the warning threshold (652 h, 90 % of limit) are listed. The highlighted month cells show which 3-month window is the worst for each worker; the remaining months are dimmed. Workers already in breach are shown in red with the overage amount; those approaching the limit are shown in amber. Hours are calculated after removing stand-down days (any 14th consecutive working day in an unbroken roster run).</p>
+    </header>
+    <div class="body">
+      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
+        <span id="compliance-summary" class="muted small">—</span>
+        <button id="compliance-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
+      </div>
+      <div class="table-scroll">
+        <table class="tbl" id="compliance-table">
+          <thead id="compliance-thead"></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="small muted" style="margin-top:8px;">
+        Limit: 724h per any rolling 3-month period &nbsp;·&nbsp;
+        <span class="badge warn">Close</span> ≥ 652h &nbsp;·&nbsp;
+        <span class="badge risk">Breach</span> ≥ 724h &nbsp;·&nbsp;
+        Stand-down applied: day 14+ in any consecutive working run is excluded.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="assets/format.js"></script>
+<script src="assets/compliance.js"></script>
+<script src="assets/fatigue-app.js"></script>
+</body>
+</html>

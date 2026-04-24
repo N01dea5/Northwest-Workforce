@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=2" />
+  <link rel="stylesheet" href="assets/styles.css?v=3" />
 </head>
 <body>
 
@@ -25,6 +25,10 @@
       <div class="subtitle">
         Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
       </div>
+      <nav class="page-nav">
+        <span class="page-nav-active">Dashboard</span>
+        <a href="fatigue.html">Fatigue &amp; Compliance</a>
+      </nav>
     </div>
     <div class="brand-right">
       <img src="assets/srg_logo.png" alt="SRG Global" class="srg-logo-img" />
@@ -187,32 +191,6 @@
     </div>
   </section>
 
-  <!-- Section 04b — Hours compliance -->
-  <section class="card" id="sec-compliance">
-    <header>
-      <h2><span class="section-number">04b</span> Hours compliance — 724h rolling 3-month limit</h2>
-      <span class="hint">Flagged workers: any consecutive 3-month window ≥ 652h (close) or ≥ 724h (breach). Highlighted cells = worst window.</span>
-      <p class="section-desc">Checks every possible consecutive 3-month window within the reporting period against the 724 h limit. Only workers whose worst window reaches the warning threshold (652 h, 90 % of limit) are listed. The highlighted month cells show which 3-month window is the worst for each worker; the remaining months are dimmed. Workers already in breach are shown in red with the overage amount; those approaching the limit are shown in amber.</p>
-    </header>
-    <div class="body">
-      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
-        <span id="compliance-summary" class="muted small">—</span>
-        <button id="compliance-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
-      </div>
-      <div class="table-scroll">
-        <table class="tbl" id="compliance-table">
-          <thead id="compliance-thead"></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-      <div class="small muted" style="margin-top:8px;">
-        Limit: 724h per any rolling 3-month period &nbsp;·&nbsp;
-        <span class="badge warn">Close</span> ≥ 652h &nbsp;·&nbsp;
-        <span class="badge risk">Breach</span> ≥ 724h
-      </div>
-    </div>
-  </section>
-
   <!-- Section 05 — Utilisation trend chart -->
   <section class="card" id="sec-trend">
     <header>
@@ -245,7 +223,6 @@
 <script src="assets/retention-table.js"></script>
 <script src="assets/position-flow.js"></script>
 <script src="assets/at-risk.js"></script>
-<script src="assets/compliance.js"></script>
 <script src="assets/utilisation-chart.js"></script>
 <script src="assets/churn-chart.js"></script>
 <script src="assets/app.js"></script>

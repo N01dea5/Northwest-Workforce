@@ -121,6 +121,41 @@ a:hover { color: var(--srg-red-dark); text-decoration: underline; }
 }
 .site-header .meta strong { color: var(--srg-dark); font-weight: 700; }
 
+/* ---------- Page navigation ---------- */
+
+.page-nav {
+  display: flex;
+  gap: 4px;
+  margin-top: 10px;
+  align-items: center;
+}
+.page-nav a,
+.page-nav-active {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.page-nav a {
+  color: var(--srg-grey);
+  background: transparent;
+  border: 1px solid var(--srg-border);
+}
+.page-nav a:hover {
+  color: var(--srg-red);
+  border-color: var(--srg-red);
+  text-decoration: none;
+}
+.page-nav-active {
+  color: var(--surface);
+  background: var(--srg-red);
+  border: 1px solid var(--srg-red);
+  cursor: default;
+}
+
 /* ---------- Filter strip ---------- */
 
 .filter-strip {
