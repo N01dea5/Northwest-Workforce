@@ -238,18 +238,41 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
         )
     ws = wb["xpbi02 PersonnelRosterView"]
     headers, it = _read_headers(ws)
-    i_pid = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
-    i_dt = _pick_header(headers, "Schedule Date", "ScheduleDate", "Date")
-    i_type = _pick_header(headers, "Schedule Type", "ScheduleType", "Shift Type")
-    i_client = _pick_header(headers, "Client", "ClientId", "Client Id", "Company")
-    i_job = _pick_header(headers, "Job No", "JobNo", "Job Number")
-    i_on = _pick_header(headers, "IsOnLocation", "Is On Location", "On Location", "OnSite")
+    i_pid    = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
+    i_dt     = _pick_header(headers, "Schedule Date", "ScheduleDate", "Date")
+    i_type   = _pick_header(headers, "Schedule Type", "ScheduleType", "Shift Type")
+    i_job    = _pick_header(headers, "Job No", "JobNo", "Job Number")
+    i_on     = _pick_header(headers, "IsOnLocation", "Is On Location", "On Location", "OnSite")
+    # Locate both the text-name column and the GUID column independently so we
+    # can try both when one is blank — historical rows often carry the GUID only.
+    i_client_name = _pick_header(headers, "Client Name", "ClientName")
+    i_client_id   = _pick_header(headers, "ClientId", "Client Id", "Client ID")
+    # Fallback: a plain "Client" column that might hold either text or a GUID.
+    i_client_any  = _pick_header(headers, "Client", "Company")
 
-    if None in (i_pid, i_dt, i_type, i_client):
+    if None in (i_pid, i_dt, i_type):
         raise ValueError(
             "RosterView is missing one of Personnel Id / Schedule Date / "
-            f"Schedule Type / Client. Headers: {headers!r}"
+            f"Schedule Type. Headers: {headers!r}"
         )
+    if i_client_name is None and i_client_id is None and i_client_any is None:
+        raise ValueError(f"RosterView has no recognisable Client column. Headers: {headers!r}")
+
+    def _client_from_row(row) -> str | None:
+        # Try dedicated text-name column first.
+        if i_client_name is not None:
+            result = _resolve_client(row[i_client_name], client_lookup)
+            if result:
+                return result
+        # Try dedicated GUID column.
+        if i_client_id is not None:
+            result = _resolve_client(row[i_client_id], client_lookup)
+            if result:
+                return result
+        # Fall back to the generic "Client" column (may be text or GUID).
+        if i_client_any is not None:
+            return _resolve_client(row[i_client_any], client_lookup)
+        return None
 
     out: list[RosterRow] = []
     for row in it:
@@ -268,7 +291,7 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
         # missing we trust the on-site schedule type.
         if i_on is not None and row[i_on] is not None and not _truthy(row[i_on]):
             continue
-        client = _resolve_client(row[i_client], client_lookup)
+        client = _client_from_row(row)
         if client is None:
             continue  # not one of the four NW majors
         job_no = _norm_text(row[i_job]) if i_job is not None else None
