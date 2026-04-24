@@ -57,7 +57,7 @@
       `<th>Name</th><th>Position</th><th>Current client</th>` +
       months.map((m, i) => {
         const cls = i < curIdx ? "month-past" : i === curIdx ? "month-cur" : "month-future";
-        return `<th class="${cls}" style="text-align:right;min-width:52px;">${NW.fmtMonth(m)}</th>`;
+        return `<th class="${cls} num" style="min-width:52px;">${NW.fmtMonth(m)}</th>`;
       }).join("") +
       `<th class="num">Window total</th><th>Worst window</th><th>Status</th>`;
     thead.appendChild(htr);

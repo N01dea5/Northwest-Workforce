@@ -316,7 +316,7 @@ section.card > .body { padding: 18px 20px 20px; }
   top: 0;
 }
 .tbl tbody tr:hover { background: var(--srg-light); }
-.tbl td.num, .tbl th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.tbl td.num, .tbl th.num { text-align: center; font-variant-numeric: tabular-nums; }
 .tbl td.pos-name { font-weight: 600; white-space: nowrap; }
 .tbl tr.disc-group-header { background: var(--srg-light); }
 .tbl tr.disc-group-header td.disc-label {
