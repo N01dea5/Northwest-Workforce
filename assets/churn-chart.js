@@ -19,7 +19,7 @@
       workers.forEach((w) => {
         if ((w.monthly[m]?.hours || 0) === 0) return;
         const hasLater = later.some(
-          (lm) => (w.monthly[lm]?.hours || 0) > 0 || w.monthly[lm]?.committed
+          (lm) => (w.monthly[lm]?.hours || 0) > 0
         );
         if (!hasLater) n += 1;
       });

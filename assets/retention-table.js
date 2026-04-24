@@ -9,7 +9,7 @@
       if (w.position !== position) return;
       const mm = w.monthly[month];
       if (!mm) return;
-      if ((mm.hours || 0) > 0 || mm.committed) {
+      if ((mm.hours || 0) > 0) {
         inThis.add(w.id);
         hrsSum += (mm.hours || 0);
       }
