@@ -183,6 +183,7 @@ class WorkerMaster:
     primary_role: str
     hire_company: str | None
     start_date: date | None
+    discipline: str | None = None
 
 
 def _read_headers(ws) -> tuple[list[str], Iterable]:
@@ -220,6 +221,27 @@ def read_client_lookup(wb) -> dict[str, str]:
         if cid and name:
             lookup[cid] = name
     return lookup
+
+
+def read_discipline_lookup(wb) -> dict[str, str]:
+    """Return {trade_name_lower: discipline} from xpbi02 DisciplineTrade."""
+    if "xpbi02 DisciplineTrade" not in wb.sheetnames:
+        return {}
+    ws = wb["xpbi02 DisciplineTrade"]
+    headers, it = _read_headers(ws)
+    i_trade = _pick_header(headers, "Trade")
+    i_disc  = _pick_header(headers, "Discipline")
+    if i_trade is None or i_disc is None:
+        return {}
+    out: dict[str, str] = {}
+    for row in it:
+        if row is None:
+            continue
+        trade = _norm_text(row[i_trade])
+        disc  = _norm_text(row[i_disc])
+        if trade and disc:
+            out[trade.lower()] = disc
+    return out
 
 
 def _resolve_client(raw, client_lookup: dict[str, str]) -> str | None:
@@ -294,7 +316,13 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
             return _resolve_client(row[i_client_any], client_lookup)
         return None
 
-    out: list[RosterRow] = []
+    # Deduplicate: one row per (personnel_id, date). The workbook emits both
+    # 'onsite' and 'demobilised' rows for the same worker/day when a job ends
+    # and another begins; both carry onsite=1 and would otherwise double-count
+    # hours. Prefer 'onsite' status over 'demobilised'.
+    STATUS_PRIORITY = {"onsite": 0, "demobilised": 1}
+    seen: dict[tuple[str, date], tuple[int, RosterRow]] = {}
+
     for row in it:
         if row is None:
             continue
@@ -304,7 +332,8 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
         d = _coerce_date(row[i_dt])
         if d is None:
             continue
-        if i_status is not None and _norm_text(row[i_status]).lower() == "rejected":
+        status_str = _norm_text(row[i_status]).lower() if i_status is not None else ""
+        if status_str == "rejected":
             continue
         if i_active is not None and row[i_active] is not None and not _truthy(row[i_active]):
             continue
@@ -316,21 +345,28 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
             if stype not in ONSITE_TYPES:
                 continue
         else:
-            # New sheet layout: no Schedule Type column, credit each on-site
-            # row as a Day Shift (12h).
             stype = "Day Shift"
 
         client = _client_from_row(row)
         if client is None:
             continue
         job_no = _norm_text(row[i_job]) if i_job is not None else None
-        out.append(RosterRow(pid, d, stype, client, job_no or None))
-    return out
+        prio = STATUS_PRIORITY.get(status_str, 2)
+        key = (pid, d)
+        existing = seen.get(key)
+        if existing is None or prio < existing[0]:
+            seen[key] = (prio, RosterRow(pid, d, stype, client, job_no or None))
+
+    return [r for _, r in seen.values()]
 
 
-def read_personnel(wb) -> dict[str, WorkerMaster]:
+def read_personnel(
+    wb,
+    discipline_lookup: dict[str, str] | None = None,
+) -> dict[str, WorkerMaster]:
     if "xll01 Personnel" not in wb.sheetnames:
         return {}
+    discipline_lookup = discipline_lookup or {}
     ws = wb["xll01 Personnel"]
     headers, it = _read_headers(ws)
     i_pid = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
@@ -357,7 +393,8 @@ def read_personnel(wb) -> dict[str, WorkerMaster]:
         role = _norm_text(row[i_role]) if i_role is not None else ""
         hire = _norm_text(row[i_hire]) if i_hire is not None else ""
         start = _coerce_date(row[i_start]) if i_start is not None else None
-        out[pid] = WorkerMaster(pid, name, role, hire or None, start)
+        disc = discipline_lookup.get(role.lower())
+        out[pid] = WorkerMaster(pid, name, role, hire or None, start, disc)
     return out
 
 
@@ -471,6 +508,7 @@ def worker_payload(
         "id": "w-" + _norm_name(agg.master.name)[:14],
         "name": agg.master.name,
         "position": agg.master.primary_role or "Unknown",
+        "discipline": agg.master.discipline or "Other",
         "primary_client": primary_client,
         "employment_start": employment_start.isoformat(),
         "employment_end": None,
@@ -582,6 +620,7 @@ def dedupe_ids(workers: list[dict]) -> list[dict]:
 def build_payload(excel_path: Path, current_month: date) -> dict:
     wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
     client_lookup = read_client_lookup(wb)
+    discipline_lookup = read_discipline_lookup(wb)
     # PersonnelRosterView: active jobs only, but carries Schedule Type
     # detail (Day Shift / Night Shift / RNR) so gives accurate hours.
     roster = read_roster(wb, client_lookup)
@@ -593,7 +632,7 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
     extra = [r for r in daily_extra if (r.personnel_id, r.schedule_date, r.client) not in seen]
     all_rows = roster + extra
 
-    personnel = read_personnel(wb)
+    personnel = read_personnel(wb, discipline_lookup)
     months = build_months(current_month)
     aggs = aggregate(all_rows, personnel, months, current_month)
 

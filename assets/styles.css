@@ -62,45 +62,76 @@ a:hover { color: var(--srg-red-dark); text-decoration: underline; }
 .site-header {
   background: var(--surface);
   border-bottom: 1px solid var(--srg-border);
-  padding: 18px 32px 16px;
+  padding: 20px 32px 18px;
 }
 .site-header .brand-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
 }
-.site-header .brand {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-}
-.site-header .brand-mark {
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 0.04em;
-  color: var(--srg-red);
-  text-transform: uppercase;
-}
-.site-header h1 {
-  font-size: 22px;
+.site-header .brand-block { flex: 1; min-width: 0; }
+.site-header .breadcrumb {
+  font-size: 11px;
   font-weight: 700;
-  margin: 0;
-  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--srg-grey-2);
+  margin-bottom: 6px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.site-header .breadcrumb .sep { color: var(--srg-border); }
+.site-header h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--srg-dark);
+  line-height: 1;
 }
 .site-header .subtitle {
   color: var(--srg-grey);
   font-size: 13px;
-  margin-top: 4px;
+}
+.site-header .brand-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.site-header .srg-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  line-height: 1;
+}
+.site-header .logo-srg {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--srg-red);
+  letter-spacing: 0.04em;
+}
+.site-header .logo-global {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--srg-dark);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .site-header .meta {
   display: flex;
-  gap: 18px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
   color: var(--srg-grey-2);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  text-align: right;
 }
 .site-header .meta strong { color: var(--srg-dark); font-weight: 700; }
 
@@ -291,6 +322,17 @@ section.card > .body { padding: 18px 20px 20px; }
 .tbl tbody tr:hover { background: var(--srg-light); }
 .tbl td.num, .tbl th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .tbl td.pos-name { font-weight: 600; white-space: nowrap; }
+.tbl tr.disc-group-header { background: var(--srg-light); }
+.tbl tr.disc-group-header td.disc-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--srg-grey);
+  padding: 6px 10px 5px;
+  border-top: 1px solid var(--srg-border);
+}
+.tbl td.pos-indent { padding-left: 22px; }
 .tbl td.worker-name { font-weight: 600; }
 .tbl td.worker-name a { color: var(--srg-dark); }
 .tbl td.worker-name a:hover { color: var(--srg-red); }

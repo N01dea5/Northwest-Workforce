@@ -45,6 +45,7 @@
       "id": "w-aaronbuttigieg",
       "name": "Aaron BUTTIGIEG",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-05-17",
       "employment_end": null,
@@ -90,6 +91,7 @@
       "id": "w-aaroncooper",
       "name": "Aaron COOPER",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-04-08",
       "employment_end": null,
@@ -135,6 +137,7 @@
       "id": "w-aaronholbrook",
       "name": "Aaron HOLBROOK",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-24",
       "employment_end": null,
@@ -180,6 +183,7 @@
       "id": "w-aaronwhite",
       "name": "Aaron WHITE",
       "position": "Apprentice - Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-09-08",
       "employment_end": null,
@@ -225,6 +229,7 @@
       "id": "w-abdulhaseem",
       "name": "Abdul HASEEM",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-27",
       "employment_end": null,
@@ -270,6 +275,7 @@
       "id": "w-adamfrench",
       "name": "Adam FRENCH",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-09",
       "employment_end": null,
@@ -281,7 +287,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 384,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
@@ -315,6 +321,7 @@
       "id": "w-adamgriffiths",
       "name": "Adam GRIFFITHS",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-13",
       "employment_end": null,
@@ -360,6 +367,7 @@
       "id": "w-adamsenjuschen",
       "name": "Adam SENJUSCHENKO",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-09-02",
       "employment_end": null,
@@ -405,6 +413,7 @@
       "id": "w-adamwinder",
       "name": "Adam WINDER",
       "position": "Apprentice - Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-11-11",
       "employment_end": null,
@@ -421,7 +430,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
@@ -450,6 +459,7 @@
       "id": "w-adenswepstone",
       "name": "Aden SWEPSTONE",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-21",
       "employment_end": null,
@@ -495,6 +505,7 @@
       "id": "w-adiemosdell",
       "name": "Adie MOSDELL",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-10",
       "employment_end": null,
@@ -540,6 +551,7 @@
       "id": "w-adriendiaz",
       "name": "Adrien DIAZ",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-15",
       "employment_end": null,
@@ -585,6 +597,7 @@
       "id": "w-adriengarcia",
       "name": "Adrien GARCIA",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-24",
       "employment_end": null,
@@ -630,6 +643,7 @@
       "id": "w-agaprimasto",
       "name": "Aga PRIMASTO",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-08",
       "employment_end": null,
@@ -675,6 +689,7 @@
       "id": "w-ahmedincolic",
       "name": "Ahmedin COLIC",
       "position": "HSE Superintendent",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-28",
       "employment_end": null,
@@ -720,6 +735,7 @@
       "id": "w-aidanyoung",
       "name": "Aidan YOUNG",
       "position": "HSE Advisor",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-13",
       "employment_end": null,
@@ -765,6 +781,7 @@
       "id": "w-alanwallace",
       "name": "Alan WALLACE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-04-08",
       "employment_end": null,
@@ -810,6 +827,7 @@
       "id": "w-alardubinin",
       "name": "Alar DUBININ",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-28",
       "employment_end": null,
@@ -821,7 +839,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 216,
           "committed": false
         },
         "2026-03": {
@@ -855,6 +873,7 @@
       "id": "w-aldokurniawan",
       "name": "Aldo KURNIAWAN",
       "position": "Rope Access - Mech Fitter",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-04-09",
       "employment_end": null,
@@ -900,6 +919,7 @@
       "id": "w-alexenderby",
       "name": "Alex ENDERBY \ud83d\udd37",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-18",
       "employment_end": null,
@@ -945,6 +965,7 @@
       "id": "w-alexhall",
       "name": "Alex HALL",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-31",
       "employment_end": null,
@@ -990,6 +1011,7 @@
       "id": "w-alexsimpson",
       "name": "Alex SIMPSON",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-02-03",
       "employment_end": null,
@@ -1035,6 +1057,7 @@
       "id": "w-alextribe",
       "name": "Alex TRIBE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-19",
       "employment_end": null,
@@ -1080,6 +1103,7 @@
       "id": "w-alexanderknigh",
       "name": "Alexander KNIGHT",
       "position": "Boilermaker",
+      "discipline": "Boilermaker",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-09",
       "employment_end": null,
@@ -1125,6 +1149,7 @@
       "id": "w-alexandrebozsi",
       "name": "Alexandre BOZSIK",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-11-13",
       "employment_end": null,
@@ -1170,6 +1195,7 @@
       "id": "w-alistairwhite",
       "name": "Alistair WHITE",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-15",
       "employment_end": null,
@@ -1186,7 +1212,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 312,
+          "hours": 300,
           "committed": false
         },
         "2026-04": {
@@ -1215,6 +1241,7 @@
       "id": "w-allensharne",
       "name": "Allen SHARNE",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-27",
       "employment_end": null,
@@ -1226,12 +1253,12 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 348,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 444,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -1260,6 +1287,7 @@
       "id": "w-alysharattray",
       "name": "Alysha RATTRAY",
       "position": "MLO",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2023-11-23",
       "employment_end": null,
@@ -1305,6 +1333,7 @@
       "id": "w-amdirustem",
       "name": "Amdi RUSTEM \ud83d\udd37",
       "position": "Apprentice - Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-07-24",
       "employment_end": null,
@@ -1350,6 +1379,7 @@
       "id": "w-andreholtz",
       "name": "Andre HOLTZ",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-06",
       "employment_end": null,
@@ -1361,7 +1391,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 396,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
@@ -1371,7 +1401,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 432,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -1395,6 +1425,7 @@
       "id": "w-andrewduff",
       "name": "Andrew DUFF",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-22",
       "employment_end": null,
@@ -1416,7 +1447,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 96,
+          "hours": 84,
           "committed": false
         },
         "2026-05": {
@@ -1440,6 +1471,7 @@
       "id": "w-andrewgarie",
       "name": "Andrew GARIE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-11",
       "employment_end": null,
@@ -1485,6 +1517,7 @@
       "id": "w-andrewgulle",
       "name": "Andrew GULLE",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-29",
       "employment_end": null,
@@ -1530,6 +1563,7 @@
       "id": "w-andrewmitchell",
       "name": "Andrew MITCHELL",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-24",
       "employment_end": null,
@@ -1575,6 +1609,7 @@
       "id": "w-andrewroberts",
       "name": "Andrew ROBERTS",
       "position": "Supervisor - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-05-18",
       "employment_end": null,
@@ -1620,6 +1655,7 @@
       "id": "w-andrewwade",
       "name": "Andrew WADE \u274c",
       "position": "Rope Access - NDT",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-19",
       "employment_end": null,
@@ -1665,6 +1701,7 @@
       "id": "w-angeliquedefra",
       "name": "Angelique DEFRANCESCHI",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-19",
       "employment_end": null,
@@ -1710,6 +1747,7 @@
       "id": "w-anguscampbell",
       "name": "Angus CAMPBELL",
       "position": "Boilermaker - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-24",
       "employment_end": null,
@@ -1755,6 +1793,7 @@
       "id": "w-angusomara",
       "name": "Angus O\u2019MARA",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-03-02",
       "employment_end": null,
@@ -1800,6 +1839,7 @@
       "id": "w-aniskerfi",
       "name": "Anis KERFI",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-11",
       "employment_end": null,
@@ -1845,6 +1885,7 @@
       "id": "w-annaellaviljoe",
       "name": "Annaella VILJOEN",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-03-06",
       "employment_end": null,
@@ -1890,6 +1931,7 @@
       "id": "w-anqining",
       "name": "Anqi NING",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-28",
       "employment_end": null,
@@ -1935,6 +1977,7 @@
       "id": "w-anthonybrandis",
       "name": "Anthony BRANDIS",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-08-17",
       "employment_end": null,
@@ -1980,6 +2023,7 @@
       "id": "w-arthobayly",
       "name": "Art HO-BAYLY",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-30",
       "employment_end": null,
@@ -2025,6 +2069,7 @@
       "id": "w-arthurdeydier",
       "name": "Arthur DEYDIER",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-13",
       "employment_end": null,
@@ -2070,6 +2115,7 @@
       "id": "w-aurelehuguet",
       "name": "Aurele HUGUET",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-05",
       "employment_end": null,
@@ -2115,6 +2161,7 @@
       "id": "w-auriolsson",
       "name": "Auri OLSSON",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-03-01",
       "employment_end": null,
@@ -2160,6 +2207,7 @@
       "id": "w-aylasmith",
       "name": "Ayla SMITH",
       "position": "Site Administration",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-28",
       "employment_end": null,
@@ -2205,6 +2253,7 @@
       "id": "w-baolacleondu",
       "name": "Bao-Lac (Leon) DU",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-30",
       "employment_end": null,
@@ -2221,7 +2270,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-04": {
@@ -2250,6 +2299,7 @@
       "id": "w-baptisteregine",
       "name": "Baptiste REGINER",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-31",
       "employment_end": null,
@@ -2295,6 +2345,7 @@
       "id": "w-baydenkau",
       "name": "Bayden KAU",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-12",
       "employment_end": null,
@@ -2340,6 +2391,7 @@
       "id": "w-beaudavyrusso",
       "name": "Beau DAVY-RUSSO",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-17",
       "employment_end": null,
@@ -2385,6 +2437,7 @@
       "id": "w-benbindon",
       "name": "Ben BINDON",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-04",
       "employment_end": null,
@@ -2401,7 +2454,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-04": {
@@ -2430,6 +2483,7 @@
       "id": "w-bensaffioti",
       "name": "Ben SAFFIOTI \u274c",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-28",
       "employment_end": null,
@@ -2475,6 +2529,7 @@
       "id": "w-bentomkins",
       "name": "Ben TOMKINS",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -2520,6 +2575,7 @@
       "id": "w-benjaminherman",
       "name": "Benjamin HERMAN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-23",
       "employment_end": null,
@@ -2565,6 +2621,7 @@
       "id": "w-bradleyhoward",
       "name": "Bradley HOWARD",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-07-26",
       "employment_end": null,
@@ -2610,6 +2667,7 @@
       "id": "w-bradleymcrober",
       "name": "Bradley MCROBERTS",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-01",
       "employment_end": null,
@@ -2655,6 +2713,7 @@
       "id": "w-bradleytaylor",
       "name": "Bradley TAYLOR",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-07-31",
       "employment_end": null,
@@ -2700,6 +2759,7 @@
       "id": "w-bradythomas",
       "name": "Brady THOMAS",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-01-30",
       "employment_end": null,
@@ -2721,7 +2781,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 108,
+          "hours": 96,
           "committed": false
         },
         "2026-05": {
@@ -2745,6 +2805,7 @@
       "id": "w-brandonrichard",
       "name": "Brandon RICHARDSON",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-05",
       "employment_end": null,
@@ -2790,6 +2851,7 @@
       "id": "w-brendandean",
       "name": "Brendan DEAN",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-28",
       "employment_end": null,
@@ -2806,7 +2868,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 312,
+          "hours": 300,
           "committed": false
         },
         "2026-04": {
@@ -2835,6 +2897,7 @@
       "id": "w-brendonwyatt",
       "name": "Brendon WYATT",
       "position": "Superintendent - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-22",
       "employment_end": null,
@@ -2851,7 +2914,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 192,
+          "hours": 180,
           "committed": false
         },
         "2026-04": {
@@ -2880,6 +2943,7 @@
       "id": "w-brentbobbynaul",
       "name": "Brent (Bobby) NAULU",
       "position": "Superintendent - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2020-12-15",
       "employment_end": null,
@@ -2896,7 +2960,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 276,
           "committed": false
         },
         "2026-04": {
@@ -2925,6 +2989,7 @@
       "id": "w-briansimpson",
       "name": "Brian SIMPSON \u274c",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-28",
       "employment_end": null,
@@ -2970,6 +3035,7 @@
       "id": "w-brianwilliams",
       "name": "Brian WILLIAMS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-05-17",
       "employment_end": null,
@@ -3015,6 +3081,7 @@
       "id": "w-brockatkins",
       "name": "Brock ATKINS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-04-21",
       "employment_end": null,
@@ -3060,6 +3127,7 @@
       "id": "w-brockpaech",
       "name": "Brock PAECH",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-12-09",
       "employment_end": null,
@@ -3105,6 +3173,7 @@
       "id": "w-brodiecope",
       "name": "Brodie COPE",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-11",
       "employment_end": null,
@@ -3150,6 +3219,7 @@
       "id": "w-brodiewilson",
       "name": "Brodie WILSON",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-10",
       "employment_end": null,
@@ -3195,6 +3265,7 @@
       "id": "w-bronsonholbroo",
       "name": "Bronson HOLBROOK\u274c",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2021-09-21",
       "employment_end": null,
@@ -3240,6 +3311,7 @@
       "id": "w-brontecharlesw",
       "name": "Bronte CHARLESWORTH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-01",
       "employment_end": null,
@@ -3285,6 +3357,7 @@
       "id": "w-brycemcintosh",
       "name": "Bryce MCINTOSH",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-01-31",
       "employment_end": null,
@@ -3330,6 +3403,7 @@
       "id": "w-burskbozkurt",
       "name": "Bursk BOZKURT",
       "position": "Rope Access - Mech Fitter",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-20",
       "employment_end": null,
@@ -3375,6 +3449,7 @@
       "id": "w-butholezweboto",
       "name": "Butholezwe (Bo-toe) MOYO \ud83d\udea9",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-03-29",
       "employment_end": null,
@@ -3420,6 +3495,7 @@
       "id": "w-byronshields",
       "name": "Byron SHIELDS",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-05-02",
       "employment_end": null,
@@ -3465,6 +3541,7 @@
       "id": "w-caiquefoley",
       "name": "Caique FOLEY",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-27",
       "employment_end": null,
@@ -3481,7 +3558,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -3510,6 +3587,7 @@
       "id": "w-caitlanbell",
       "name": "Caitlan BELL",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-28",
       "employment_end": null,
@@ -3555,6 +3633,7 @@
       "id": "w-calebfletcher",
       "name": "Caleb FLETCHER \u274c",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-23",
       "employment_end": null,
@@ -3600,6 +3679,7 @@
       "id": "w-calebwainwrigh",
       "name": "Caleb WAINWRIGHT",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-17",
       "employment_end": null,
@@ -3645,6 +3725,7 @@
       "id": "w-cameronbaker",
       "name": "Cameron BAKER",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-11-08",
       "employment_end": null,
@@ -3656,7 +3737,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-03": {
@@ -3690,6 +3771,7 @@
       "id": "w-camerongreen",
       "name": "Cameron GREEN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-04-08",
       "employment_end": null,
@@ -3711,7 +3793,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-05": {
@@ -3735,6 +3817,7 @@
       "id": "w-cameronhotchin",
       "name": "Cameron HOTCHIN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-05",
       "employment_end": null,
@@ -3780,6 +3863,7 @@
       "id": "w-cameronlucas",
       "name": "Cameron LUCAS",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-11",
       "employment_end": null,
@@ -3825,6 +3909,7 @@
       "id": "w-cameronmcalist",
       "name": "Cameron McALISTER \u274c",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-07",
       "employment_end": null,
@@ -3870,6 +3955,7 @@
       "id": "w-caraghvanleen",
       "name": "Caragh VAN LEEN",
       "position": "MLO",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-05",
       "employment_end": null,
@@ -3915,6 +4001,7 @@
       "id": "w-carloferri",
       "name": "Carlo FERRI \ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-19",
       "employment_end": null,
@@ -3960,6 +4047,7 @@
       "id": "w-chanellehuiaru",
       "name": "Chanelle HUIA-RUTTEN",
       "position": "MLO",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2024-12-20",
       "employment_end": null,
@@ -4005,6 +4093,7 @@
       "id": "w-charianreti",
       "name": "Charian RETI",
       "position": "Scaffolder - Basic",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2021-11-04",
       "employment_end": null,
@@ -4050,6 +4139,7 @@
       "id": "w-charliejackson",
       "name": "Charlie JACKSON",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-09-19",
       "employment_end": null,
@@ -4095,6 +4185,7 @@
       "id": "w-chloejohnsonha",
       "name": "Chloe JOHNSON-HAYWARD",
       "position": "Site Administration",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-12",
       "employment_end": null,
@@ -4140,6 +4231,7 @@
       "id": "w-christianhuege",
       "name": "Christian HUEGE DE SERVILLE",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-13",
       "employment_end": null,
@@ -4185,6 +4277,7 @@
       "id": "w-christophercur",
       "name": "Christopher CURTIS",
       "position": "Superintendent - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-06-10",
       "employment_end": null,
@@ -4206,7 +4299,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 132,
           "committed": false
         },
         "2026-05": {
@@ -4230,6 +4323,7 @@
       "id": "w-christopherfor",
       "name": "Christopher FORD\ud83d\udd37",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-27",
       "employment_end": null,
@@ -4275,6 +4369,7 @@
       "id": "w-christopherodo",
       "name": "Christopher O'DONNELL",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-03-02",
       "employment_end": null,
@@ -4320,6 +4415,7 @@
       "id": "w-clairefairbair",
       "name": "Claire FAIRBAIRN",
       "position": "Site Administration",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-16",
       "employment_end": null,
@@ -4365,6 +4461,7 @@
       "id": "w-clarkcaputolan",
       "name": "Clark CAPUTOLAN",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-02",
       "employment_end": null,
@@ -4381,7 +4478,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-04": {
@@ -4410,6 +4507,7 @@
       "id": "w-claytonpetteit",
       "name": "Clayton PETTEIT",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-03",
       "employment_end": null,
@@ -4455,6 +4553,7 @@
       "id": "w-claytontaura",
       "name": "Clayton TAURA",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-09-16",
       "employment_end": null,
@@ -4466,102 +4565,12 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 156,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
           "hours": 84,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 240,
-          "committed": false
-        },
-        "2026-05": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-codymcvay",
-      "name": "Cody MCVAY",
-      "position": "Scaffolder - Intermediate",
-      "primary_client": "Fortescue",
-      "employment_start": "2025-11-11",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": "Fortescue",
-          "hours": 108,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 264,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 180,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 192,
-          "committed": false
-        },
-        "2026-05": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-coopersumner",
-      "name": "Cooper SUMNER",
-      "position": "Rope Access - Boilermaker",
-      "primary_client": "Fortescue",
-      "employment_start": "2025-11-13",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": "Fortescue",
-          "hours": 24,
-          "committed": false
-        },
-        "2026-02": {
-          "client": "Fortescue",
-          "hours": 288,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 204,
           "committed": false
         },
         "2026-04": {
@@ -4587,9 +4596,102 @@
       }
     },
     {
+      "id": "w-codymcvay",
+      "name": "Cody MCVAY",
+      "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-11-11",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 108,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 264,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 180,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 180,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-coopersumner",
+      "name": "Cooper SUMNER",
+      "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-11-13",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 24,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 288,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 204,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 216,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
       "id": "w-coreyfooter",
       "name": "Corey FOOTER \ud83d\udea9",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-09",
       "employment_end": null,
@@ -4635,6 +4737,7 @@
       "id": "w-coreywimperis",
       "name": "Corey WIMPERIS",
       "position": "Superintendent - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2021-05-11",
       "employment_end": null,
@@ -4680,6 +4783,7 @@
       "id": "w-corycairns",
       "name": "Cory CAIRNS",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-05",
       "employment_end": null,
@@ -4725,6 +4829,7 @@
       "id": "w-corygarner",
       "name": "Cory GARNER",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-24",
       "employment_end": null,
@@ -4770,13 +4875,14 @@
       "id": "w-corymacdonell",
       "name": "Cory MACDONELL",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-02": {
@@ -4786,7 +4892,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 276,
           "committed": false
         },
         "2026-04": {
@@ -4815,6 +4921,7 @@
       "id": "w-daimonosbourne",
       "name": "Daimon OSBOURNE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-22",
       "employment_end": null,
@@ -4860,6 +4967,7 @@
       "id": "w-damiencailleux",
       "name": "Damien CAILLEUX",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-21",
       "employment_end": null,
@@ -4905,6 +5013,7 @@
       "id": "w-damienclarkson",
       "name": "Damien CLARKSON",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-03",
       "employment_end": null,
@@ -4950,6 +5059,7 @@
       "id": "w-danielaitken",
       "name": "Daniel AITKEN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-16",
       "employment_end": null,
@@ -4995,6 +5105,7 @@
       "id": "w-danielbarr",
       "name": "Daniel BARR",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-15",
       "employment_end": null,
@@ -5040,6 +5151,7 @@
       "id": "w-danielcawley",
       "name": "Daniel CAWLEY \ud83d\udd37",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-13",
       "employment_end": null,
@@ -5085,6 +5197,7 @@
       "id": "w-danieldodd",
       "name": "Daniel DODD",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-17",
       "employment_end": null,
@@ -5130,6 +5243,7 @@
       "id": "w-danielhillsdon",
       "name": "Daniel HILLSDON",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-08-02",
       "employment_end": null,
@@ -5175,6 +5289,7 @@
       "id": "w-daniellajh",
       "name": "Daniel LAJH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-13",
       "employment_end": null,
@@ -5220,6 +5335,7 @@
       "id": "w-danielmartin",
       "name": "Daniel MARTIN",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-03",
       "employment_end": null,
@@ -5265,6 +5381,7 @@
       "id": "w-danielnoble",
       "name": "Daniel NOBLE",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-23",
       "employment_end": null,
@@ -5281,7 +5398,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -5310,6 +5427,7 @@
       "id": "w-danielrainey",
       "name": "Daniel RAINEY",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-18",
       "employment_end": null,
@@ -5355,6 +5473,7 @@
       "id": "w-danielwoods",
       "name": "Daniel WOODS",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-09-01",
       "employment_end": null,
@@ -5400,6 +5519,7 @@
       "id": "w-dannymorrison",
       "name": "Danny MORRISON",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-18",
       "employment_end": null,
@@ -5445,6 +5565,7 @@
       "id": "w-darcitarr",
       "name": "Darci TARR",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-15",
       "employment_end": null,
@@ -5490,6 +5611,7 @@
       "id": "w-darcyhubbard",
       "name": "Darcy HUBBARD",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-01-15",
       "employment_end": null,
@@ -5535,6 +5657,7 @@
       "id": "w-darcyzloich",
       "name": "Darcy ZLOICH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-03-29",
       "employment_end": null,
@@ -5580,13 +5703,14 @@
       "id": "w-darrencoller",
       "name": "Darren COLLER \ud83d\udea9",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-01",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 132,
+          "hours": 72,
           "committed": false
         },
         "2026-02": {
@@ -5625,6 +5749,7 @@
       "id": "w-darrenlawler",
       "name": "Darren LAWLER",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-16",
       "employment_end": null,
@@ -5670,6 +5795,7 @@
       "id": "w-davidbradley",
       "name": "David BRADLEY",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -5715,6 +5841,7 @@
       "id": "w-davidcrook",
       "name": "David CROOK",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-19",
       "employment_end": null,
@@ -5760,6 +5887,7 @@
       "id": "w-davidgrimes",
       "name": "David GRIMES",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-04",
       "employment_end": null,
@@ -5805,6 +5933,7 @@
       "id": "w-davidmcgiven",
       "name": "David MCGIVEN",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-05-30",
       "employment_end": null,
@@ -5826,7 +5955,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 324,
+          "hours": 312,
           "committed": false
         },
         "2026-05": {
@@ -5850,6 +5979,7 @@
       "id": "w-davidpowell",
       "name": "David POWELL",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-11",
       "employment_end": null,
@@ -5871,7 +6001,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-05": {
@@ -5895,6 +6025,7 @@
       "id": "w-dembotoure",
       "name": "Dembo TOURE",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-12-04",
       "employment_end": null,
@@ -5940,6 +6071,7 @@
       "id": "w-derbyabdoulaye",
       "name": "Derby-Abdoulaye SAMBA",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-26",
       "employment_end": null,
@@ -5985,6 +6117,7 @@
       "id": "w-douglasgauvin",
       "name": "Douglas GAUVIN",
       "position": "Rope Access - Mech Fitter",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-29",
       "employment_end": null,
@@ -6030,6 +6163,7 @@
       "id": "w-douglasmoore",
       "name": "Douglas MOORE \ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-21",
       "employment_end": null,
@@ -6041,7 +6175,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 192,
+          "hours": 168,
           "committed": false
         },
         "2026-03": {
@@ -6075,6 +6209,7 @@
       "id": "w-drewmclennan",
       "name": "Drew MCLENNAN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-09",
       "employment_end": null,
@@ -6120,6 +6255,7 @@
       "id": "w-duanrosario",
       "name": "Duan ROSARIO",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-14",
       "employment_end": null,
@@ -6165,6 +6301,7 @@
       "id": "w-dudleybarber",
       "name": "Dudley BARBER",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-12-05",
       "employment_end": null,
@@ -6210,6 +6347,7 @@
       "id": "w-dylanclarke",
       "name": "Dylan CLARKE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-11-22",
       "employment_end": null,
@@ -6255,6 +6393,7 @@
       "id": "w-dylanjoseph",
       "name": "Dylan JOSEPH",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-28",
       "employment_end": null,
@@ -6300,23 +6439,24 @@
       "id": "w-dylanthomas",
       "name": "Dylan THOMAS",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-13",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 432,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 504,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 396,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -6345,6 +6485,7 @@
       "id": "w-eberhardcoutan",
       "name": "Eberhard COUTANT \u274c",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-04-14",
       "employment_end": null,
@@ -6390,6 +6531,7 @@
       "id": "w-edwardtedustia",
       "name": "Edward (Ted) USTIANOWSKI",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-08",
       "employment_end": null,
@@ -6435,6 +6577,7 @@
       "id": "w-elijahngawhika",
       "name": "Elijah NGAWHIKA",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-01-08",
       "employment_end": null,
@@ -6480,6 +6623,7 @@
       "id": "w-ellienaisbitt",
       "name": "Ellie NAISBITT",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-04-05",
       "employment_end": null,
@@ -6525,6 +6669,7 @@
       "id": "w-elliotpurvis",
       "name": "Elliot PURVIS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-03-08",
       "employment_end": null,
@@ -6570,6 +6715,7 @@
       "id": "w-erubennettpaul",
       "name": "Eru BENNETT-PAUL",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-26",
       "employment_end": null,
@@ -6586,7 +6732,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 456,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -6615,6 +6761,7 @@
       "id": "w-erwantipaka",
       "name": "Erwan TIPAKA",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-14",
       "employment_end": null,
@@ -6660,6 +6807,7 @@
       "id": "w-ethanmaitland",
       "name": "Ethan MAITLAND",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-19",
       "employment_end": null,
@@ -6705,6 +6853,7 @@
       "id": "w-ethanmcleod",
       "name": "Ethan MCLEOD",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-09",
       "employment_end": null,
@@ -6720,8 +6869,8 @@
           "committed": false
         },
         "2026-03": {
-          "client": "Fortescue",
-          "hours": 324,
+          "client": "Roy Hill/Hancock",
+          "hours": 312,
           "committed": false
         },
         "2026-04": {
@@ -6750,6 +6899,7 @@
       "id": "w-eugenepark",
       "name": "Eugene PARK",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-09-20",
       "employment_end": null,
@@ -6795,6 +6945,7 @@
       "id": "w-evanbarcoe",
       "name": "Evan BARCOE",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-04-10",
       "employment_end": null,
@@ -6840,6 +6991,7 @@
       "id": "w-ezekielnanai",
       "name": "Ezekiel NANAI",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-08",
       "employment_end": null,
@@ -6885,6 +7037,7 @@
       "id": "w-florentlebec",
       "name": "Florent LE BEC",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-17",
       "employment_end": null,
@@ -6901,7 +7054,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -6930,6 +7083,7 @@
       "id": "w-florinvieriu",
       "name": "Florin VIERIU",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-31",
       "employment_end": null,
@@ -6975,13 +7129,14 @@
       "id": "w-flynnbarrett",
       "name": "Flynn BARRETT",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-29",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 120,
+          "hours": 108,
           "committed": false
         },
         "2026-02": {
@@ -7020,6 +7175,7 @@
       "id": "w-frankturner",
       "name": "Frank TURNER",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-04",
       "employment_end": null,
@@ -7065,18 +7221,19 @@
       "id": "w-fredrickjoeafe",
       "name": "Fredrick (Joe) AFEAKI",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-01",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
@@ -7110,6 +7267,7 @@
       "id": "w-froilanencinas",
       "name": "Froilan ENCINAS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-09",
       "employment_end": null,
@@ -7155,6 +7313,7 @@
       "id": "w-gaetangodeau",
       "name": "Gaetan GODEAU",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-11-09",
       "employment_end": null,
@@ -7200,6 +7359,7 @@
       "id": "w-garykenny",
       "name": "Gary KENNY \ud83d\udd37",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-10",
       "employment_end": null,
@@ -7211,7 +7371,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 216,
           "committed": false
         },
         "2026-03": {
@@ -7245,6 +7405,7 @@
       "id": "w-georgehawkey",
       "name": "George HAWKEY",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-13",
       "employment_end": null,
@@ -7290,6 +7451,7 @@
       "id": "w-giannifederico",
       "name": "Gianni FEDERICO",
       "position": "HSE Advisor",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2024-01-10",
       "employment_end": null,
@@ -7301,7 +7463,7 @@
         },
         "2026-02": {
           "client": "BHP",
-          "hours": 156,
+          "hours": 96,
           "committed": false
         },
         "2026-03": {
@@ -7335,6 +7497,7 @@
       "id": "w-gillevit",
       "name": "Gil LEVIT \u274c",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-04",
       "employment_end": null,
@@ -7380,6 +7543,7 @@
       "id": "w-giovannigarbol",
       "name": "Giovanni GARBOLINO \ud83d\udea9",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-04",
       "employment_end": null,
@@ -7425,13 +7589,14 @@
       "id": "w-glenpoldmaa",
       "name": "Glen POLDMAA",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-03",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 276,
           "committed": false
         },
         "2026-02": {
@@ -7446,7 +7611,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-05": {
@@ -7470,6 +7635,7 @@
       "id": "w-godwillmadziva",
       "name": "Godwill MADZIVADONDO",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-31",
       "employment_end": null,
@@ -7515,6 +7681,7 @@
       "id": "w-hamishcummings",
       "name": "Hamish CUMMINGS",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-07",
       "employment_end": null,
@@ -7560,6 +7727,7 @@
       "id": "w-haroldsenecal",
       "name": "Harold SENECAL",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-11-23",
       "employment_end": null,
@@ -7605,6 +7773,7 @@
       "id": "w-harrisoncusack",
       "name": "Harrison CUSACK",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-17",
       "employment_end": null,
@@ -7650,6 +7819,7 @@
       "id": "w-harrisongodrid",
       "name": "Harrison GODRIDGE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-01",
       "employment_end": null,
@@ -7695,6 +7865,7 @@
       "id": "w-haydynnissen",
       "name": "Haydyn NISSEN",
       "position": "HSE Superintendent",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2021-09-14",
       "employment_end": null,
@@ -7740,6 +7911,7 @@
       "id": "w-heremaiakendal",
       "name": "Heremaia KENDALL",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-01-23",
       "employment_end": null,
@@ -7785,6 +7957,7 @@
       "id": "w-ianherold",
       "name": "Ian HEROLD",
       "position": "Superintendent - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-07-14",
       "employment_end": null,
@@ -7801,7 +7974,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 180,
           "committed": false
         },
         "2026-04": {
@@ -7830,6 +8003,7 @@
       "id": "w-ioritanafilo",
       "name": "Ioritana FILO",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-24",
       "employment_end": null,
@@ -7875,6 +8049,7 @@
       "id": "w-ivanmontana",
       "name": "Ivan MONTANA",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-12",
       "employment_end": null,
@@ -7920,6 +8095,7 @@
       "id": "w-jackevans",
       "name": "Jack EVANS",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -7936,7 +8112,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-04": {
@@ -7965,6 +8141,7 @@
       "id": "w-jacklearmonth",
       "name": "Jack LEARMONTH",
       "position": "Boilermaker - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-09-26",
       "employment_end": null,
@@ -8010,6 +8187,7 @@
       "id": "w-jackralph",
       "name": "Jack RALPH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-03-07",
       "employment_end": null,
@@ -8055,6 +8233,7 @@
       "id": "w-jackrichardson",
       "name": "Jack RICHARDSON",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-04-04",
       "employment_end": null,
@@ -8100,6 +8279,7 @@
       "id": "w-jackthompson",
       "name": "Jack THOMPSON",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-10",
       "employment_end": null,
@@ -8145,6 +8325,7 @@
       "id": "w-jacktrewick",
       "name": "Jack TREWICK",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-26",
       "employment_end": null,
@@ -8190,6 +8371,7 @@
       "id": "w-jackvujcich",
       "name": "Jack VUJCICH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-28",
       "employment_end": null,
@@ -8235,6 +8417,7 @@
       "id": "w-jacksonbrunton",
       "name": "Jackson BRUNTON",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-06-04",
       "employment_end": null,
@@ -8251,7 +8434,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-04": {
@@ -8280,6 +8463,7 @@
       "id": "w-jacobbeard",
       "name": "Jacob BEARD",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-01",
       "employment_end": null,
@@ -8325,6 +8509,7 @@
       "id": "w-jacobjolliffej",
       "name": "Jacob JOLLIFFE-JONES",
       "position": "Supervisor - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-04-15",
       "employment_end": null,
@@ -8370,6 +8555,7 @@
       "id": "w-jacobmorrison",
       "name": "Jacob MORRISON",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-24",
       "employment_end": null,
@@ -8415,6 +8601,7 @@
       "id": "w-jacquelinelukh",
       "name": "Jacqueline LUKHAUP",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2022-11-28",
       "employment_end": null,
@@ -8460,6 +8647,7 @@
       "id": "w-jadranplosnic",
       "name": "Jadran PLOSNIC",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-17",
       "employment_end": null,
@@ -8505,6 +8693,7 @@
       "id": "w-jahradbutler",
       "name": "Jahrad BUTLER",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-11",
       "employment_end": null,
@@ -8550,6 +8739,7 @@
       "id": "w-jaibaileytimu",
       "name": "Jai BAILEYTIMU",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-12",
       "employment_end": null,
@@ -8561,7 +8751,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 192,
+          "hours": 168,
           "committed": false
         },
         "2026-03": {
@@ -8595,6 +8785,7 @@
       "id": "w-jakedonnelly",
       "name": "Jake DONNELLY",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-16",
       "employment_end": null,
@@ -8640,6 +8831,7 @@
       "id": "w-jakegriechen",
       "name": "Jake GRIECHEN",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-14",
       "employment_end": null,
@@ -8685,6 +8877,7 @@
       "id": "w-jakeillich",
       "name": "Jake ILLICH",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-12-01",
       "employment_end": null,
@@ -8730,6 +8923,7 @@
       "id": "w-jaketilley",
       "name": "Jake TILLEY",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-15",
       "employment_end": null,
@@ -8775,6 +8969,7 @@
       "id": "w-jamesjamiemcdo",
       "name": "James (Jamie) McDONAGH",
       "position": "Manager - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-24",
       "employment_end": null,
@@ -8820,6 +9015,7 @@
       "id": "w-jamesbolland",
       "name": "James BOLLAND \u274c",
       "position": "Scaffolder - Basic",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-17",
       "employment_end": null,
@@ -8865,6 +9061,7 @@
       "id": "w-jamescassells",
       "name": "James CASSELLS",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-04-22",
       "employment_end": null,
@@ -8881,7 +9078,7 @@
         },
         "2026-03": {
           "client": "Roy Hill/Hancock",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
@@ -8910,6 +9107,7 @@
       "id": "w-jamescoates",
       "name": "James COATES",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-23",
       "employment_end": null,
@@ -8955,6 +9153,7 @@
       "id": "w-jamescoomber",
       "name": "James COOMBER",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-19",
       "employment_end": null,
@@ -9000,6 +9199,7 @@
       "id": "w-jamesfraser",
       "name": "James FRASER",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-27",
       "employment_end": null,
@@ -9045,6 +9245,7 @@
       "id": "w-jamesrosielle",
       "name": "James ROSIELLE",
       "position": "Superintendent - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-16",
       "employment_end": null,
@@ -9056,12 +9257,12 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 540,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 444,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -9090,6 +9291,7 @@
       "id": "w-jamesstephenso",
       "name": "James STEPHENSON",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-28",
       "employment_end": null,
@@ -9135,6 +9337,7 @@
       "id": "w-jamesward",
       "name": "James WARD",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-27",
       "employment_end": null,
@@ -9151,7 +9354,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 276,
+          "hours": 264,
           "committed": false
         },
         "2026-04": {
@@ -9180,6 +9383,7 @@
       "id": "w-jamiemcguire",
       "name": "Jamie McGUIRE",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-17",
       "employment_end": null,
@@ -9225,6 +9429,7 @@
       "id": "w-jamiesmith",
       "name": "Jamie SMITH",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-15",
       "employment_end": null,
@@ -9270,6 +9475,7 @@
       "id": "w-jarradfehlberg",
       "name": "Jarrad FEHLBERG",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-07-25",
       "employment_end": null,
@@ -9315,6 +9521,7 @@
       "id": "w-jasonread",
       "name": "Jason READ \ud83d\udea9",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-01-19",
       "employment_end": null,
@@ -9360,6 +9567,7 @@
       "id": "w-jaxonswanson",
       "name": "Jaxon SWANSON",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-07-31",
       "employment_end": null,
@@ -9405,6 +9613,7 @@
       "id": "w-jaycashell",
       "name": "Jay CASHELL \u2b50",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-05",
       "employment_end": null,
@@ -9421,12 +9630,12 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 180,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 444,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -9450,6 +9659,7 @@
       "id": "w-jaypacker",
       "name": "Jay PACKER",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-30",
       "employment_end": null,
@@ -9495,6 +9705,7 @@
       "id": "w-jeanmichelkoud",
       "name": "Jean-Michel KOUDOU",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-30",
       "employment_end": null,
@@ -9540,6 +9751,7 @@
       "id": "w-jeremiahtaura",
       "name": "Jeremiah TAURA",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-22",
       "employment_end": null,
@@ -9585,6 +9797,7 @@
       "id": "w-jeremybreadmor",
       "name": "Jeremy BREADMORE",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-03-30",
       "employment_end": null,
@@ -9630,6 +9843,7 @@
       "id": "w-jeremyignacz",
       "name": "Jeremy IGNACZ",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-01",
       "employment_end": null,
@@ -9675,6 +9889,7 @@
       "id": "w-jeremypatol",
       "name": "Jeremy PATOL",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-06-30",
       "employment_end": null,
@@ -9691,7 +9906,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
@@ -9720,6 +9935,7 @@
       "id": "w-jerredmuir",
       "name": "Jerred MUIR",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-04-15",
       "employment_end": null,
@@ -9765,6 +9981,7 @@
       "id": "w-jervaislegendr",
       "name": "Jervais LE GENDRE",
       "position": "Rope Access - NDT",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-09-01",
       "employment_end": null,
@@ -9810,6 +10027,7 @@
       "id": "w-jesseburr",
       "name": "Jesse BURR",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-31",
       "employment_end": null,
@@ -9855,6 +10073,7 @@
       "id": "w-jessefranklin",
       "name": "Jesse FRANKLIN",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-09-05",
       "employment_end": null,
@@ -9900,6 +10119,7 @@
       "id": "w-jesseoakes",
       "name": "Jesse OAKES",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-04-02",
       "employment_end": null,
@@ -9945,6 +10165,7 @@
       "id": "w-jesseverhage",
       "name": "Jesse VERHAGE",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-04-09",
       "employment_end": null,
@@ -9990,6 +10211,7 @@
       "id": "w-jesseykereopa",
       "name": "Jessey KEREOPA",
       "position": "Site Coordinator",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2024-11-12",
       "employment_end": null,
@@ -10011,7 +10233,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 324,
+          "hours": 312,
           "committed": false
         },
         "2026-05": {
@@ -10035,6 +10257,7 @@
       "id": "w-jessicalajoie",
       "name": "Jessica LAJOIE",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-19",
       "employment_end": null,
@@ -10051,7 +10274,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -10080,6 +10303,7 @@
       "id": "w-jigmidorjee",
       "name": "Jigmi DORJEE",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-03",
       "employment_end": null,
@@ -10125,6 +10349,7 @@
       "id": "w-jodiemayo",
       "name": "Jodie MAYO",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-03",
       "employment_end": null,
@@ -10170,6 +10395,7 @@
       "id": "w-joemagee",
       "name": "Joe MAGEE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-17",
       "employment_end": null,
@@ -10215,6 +10441,7 @@
       "id": "w-joesutherland",
       "name": "Joe SUTHERLAND",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-09",
       "employment_end": null,
@@ -10260,13 +10487,14 @@
       "id": "w-joelarcher",
       "name": "Joel ARCHER",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-03",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-02": {
@@ -10305,6 +10533,7 @@
       "id": "w-joffreydeharch",
       "name": "Joffrey DEHARCHIES",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2022-08-15",
       "employment_end": null,
@@ -10350,6 +10579,7 @@
       "id": "w-johannenslin",
       "name": "Johann ENSLIN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-29",
       "employment_end": null,
@@ -10395,6 +10625,7 @@
       "id": "w-johnfarrell",
       "name": "John FARRELL",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-04-15",
       "employment_end": null,
@@ -10440,6 +10671,7 @@
       "id": "w-jonathanbonney",
       "name": "Jonathan BONNEY",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-04-22",
       "employment_end": null,
@@ -10485,6 +10717,7 @@
       "id": "w-jonathanmartin",
       "name": "Jonathan MARTIN",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-09-11",
       "employment_end": null,
@@ -10530,6 +10763,7 @@
       "id": "w-jonathanmcnama",
       "name": "Jonathan McNAMARA",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-13",
       "employment_end": null,
@@ -10546,7 +10780,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-04": {
@@ -10575,6 +10809,7 @@
       "id": "w-jonathansteve",
       "name": "Jonathan STEVE",
       "position": "Superintendent - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-09-08",
       "employment_end": null,
@@ -10620,6 +10855,7 @@
       "id": "w-jordanatitoabr",
       "name": "Jordan ATITOA-BRYANT",
       "position": "Applicator",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-28",
       "employment_end": null,
@@ -10665,6 +10901,7 @@
       "id": "w-jordanguthmann",
       "name": "Jordan GUTHMANN-CHESTER",
       "position": "Superintendent - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-15",
       "employment_end": null,
@@ -10676,17 +10913,17 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 600,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 480,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 420,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -10710,6 +10947,7 @@
       "id": "w-jordanreddish",
       "name": "Jordan REDDISH",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-06-12",
       "employment_end": null,
@@ -10755,6 +10993,7 @@
       "id": "w-josephfoss",
       "name": "Joseph FOSS \ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-21",
       "employment_end": null,
@@ -10800,6 +11039,7 @@
       "id": "w-joshbilbrough",
       "name": "Josh BILBROUGH \ud83d\udea9",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-03-27",
       "employment_end": null,
@@ -10845,6 +11085,7 @@
       "id": "w-joshuafitzgera",
       "name": "Joshua FITZGERALD",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-03-01",
       "employment_end": null,
@@ -10890,6 +11131,7 @@
       "id": "w-joshuagranucci",
       "name": "Joshua GRANUCCI",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-03-29",
       "employment_end": null,
@@ -10935,6 +11177,7 @@
       "id": "w-joshuagregory",
       "name": "Joshua GREGORY",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-05-20",
       "employment_end": null,
@@ -10980,6 +11223,7 @@
       "id": "w-joshuahemming",
       "name": "Joshua HEMMING",
       "position": "Supervisor - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-08-17",
       "employment_end": null,
@@ -11025,6 +11269,7 @@
       "id": "w-joshuaikin",
       "name": "Joshua IKIN",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-28",
       "employment_end": null,
@@ -11036,7 +11281,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 396,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
@@ -11070,6 +11315,7 @@
       "id": "w-joshuasearle",
       "name": "Joshua SEARLE",
       "position": "Boilermaker - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-02",
       "employment_end": null,
@@ -11115,6 +11361,7 @@
       "id": "w-joshuasibraa",
       "name": "Joshua SIBRAA",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-09",
       "employment_end": null,
@@ -11160,6 +11407,7 @@
       "id": "w-joshuasmeeton",
       "name": "Joshua SMEETON",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-15",
       "employment_end": null,
@@ -11205,6 +11453,7 @@
       "id": "w-joshuastorer",
       "name": "Joshua STORER",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-11",
       "employment_end": null,
@@ -11221,12 +11470,12 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 480,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 456,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -11250,6 +11499,7 @@
       "id": "w-juanosullivan",
       "name": "Juan O'SULLIVAN",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-03",
       "employment_end": null,
@@ -11295,6 +11545,7 @@
       "id": "w-juanpalomar",
       "name": "Juan PALOMAR",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-11-30",
       "employment_end": null,
@@ -11311,12 +11562,12 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 420,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 408,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -11340,6 +11591,7 @@
       "id": "w-julienkichetam",
       "name": "Julien KICHETAMA",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-09-16",
       "employment_end": null,
@@ -11385,6 +11637,7 @@
       "id": "w-kaedynlaplanch",
       "name": "Kaedyn LAPLANCHE",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-23",
       "employment_end": null,
@@ -11430,6 +11683,7 @@
       "id": "w-kalanireti",
       "name": "Kalani RETI \ud83d\udea9",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-13",
       "employment_end": null,
@@ -11475,6 +11729,7 @@
       "id": "w-kanefitton",
       "name": "Kane FITTON\ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-11",
       "employment_end": null,
@@ -11520,6 +11775,7 @@
       "id": "w-kanejauncey",
       "name": "Kane JAUNCEY",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-04-03",
       "employment_end": null,
@@ -11565,6 +11821,7 @@
       "id": "w-karinaarras",
       "name": "Karina ARRAS",
       "position": "Scaffolder - Basic",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-18",
       "employment_end": null,
@@ -11610,6 +11867,7 @@
       "id": "w-karlmatthews",
       "name": "Karl MATTHEWS",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-11-21",
       "employment_end": null,
@@ -11631,7 +11889,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 336,
+          "hours": 324,
           "committed": false
         },
         "2026-05": {
@@ -11655,6 +11913,7 @@
       "id": "w-karlngawhika",
       "name": "Karl NGAWHIKA",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-05-27",
       "employment_end": null,
@@ -11700,6 +11959,7 @@
       "id": "w-kayncorboy",
       "name": "Kayn CORBOY",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-03-11",
       "employment_end": null,
@@ -11711,7 +11971,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 432,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
@@ -11745,6 +12005,7 @@
       "id": "w-keeranerikson",
       "name": "Keeran ERIKSON \ud83d\udd37",
       "position": "Apprentice - Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-09-26",
       "employment_end": null,
@@ -11790,6 +12051,7 @@
       "id": "w-kennedywaye",
       "name": "Kennedy WAYE",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-05-29",
       "employment_end": null,
@@ -11835,6 +12097,7 @@
       "id": "w-kennethsolomon",
       "name": "Kenneth SOLOMON-TAUHINU \u274c",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-17",
       "employment_end": null,
@@ -11852,51 +12115,6 @@
         "2026-03": {
           "client": "Roy Hill/Hancock",
           "hours": 216,
-          "committed": false
-        },
-        "2026-04": {
-          "client": "Fortescue",
-          "hours": 180,
-          "committed": false
-        },
-        "2026-05": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-06": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        },
-        "2026-07": {
-          "client": null,
-          "hours": 0,
-          "committed": true
-        }
-      }
-    },
-    {
-      "id": "w-kerrodmartin",
-      "name": "Kerrod MARTIN",
-      "position": "Scaffolder - Advanced",
-      "primary_client": "Fortescue",
-      "employment_start": "2024-10-07",
-      "employment_end": null,
-      "monthly": {
-        "2026-01": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-02": {
-          "client": null,
-          "hours": 0,
-          "committed": false
-        },
-        "2026-03": {
-          "client": "Fortescue",
-          "hours": 12,
           "committed": false
         },
         "2026-04": {
@@ -11922,9 +12140,56 @@
       }
     },
     {
+      "id": "w-kerrodmartin",
+      "name": "Kerrod MARTIN",
+      "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
+      "primary_client": "Fortescue",
+      "employment_start": "2024-10-07",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 12,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
       "id": "w-kiennguyen",
       "name": "Kien NGUYEN",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-06-01",
       "employment_end": null,
@@ -11941,7 +12206,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 396,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -11970,6 +12235,7 @@
       "id": "w-kirstydavies",
       "name": "Kirsty DAVIES",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-10",
       "employment_end": null,
@@ -11986,7 +12252,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": false
         },
         "2026-04": {
@@ -12015,6 +12281,7 @@
       "id": "w-komborerochico",
       "name": "Komborero (Chico) CHIKONYERA",
       "position": "Boilermaker - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-08-19",
       "employment_end": null,
@@ -12060,6 +12327,7 @@
       "id": "w-kristoferolsze",
       "name": "Kristofer OLSZEWSKI",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-11-22",
       "employment_end": null,
@@ -12105,6 +12373,7 @@
       "id": "w-kwokfuchan",
       "name": "Kwok Fu CHAN",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-19",
       "employment_end": null,
@@ -12150,6 +12419,7 @@
       "id": "w-kylebauer",
       "name": "Kyle BAUER",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "BHP",
       "employment_start": "2024-08-21",
       "employment_end": null,
@@ -12171,7 +12441,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-05": {
@@ -12195,6 +12465,7 @@
       "id": "w-kylejohnson",
       "name": "Kyle JOHNSON",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-26",
       "employment_end": null,
@@ -12240,6 +12511,7 @@
       "id": "w-kylekeating",
       "name": "Kyle KEATING",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-09",
       "employment_end": null,
@@ -12285,6 +12557,7 @@
       "id": "w-kylenairn",
       "name": "Kyle NAIRN",
       "position": "Rope Access - NDT",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-25",
       "employment_end": null,
@@ -12301,7 +12574,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-04": {
@@ -12330,6 +12603,7 @@
       "id": "w-kynanmortimer",
       "name": "Kynan MORTIMER",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-17",
       "employment_end": null,
@@ -12375,6 +12649,7 @@
       "id": "w-kyutaejeffhwan",
       "name": "Kyu Tae (Jeff) HWANG",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-15",
       "employment_end": null,
@@ -12420,6 +12695,7 @@
       "id": "w-lachlangray",
       "name": "Lachlan GRAY",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-23",
       "employment_end": null,
@@ -12465,6 +12741,7 @@
       "id": "w-lachlanmorrice",
       "name": "Lachlan MORRICE",
       "position": "Rope Access - Mech Fitter",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-21",
       "employment_end": null,
@@ -12481,7 +12758,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-04": {
@@ -12510,6 +12787,7 @@
       "id": "w-lachlanstrelei",
       "name": "Lachlan STRELEIN",
       "position": "Apprentice - Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-07-19",
       "employment_end": null,
@@ -12555,6 +12833,7 @@
       "id": "w-lawriemccue",
       "name": "Lawrie McCUE",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-11",
       "employment_end": null,
@@ -12600,6 +12879,7 @@
       "id": "w-laynikeyzer",
       "name": "Layni KEYZER",
       "position": "Site Administration",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2024-06-20",
       "employment_end": null,
@@ -12645,6 +12925,7 @@
       "id": "w-leemorris",
       "name": "Lee MORRIS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-24",
       "employment_end": null,
@@ -12690,6 +12971,7 @@
       "id": "w-leondemuth",
       "name": "Leon DE MUTH",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-17",
       "employment_end": null,
@@ -12735,6 +13017,7 @@
       "id": "w-leonterblanche",
       "name": "Leon TERBLANCHE",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-06-16",
       "employment_end": null,
@@ -12780,6 +13063,7 @@
       "id": "w-lesleyjera",
       "name": "Lesley JERA",
       "position": "Apprentice - Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-07",
       "employment_end": null,
@@ -12801,7 +13085,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 144,
           "committed": false
         },
         "2026-05": {
@@ -12825,6 +13109,7 @@
       "id": "w-leviseko",
       "name": "Levi SEKO",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-03-22",
       "employment_end": null,
@@ -12870,6 +13155,7 @@
       "id": "w-lewiscoburn",
       "name": "Lewis COBURN",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-12",
       "employment_end": null,
@@ -12886,7 +13172,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": false
         },
         "2026-04": {
@@ -12915,6 +13201,7 @@
       "id": "w-lewismorgan",
       "name": "Lewis MORGAN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-03",
       "employment_end": null,
@@ -12960,6 +13247,7 @@
       "id": "w-liameastwood",
       "name": "Liam EASTWOOD",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-31",
       "employment_end": null,
@@ -13005,6 +13293,7 @@
       "id": "w-lillykealley",
       "name": "Lilly KEALLEY",
       "position": "MLO",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2023-04-19",
       "employment_end": null,
@@ -13050,6 +13339,7 @@
       "id": "w-lincolnaxfordw",
       "name": "Lincoln AXFORD-WOOD",
       "position": "Superintendent - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -13095,6 +13385,7 @@
       "id": "w-lintonpirihi",
       "name": "Linton PIRIHI",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-08",
       "employment_end": null,
@@ -13140,6 +13431,7 @@
       "id": "w-lisagriechen",
       "name": "Lisa GRIECHEN",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-04-10",
       "employment_end": null,
@@ -13185,6 +13477,7 @@
       "id": "w-livingstonenan",
       "name": "Livingstone NANAI",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-18",
       "employment_end": null,
@@ -13206,7 +13499,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 516,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -13230,6 +13523,7 @@
       "id": "w-lochlanamos",
       "name": "Lochlan AMOS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-26",
       "employment_end": null,
@@ -13275,6 +13569,7 @@
       "id": "w-louischaponnay",
       "name": "Louis CHAPONNAY",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-30",
       "employment_end": null,
@@ -13320,6 +13615,7 @@
       "id": "w-lucaspajic",
       "name": "Luca SPAJIC",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-09-11",
       "employment_end": null,
@@ -13365,13 +13661,14 @@
       "id": "w-luccasidey",
       "name": "Lucca SIDEY",
       "position": "Rope Access - NDT",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-09",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-02": {
@@ -13410,6 +13707,7 @@
       "id": "w-lukeagius",
       "name": "Luke AGIUS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-01",
       "employment_end": null,
@@ -13455,6 +13753,7 @@
       "id": "w-lukeblack",
       "name": "Luke BLACK",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-24",
       "employment_end": null,
@@ -13500,6 +13799,7 @@
       "id": "w-lukecowley",
       "name": "Luke COWLEY",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-13",
       "employment_end": null,
@@ -13545,6 +13845,7 @@
       "id": "w-lukeparker",
       "name": "Luke PARKER",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-24",
       "employment_end": null,
@@ -13590,6 +13891,7 @@
       "id": "w-lyrikjob",
       "name": "Lyrik JOB",
       "position": "Scaffolder - Basic",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-05",
       "employment_end": null,
@@ -13635,6 +13937,7 @@
       "id": "w-maanueraluckyh",
       "name": "Maanuera Lucky HAIMONA",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-12",
       "employment_end": null,
@@ -13680,6 +13983,7 @@
       "id": "w-maissanehadjer",
       "name": "Maissane HADJERES",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-11",
       "employment_end": null,
@@ -13725,6 +14029,7 @@
       "id": "w-mariaisabelrod",
       "name": "Maria Isabel RODRIGUES BERROCAL",
       "position": "Rope Access - NDT",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-01",
       "employment_end": null,
@@ -13770,6 +14075,7 @@
       "id": "w-markcaton",
       "name": "Mark CATON",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-09",
       "employment_end": null,
@@ -13786,7 +14092,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-04": {
@@ -13815,6 +14121,7 @@
       "id": "w-markclohesy",
       "name": "Mark CLOHESY",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-22",
       "employment_end": null,
@@ -13860,6 +14167,7 @@
       "id": "w-markkolkotin",
       "name": "Mark KOLKOTIN",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "BHP",
       "employment_start": "2023-07-21",
       "employment_end": null,
@@ -13905,6 +14213,7 @@
       "id": "w-marklynch",
       "name": "Mark LYNCH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-04",
       "employment_end": null,
@@ -13926,7 +14235,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-05": {
@@ -13950,6 +14259,7 @@
       "id": "w-marleyngatai",
       "name": "Marley NGATAI",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-11",
       "employment_end": null,
@@ -13961,7 +14271,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 396,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
@@ -13971,7 +14281,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 432,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -13995,6 +14305,7 @@
       "id": "w-marlonmckinnon",
       "name": "Marlon McKINNON",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-27",
       "employment_end": null,
@@ -14040,6 +14351,7 @@
       "id": "w-martinfleet",
       "name": "Martin FLEET",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-06-27",
       "employment_end": null,
@@ -14085,6 +14397,7 @@
       "id": "w-martyntaylor",
       "name": "Martyn TAYLOR",
       "position": "Rope Access - NDT",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-17",
       "employment_end": null,
@@ -14130,6 +14443,7 @@
       "id": "w-mathewbaty",
       "name": "Mathew BATY",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-11",
       "employment_end": null,
@@ -14141,7 +14455,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 384,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
@@ -14151,7 +14465,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 456,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -14175,6 +14489,7 @@
       "id": "w-mattpepper",
       "name": "Matt PEPPER",
       "position": "Supervisor - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-05-17",
       "employment_end": null,
@@ -14191,12 +14506,12 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 276,
+          "hours": 264,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 276,
           "committed": false
         },
         "2026-05": {
@@ -14220,23 +14535,24 @@
       "id": "w-matthewbradsha",
       "name": "Matthew BRADSHAW",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-11-20",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 276,
+          "hours": 228,
           "committed": false
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 408,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -14265,6 +14581,7 @@
       "id": "w-matthewcarroll",
       "name": "Matthew CARROLL",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-01-16",
       "employment_end": null,
@@ -14310,6 +14627,7 @@
       "id": "w-matthewcox",
       "name": "Matthew COX",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-13",
       "employment_end": null,
@@ -14331,7 +14649,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-05": {
@@ -14355,6 +14673,7 @@
       "id": "w-matthewhewlett",
       "name": "Matthew HEWLETT",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-04-23",
       "employment_end": null,
@@ -14400,6 +14719,7 @@
       "id": "w-matthewmedwin",
       "name": "Matthew MEDWIN",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-27",
       "employment_end": null,
@@ -14445,6 +14765,7 @@
       "id": "w-matthewmckaig",
       "name": "Matthew McKAIG",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-18",
       "employment_end": null,
@@ -14490,6 +14811,7 @@
       "id": "w-matthewreuter",
       "name": "Matthew REUTER",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-09",
       "employment_end": null,
@@ -14535,6 +14857,7 @@
       "id": "w-matthewsherrin",
       "name": "Matthew SHERRING",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-19",
       "employment_end": null,
@@ -14580,6 +14903,7 @@
       "id": "w-maxlorimer",
       "name": "Max LORIMER",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-07",
       "employment_end": null,
@@ -14625,6 +14949,7 @@
       "id": "w-megancraven",
       "name": "Megan CRAVEN",
       "position": "Scaffolder - Basic",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-31",
       "employment_end": null,
@@ -14646,7 +14971,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-05": {
@@ -14670,6 +14995,7 @@
       "id": "w-mehdiouriaghil",
       "name": "Mehdi OURIAGHIL",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-28",
       "employment_end": null,
@@ -14715,6 +15041,7 @@
       "id": "w-michaelmikeroc",
       "name": "Michael (Mike) ROCKS",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -14731,7 +15058,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 360,
+          "hours": 348,
           "committed": false
         },
         "2026-04": {
@@ -14760,6 +15087,7 @@
       "id": "w-michaelallum",
       "name": "Michael ALLUM",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-07-15",
       "employment_end": null,
@@ -14781,7 +15109,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 144,
           "committed": false
         },
         "2026-05": {
@@ -14805,6 +15133,7 @@
       "id": "w-michaelcurtis",
       "name": "Michael CURTIS",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-24",
       "employment_end": null,
@@ -14850,6 +15179,7 @@
       "id": "w-michaeljobson",
       "name": "Michael JOBSON",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-11",
       "employment_end": null,
@@ -14895,6 +15225,7 @@
       "id": "w-michaelkenward",
       "name": "Michael KENWARD",
       "position": "MLO",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-14",
       "employment_end": null,
@@ -14940,6 +15271,7 @@
       "id": "w-michaelmatsias",
       "name": "Michael MATSIAS",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-07-14",
       "employment_end": null,
@@ -14985,6 +15317,7 @@
       "id": "w-michaelventure",
       "name": "Michael VENTURELLI",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-03",
       "employment_end": null,
@@ -15030,6 +15363,7 @@
       "id": "w-michaelwaiomio",
       "name": "Michael WAIOMIO",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "BHP",
       "employment_start": "2023-08-21",
       "employment_end": null,
@@ -15051,7 +15385,7 @@
         },
         "2026-04": {
           "client": "BHP",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-05": {
@@ -15075,6 +15409,7 @@
       "id": "w-michaelweir",
       "name": "Michael WEIR",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-18",
       "employment_end": null,
@@ -15120,6 +15455,7 @@
       "id": "w-milanjakovljev",
       "name": "Milan JAKOVLJEVIC",
       "position": "Superintendent - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-08",
       "employment_end": null,
@@ -15131,7 +15467,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 240,
           "committed": false
         },
         "2026-03": {
@@ -15165,6 +15501,7 @@
       "id": "w-millenwihone",
       "name": "Millen WIHONE",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-11",
       "employment_end": null,
@@ -15210,6 +15547,7 @@
       "id": "w-mirprabhudesai",
       "name": "Mir PRABHUDESAI",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-13",
       "employment_end": null,
@@ -15255,6 +15593,7 @@
       "id": "w-mitchellcole",
       "name": "Mitchell COLE",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-12-06",
       "employment_end": null,
@@ -15300,6 +15639,7 @@
       "id": "w-mitchellharris",
       "name": "Mitchell HARRIS\ud83d\udd37",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-19",
       "employment_end": null,
@@ -15345,6 +15685,7 @@
       "id": "w-mohamadkamal",
       "name": "Mohamad KAMAL",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-07-26",
       "employment_end": null,
@@ -15361,7 +15702,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 276,
+          "hours": 264,
           "committed": false
         },
         "2026-04": {
@@ -15390,6 +15731,7 @@
       "id": "w-morganmaclanna",
       "name": "Morgan MACLANNAN",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-11-01",
       "employment_end": null,
@@ -15435,6 +15777,7 @@
       "id": "w-nantessnyman",
       "name": "Nantes SNYMAN",
       "position": "Supervisor - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-06-13",
       "employment_end": null,
@@ -15480,6 +15823,7 @@
       "id": "w-nashholford",
       "name": "Nash HOLFORD",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-21",
       "employment_end": null,
@@ -15525,6 +15869,7 @@
       "id": "w-nataliawaiomio",
       "name": "Natalia WAIOMIO",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-07",
       "employment_end": null,
@@ -15570,6 +15915,7 @@
       "id": "w-nathanrobertst",
       "name": "Nathan ROBERTS-TINDALL",
       "position": "Superintendent - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-02-24",
       "employment_end": null,
@@ -15615,6 +15961,7 @@
       "id": "w-nathanwaters",
       "name": "Nathan WATERS",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-09",
       "employment_end": null,
@@ -15631,7 +15978,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
@@ -15660,6 +16007,7 @@
       "id": "w-nathanwright",
       "name": "Nathan WRIGHT",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-07",
       "employment_end": null,
@@ -15705,6 +16053,7 @@
       "id": "w-nathanaelvivia",
       "name": "Nathanael VIVIAN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-25",
       "employment_end": null,
@@ -15750,6 +16099,7 @@
       "id": "w-neilcumberwort",
       "name": "Neil CUMBERWORTH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -15795,6 +16145,7 @@
       "id": "w-neilkeeney",
       "name": "Neil KEENEY",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-23",
       "employment_end": null,
@@ -15840,6 +16191,7 @@
       "id": "w-nereusueko",
       "name": "Nereus UEKO",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-04",
       "employment_end": null,
@@ -15885,6 +16237,7 @@
       "id": "w-nicholasbrady",
       "name": "Nicholas BRADY",
       "position": "HSE Advisor",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-11",
       "employment_end": null,
@@ -15930,6 +16283,7 @@
       "id": "w-nicholasjackso",
       "name": "Nicholas JACKSON",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-13",
       "employment_end": null,
@@ -15975,6 +16329,7 @@
       "id": "w-nicholaslavend",
       "name": "Nicholas LAVENDER \ud83d\udd37",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-12-09",
       "employment_end": null,
@@ -16020,6 +16375,7 @@
       "id": "w-nicholassomerf",
       "name": "Nicholas SOMERFORD-DIPLOCK",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-17",
       "employment_end": null,
@@ -16065,6 +16421,7 @@
       "id": "w-niclashughes",
       "name": "Niclas HUGHES",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-24",
       "employment_end": null,
@@ -16110,6 +16467,7 @@
       "id": "w-nicolaasswart",
       "name": "Nicolaas SWART",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-19",
       "employment_end": null,
@@ -16126,7 +16484,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -16155,6 +16513,7 @@
       "id": "w-nikitakhachere",
       "name": "Nikita KHACHERESOV",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-26",
       "employment_end": null,
@@ -16200,6 +16559,7 @@
       "id": "w-noelfirkin",
       "name": "Noel FIRKIN",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-12-05",
       "employment_end": null,
@@ -16216,7 +16576,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-04": {
@@ -16245,6 +16605,7 @@
       "id": "w-noppadolsodsai",
       "name": "Noppadol SODSAI \ud83d\udd37",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-17",
       "employment_end": null,
@@ -16290,6 +16651,7 @@
       "id": "w-oisinmcdonald",
       "name": "Oisin McDONALD\ud83d\udd37",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-30",
       "employment_end": null,
@@ -16335,6 +16697,7 @@
       "id": "w-oliverhumphrey",
       "name": "Oliver HUMPHREYS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-19",
       "employment_end": null,
@@ -16351,7 +16714,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
@@ -16380,6 +16743,7 @@
       "id": "w-oscarkealley",
       "name": "Oscar KEALLEY",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-26",
       "employment_end": null,
@@ -16425,6 +16789,7 @@
       "id": "w-oscarnoblet",
       "name": "Oscar NOBLET",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-23",
       "employment_end": null,
@@ -16470,6 +16835,7 @@
       "id": "w-owenbowley",
       "name": "Owen BOWLEY",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-16",
       "employment_end": null,
@@ -16515,6 +16881,7 @@
       "id": "w-padraicwaterto",
       "name": "Padraic WATERTON \ud83d\udea9",
       "position": "Rope Access - Mech Fitter",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-28",
       "employment_end": null,
@@ -16560,6 +16927,7 @@
       "id": "w-patrickkohi",
       "name": "Patrick KOHI \ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-30",
       "employment_end": null,
@@ -16605,6 +16973,7 @@
       "id": "w-paulamies",
       "name": "Paul AMIES",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -16621,7 +16990,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 144,
           "committed": false
         },
         "2026-04": {
@@ -16650,6 +17019,7 @@
       "id": "w-paulsiht",
       "name": "Paul SIHT \ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-21",
       "employment_end": null,
@@ -16695,6 +17065,7 @@
       "id": "w-paulsolomon",
       "name": "Paul SOLOMON",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-30",
       "employment_end": null,
@@ -16740,6 +17111,7 @@
       "id": "w-paulstott",
       "name": "Paul STOTT",
       "position": "Project Manager",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2022-03-08",
       "employment_end": null,
@@ -16785,6 +17157,7 @@
       "id": "w-paulinatakhsha",
       "name": "Paulina TAKHSHA",
       "position": "Site Administration",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-26",
       "employment_end": null,
@@ -16830,6 +17203,7 @@
       "id": "w-penpatshering",
       "name": "Penpa TSHERING",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-16",
       "employment_end": null,
@@ -16875,6 +17249,7 @@
       "id": "w-peterngbapai",
       "name": "Peter NGBAPAI",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-07",
       "employment_end": null,
@@ -16920,6 +17295,7 @@
       "id": "w-philippfeldhau",
       "name": "Philipp FELDHAUS\ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-30",
       "employment_end": null,
@@ -16965,6 +17341,7 @@
       "id": "w-philippekochja",
       "name": "Philippe KOCHJAR",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-08",
       "employment_end": null,
@@ -17010,6 +17387,7 @@
       "id": "w-phillipcooper",
       "name": "Phillip COOPER \ud83d\udd37",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-23",
       "employment_end": null,
@@ -17055,6 +17433,7 @@
       "id": "w-piercesheahan",
       "name": "Pierce SHEAHAN",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-08-02",
       "employment_end": null,
@@ -17100,6 +17479,7 @@
       "id": "w-presleyautagav",
       "name": "Presley AUTAGAVAIA",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-03",
       "employment_end": null,
@@ -17145,6 +17525,7 @@
       "id": "w-rameshgujju",
       "name": "Ramesh GUJJU",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-14",
       "employment_end": null,
@@ -17161,7 +17542,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -17190,6 +17571,7 @@
       "id": "w-rayponiente",
       "name": "Ray PONIENTE",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-09-16",
       "employment_end": null,
@@ -17235,6 +17617,7 @@
       "id": "w-raymondhill",
       "name": "Raymond HILL",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-09-30",
       "employment_end": null,
@@ -17280,6 +17663,7 @@
       "id": "w-reidsteel",
       "name": "Reid STEEL",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-20",
       "employment_end": null,
@@ -17325,6 +17709,7 @@
       "id": "w-richardakavi",
       "name": "Richard AKAVI",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-23",
       "employment_end": null,
@@ -17341,12 +17726,12 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 432,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 408,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -17370,6 +17755,7 @@
       "id": "w-richardleonard",
       "name": "Richard LEONARD",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-31",
       "employment_end": null,
@@ -17415,6 +17801,7 @@
       "id": "w-rickeysmith",
       "name": "Rickey SMITH",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-24",
       "employment_end": null,
@@ -17460,6 +17847,7 @@
       "id": "w-rickiharvey",
       "name": "Ricki HARVEY",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-09-27",
       "employment_end": null,
@@ -17481,7 +17869,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 348,
+          "hours": 336,
           "committed": false
         },
         "2026-05": {
@@ -17505,6 +17893,7 @@
       "id": "w-rickywirepa",
       "name": "Ricky WIREPA",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-08",
       "employment_end": null,
@@ -17550,6 +17939,7 @@
       "id": "w-rileythorpe",
       "name": "Riley THORPE",
       "position": "Superintendent - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-08-24",
       "employment_end": null,
@@ -17566,7 +17956,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 312,
+          "hours": 288,
           "committed": false
         },
         "2026-04": {
@@ -17595,6 +17985,7 @@
       "id": "w-robbieyourston",
       "name": "Robbie YOURSTON",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-20",
       "employment_end": null,
@@ -17616,7 +18007,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-05": {
@@ -17640,6 +18031,7 @@
       "id": "w-robertblake",
       "name": "Robert BLAKE \ud83d\udea9",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-02-02",
       "employment_end": null,
@@ -17685,6 +18077,7 @@
       "id": "w-robertgull",
       "name": "Robert GULL",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-29",
       "employment_end": null,
@@ -17730,6 +18123,7 @@
       "id": "w-rocconurmela",
       "name": "Rocco NURMELA",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-05",
       "employment_end": null,
@@ -17775,6 +18169,7 @@
       "id": "w-rolandojrbeltr",
       "name": "Rolando Jr BELTRAN",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-01",
       "employment_end": null,
@@ -17820,6 +18215,7 @@
       "id": "w-rossmccallum",
       "name": "Ross McCALLUM",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-08",
       "employment_end": null,
@@ -17865,6 +18261,7 @@
       "id": "w-rossmcminn",
       "name": "Ross McMINN",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-07",
       "employment_end": null,
@@ -17910,6 +18307,7 @@
       "id": "w-roydaly",
       "name": "Roy DALY",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-05-28",
       "employment_end": null,
@@ -17955,6 +18353,7 @@
       "id": "w-rufusoosthuyse",
       "name": "Rufus OOSTHUYSEN",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-08-17",
       "employment_end": null,
@@ -18000,6 +18399,7 @@
       "id": "w-ryanboucaut",
       "name": "Ryan BOUCAUT",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-06-12",
       "employment_end": null,
@@ -18021,7 +18421,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-05": {
@@ -18045,6 +18445,7 @@
       "id": "w-ryanclement",
       "name": "Ryan CLEMENT",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-03-23",
       "employment_end": null,
@@ -18090,6 +18491,7 @@
       "id": "w-ryanjoseph",
       "name": "Ryan JOSEPH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-20",
       "employment_end": null,
@@ -18135,6 +18537,7 @@
       "id": "w-ryanoneill",
       "name": "Ryan O'NEILL",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-20",
       "employment_end": null,
@@ -18180,6 +18583,7 @@
       "id": "w-ryantoward",
       "name": "Ryan TOWARD \ud83d\udea9",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-05-24",
       "employment_end": null,
@@ -18225,6 +18629,7 @@
       "id": "w-samstott",
       "name": "Sam STOTT",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-07",
       "employment_end": null,
@@ -18270,6 +18675,7 @@
       "id": "w-samuelbryant",
       "name": "Samuel BRYANT",
       "position": "Supervisor",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-28",
       "employment_end": null,
@@ -18315,13 +18721,14 @@
       "id": "w-samueldalton",
       "name": "Samuel DALTON",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-08-27",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-02": {
@@ -18360,6 +18767,7 @@
       "id": "w-samuelkirkcald",
       "name": "Samuel KIRKCALDY",
       "position": "HSE Admin",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-21",
       "employment_end": null,
@@ -18405,13 +18813,14 @@
       "id": "w-samuelmitchell",
       "name": "Samuel MITCHELL",
       "position": "Supervisor - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-09-12",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-02": {
@@ -18421,7 +18830,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -18450,6 +18859,7 @@
       "id": "w-samuelmuckridg",
       "name": "Samuel MUCKRIDGE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-01",
       "employment_end": null,
@@ -18495,6 +18905,7 @@
       "id": "w-samueltownsend",
       "name": "Samuel TOWNSEND",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-07",
       "employment_end": null,
@@ -18540,6 +18951,7 @@
       "id": "w-sanderjaervema",
       "name": "Sander JAERVEMAEGI",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-14",
       "employment_end": null,
@@ -18585,6 +18997,7 @@
       "id": "w-sarahgage",
       "name": "Sarah GAGE",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-01-16",
       "employment_end": null,
@@ -18630,6 +19043,7 @@
       "id": "w-sarvarnahleeta",
       "name": "Sarvarnah-Lee TAYLOR",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-08-08",
       "employment_end": null,
@@ -18675,6 +19089,7 @@
       "id": "w-sashafollett",
       "name": "Sasha FOLLETT",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-05",
       "employment_end": null,
@@ -18720,6 +19135,7 @@
       "id": "w-satkobajric",
       "name": "Satko BAJRIC",
       "position": "Trade Assistant",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-12",
       "employment_end": null,
@@ -18765,6 +19181,7 @@
       "id": "w-scottfleet",
       "name": "Scott FLEET",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-07-02",
       "employment_end": null,
@@ -18810,6 +19227,7 @@
       "id": "w-scottforsyth",
       "name": "Scott FORSYTH",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-04-14",
       "employment_end": null,
@@ -18855,6 +19273,7 @@
       "id": "w-seansmidt",
       "name": "Sean SMIDT",
       "position": "HSE Advisor",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2023-01-09",
       "employment_end": null,
@@ -18871,7 +19290,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -18900,6 +19319,7 @@
       "id": "w-sebastiankazim",
       "name": "Sebastian KAZIMIERSKI",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-20",
       "employment_end": null,
@@ -18945,6 +19365,7 @@
       "id": "w-sethstagg",
       "name": "Seth STAGG",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-21",
       "employment_end": null,
@@ -18990,6 +19411,7 @@
       "id": "w-seungjunoh",
       "name": "Seungjun OH",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-31",
       "employment_end": null,
@@ -19035,6 +19457,7 @@
       "id": "w-severinevong",
       "name": "Severine VONG",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-31",
       "employment_end": null,
@@ -19080,6 +19503,7 @@
       "id": "w-shadrackniyonk",
       "name": "Shadrack NIYONKURU",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2022-02-22",
       "employment_end": null,
@@ -19096,7 +19520,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 312,
+          "hours": 300,
           "committed": false
         },
         "2026-04": {
@@ -19125,6 +19549,7 @@
       "id": "w-shanelash",
       "name": "Shane LASH",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-08",
       "employment_end": null,
@@ -19170,6 +19595,7 @@
       "id": "w-shaunrickard",
       "name": "Shaun RICKARD",
       "position": "Boilermaker - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-01-11",
       "employment_end": null,
@@ -19215,6 +19641,7 @@
       "id": "w-shauntimuhepi",
       "name": "Shaun TIMU-HEPI",
       "position": "Site Coordinator",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -19231,12 +19658,12 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 444,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-05": {
@@ -19260,6 +19687,7 @@
       "id": "w-shaunatimmons",
       "name": "Shauna TIMMONS",
       "position": "Site Administration",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-21",
       "employment_end": null,
@@ -19305,6 +19733,7 @@
       "id": "w-shaybulmer",
       "name": "Shay BULMER",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-03-31",
       "employment_end": null,
@@ -19350,6 +19779,7 @@
       "id": "w-silamarrocco",
       "name": "Sila MARROCCO",
       "position": "Rope Access - Boilermaker / L3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-06",
       "employment_end": null,
@@ -19395,6 +19825,7 @@
       "id": "w-simonfranz",
       "name": "Simon FRANZ",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-01-24",
       "employment_end": null,
@@ -19440,6 +19871,7 @@
       "id": "w-simonyoung",
       "name": "Simon YOUNG",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-03-26",
       "employment_end": null,
@@ -19456,7 +19888,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-04": {
@@ -19485,6 +19917,7 @@
       "id": "w-sinjareinke",
       "name": "Sinja REINKE",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-07",
       "employment_end": null,
@@ -19530,6 +19963,7 @@
       "id": "w-siopevea",
       "name": "Siope VEA",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2022-08-24",
       "employment_end": null,
@@ -19575,6 +20009,7 @@
       "id": "w-siunkim",
       "name": "Siun KIM",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-07",
       "employment_end": null,
@@ -19620,6 +20055,7 @@
       "id": "w-solomonmwangok",
       "name": "Solomon MWANGOKA",
       "position": "Trade Assistant",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2024-05-28",
       "employment_end": null,
@@ -19665,6 +20101,7 @@
       "id": "w-stephenboundy",
       "name": "Stephen BOUNDY \ud83d\udd37",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-08",
       "employment_end": null,
@@ -19710,6 +20147,7 @@
       "id": "w-stevenmcfadyen",
       "name": "Steven McFADYEN",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-11",
       "employment_end": null,
@@ -19755,6 +20193,7 @@
       "id": "w-stevenwhitaker",
       "name": "Steven WHITAKER",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-06-27",
       "employment_end": null,
@@ -19800,6 +20239,7 @@
       "id": "w-taasesamuelu",
       "name": "Taase SAMUELU",
       "position": "Trade Assistant",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-18",
       "employment_end": null,
@@ -19821,7 +20261,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-05": {
@@ -19845,6 +20285,7 @@
       "id": "w-tamamarsh",
       "name": "Tama MARSH",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-09-10",
       "employment_end": null,
@@ -19890,6 +20331,7 @@
       "id": "w-tanemakoare",
       "name": "Tane MAKOARE",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-07-21",
       "employment_end": null,
@@ -19911,7 +20353,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 276,
+          "hours": 264,
           "committed": false
         },
         "2026-05": {
@@ -19935,6 +20377,7 @@
       "id": "w-taureankereopa",
       "name": "Taurean KEREOPA",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-23",
       "employment_end": null,
@@ -19980,6 +20423,7 @@
       "id": "w-taylaburgessme",
       "name": "Tayla BURGESS-MEISTER",
       "position": "Site Administration",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2026-01-12",
       "employment_end": null,
@@ -20025,6 +20469,7 @@
       "id": "w-taylormcdonoug",
       "name": "Taylor McDONOUGH",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-17",
       "employment_end": null,
@@ -20070,6 +20515,7 @@
       "id": "w-temaputupou",
       "name": "Temapu TUPOU",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-13",
       "employment_end": null,
@@ -20115,6 +20561,7 @@
       "id": "w-terencerosenfi",
       "name": "Terence ROSENFIELD",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-18",
       "employment_end": null,
@@ -20131,7 +20578,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-04": {
@@ -20160,6 +20607,7 @@
       "id": "w-terencevaz",
       "name": "Terence VAZ",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2020-12-15",
       "employment_end": null,
@@ -20205,6 +20653,7 @@
       "id": "w-terewaharmer",
       "name": "Terewa HARMER",
       "position": "Manager - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2020-12-15",
       "employment_end": null,
@@ -20221,7 +20670,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 108,
+          "hours": 96,
           "committed": false
         },
         "2026-04": {
@@ -20250,6 +20699,7 @@
       "id": "w-terrencesmith",
       "name": "Terrence SMITH",
       "position": "Superintendent - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-12-26",
       "employment_end": null,
@@ -20295,6 +20745,7 @@
       "id": "w-thomascooper",
       "name": "Thomas COOPER",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2021-02-09",
       "employment_end": null,
@@ -20306,7 +20757,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 192,
+          "hours": 168,
           "committed": false
         },
         "2026-03": {
@@ -20316,7 +20767,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 180,
           "committed": false
         },
         "2026-05": {
@@ -20340,6 +20791,7 @@
       "id": "w-thomascoote",
       "name": "Thomas COOTE",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-24",
       "employment_end": null,
@@ -20385,6 +20837,7 @@
       "id": "w-thomasdavies",
       "name": "Thomas DAVIES",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-02-29",
       "employment_end": null,
@@ -20406,7 +20859,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-05": {
@@ -20430,6 +20883,7 @@
       "id": "w-thomasgreensla",
       "name": "Thomas GREENSLADE",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-30",
       "employment_end": null,
@@ -20475,6 +20929,7 @@
       "id": "w-thomashanney",
       "name": "Thomas HANNEY",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-24",
       "employment_end": null,
@@ -20520,6 +20975,7 @@
       "id": "w-thomasjustin",
       "name": "Thomas JUSTIN",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-11",
       "employment_end": null,
@@ -20565,6 +21021,7 @@
       "id": "w-thomasleggatt",
       "name": "Thomas LEGGATT",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-16",
       "employment_end": null,
@@ -20610,6 +21067,7 @@
       "id": "w-thomasrivers",
       "name": "Thomas RIVERS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-10",
       "employment_end": null,
@@ -20655,6 +21113,7 @@
       "id": "w-thomassouth",
       "name": "Thomas SOUTH",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-10-09",
       "employment_end": null,
@@ -20700,6 +21159,7 @@
       "id": "w-thomasturner",
       "name": "Thomas TURNER",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2022-09-28",
       "employment_end": null,
@@ -20745,6 +21205,7 @@
       "id": "w-thomaswright",
       "name": "Thomas WRIGHT",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-17",
       "employment_end": null,
@@ -20790,6 +21251,7 @@
       "id": "w-tiahauraki",
       "name": "Tia HAURAKI",
       "position": "Trade Assistant",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-11",
       "employment_end": null,
@@ -20835,6 +21297,7 @@
       "id": "w-timothygregan",
       "name": "Timothy GREGAN",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-08-02",
       "employment_end": null,
@@ -20880,6 +21343,7 @@
       "id": "w-tobiasgoretzki",
       "name": "Tobias GORETZKI",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-22",
       "employment_end": null,
@@ -20925,6 +21389,7 @@
       "id": "w-torincavanagh",
       "name": "Torin CAVANAGH",
       "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-23",
       "employment_end": null,
@@ -20970,6 +21435,7 @@
       "id": "w-travisforrest",
       "name": "Travis FORREST",
       "position": "Operations Manager",
+      "discipline": "Other",
       "primary_client": "Roy Hill/Hancock",
       "employment_start": "2021-02-11",
       "employment_end": null,
@@ -21015,6 +21481,7 @@
       "id": "w-travisreti",
       "name": "Travis RETI",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-05-26",
       "employment_end": null,
@@ -21060,6 +21527,7 @@
       "id": "w-travistucker",
       "name": "Travis TUCKER",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-10-03",
       "employment_end": null,
@@ -21105,6 +21573,7 @@
       "id": "w-trevorsouthern",
       "name": "Trevor SOUTHERN",
       "position": "Supervisor - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-07-11",
       "employment_end": null,
@@ -21116,7 +21585,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-03": {
@@ -21126,7 +21595,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-05": {
@@ -21150,6 +21619,7 @@
       "id": "w-tristanchartie",
       "name": "Tristan CHARTIER",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-24",
       "employment_end": null,
@@ -21195,6 +21665,7 @@
       "id": "w-tristanlong",
       "name": "Tristan LONG",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-16",
       "employment_end": null,
@@ -21211,7 +21682,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-04": {
@@ -21240,6 +21711,7 @@
       "id": "w-tyranrayner",
       "name": "Tyran RAYNER",
       "position": "Superintendent - Scaffold",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2024-08-09",
       "employment_end": null,
@@ -21285,6 +21757,7 @@
       "id": "w-tyronmccann",
       "name": "Tyron MCCANN",
       "position": "Supervisor - Electrical",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2021-03-29",
       "employment_end": null,
@@ -21330,23 +21803,24 @@
       "id": "w-tyronnedelamer",
       "name": "Tyronne DELAMERE",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-08-11",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 384,
+          "hours": 312,
           "committed": false
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 432,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 504,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -21375,6 +21849,7 @@
       "id": "w-vincentking",
       "name": "Vincent KING",
       "position": "Scaffolder - Leading Hand",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-12-18",
       "employment_end": null,
@@ -21420,6 +21895,7 @@
       "id": "w-wakatotorewa",
       "name": "Waka TOTOREWA \ud83d\udea9",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-01-25",
       "employment_end": null,
@@ -21465,6 +21941,7 @@
       "id": "w-willariki",
       "name": "Will ARIKI",
       "position": "HSE Advisor",
+      "discipline": "Other",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-30",
       "employment_end": null,
@@ -21510,6 +21987,7 @@
       "id": "w-williambachele",
       "name": "William BACHELET",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-06-30",
       "employment_end": null,
@@ -21555,6 +22033,7 @@
       "id": "w-williambidesi",
       "name": "William BIDESI \ud83d\udea9",
       "position": "Electrician - Trade Assistant",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2023-01-27",
       "employment_end": null,
@@ -21600,6 +22079,7 @@
       "id": "w-williamilalio",
       "name": "William ILALIO",
       "position": "Scaffolder - Basic",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2022-06-29",
       "employment_end": null,
@@ -21645,6 +22125,7 @@
       "id": "w-williamkennedi",
       "name": "William Kennedi WANG",
       "position": "Rope Access - NDT",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-05",
       "employment_end": null,
@@ -21690,6 +22171,7 @@
       "id": "w-williamwebb",
       "name": "William WEBB",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2026-02-02",
       "employment_end": null,
@@ -21735,6 +22217,7 @@
       "id": "w-wiremuherewini",
       "name": "Wiremu HEREWINI",
       "position": "Scaffolder - Advanced",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2025-10-15",
       "employment_end": null,
@@ -21756,7 +22239,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 276,
           "committed": false
         },
         "2026-05": {
@@ -21780,6 +22263,7 @@
       "id": "w-wiremuwilliams",
       "name": "Wiremu WILLIAMS",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2025-02-25",
       "employment_end": null,
@@ -21825,6 +22309,7 @@
       "id": "w-yannicksterckx",
       "name": "Yannick STERCKX \ud83d\udea9",
       "position": "Rope Access - Boilermaker",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2023-09-07",
       "employment_end": null,
@@ -21870,6 +22355,7 @@
       "id": "w-zacjones",
       "name": "Zac JONES",
       "position": "Electrician",
+      "discipline": "Electrical",
       "primary_client": "Fortescue",
       "employment_start": "2025-11-28",
       "employment_end": null,
@@ -21915,6 +22401,7 @@
       "id": "w-zacharyjuranov",
       "name": "Zachary JURANOVICH",
       "position": "Supervisor - Rope Access",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2021-07-06",
       "employment_end": null,
@@ -21960,23 +22447,24 @@
       "id": "w-zakaddison",
       "name": "Zak ADDISON",
       "position": "Scaffolder - Intermediate",
+      "discipline": "Scaffold",
       "primary_client": "Fortescue",
       "employment_start": "2023-09-01",
       "employment_end": null,
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 276,
+          "hours": 228,
           "committed": false
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 456,
+          "hours": 336,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 432,
+          "hours": 372,
           "committed": false
         },
         "2026-04": {
@@ -22005,6 +22493,7 @@
       "id": "w-zebscott",
       "name": "Zeb SCOTT",
       "position": "Rope Access - Rigger",
+      "discipline": "Rope Access",
       "primary_client": "Fortescue",
       "employment_start": "2026-03-24",
       "employment_end": null,

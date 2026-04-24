@@ -1,5 +1,14 @@
 // Summary position × month table + per-client clones.
 (function (NW) {
+  // Build {position: discipline} from worker list.
+  function disciplineMap(workers) {
+    const map = {};
+    workers.forEach((w) => {
+      if (w.position && w.discipline && !map[w.position]) map[w.position] = w.discipline;
+    });
+    return map;
+  }
+
   // For each (position, client-filter, month): compute headcount,
   // avg hours, and retention % from prior month.
   function cellStats(workers, position, month, monthPrev) {
@@ -66,7 +75,7 @@
     tbody.innerHTML = "";
 
     const topRow = document.createElement("tr");
-    topRow.innerHTML = `<th rowspan="2">Position</th>` +
+    topRow.innerHTML = `<th rowspan="2">Discipline / Position</th>` +
       months.map((m, i) => {
         const past = i < curIdx;
         const cur = i === curIdx;
@@ -77,29 +86,47 @@
       }).join("");
     thead.appendChild(topRow);
 
-    // Data rows
+    // Group positions by discipline, preserving top-positions order within each group.
+    const discMap = disciplineMap(effectiveWorkers);
+    const groupOrder = [];
+    const groupPositions = {};
     positions.forEach((pos) => {
-      const tr = document.createElement("tr");
-      const cells = [`<td class="pos-name">${pos}</td>`];
-      months.forEach((m, i) => {
-        const mPrev = i > 0 ? months[i - 1] : null;
-        const { hc, avg, retention } = cellStats(effectiveWorkers, pos, m, mPrev);
-        const clsBits = ["ret-cell"];
-        if (i > curIdx) clsBits.push("future");
-        if (i === curIdx) clsBits.push("current");
-        if (i === curIdx + 1) clsBits.push("div-future");
-        clsBits.push(NW.retentionClass(retention));
-        const retTxt = retention == null ? "" : ` &middot; ret ${NW.fmtPct(retention)}`;
-        const title = `Headcount ${hc} · avg ${NW.fmtHours(avg)}${retTxt}`;
-        cells.push(
-          `<td class="${clsBits.join(" ")}" title="${title}">
-            <div class="hc">${hc || "·"}</div>
-            <div class="hrs">${hc ? NW.fmtInt(avg) + "h" : ""}</div>
-          </td>`
-        );
+      const disc = discMap[pos] || "Other";
+      if (!groupPositions[disc]) { groupPositions[disc] = []; groupOrder.push(disc); }
+      groupPositions[disc].push(pos);
+    });
+
+    // Data rows grouped by discipline
+    groupOrder.forEach((disc) => {
+      // Discipline header row
+      const discTr = document.createElement("tr");
+      discTr.className = "disc-group-header";
+      discTr.innerHTML = `<td class="disc-label" colspan="${months.length + 1}">${disc}</td>`;
+      tbody.appendChild(discTr);
+
+      groupPositions[disc].forEach((pos) => {
+        const tr = document.createElement("tr");
+        const cells = [`<td class="pos-name pos-indent">${pos}</td>`];
+        months.forEach((m, i) => {
+          const mPrev = i > 0 ? months[i - 1] : null;
+          const { hc, avg, retention } = cellStats(effectiveWorkers, pos, m, mPrev);
+          const clsBits = ["ret-cell"];
+          if (i > curIdx) clsBits.push("future");
+          if (i === curIdx) clsBits.push("current");
+          if (i === curIdx + 1) clsBits.push("div-future");
+          clsBits.push(NW.retentionClass(retention));
+          const retTxt = retention == null ? "" : ` · ret ${NW.fmtPct(retention)}`;
+          const title = `Headcount ${hc} · avg ${NW.fmtHours(avg)}${retTxt}`;
+          cells.push(
+            `<td class="${clsBits.join(" ")}" title="${title}">
+              <div class="hc">${hc || "·"}</div>
+              <div class="hrs">${hc ? NW.fmtInt(avg) + "h" : ""}</div>
+            </td>`
+          );
+        });
+        tr.innerHTML = cells.join("");
+        tbody.appendChild(tr);
       });
-      tr.innerHTML = cells.join("");
-      tbody.appendChild(tr);
     });
   }
 
