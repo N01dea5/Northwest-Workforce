@@ -82,7 +82,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 276,
           "committed": true
         }
       }
@@ -103,7 +103,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 228,
           "committed": false
         },
         "2026-03": {
@@ -118,7 +118,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 192,
           "committed": true
         },
         "2026-06": {
@@ -128,7 +128,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -174,7 +174,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 348,
+          "hours": 336,
           "committed": true
         }
       }
@@ -200,17 +200,17 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 324,
+          "hours": 312,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 204,
           "committed": true
         },
         "2026-06": {
@@ -220,7 +220,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -266,7 +266,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -312,7 +312,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -338,7 +338,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": false
         },
         "2026-04": {
@@ -348,7 +348,7 @@
         },
         "2026-05": {
           "client": "Rio Tinto",
-          "hours": 228,
+          "hours": 216,
           "committed": true
         },
         "2026-06": {
@@ -379,7 +379,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 192,
           "committed": false
         },
         "2026-03": {
@@ -389,7 +389,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 192,
           "committed": false
         },
         "2026-05": {
@@ -450,7 +450,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 132,
           "committed": true
         }
       }
@@ -496,7 +496,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -537,12 +537,12 @@
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 144,
           "committed": true
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 276,
+          "hours": 264,
           "committed": true
         }
       }
@@ -568,7 +568,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
@@ -578,7 +578,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": true
         },
         "2026-06": {
@@ -588,7 +588,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -609,7 +609,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 12,
+          "hours": 0,
           "committed": false
         },
         "2026-03": {
@@ -634,7 +634,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": true
         }
       }
@@ -680,7 +680,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -747,12 +747,12 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 192,
+          "hours": 180,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": false
         },
         "2026-04": {
@@ -762,7 +762,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 324,
+          "hours": 300,
           "committed": true
         },
         "2026-06": {
@@ -772,7 +772,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -818,7 +818,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 132,
           "committed": true
         }
       }
@@ -864,7 +864,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -900,7 +900,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": true
         },
         "2026-06": {
@@ -910,7 +910,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -931,17 +931,17 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-05": {
@@ -1002,7 +1002,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -1048,7 +1048,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 144,
+          "hours": 132,
           "committed": true
         }
       }
@@ -1140,7 +1140,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -1207,7 +1207,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 204,
           "committed": false
         },
         "2026-03": {
@@ -1258,7 +1258,7 @@
         },
         "2026-03": {
           "client": "Roy Hill/Hancock",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-04": {
@@ -1278,7 +1278,7 @@
         },
         "2026-07": {
           "client": "Roy Hill/Hancock",
-          "hours": 312,
+          "hours": 300,
           "committed": true
         }
       }
@@ -1314,7 +1314,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 204,
           "committed": true
         },
         "2026-06": {
@@ -1324,7 +1324,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 240,
+          "hours": 228,
           "committed": true
         }
       }
@@ -1350,7 +1350,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-04": {
@@ -1370,7 +1370,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": true
         }
       }
@@ -1391,7 +1391,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-03": {
@@ -1442,7 +1442,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 264,
           "committed": false
         },
         "2026-04": {
@@ -1452,7 +1452,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": true
         },
         "2026-06": {
@@ -1462,7 +1462,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -1478,12 +1478,12 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 312,
+          "hours": 300,
           "committed": false
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 72,
+          "hours": 60,
           "committed": false
         },
         "2026-03": {
@@ -1508,7 +1508,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": true
         }
       }
@@ -1539,7 +1539,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 204,
           "committed": false
         },
         "2026-05": {
@@ -1580,7 +1580,7 @@
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-04": {
@@ -1590,17 +1590,17 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 186,
+          "hours": 348,
           "committed": true
         },
         "2026-06": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 336,
           "committed": true
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 186,
+          "hours": 336,
           "committed": true
         }
       }
@@ -1621,12 +1621,12 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 216,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-04": {
@@ -1636,7 +1636,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": true
         },
         "2026-06": {
@@ -1646,7 +1646,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": true
         }
       }
@@ -1667,7 +1667,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 264,
+          "hours": 252,
           "committed": false
         },
         "2026-03": {
@@ -1692,7 +1692,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -1723,12 +1723,12 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 204,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 312,
+          "hours": 300,
           "committed": true
         },
         "2026-06": {
@@ -1830,7 +1830,7 @@
         },
         "2026-07": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": true
         }
       }
@@ -1851,7 +1851,7 @@
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-03": {
@@ -1866,7 +1866,7 @@
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 276,
           "committed": true
         },
         "2026-06": {
@@ -1876,7 +1876,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }
@@ -1892,17 +1892,17 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-02": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 240,
           "committed": false
         },
         "2026-03": {
           "client": "Fortescue",
-          "hours": 252,
+          "hours": 228,
           "committed": false
         },
         "2026-04": {
@@ -1922,7 +1922,7 @@
         },
         "2026-07": {
           "client": "Rio Tinto",
-          "hours": 180,
+          "hours": 168,
           "committed": true
         }
       }

@@ -420,6 +420,9 @@ class WorkerAgg:
     first_seen: date | None = None
 
 
+MAX_CONSECUTIVE_DAYS = 13  # Day 14+ in an unbroken working run = fatigue stand-down
+
+
 def aggregate(
     roster: list[RosterRow],
     personnel: dict[str, WorkerMaster],
@@ -434,6 +437,8 @@ def aggregate(
     aggs: dict[str, WorkerAgg] = {}
     # Track distinct dates per (pid, month_key) for full-roster detection.
     dates_seen: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
+    # Per-day detail for 13-day consecutive rule: {pid: {date: (client, hrs)}}
+    day_detail: dict[str, dict[date, tuple[str, int]]] = defaultdict(dict)
 
     for r in roster:
         if r.schedule_date < start or r.schedule_date > end:
@@ -449,10 +454,43 @@ def aggregate(
         if a.first_seen is None or r.schedule_date < a.first_seen:
             a.first_seen = r.schedule_date
         mk = _month_key(r.schedule_date)
+        hrs = HOURS_PER_SHIFT.get(r.schedule_type, 0)
         dates_seen[r.personnel_id][mk].add(r.schedule_date)
+        day_detail[r.personnel_id][r.schedule_date] = (r.client, hrs)
         bucket = a.buckets[mk][r.client]
         bucket["days"] += 1
-        bucket["hours"] += HOURS_PER_SHIFT.get(r.schedule_type, 0)
+        bucket["hours"] += hrs
+
+    # Apply 13-day consecutive stand-down rule.
+    # Scan each worker's working days (hours > 0) in date order. When a
+    # consecutive run reaches 14 days, that 14th day is zeroed out as a
+    # fatigue stand-down, which also breaks the run so day 15 starts fresh.
+    from datetime import timedelta
+    for pid, details in day_detail.items():
+        if pid not in aggs:
+            continue
+        working_dates = sorted(d for d, (_, h) in details.items() if h > 0)
+        run_len = 0
+        prev_d: date | None = None
+        for d in working_dates:
+            if prev_d is not None and (d - prev_d).days == 1:
+                run_len += 1
+            else:
+                run_len = 1
+            if run_len > MAX_CONSECUTIVE_DAYS:
+                # Stand-down: remove this day's hours from its bucket.
+                client, hrs = details[d]
+                mk = _month_key(d)
+                bucket = aggs[pid].buckets.get(mk, {}).get(client, {})
+                if bucket and hrs > 0:
+                    bucket["hours"] = max(0, bucket["hours"] - hrs)
+                    bucket["days"]  = max(0, bucket["days"] - 1)
+                dates_seen[pid][mk].discard(d)
+                # Break the run — next working day starts a new streak.
+                run_len = 0
+                prev_d = None
+            else:
+                prev_d = d
 
     # If a worker has an entry for every calendar day of a month, the
     # scheduling system is recording them as on-roster continuously (e.g. a
