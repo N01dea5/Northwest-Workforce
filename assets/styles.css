@@ -367,7 +367,7 @@ section.card > .body { padding: 18px 20px 20px; }
      Retention-tint classes override the background colour below;
      the dashed border persists to keep forward months visually distinct. */
   background-color: var(--callout-fill);
-  border-bottom: 2px dashed var(--callout-line);
+  border-bottom: 1px dashed var(--callout-line);
   font-style: italic;
 }
 .ret-cell.future .hc { color: var(--srg-grey); }
