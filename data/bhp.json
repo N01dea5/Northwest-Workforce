@@ -905,8 +905,8 @@
       "employment_end": null,
       "monthly": {
         "2026-01": {
-          "client": "Fortescue",
-          "hours": 120,
+          "client": "BHP",
+          "hours": 108,
           "committed": false
         },
         "2026-02": {
@@ -996,7 +996,7 @@
       "monthly": {
         "2026-01": {
           "client": "BHP",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -1221,7 +1221,7 @@
       "monthly": {
         "2026-01": {
           "client": "BHP",
-          "hours": 552,
+          "hours": 540,
           "committed": false
         },
         "2026-02": {
@@ -1536,7 +1536,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": false
         },
         "2026-02": {

@@ -321,7 +321,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -591,7 +591,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -681,7 +681,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-02": {
@@ -1266,7 +1266,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -1401,7 +1401,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -1626,7 +1626,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-02": {
@@ -5361,7 +5361,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-02": {
@@ -5991,7 +5991,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 156,
+          "hours": 132,
           "committed": false
         },
         "2026-02": {
@@ -6891,7 +6891,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 444,
+          "hours": 432,
           "committed": false
         },
         "2026-02": {
@@ -6936,7 +6936,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -7206,7 +7206,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -7746,7 +7746,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 384,
+          "hours": 372,
           "committed": false
         },
         "2026-02": {
@@ -7836,7 +7836,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -9275,8 +9275,8 @@
       "employment_end": null,
       "monthly": {
         "2026-01": {
-          "client": "Fortescue",
-          "hours": 120,
+          "client": "BHP",
+          "hours": 108,
           "committed": false
         },
         "2026-02": {
@@ -9726,7 +9726,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -9906,7 +9906,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -10221,7 +10221,7 @@
       "monthly": {
         "2026-01": {
           "client": "BHP",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -10311,7 +10311,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -10941,7 +10941,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 84,
+          "hours": 72,
           "committed": false
         },
         "2026-02": {
@@ -11301,7 +11301,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 72,
+          "hours": 60,
           "committed": false
         },
         "2026-02": {
@@ -12021,7 +12021,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -12246,7 +12246,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -12291,7 +12291,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -12561,7 +12561,7 @@
       "monthly": {
         "2026-01": {
           "client": "BHP",
-          "hours": 552,
+          "hours": 540,
           "committed": false
         },
         "2026-02": {
@@ -12831,7 +12831,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -12921,7 +12921,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -14136,7 +14136,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -14406,7 +14406,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 204,
           "committed": false
         },
         "2026-02": {
@@ -14496,7 +14496,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -15261,7 +15261,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -15441,7 +15441,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -16881,7 +16881,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 180,
+          "hours": 168,
           "committed": false
         },
         "2026-02": {
@@ -18726,7 +18726,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 336,
+          "hours": 324,
           "committed": false
         },
         "2026-02": {
@@ -20706,7 +20706,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -21021,7 +21021,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -21381,7 +21381,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
@@ -21876,7 +21876,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 24,
+          "hours": 12,
           "committed": false
         },
         "2026-02": {
@@ -22641,7 +22641,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 24,
+          "hours": 12,
           "committed": false
         },
         "2026-02": {
@@ -22821,7 +22821,7 @@
       "monthly": {
         "2026-01": {
           "client": "Fortescue",
-          "hours": 372,
+          "hours": 360,
           "committed": false
         },
         "2026-02": {
