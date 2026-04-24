@@ -216,17 +216,46 @@ def main(argv=None):
         print(f"  {cnt:6d}  {val!r}")
     print()
 
-    print("=== Client values (top 30) ===")
+    # Build client GUID lookup from ClientView sheet
+    client_lookup: dict[str, str] = {}
+    if "xpbi02 ClientView" in wb.sheetnames:
+        ws_cv = wb["xpbi02 ClientView"]
+        cv_it = ws_cv.iter_rows(values_only=True)
+        cv_headers = [_norm(c) for c in next(cv_it)]
+        def _ph(*c): return next((i for i, h in enumerate(cv_headers) if re.sub(r"[\s_\-]+","",h.lower()) in [re.sub(r"[\s_\-]+","",x.lower()) for x in c]), None)
+        ci_id = _ph("ClientId","Client Id","Id")
+        ci_nm = _ph("ClientName","Client Name","Name")
+        if ci_id is not None and ci_nm is not None:
+            for row in cv_it:
+                if row is None: continue
+                cid = _norm(row[ci_id]).lower()
+                name = _norm(row[ci_nm])
+                if cid and name:
+                    client_lookup[cid] = name
+        print(f"ClientView lookup: {len(client_lookup)} entries\n")
+    else:
+        print("ClientView sheet not found — GUID lookup unavailable\n")
+
+    def _resolve(raw):
+        text = _norm(raw)
+        r = _classify_client(text)
+        if r: return r
+        name = client_lookup.get(text.lower())
+        return _classify_client(name) if name else None
+
+    print("=== Client values (top 30) — with GUID lookup ===")
     for val, cnt in client_counter.most_common(30):
-        classified = _classify_client(val)
-        flag = f"→ {classified}" if classified else "✗ UNMATCHED"
+        resolved = _resolve(val)
+        flag = f"→ {resolved}" if resolved else "✗ UNMATCHED"
         print(f"  {cnt:6d}  {flag:30s}  {val!r}")
     print()
 
     if client_unmatched:
-        print("=== Unmatched client values (not one of the 4 NW majors) ===")
+        print("=== Still-unmatched after GUID lookup ===")
         for val, cnt in client_unmatched.most_common(30):
-            print(f"  {cnt:6d}  {val!r}")
+            resolved = _resolve(val)
+            flag = f"→ {resolved}" if resolved else "✗ still unmatched"
+            print(f"  {cnt:6d}  {flag:30s}  {val!r}")
         print()
 
     print("=== Per-month row funnel ===")

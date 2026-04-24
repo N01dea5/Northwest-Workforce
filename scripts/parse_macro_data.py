@@ -187,7 +187,50 @@ def _read_headers(ws) -> tuple[list[str], Iterable]:
     return headers, it
 
 
-def read_roster(wb) -> list[RosterRow]:
+def read_client_lookup(wb) -> dict[str, str]:
+    """Build {client_id_guid: canonical_client_name} from xpbi02 ClientView.
+
+    The PersonnelRosterView stores ClientId (GUID) in its Client column for
+    historical rows.  We join via this lookup so alias matching works on the
+    text name regardless of whether the roster cell holds a GUID or a name.
+    """
+    sheet = "xpbi02 ClientView"
+    if sheet not in wb.sheetnames:
+        return {}
+    ws = wb[sheet]
+    headers, it = _read_headers(ws)
+    i_id   = _pick_header(headers, "ClientId", "Client Id", "Client ID", "Id")
+    i_name = _pick_header(headers, "ClientName", "Client Name", "Name")
+    if i_id is None or i_name is None:
+        return {}
+    lookup: dict[str, str] = {}
+    for row in it:
+        if row is None:
+            continue
+        cid  = _norm_text(row[i_id]).lower()
+        name = _norm_text(row[i_name])
+        if cid and name:
+            lookup[cid] = name
+    return lookup
+
+
+def _resolve_client(raw, client_lookup: dict[str, str]) -> str | None:
+    """Classify a Client cell that may be a text name or a GUID."""
+    text = _norm_text(raw)
+    # Try direct alias match first (text name in cell).
+    result = _classify_client(text)
+    if result:
+        return result
+    # Fall back: treat cell value as a ClientId GUID and look up the name.
+    resolved_name = client_lookup.get(text.lower())
+    if resolved_name:
+        return _classify_client(resolved_name)
+    return None
+
+
+def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterRow]:
+    if client_lookup is None:
+        client_lookup = {}
     if "xpbi02 PersonnelRosterView" not in wb.sheetnames:
         raise ValueError(
             "Workbook missing sheet 'xpbi02 PersonnelRosterView' — "
@@ -198,7 +241,7 @@ def read_roster(wb) -> list[RosterRow]:
     i_pid = _pick_header(headers, "Personnel Id", "PersonnelId", "Personnel ID")
     i_dt = _pick_header(headers, "Schedule Date", "ScheduleDate", "Date")
     i_type = _pick_header(headers, "Schedule Type", "ScheduleType", "Shift Type")
-    i_client = _pick_header(headers, "Client", "Company")
+    i_client = _pick_header(headers, "Client", "ClientId", "Client Id", "Company")
     i_job = _pick_header(headers, "Job No", "JobNo", "Job Number")
     i_on = _pick_header(headers, "IsOnLocation", "Is On Location", "On Location", "OnSite")
 
@@ -225,7 +268,7 @@ def read_roster(wb) -> list[RosterRow]:
         # missing we trust the on-site schedule type.
         if i_on is not None and row[i_on] is not None and not _truthy(row[i_on]):
             continue
-        client = _classify_client(row[i_client])
+        client = _resolve_client(row[i_client], client_lookup)
         if client is None:
             continue  # not one of the four NW majors
         job_no = _norm_text(row[i_job]) if i_job is not None else None
@@ -399,7 +442,8 @@ def dedupe_ids(workers: list[dict]) -> list[dict]:
 
 def build_payload(excel_path: Path, current_month: date) -> dict:
     wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
-    roster = read_roster(wb)
+    client_lookup = read_client_lookup(wb)
+    roster = read_roster(wb, client_lookup)
     personnel = read_personnel(wb)
     months = build_months(current_month)
     aggs = aggregate(roster, personnel, months, current_month)
