@@ -309,7 +309,10 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
         if i_active is not None and row[i_active] is not None and not _truthy(row[i_active]):
             continue
         if i_on is not None and row[i_on] is not None and not _truthy(row[i_on]):
-            continue
+            # Future mobilising/confirmed rows always have OnSite=0 (worker
+            # hasn't arrived yet), but they represent real booked shifts.
+            if not (d >= date.today() and status_str in ("mobilising", "confirmed")):
+                continue
 
         if i_type is not None:
             stype = _norm_text(row[i_type])
