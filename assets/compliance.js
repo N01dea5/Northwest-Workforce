@@ -54,12 +54,12 @@
     thead.innerHTML = "";
     const htr = document.createElement("tr");
     htr.innerHTML =
-      `<th>Name</th><th>Position</th><th>Current client</th>` +
+      `<th class="cell-left">Name</th><th class="cell-left">Position</th><th class="cell-left">Current client</th>` +
       months.map((m, i) => {
         const cls = i < curIdx ? "month-past" : i === curIdx ? "month-cur" : "month-future";
         return `<th class="${cls} num" style="min-width:52px;">${NW.fmtMonth(m)}</th>`;
       }).join("") +
-      `<th class="num">Window total</th><th>Worst window</th><th>Status</th>`;
+      `<th class="num">Window total</th><th class="cell-left">Worst window</th><th>Status</th>`;
     thead.appendChild(htr);
 
     const tbody = document.querySelector("#compliance-table tbody");
@@ -84,11 +84,11 @@
 
       tr.innerHTML = `
         <td class="worker-name"><a href="${NW.workerUrl(r.id)}">${r.name}</a></td>
-        <td>${r.position}</td>
-        <td><span class="dot ${NW.clientSlug(r.client)}"></span> ${r.client}</td>
+        <td class="cell-left">${r.position}</td>
+        <td class="cell-left"><span class="dot ${NW.clientSlug(r.client)}"></span> ${r.client}</td>
         ${monthCells}
         <td class="num compliance-total"><strong>${NW.fmtInt(r.total)}h</strong></td>
-        <td class="nowrap">${r.windowLabel}</td>
+        <td class="nowrap cell-left">${r.windowLabel}</td>
         <td>${badge}</td>`;
       tbody.appendChild(tr);
     });

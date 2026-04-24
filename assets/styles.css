@@ -299,11 +299,13 @@ section.card > .body { padding: 18px 20px 20px; }
   font-size: 13px;
 }
 .tbl th, .tbl td {
-  text-align: left;
+  text-align: center;
   padding: 8px 10px;
   border-bottom: 1px solid var(--srg-border);
   vertical-align: middle;
 }
+.tbl td.pos-name, .tbl td.worker-name, .tbl td.subtotal-label,
+.tbl tr.disc-group-header td, .tbl td.cell-left, .tbl th.cell-left { text-align: left; }
 .tbl thead th {
   font-size: 11px;
   text-transform: uppercase;

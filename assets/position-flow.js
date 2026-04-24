@@ -138,7 +138,7 @@
       const r = flowRow(view, position, client);
       const ctr = document.createElement("tr");
       ctr.innerHTML = `
-        <td><span class="dot ${NW.clientSlug(client)}"></span> ${client}</td>
+        <td class="cell-left"><span class="dot ${NW.clientSlug(client)}"></span> ${client}</td>
         <td class="num">${NW.fmtInt(r.current)}</td>
         <td>${NW.sparkline(r.trend, { width: 90, height: 22 })}</td>
         <td class="num">${r.newPerMo.toFixed(1)}</td>

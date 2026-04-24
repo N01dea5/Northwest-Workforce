@@ -37,8 +37,8 @@
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td class="worker-name"><a href="${NW.workerUrl(r.id)}">${r.name}</a></td>
-        <td>${r.position}</td>
-        <td><span class="dot ${NW.clientSlug(r.client)}"></span> ${r.client}</td>
+        <td class="cell-left">${r.position}</td>
+        <td class="cell-left"><span class="dot ${NW.clientSlug(r.client)}"></span> ${r.client}</td>
         <td class="num">${NW.fmtInt(r.avg)}h</td>
         <td class="num">${NW.fmtInt(r.next)}h</td>
         <td class="num"><strong>${NW.fmtInt(r.drop)}h</strong></td>`;
