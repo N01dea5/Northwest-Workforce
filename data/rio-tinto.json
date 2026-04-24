@@ -1,0 +1,6841 @@
+{
+  "generated_at": "2026-04-24",
+  "current_month": "2026-04",
+  "reporting_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07"
+  ],
+  "months_behind": 3,
+  "months_ahead": 3,
+  "positions_top20": [
+    "Boilermaker",
+    "Welder",
+    "Advanced Rigger",
+    "Scaffolder",
+    "Trades Assistant",
+    "Electrician",
+    "Mechanical Fitter",
+    "Pipefitter",
+    "Rope Access Tech",
+    "Supervisor",
+    "Safety Officer",
+    "Dogger",
+    "EWP Operator",
+    "Forklift Operator",
+    "Crane Operator",
+    "Blaster",
+    "NDT Technician",
+    "Planner",
+    "Storeperson",
+    "Leading Hand"
+  ],
+  "clients": [
+    "Fortescue",
+    "Rio Tinto",
+    "BHP",
+    "Roy Hill/Hancock"
+  ],
+  "workers": [
+    {
+      "id": "w-thomascarter",
+      "name": "Thomas Carter",
+      "position": "Safety Officer",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 195,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 197,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 140,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-oliviaross",
+      "name": "Olivia Ross",
+      "position": "EWP Operator",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2021-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 203,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 173,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 197,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 110,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jaydenwright",
+      "name": "Jayden Wright",
+      "position": "Safety Officer",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2021-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 219,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 199,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 175,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 166,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "BHP",
+          "hours": 121,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brookekelly",
+      "name": "Brooke Kelly",
+      "position": "Pipefitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 170,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 204,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 186,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 132,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 178,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-emmaedwards",
+      "name": "Emma Edwards",
+      "position": "Crane Operator",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 144,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 183,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 147,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 123,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "BHP",
+          "hours": 96,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-hunterbrown",
+      "name": "Hunter Brown",
+      "position": "Blaster",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 224,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 151,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-reecewatson",
+      "name": "Reece Watson",
+      "position": "Electrician",
+      "primary_client": "Fortescue",
+      "employment_start": "2023-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 157,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 148,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 161,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 91,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 116,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-staceyking",
+      "name": "Stacey King",
+      "position": "Welder",
+      "primary_client": "BHP",
+      "employment_start": "2025-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 174,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "BHP",
+          "hours": 78,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-sarahwilson",
+      "name": "Sarah Wilson",
+      "position": "Pipefitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 197,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 203,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 143,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 151,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 132,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 107,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ethanphillips",
+      "name": "Ethan Phillips",
+      "position": "Advanced Rigger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 164,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-zacgreen",
+      "name": "Zac Green",
+      "position": "Electrician",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2024-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 129,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 140,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 198,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-craigpowell",
+      "name": "Craig Powell",
+      "position": "NDT Technician",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2023-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 137,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 181,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 123,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 112,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-thomaswilliams",
+      "name": "Thomas Williams",
+      "position": "Trades Assistant",
+      "primary_client": "Fortescue",
+      "employment_start": "2022-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 146,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-katetaylor",
+      "name": "Kate Taylor",
+      "position": "Mechanical Fitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 153,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 114,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-staceycampbell",
+      "name": "Stacey Campbell",
+      "position": "Advanced Rigger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 146,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 153,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 141,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-darrenbaker",
+      "name": "Darren Baker",
+      "position": "Dogger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 142,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 190,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-thomasramirez",
+      "name": "Thomas Ramirez",
+      "position": "Mechanical Fitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 165,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 228,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 121,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 182,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-zoebaker",
+      "name": "Zoe Baker",
+      "position": "Trades Assistant",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 194,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 67,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-lucasperry",
+      "name": "Lucas Perry",
+      "position": "Scaffolder",
+      "primary_client": "BHP",
+      "employment_start": "2022-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 173,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 184,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 166,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-noahobrien",
+      "name": "Noah O'Brien",
+      "position": "Boilermaker",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2021-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 208,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 198,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 175,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 188,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 155,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ethanyoung",
+      "name": "Ethan Young",
+      "position": "Leading Hand",
+      "primary_client": "BHP",
+      "employment_start": "2024-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 175,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 180,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 135,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 109,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-tarabailey",
+      "name": "Tara Bailey",
+      "position": "Safety Officer",
+      "primary_client": "BHP",
+      "employment_start": "2025-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 169,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 140,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kateramirez",
+      "name": "Kate Ramirez",
+      "position": "NDT Technician",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 188,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 124,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-hollythompson",
+      "name": "Holly Thompson",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 186,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 137,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 49,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-reecelong",
+      "name": "Reece Long",
+      "position": "Boilermaker",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 215,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 201,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 90,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-emmapatterson",
+      "name": "Emma Patterson",
+      "position": "Pipefitter",
+      "primary_client": "BHP",
+      "employment_start": "2022-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 126,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 104,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kirstyobrien",
+      "name": "Kirsty O'Brien",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2021-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 175,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 183,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 174,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 140,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 127,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 121,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jameslong",
+      "name": "James Long",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2024-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 139,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 155,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 143,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-zacross",
+      "name": "Zac Ross",
+      "position": "Mechanical Fitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 153,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 187,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 147,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 83,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jamesobrien",
+      "name": "James O'Brien",
+      "position": "Scaffolder",
+      "primary_client": "Fortescue",
+      "employment_start": "2021-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 165,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 205,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 108,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 172,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-darrenflynn",
+      "name": "Darren Flynn",
+      "position": "Blaster",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 214,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 180,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 143,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 153,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-zacedwards",
+      "name": "Zac Edwards",
+      "position": "Mechanical Fitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 130,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 187,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 200,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 142,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 122,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 64,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-rubyclark",
+      "name": "Ruby Clark",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2021-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 189,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-troyedwards",
+      "name": "Troy Edwards",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 147,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 201,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 170,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 184,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 170,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 121,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "BHP",
+          "hours": 112,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-troywilliams",
+      "name": "Troy Williams",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 192,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 151,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-biancabrown",
+      "name": "Bianca Brown",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 142,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 202,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 108,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-shaneclark",
+      "name": "Shane Clark",
+      "position": "Scaffolder",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2022-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 157,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 148,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 187,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-darrenjenkins",
+      "name": "Darren Jenkins",
+      "position": "Leading Hand",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 147,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 143,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-oliverwood",
+      "name": "Oliver Wood",
+      "position": "Rope Access Tech",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 204,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 130,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 190,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 142,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-maxlewis",
+      "name": "Max Lewis",
+      "position": "Safety Officer",
+      "primary_client": "BHP",
+      "employment_start": "2026-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 145,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 191,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-maxpowell",
+      "name": "Max Powell",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 183,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 191,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 146,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 78,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-lucasevans",
+      "name": "Lucas Evans",
+      "position": "Advanced Rigger",
+      "primary_client": "Fortescue",
+      "employment_start": "2024-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 130,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 183,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 174,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-lucasallen",
+      "name": "Lucas Allen",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 177,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 117,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 185,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 109,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 51,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-gracegreen",
+      "name": "Grace Green",
+      "position": "Rope Access Tech",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 105,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 69,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-cooperjames",
+      "name": "Cooper James",
+      "position": "Trades Assistant",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2021-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 165,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 184,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 177,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 164,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-leokelly",
+      "name": "Leo Kelly",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 222,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-noahmartin",
+      "name": "Noah Martin",
+      "position": "Trades Assistant",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 146,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 181,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 142,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-coopercook",
+      "name": "Cooper Cook",
+      "position": "EWP Operator",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 181,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 148,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-leothompson",
+      "name": "Leo Thompson",
+      "position": "NDT Technician",
+      "primary_client": "Fortescue",
+      "employment_start": "2023-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 201,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 136,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-oliverflynn",
+      "name": "Oliver Flynn",
+      "position": "Advanced Rigger",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 182,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 186,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-daniellephilli",
+      "name": "Danielle Phillips",
+      "position": "Welder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 151,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 174,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 164,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 187,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-taracarter",
+      "name": "Tara Carter",
+      "position": "Pipefitter",
+      "primary_client": "BHP",
+      "employment_start": "2023-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 170,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-liamsmith",
+      "name": "Liam Smith",
+      "position": "Crane Operator",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 92,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 139,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 102,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 90,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-dylanparker",
+      "name": "Dylan Parker",
+      "position": "Advanced Rigger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 199,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 191,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 190,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 143,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 139,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 95,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-harrisonwilson",
+      "name": "Harrison Wilson",
+      "position": "Planner",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-harrisonbailey",
+      "name": "Harrison Bailey",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2024-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 153,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 125,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 209,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 110,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-noahflynn",
+      "name": "Noah Flynn",
+      "position": "Welder",
+      "primary_client": "BHP",
+      "employment_start": "2024-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 127,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-noahgray",
+      "name": "Noah Gray",
+      "position": "Supervisor",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 177,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 192,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 157,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 193,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-thomaswright",
+      "name": "Thomas Wright",
+      "position": "Advanced Rigger",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2025-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 148,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 191,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 84,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brookeward",
+      "name": "Brooke Ward",
+      "position": "Dogger",
+      "primary_client": "BHP",
+      "employment_start": "2026-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 186,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 101,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 93,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 41,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-tarathompson",
+      "name": "Tara Thompson",
+      "position": "Scaffolder",
+      "primary_client": "Fortescue",
+      "employment_start": "2022-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 213,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 142,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 201,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 196,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 185,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brookerogers",
+      "name": "Brooke Rogers",
+      "position": "Welder",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2025-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 137,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 146,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 112,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 112,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 140,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-harrisonclark",
+      "name": "Harrison Clark",
+      "position": "Mechanical Fitter",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2025-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 202,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 98,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 55,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-sarahwright",
+      "name": "Sarah Wright",
+      "position": "Scaffolder",
+      "primary_client": "Fortescue",
+      "employment_start": "2022-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 173,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 157,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-charlottegreen",
+      "name": "Charlotte Green",
+      "position": "Forklift Operator",
+      "primary_client": "Fortescue",
+      "employment_start": "2022-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 162,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jamesbrown",
+      "name": "James Brown",
+      "position": "Advanced Rigger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 173,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 205,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 125,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 96,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-staceyphillips",
+      "name": "Stacey Phillips",
+      "position": "Mechanical Fitter",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2023-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 130,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 203,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 41,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kirstytaylor",
+      "name": "Kirsty Taylor",
+      "position": "Pipefitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 177,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 130,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-harrisonphilli",
+      "name": "Harrison Phillips",
+      "position": "Safety Officer",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 132,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 163,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 161,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-leoking",
+      "name": "Leo King",
+      "position": "Dogger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2021-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 148,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 168,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kylethompson",
+      "name": "Kyle Thompson",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 205,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 39,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-zacjenkins",
+      "name": "Zac Jenkins",
+      "position": "EWP Operator",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2025-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 165,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 175,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 134,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-craigparker",
+      "name": "Craig Parker",
+      "position": "Advanced Rigger",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2023-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 124,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 148,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 216,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 103,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kirstyramirez",
+      "name": "Kirsty Ramirez",
+      "position": "Dogger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 170,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 187,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 196,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 180,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 85,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ellaevans",
+      "name": "Ella Evans",
+      "position": "Dogger",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2026-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 174,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 129,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kyleross",
+      "name": "Kyle Ross",
+      "position": "Advanced Rigger",
+      "primary_client": "Fortescue",
+      "employment_start": "2023-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 125,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 135,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-thomasreed2",
+      "name": "Thomas Reed",
+      "position": "Trades Assistant",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 190,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 165,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 206,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 200,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 108,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-harrisonbyrne",
+      "name": "Harrison Byrne",
+      "position": "Advanced Rigger",
+      "primary_client": "BHP",
+      "employment_start": "2025-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 211,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 197,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 184,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 168,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 123,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-leosullivan",
+      "name": "Leo Sullivan",
+      "position": "Boilermaker",
+      "primary_client": "Fortescue",
+      "employment_start": "2022-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 110,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 191,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 127,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-zoepowell",
+      "name": "Zoe Powell",
+      "position": "Safety Officer",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2022-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 175,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 143,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 204,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 177,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 121,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brookesullivan",
+      "name": "Brooke Sullivan",
+      "position": "EWP Operator",
+      "primary_client": "Fortescue",
+      "employment_start": "2023-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 146,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 155,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 182,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jessicacarter",
+      "name": "Jessica Carter",
+      "position": "Advanced Rigger",
+      "primary_client": "Fortescue",
+      "employment_start": "2024-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 135,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-sarahobrien",
+      "name": "Sarah O'Brien",
+      "position": "Electrician",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 171,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 103,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jamesward",
+      "name": "James Ward",
+      "position": "NDT Technician",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 180,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 137,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 196,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-gracepatterson",
+      "name": "Grace Patterson",
+      "position": "Blaster",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2021-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 162,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 195,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 124,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 123,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 72,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-daniellestewar",
+      "name": "Danielle Stewart",
+      "position": "Welder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 141,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 162,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 155,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 130,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jamesgreen",
+      "name": "James Green",
+      "position": "Crane Operator",
+      "primary_client": "BHP",
+      "employment_start": "2026-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 133,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-mitchlong",
+      "name": "Mitch Long",
+      "position": "EWP Operator",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 165,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 166,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 88,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-mitchjones",
+      "name": "Mitch Jones",
+      "position": "Trades Assistant",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 151,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 153,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 164,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 196,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 182,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 51,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jackwilliams",
+      "name": "Jack Williams",
+      "position": "Trades Assistant",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 189,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-emmawood",
+      "name": "Emma Wood",
+      "position": "Rope Access Tech",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 146,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 108,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 147,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 167,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 101,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 125,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ethancooper",
+      "name": "Ethan Cooper",
+      "position": "Pipefitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 155,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 144,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 175,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 131,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 107,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-rubybrown",
+      "name": "Ruby Brown",
+      "position": "Trades Assistant",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2026-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 149,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 77,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 96,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-archiebarnes",
+      "name": "Archie Barnes",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 181,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 133,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 175,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 153,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-liamjones",
+      "name": "Liam Jones",
+      "position": "Welder",
+      "primary_client": "BHP",
+      "employment_start": "2023-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 140,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 182,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 163,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 117,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-charlieturner",
+      "name": "Charlie Turner",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 164,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 222,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 201,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 180,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 122,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 57,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-liamturner",
+      "name": "Liam Turner",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-11-01",
+      "employment_end": "2026-04-01",
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 142,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 203,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-sarahhenderson",
+      "name": "Sarah Henderson",
+      "position": "Scaffolder",
+      "primary_client": "Fortescue",
+      "employment_start": "2023-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 122,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 162,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 173,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brookewatson",
+      "name": "Brooke Watson",
+      "position": "Mechanical Fitter",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2025-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 197,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 199,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 191,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-reecemitchell",
+      "name": "Reece Mitchell",
+      "position": "Boilermaker",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2023-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 138,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 130,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 193,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 155,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 97,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kateyoung",
+      "name": "Kate Young",
+      "position": "Welder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 128,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 143,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 147,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-reeceprice",
+      "name": "Reece Price",
+      "position": "Pipefitter",
+      "primary_client": "Fortescue",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 195,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-taraking",
+      "name": "Tara King",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 174,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 190,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 112,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-troyphillips",
+      "name": "Troy Phillips",
+      "position": "Rope Access Tech",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 151,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ellalong",
+      "name": "Ella Long",
+      "position": "Leading Hand",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2021-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 171,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 198,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 179,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-miacampbell",
+      "name": "Mia Campbell",
+      "position": "Mechanical Fitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-11-01",
+      "employment_end": "2026-02-01",
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 191,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 153,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ashleyhenderso",
+      "name": "Ashley Henderson",
+      "position": "Electrician",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2026-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 207,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 162,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 195,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 156,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 157,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 148,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kateprice",
+      "name": "Kate Price",
+      "position": "Safety Officer",
+      "primary_client": "Fortescue",
+      "employment_start": "2021-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 201,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 153,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 134,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 89,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-lilyscott",
+      "name": "Lily Scott",
+      "position": "Leading Hand",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 221,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 182,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 105,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-hannahcook",
+      "name": "Hannah Cook",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 192,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 178,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 137,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kirstywhite",
+      "name": "Kirsty White",
+      "position": "Rope Access Tech",
+      "primary_client": "BHP",
+      "employment_start": "2021-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 170,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 186,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-shaneprice",
+      "name": "Shane Price",
+      "position": "NDT Technician",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 110,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 105,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jamessullivan",
+      "name": "James Sullivan",
+      "position": "Leading Hand",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 209,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 96,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "BHP",
+          "hours": 69,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brettcampbell",
+      "name": "Brett Campbell",
+      "position": "Boilermaker",
+      "primary_client": "Fortescue",
+      "employment_start": "2023-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 157,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 123,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 144,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 106,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kaicoleman2",
+      "name": "Kai Coleman",
+      "position": "Pipefitter",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2022-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 145,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 104,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-masonmurphy",
+      "name": "Mason Murphy",
+      "position": "Advanced Rigger",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2023-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 185,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 128,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 126,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 174,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 141,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-zoegray",
+      "name": "Zoe Gray",
+      "position": "Electrician",
+      "primary_client": "Fortescue",
+      "employment_start": "2024-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 110,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 148,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 53,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-biancabrooks",
+      "name": "Bianca Brooks",
+      "position": "Leading Hand",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-11-01",
+      "employment_end": "2026-04-01",
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 199,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 174,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 174,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-tylerlong",
+      "name": "Tyler Long",
+      "position": "Boilermaker",
+      "primary_client": "BHP",
+      "employment_start": "2025-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 165,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 157,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 208,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 185,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 171,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-lilymurphy",
+      "name": "Lily Murphy",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-11-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 155,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 188,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-sophieperry",
+      "name": "Sophie Perry",
+      "position": "EWP Operator",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 180,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 135,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 147,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ethantaylor2",
+      "name": "Ethan Taylor",
+      "position": "Boilermaker",
+      "primary_client": "BHP",
+      "employment_start": "2026-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 142,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 142,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-biancaclark",
+      "name": "Bianca Clark",
+      "position": "Welder",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 152,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 144,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 140,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 171,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-liamgray",
+      "name": "Liam Gray",
+      "position": "Dogger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 155,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 155,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 112,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-rubyreed",
+      "name": "Ruby Reed",
+      "position": "Welder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 226,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Roy Hill/Hancock",
+          "hours": 114,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 149,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 177,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "BHP",
+          "hours": 116,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-williamcoleman",
+      "name": "William Coleman",
+      "position": "Boilermaker",
+      "primary_client": "Fortescue",
+      "employment_start": "2022-09-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 144,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 115,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-liamturner2",
+      "name": "Liam Turner",
+      "position": "Trades Assistant",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 141,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 186,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 138,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 140,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-hollygray2",
+      "name": "Holly Gray",
+      "position": "Pipefitter",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2021-08-01",
+      "employment_end": "2026-02-01",
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 187,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 203,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-kyliemitchell",
+      "name": "Kylie Mitchell",
+      "position": "Rope Access Tech",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2024-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 200,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 176,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 145,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 154,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 71,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-waynethompson",
+      "name": "Wayne Thompson",
+      "position": "Blaster",
+      "primary_client": "Fortescue",
+      "employment_start": "2021-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 181,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 167,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 118,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-williammitchel",
+      "name": "William Mitchell",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2024-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 210,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 143,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 134,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "BHP",
+          "hours": 95,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brookewilson",
+      "name": "Brooke Wilson",
+      "position": "Forklift Operator",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 149,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 159,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 140,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 175,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 205,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-tylerross",
+      "name": "Tyler Ross",
+      "position": "Mechanical Fitter",
+      "primary_client": "BHP",
+      "employment_start": "2025-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 146,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 196,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 146,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jamesallen",
+      "name": "James Allen",
+      "position": "Advanced Rigger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 190,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 213,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Roy Hill/Hancock",
+          "hours": 89,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-lucaswilliams",
+      "name": "Lucas Williams",
+      "position": "Scaffolder",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 123,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 143,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 91,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-oliviaprice",
+      "name": "Olivia Price",
+      "position": "Welder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 160,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 164,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 195,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 168,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 98,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 115,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-ellabrown",
+      "name": "Ella Brown",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-12-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 145,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 128,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 181,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 162,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 132,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 125,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-liamgray2",
+      "name": "Liam Gray",
+      "position": "Supervisor",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 185,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 155,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 179,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 127,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Rio Tinto",
+          "hours": 102,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-leophillips",
+      "name": "Leo Phillips",
+      "position": "Trades Assistant",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 121,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Fortescue",
+          "hours": 166,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Fortescue",
+          "hours": 131,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brookehenderso",
+      "name": "Brooke Henderson",
+      "position": "Scaffolder",
+      "primary_client": "Fortescue",
+      "employment_start": "2023-07-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 172,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 194,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 163,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 149,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-dylanpowell",
+      "name": "Dylan Powell",
+      "position": "Boilermaker",
+      "primary_client": "Fortescue",
+      "employment_start": "2021-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 148,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 178,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 173,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 180,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 98,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-nathanobrien",
+      "name": "Nathan O'Brien",
+      "position": "Leading Hand",
+      "primary_client": "BHP",
+      "employment_start": "2025-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 199,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 182,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 155,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "BHP",
+          "hours": 185,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-oliviasanders",
+      "name": "Olivia Sanders",
+      "position": "Electrician",
+      "primary_client": "BHP",
+      "employment_start": "2022-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "BHP",
+          "hours": 143,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "BHP",
+          "hours": 200,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "BHP",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "BHP",
+          "hours": 186,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 140,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jameslong2",
+      "name": "James Long",
+      "position": "Rope Access Tech",
+      "primary_client": "BHP",
+      "employment_start": "2026-03-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 177,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 215,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-emmapowell",
+      "name": "Emma Powell",
+      "position": "Trades Assistant",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2023-10-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Roy Hill/Hancock",
+          "hours": 146,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 161,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 145,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-sophierobinson",
+      "name": "Sophie Robinson",
+      "position": "Boilermaker",
+      "primary_client": "Fortescue",
+      "employment_start": "2022-05-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 196,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 151,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 170,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-jackpeterson",
+      "name": "Jack Peterson",
+      "position": "Scaffolder",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2022-02-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 164,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 170,
+          "committed": false
+        },
+        "2026-04": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 151,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Rio Tinto",
+          "hours": 121,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-brettrogers",
+      "name": "Brett Rogers",
+      "position": "Advanced Rigger",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-08-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 177,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 191,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 222,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Roy Hill/Hancock",
+          "hours": 203,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 165,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 116,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-harrisonclark2",
+      "name": "Harrison Clark",
+      "position": "Welder",
+      "primary_client": "Roy Hill/Hancock",
+      "employment_start": "2026-04-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-02": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-03": {
+          "client": null,
+          "hours": 0,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 141,
+          "committed": false
+        },
+        "2026-05": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-hollygray3",
+      "name": "Holly Gray",
+      "position": "Storeperson",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2025-06-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 173,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 207,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 223,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 150,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Rio Tinto",
+          "hours": 159,
+          "committed": true
+        },
+        "2026-06": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        },
+        "2026-07": {
+          "client": null,
+          "hours": 0,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-hannahsullivan",
+      "name": "Hannah Sullivan",
+      "position": "Boilermaker",
+      "primary_client": "Rio Tinto",
+      "employment_start": "2026-01-01",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Rio Tinto",
+          "hours": 158,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Rio Tinto",
+          "hours": 151,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Rio Tinto",
+          "hours": 169,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 197,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Roy Hill/Hancock",
+          "hours": 169,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 97,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Fortescue",
+          "hours": 63,
+          "committed": true
+        }
+      }
+    }
+  ],
+  "scoped_client": "Rio Tinto"
+}

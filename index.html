@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Northwest Workforce — SRG Global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-row">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">SRG Global</span>
+        <h1>Northwest Workforce</h1>
+      </div>
+      <div class="subtitle">
+        Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
+      </div>
+    </div>
+    <div class="meta">
+      <div>Reporting window <strong id="hdr-window">—</strong></div>
+      <div>Current month <strong id="hdr-current">—</strong></div>
+      <div>Refreshed <strong id="hdr-refreshed">—</strong></div>
+    </div>
+  </div>
+</header>
+
+<div class="filter-strip">
+  <div class="filter-group">
+    <label>Client</label>
+    <div id="client-chips"></div>
+  </div>
+  <div class="filter-group">
+    <label>Position</label>
+    <select id="position-select"></select>
+  </div>
+  <label class="toggle">
+    <input type="checkbox" id="hide-zero" />
+    Hide zero-hour workers
+  </label>
+  <button id="reset-filters" class="btn small" style="margin-left:auto;">Reset filters</button>
+</div>
+
+<main>
+
+  <!-- Section 01 — KPI tiles -->
+  <section class="card" id="sec-kpi">
+    <header>
+      <h2><span class="section-number">01</span> Key metrics</h2>
+      <span class="hint">Filtered by client &amp; position selections above</span>
+    </header>
+    <div class="body">
+      <div class="kpi-grid">
+        <div class="kpi-tile" id="kpi-active">
+          <div class="label">Active workforce</div>
+          <div class="value">—</div>
+          <div class="delta">in current month</div>
+        </div>
+        <div class="kpi-tile" id="kpi-avg-hours">
+          <div class="label">Avg hrs / worker</div>
+          <div class="value">—</div>
+          <div class="delta">trailing 3 months</div>
+        </div>
+        <div class="kpi-tile" id="kpi-committed">
+          <div class="label">Forward committed</div>
+          <div class="value">—</div>
+          <div class="delta">next 3 months</div>
+        </div>
+        <div class="kpi-tile" id="kpi-newstart">
+          <div class="label">New starts</div>
+          <div class="value">—</div>
+          <div class="delta">this month</div>
+        </div>
+        <div class="kpi-tile" id="kpi-churn">
+          <div class="label">Churn rate</div>
+          <div class="value">—</div>
+          <div class="delta">trailing 3mo avg</div>
+        </div>
+        <div class="kpi-tile clickable" id="kpi-atrisk">
+          <div class="label">At-risk dropoffs</div>
+          <div class="value">—</div>
+          <div class="delta">≥120h past / ≤40h next</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02 — Summary position × month table -->
+  <section class="card" id="sec-summary">
+    <header>
+      <h2><span class="section-number">02</span> Retention &amp; utilisation — Position × Month</h2>
+      <span class="hint">3 months behind, current, 3 months forward. Cell tint = MoM retention %.</span>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl" id="summary-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="small muted" style="margin-top:8px;">
+        <span class="badge ok">Green</span> retention ≥ 70% &nbsp;
+        <span class="badge warn">Amber</span> 50–70% &nbsp;
+        <span class="badge risk">Red</span> &lt; 50% &nbsp;
+        <span class="muted">Forward months shown with hatched background.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02b — Position flow -->
+  <section class="card" id="sec-flow">
+    <header>
+      <h2><span class="section-number">02b</span> Position flow — Headcount, new &amp; churn</h2>
+      <span class="hint">Click a row to expand per-client breakdown</span>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl" id="flow-table">
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th class="num">Current headcount</th>
+              <th>7mo trend</th>
+              <th class="num">New / mo (3mo avg)</th>
+              <th class="num">Drops / mo (3mo avg)</th>
+              <th class="num">Churn rate</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03 — Per-client tables -->
+  <section class="card" id="sec-client-tables">
+    <header>
+      <h2><span class="section-number">03</span> By client</h2>
+      <span class="hint">Same structure as Section 02, scoped to each major</span>
+    </header>
+    <div class="body" id="client-tables"></div>
+  </section>
+
+  <!-- Section 04 — At-risk list -->
+  <section class="card" id="sec-atrisk">
+    <header>
+      <h2><span class="section-number">04</span> At-risk dropoffs</h2>
+      <span class="hint">Trailing 3mo avg ≥ 120h AND next-month committed ≤ 40h</span>
+    </header>
+    <div class="body">
+      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
+        <span id="atrisk-summary" class="muted small">—</span>
+        <button id="atrisk-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
+      </div>
+      <div class="table-scroll">
+        <table class="tbl" id="atrisk-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Current client</th>
+              <th class="num">Trailing 3mo avg</th>
+              <th class="num">Next month committed</th>
+              <th class="num">Drop size</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05 — Utilisation trend chart -->
+  <section class="card" id="sec-trend">
+    <header>
+      <h2><span class="section-number">05</span> Utilisation trend</h2>
+      <span class="hint">Avg hours / worker across the reporting window</span>
+    </header>
+    <div class="body">
+      <div class="chart-box"><canvas id="trend-chart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- Section 06 — New starts vs drop-offs chart -->
+  <section class="card" id="sec-churn">
+    <header>
+      <h2><span class="section-number">06</span> New starts vs drop-offs</h2>
+      <span class="hint">Bars show monthly movement, line shows churn rate %</span>
+    </header>
+    <div class="body">
+      <div class="chart-box"><canvas id="churn-chart"></canvas></div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="assets/format.js"></script>
+<script src="assets/kpi.js"></script>
+<script src="assets/retention-table.js"></script>
+<script src="assets/position-flow.js"></script>
+<script src="assets/at-risk.js"></script>
+<script src="assets/utilisation-chart.js"></script>
+<script src="assets/churn-chart.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
