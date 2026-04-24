@@ -117,6 +117,7 @@
     NW.renderPositionFlow(view);
     NW.renderClientTables(view);
     NW.renderAtRisk(view);
+    NW.renderCompliance(view);
     NW.renderTrendChart(view);
     NW.renderChurnChart(view);
   }

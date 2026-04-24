@@ -182,6 +182,31 @@
     </div>
   </section>
 
+  <!-- Section 04b — Hours compliance -->
+  <section class="card" id="sec-compliance">
+    <header>
+      <h2><span class="section-number">04b</span> Hours compliance — 724h rolling 3-month limit</h2>
+      <span class="hint">Flagged workers: any consecutive 3-month window ≥ 652h (close) or ≥ 724h (breach). Highlighted cells = worst window.</span>
+    </header>
+    <div class="body">
+      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
+        <span id="compliance-summary" class="muted small">—</span>
+        <button id="compliance-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
+      </div>
+      <div class="table-scroll">
+        <table class="tbl" id="compliance-table">
+          <thead id="compliance-thead"></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="small muted" style="margin-top:8px;">
+        Limit: 724h per any rolling 3-month period &nbsp;·&nbsp;
+        <span class="badge warn">Close</span> ≥ 652h &nbsp;·&nbsp;
+        <span class="badge risk">Breach</span> ≥ 724h
+      </div>
+    </div>
+  </section>
+
   <!-- Section 05 — Utilisation trend chart -->
   <section class="card" id="sec-trend">
     <header>
@@ -212,6 +237,7 @@
 <script src="assets/retention-table.js"></script>
 <script src="assets/position-flow.js"></script>
 <script src="assets/at-risk.js"></script>
+<script src="assets/compliance.js"></script>
 <script src="assets/utilisation-chart.js"></script>
 <script src="assets/churn-chart.js"></script>
 <script src="assets/app.js"></script>

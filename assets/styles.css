@@ -430,6 +430,16 @@ details.client-block summary::after {
 details.client-block[open] summary::after { transform: rotate(90deg); }
 details.client-block .body { padding: 14px 16px 18px; overflow-x: auto; }
 
+/* ---------- Compliance table ---------- */
+
+.compliance-cell-over  { background: rgba(220,38,38,0.14); font-weight: 700; color: #7f1d1d; }
+.compliance-cell-warn  { background: rgba(245,158,11,0.14); font-weight: 700; color: #78350f; }
+.compliance-cell-dim   { color: var(--srg-grey-2); }
+td.compliance-total    { font-variant-numeric: tabular-nums; }
+tr.compliance-over td  { border-left-color: transparent; }
+tr.compliance-over     { border-left: 3px solid var(--bad); }
+tr.compliance-warn     { border-left: 3px solid var(--warn); }
+
 /* ---------- Charts ---------- */
 
 .chart-box { position: relative; height: 320px; }
