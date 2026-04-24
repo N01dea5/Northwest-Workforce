@@ -479,6 +479,8 @@ def read_daily_employee_schedule(wb, client_lookup: dict[str, str]) -> list[Rost
     """
     sheet_name = None
     for candidate in (
+        "ACTIVE_SHUTDOWNS",
+        "ACTIVE_SHUTDOWN",
         "xpbipr DailyEmployeeSchedule",
         "xpbi0r DailyEmployeeSchedule",
         "xpbi02 DailyEmployeeSchedule",
