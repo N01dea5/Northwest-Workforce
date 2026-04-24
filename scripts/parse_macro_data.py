@@ -338,10 +338,10 @@ def read_roster(wb, client_lookup: dict[str, str] | None = None) -> list[RosterR
         if i_active is not None and row[i_active] is not None and not _truthy(row[i_active]):
             continue
         if i_on is not None and row[i_on] is not None and not _truthy(row[i_on]):
-            # Past rows with OnSite=0 are genuinely absent. Future rows have
-            # OnSite=0 simply because the date hasn't arrived yet — any
-            # non-rejected status (already filtered above) is a valid booking.
-            if d < date.today():
+            # For future dates, only firm bookings (mobilising / confirmed) are
+            # counted; soft statuses (contacted, planning, short list, etc.) are
+            # excluded because they represent intent, not committed shifts.
+            if not (d >= date.today() and status_str in ("mobilising", "confirmed")):
                 continue
 
         if i_type is not None:
