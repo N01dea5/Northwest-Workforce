@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24",
+  "generated_at": "2026-04-25",
   "current_month": "2026-04",
   "reporting_months": [
     "2026-01",
@@ -1033,7 +1033,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 120,
+          "hours": 108,
           "committed": false
         },
         "2026-05": {
@@ -1216,8 +1216,8 @@
           "committed": false
         },
         "2026-04": {
-          "client": "Fortescue",
-          "hours": 156,
+          "client": "Rio Tinto",
+          "hours": 144,
           "committed": false
         },
         "2026-05": {
@@ -1447,7 +1447,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 84,
+          "hours": 72,
           "committed": false
         },
         "2026-05": {
@@ -1463,6 +1463,52 @@
         "2026-07": {
           "client": "Rio Tinto",
           "hours": 168,
+          "committed": true
+        }
+      }
+    },
+    {
+      "id": "w-peterngbapai",
+      "name": "Peter NGBAPAI",
+      "position": "Rope Access - Level 3",
+      "discipline": "Rope Access",
+      "primary_client": "Fortescue",
+      "employment_start": "2025-04-07",
+      "employment_end": null,
+      "monthly": {
+        "2026-01": {
+          "client": "Fortescue",
+          "hours": 156,
+          "committed": false
+        },
+        "2026-02": {
+          "client": "Fortescue",
+          "hours": 204,
+          "committed": false
+        },
+        "2026-03": {
+          "client": "Roy Hill/Hancock",
+          "hours": 216,
+          "committed": false
+        },
+        "2026-04": {
+          "client": "Rio Tinto",
+          "hours": 144,
+          "committed": false
+        },
+        "2026-05": {
+          "client": "Fortescue",
+          "hours": 288,
+          "committed": true
+        },
+        "2026-06": {
+          "client": "Fortescue",
+          "hours": 264,
+          "committed": true
+        },
+        "2026-07": {
+          "client": "Roy Hill/Hancock",
+          "hours": 300,
           "committed": true
         }
       }
@@ -1585,7 +1631,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-05": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24",
+  "generated_at": "2026-04-25",
   "current_month": "2026-04",
   "reporting_months": [
     "2026-01",
@@ -527,7 +527,7 @@
         },
         "2026-04": {
           "client": "BHP",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-05": {
@@ -1033,7 +1033,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 300,
+          "hours": 288,
           "committed": false
         },
         "2026-05": {
@@ -1355,7 +1355,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 228,
+          "hours": 216,
           "committed": false
         },
         "2026-05": {
@@ -2183,7 +2183,7 @@
         },
         "2026-04": {
           "client": "BHP",
-          "hours": 96,
+          "hours": 84,
           "committed": false
         },
         "2026-05": {
