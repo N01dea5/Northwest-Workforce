@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=5" />
+  <link rel="stylesheet" href="assets/styles.css?v=6" />
 </head>
 <body>
 
@@ -25,21 +25,28 @@
       <div class="subtitle">
         Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
       </div>
-      <nav class="page-nav">
-        <a href="index.html">Utilisation</a>
-        <span class="page-nav-active">Retention</span>
-        <a href="fatigue.html">Fatigue</a>
-      </nav>
     </div>
-    <div class="brand-right">
-      <img src="assets/srg_logo.png" alt="SRG Global" class="srg-logo-img" />
-      <div class="meta">
-        <div>Reporting window <strong id="hdr-window">—</strong></div>
-        <div>Current month <strong id="hdr-current">—</strong></div>
-        <div>Last refreshed <strong id="hdr-refreshed">—</strong></div>
-      </div>
+    <img src="assets/srg_logo.png" alt="SRG Global" class="srg-logo-img" />
+  </div>
+  <div class="meta-strip">
+    <div class="meta-item">
+      <div class="meta-label">Reporting window</div>
+      <div class="meta-value" id="hdr-window">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Current month</div>
+      <div class="meta-value" id="hdr-current">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Last refreshed</div>
+      <div class="meta-value" id="hdr-refreshed">—</div>
     </div>
   </div>
+  <nav class="page-nav">
+    <a href="index.html">Utilisation</a>
+    <span class="page-nav-active">Retention</span>
+    <a href="fatigue.html">Fatigue</a>
+  </nav>
 </header>
 
 <div class="stale-banner" id="stale-banner"></div>
