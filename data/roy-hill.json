@@ -91,6 +91,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "BHP",
+        "hoursLast21Days": 96,
+        "hoursCurrentMonth": 180,
+        "consecutiveShifts": 8,
+        "consecutiveDayShifts": 8,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 8,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1134-2026-01-04": "worked",
         "1219-2026-01-22": "worked",
@@ -148,6 +160,18 @@
           "hours": 324,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 132,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 26,
+        "maxConsecutiveDayShifts": 26,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "worked",
@@ -207,6 +231,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1224-2026-02-25": "worked",
         "1178-2026-01-19": "declined",
@@ -265,6 +301,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 84,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 44,
+        "maxConsecutiveDayShifts": 44,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "declined",
@@ -335,6 +383,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 216,
+        "hoursCurrentMonth": 300,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 18,
+        "maxConsecutiveDayShifts": 18,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
         "1143-2026-02-25": "worked",
@@ -396,6 +456,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 120,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
         "1233-2026-02-24": "worked",
@@ -454,6 +526,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 228,
+        "hoursCurrentMonth": 324,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 18,
+        "maxConsecutiveDayShifts": 18,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1170-2026-02-25": "worked",
         "1204-2026-03-08": "declined",
@@ -510,6 +594,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 156,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1246-2026-01-09": "worked",
@@ -578,6 +674,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "BHP",
+        "hoursLast21Days": 156,
+        "hoursCurrentMonth": 168,
+        "consecutiveShifts": 8,
+        "consecutiveDayShifts": 8,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 8,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1134-2026-01-04": "worked",
         "1195-2026-02-28": "worked",
@@ -639,6 +747,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 120,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
         "1140-2026-01-22": "declined",
@@ -694,6 +814,18 @@
           "hours": 0,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 168,
+        "hoursCurrentMonth": 180,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1289-2026-05-14": "declined",
@@ -752,6 +884,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "worked",
@@ -816,6 +960,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "BHP",
+        "hoursLast21Days": 60,
+        "hoursCurrentMonth": 60,
+        "consecutiveShifts": 3,
+        "consecutiveDayShifts": 3,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 3,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1195-2026-02-28": "worked",
         "1231-2026-03-17": "worked",
@@ -868,6 +1024,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 180,
+        "hoursCurrentMonth": 264,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 30,
+        "maxConsecutiveDayShifts": 30,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -929,6 +1097,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 192,
+        "hoursCurrentMonth": 252,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
         "1212-2026-01-01": "worked",
@@ -983,6 +1163,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 132,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1200-2026-01-03": "worked",
@@ -1040,6 +1232,18 @@
           "hours": 276,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 96,
+        "hoursCurrentMonth": 168,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 50,
+        "maxConsecutiveDayShifts": 50,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1200-2026-01-03": "worked",
@@ -1101,6 +1305,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 72,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 25,
+        "maxConsecutiveDayShifts": 25,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1224-2026-02-25": "worked",
         "1215-2026-03-06": "declined",
@@ -1158,6 +1374,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 24,
+        "maxConsecutiveDayShifts": 24,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1223-2026-02-23": "worked",
@@ -1218,6 +1446,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 25,
+        "maxConsecutiveDayShifts": 25,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1224-2026-02-25": "worked",
         "1215-2026-03-06": "declined",
@@ -1275,6 +1515,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "BHP",
+        "hoursLast21Days": 240,
+        "hoursCurrentMonth": 252,
+        "consecutiveShifts": 21,
+        "consecutiveDayShifts": 21,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 21,
+        "maxConsecutiveShifts": 21,
+        "maxConsecutiveDayShifts": 21,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1195-2026-02-28": "worked",
         "1231-2026-03-17": "worked",
@@ -1326,6 +1578,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 84,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 24,
+        "maxConsecutiveDayShifts": 24,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1289-2026-05-14": "declined",
@@ -1385,6 +1649,18 @@
           "hours": 312,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 12,
+        "hoursCurrentMonth": 12,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 27,
+        "maxConsecutiveDayShifts": 27,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1224-2026-02-25": "declined",
@@ -1446,6 +1722,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Roy Hill/Hancock",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 12,
+        "consecutiveShifts": 7,
+        "consecutiveDayShifts": 7,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 7,
+        "maxConsecutiveShifts": 14,
+        "maxConsecutiveDayShifts": 14,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1204-2026-03-08": "declined",
         "1144-2026-03-18": "worked",
@@ -1496,6 +1784,18 @@
           "hours": 192,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 84,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -1552,6 +1852,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 156,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1098-2025-12-31": "declined",
@@ -1612,6 +1924,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 12,
+        "hoursCurrentMonth": 72,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1246-2026-01-09": "worked",
         "1222-2026-02-25": "worked",
@@ -1670,6 +1994,18 @@
           "hours": 0,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "BHP",
+        "hoursLast21Days": 240,
+        "hoursCurrentMonth": 264,
+        "consecutiveShifts": 8,
+        "consecutiveDayShifts": 8,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 8,
+        "maxConsecutiveShifts": 19,
+        "maxConsecutiveDayShifts": 19,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1134-2026-01-04": "declined",
@@ -1730,6 +2066,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 168,
+        "consecutiveShifts": 13,
+        "consecutiveDayShifts": 13,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 13,
+        "maxConsecutiveShifts": 13,
+        "maxConsecutiveDayShifts": 13,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1199-2025-12-30": "declined",
         "1254-2026-02-21": "worked",
@@ -1789,6 +2137,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Roy Hill/Hancock",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1236-2026-04-21": "declined",
         "1191-2026-03-25": "declined",
@@ -1840,6 +2200,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 84,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -1899,6 +2271,18 @@
           "hours": 336,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 144,
+        "hoursCurrentMonth": 156,
+        "consecutiveShifts": 30,
+        "consecutiveDayShifts": 30,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 30,
+        "maxConsecutiveShifts": 30,
+        "maxConsecutiveDayShifts": 30,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1226-2026-01-13": "declined",
@@ -1961,6 +2345,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "BHP",
+        "hoursLast21Days": 204,
+        "hoursCurrentMonth": 228,
+        "consecutiveShifts": 9,
+        "consecutiveDayShifts": 9,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 9,
+        "maxConsecutiveShifts": 16,
+        "maxConsecutiveDayShifts": 16,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1134-2026-01-04": "worked",
         "1195-2026-02-28": "worked",
@@ -2019,6 +2415,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 180,
+        "hoursCurrentMonth": 252,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
         "1379-2026-05-20": "declined",
@@ -2074,6 +2482,18 @@
           "hours": 264,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 168,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1215-2026-03-06": "worked",
@@ -2131,6 +2551,18 @@
           "hours": 174,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 144,
+        "hoursCurrentMonth": 156,
+        "consecutiveShifts": 34,
+        "consecutiveDayShifts": 34,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 34,
+        "maxConsecutiveShifts": 34,
+        "maxConsecutiveDayShifts": 34,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1226-2026-01-13": "worked",
@@ -2190,6 +2622,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -2253,6 +2697,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 84,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 27,
+        "maxConsecutiveDayShifts": 27,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
         "1230-2026-01-20": "worked",
@@ -2310,6 +2766,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 5,
+        "consecutiveDayShifts": 5,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 5,
+        "maxConsecutiveShifts": 5,
+        "maxConsecutiveDayShifts": 5,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "947-2025-02-26": "declined",
         "1170-2026-02-25": "declined",
@@ -2366,6 +2834,18 @@
           "hours": 324,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 26,
+        "maxConsecutiveDayShifts": 26,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
@@ -2427,6 +2907,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 204,
+        "hoursCurrentMonth": 288,
+        "consecutiveShifts": 14,
+        "consecutiveDayShifts": 14,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 14,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1289-2026-05-14": "declined",
         "1222-2026-02-25": "worked",
@@ -2485,6 +2977,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 120,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 22,
+        "maxConsecutiveDayShifts": 22,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
@@ -2548,6 +3052,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 144,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 24,
+        "maxConsecutiveDayShifts": 24,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1212-2026-01-01": "worked",
         "1215-2026-03-06": "worked",
@@ -2600,6 +3116,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 108,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 23,
+        "maxConsecutiveDayShifts": 23,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1289-2026-05-14": "declined",
@@ -2662,6 +3190,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 228,
+        "hoursCurrentMonth": 324,
+        "consecutiveShifts": 32,
+        "consecutiveDayShifts": 32,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 32,
+        "maxConsecutiveShifts": 32,
+        "maxConsecutiveDayShifts": 32,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1230-2026-01-20": "worked",
         "1304-2026-07-19": "declined",
@@ -2720,6 +3260,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 8,
+        "consecutiveDayShifts": 8,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 8,
+        "maxConsecutiveShifts": 8,
+        "maxConsecutiveDayShifts": 8,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
         "1144-2026-03-18": "worked",
@@ -2770,6 +3322,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Roy Hill/Hancock",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1144-2026-03-18": "worked",
@@ -2828,6 +3392,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 168,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 25,
+        "maxConsecutiveDayShifts": 25,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1289-2026-05-14": "declined",
         "1222-2026-02-25": "worked",
@@ -2883,6 +3459,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 60,
+        "hoursCurrentMonth": 60,
+        "consecutiveShifts": 3,
+        "consecutiveDayShifts": 3,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 3,
+        "maxConsecutiveShifts": 13,
+        "maxConsecutiveDayShifts": 13,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1264-2026-03-17": "worked",
         "1372-2026-04-22": "worked",
@@ -2936,6 +3524,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 204,
+        "hoursCurrentMonth": 288,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1289-2026-05-14": "declined",
@@ -2994,6 +3594,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 36,
+        "hoursCurrentMonth": 36,
+        "consecutiveShifts": 95,
+        "consecutiveDayShifts": 95,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 95,
+        "maxConsecutiveShifts": 95,
+        "maxConsecutiveDayShifts": 95,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1144-2026-03-18": "worked"
       }
@@ -3042,6 +3654,18 @@
           "hours": 0,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "BHP",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 96,
+        "consecutiveShifts": 16,
+        "consecutiveDayShifts": 16,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 16,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1134-2026-01-04": "worked",
