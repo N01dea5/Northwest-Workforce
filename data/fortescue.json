@@ -40,6 +40,13 @@
     "BHP",
     "Roy Hill/Hancock"
   ],
+  "disciplines": [
+    "Boilermaker",
+    "Electrical",
+    "Other",
+    "Rope Access",
+    "Scaffold"
+  ],
   "workers": [
     {
       "id": "w-aaronbuttigieg",

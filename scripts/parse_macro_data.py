@@ -866,6 +866,8 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
         workers.append(w)
     workers = dedupe_ids(sorted(workers, key=lambda w: w["name"]))
 
+    disciplines = sorted({w.get("discipline") for w in workers if w.get("discipline")})
+
     return {
         "generated_at": date.today().isoformat(),
         "current_month": _month_key(current_month),
@@ -874,6 +876,7 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
         "months_ahead": MONTHS_AHEAD,
         "positions_top20": top_positions[:TOP_POSITIONS],
         "clients": CLIENTS,
+        "disciplines": disciplines,
         "workers": workers,
         "shutdowns": shutdowns,
     }

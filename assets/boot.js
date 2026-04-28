@@ -7,6 +7,7 @@ NW.bootPage = function (renderFn) {
     data: null,
     filters: {
       clients: new Set(),
+      disciplines: new Set(),
       position: "",
       nameSearch: "",
       hideZero: false,
@@ -22,6 +23,11 @@ NW.bootPage = function (renderFn) {
         params.get("client").split(",").map((s) => s.trim()).filter(Boolean)
       );
     }
+    if (params.has("discipline")) {
+      state.filters.disciplines = new Set(
+        params.get("discipline").split(",").map((s) => s.trim()).filter(Boolean)
+      );
+    }
     if (params.has("position")) state.filters.position = params.get("position");
     if (params.get("zero") === "1") state.filters.hideZero = true;
   }
@@ -29,6 +35,7 @@ NW.bootPage = function (renderFn) {
   function writeHash() {
     const parts = [];
     if (state.filters.clients.size) parts.push(`client=${[...state.filters.clients].join(",")}`);
+    if (state.filters.disciplines.size) parts.push(`discipline=${[...state.filters.disciplines].map(encodeURIComponent).join(",")}`);
     if (state.filters.position) parts.push(`position=${encodeURIComponent(state.filters.position)}`);
     if (state.filters.hideZero) parts.push("zero=1");
     const h = parts.join("&");
@@ -43,6 +50,7 @@ NW.bootPage = function (renderFn) {
     return workers.filter((w) => {
       if (q && !w.name.toLowerCase().includes(q)) return false;
       if (state.filters.position && w.position !== state.filters.position) return false;
+      if (state.filters.disciplines.size && !state.filters.disciplines.has(w.discipline)) return false;
       if (state.filters.clients.size) {
         const touched = months.some((m) => state.filters.clients.has(w.monthly[m]?.client));
         if (!touched) return false;
@@ -75,6 +83,26 @@ NW.bootPage = function (renderFn) {
       });
     }
 
+    const discChips = document.getElementById("discipline-chips");
+    if (discChips) {
+      discChips.innerHTML = "";
+      const disciplines = state.data.disciplines || [];
+      disciplines.forEach((d) => {
+        const b = document.createElement("span");
+        b.className = "filter-chip";
+        if (state.filters.disciplines.has(d)) b.classList.add("active");
+        b.textContent = d;
+        b.addEventListener("click", () => {
+          if (state.filters.disciplines.has(d)) state.filters.disciplines.delete(d);
+          else state.filters.disciplines.add(d);
+          writeHash();
+          renderFilterStrip();
+          renderAll();
+        });
+        discChips.appendChild(b);
+      });
+    }
+
     const sel = document.getElementById("position-select");
     if (sel) {
       if (!sel.options.length) {
@@ -100,6 +128,7 @@ NW.bootPage = function (renderFn) {
     const rb = document.getElementById("reset-filters");
     if (rb) rb.onclick = () => {
       state.filters.clients = new Set();
+      state.filters.disciplines = new Set();
       state.filters.position = "";
       state.filters.nameSearch = "";
       state.filters.hideZero = false;

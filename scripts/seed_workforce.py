@@ -283,6 +283,7 @@ def main() -> None:
         "months_ahead": MONTHS_AHEAD,
         "positions_top20": [p for p, _ in POSITIONS_TOP20],
         "clients": CLIENTS,
+        "disciplines": sorted({w.discipline for w in workers if getattr(w, "discipline", None)}),
         "workers": [worker_to_json(w) for w in workers],
     }
 
