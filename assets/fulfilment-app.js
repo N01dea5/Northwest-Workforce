@@ -1,22 +1,31 @@
 NW.bootPage(function (view) {
   const esc = NW.escapeHtml;
+  const fulfilment = view.data.fulfilment || { by_client_month: {}, by_trade: [], totals: {} };
+  const byClientMonth = fulfilment.by_client_month || {};
+  const byTrade = fulfilment.by_trade || [];
 
-  // Honour the client chips: when set, narrow shutdowns to those clients.
-  // No outcome filter — fulfilment is about requested/filled, not who showed.
+  // The reporting window already runs 3-back / current / 3-forward — clamp
+  // the table columns to that range regardless of what JobPlanningView held.
+  const months = view.data.reporting_months.slice();
+
+  // Honour the client chips: empty Set = show all dashboard clients.
   const activeClients = window.NW_APP?.state.filters.clients || new Set();
-  const shutdowns = (view.data.shutdowns || []).filter((s) => {
-    if (activeClients.size && !activeClients.has(s.client)) return false;
-    return true;
-  });
-
-  const allTrades = [];
-  shutdowns.forEach((s) =>
-    (s.trades || []).forEach((t) =>
-      allTrades.push({ ...t, client: s.client, month: s.commence_month })
-    )
+  const clients = view.data.clients.filter(
+    (c) => !activeClients.size || activeClients.has(c)
   );
-  const requested = allTrades.reduce((n, t) => n + (t.requested || 0), 0);
-  const filled = allTrades.reduce((n, t) => n + (t.filled || 0), 0);
+
+  // KPIs — sum within the (filtered clients × reporting months) view so the
+  // tiles match the table the user is looking at.
+  let requested = 0;
+  let filled = 0;
+  clients.forEach((c) => {
+    months.forEach((m) => {
+      const v = byClientMonth[c]?.[m];
+      if (!v) return;
+      requested += v.requested || 0;
+      filled    += v.filled    || 0;
+    });
+  });
 
   const setVal = (id, html) => {
     const el = document.querySelector(`#${id} .value`);
@@ -32,37 +41,24 @@ NW.bootPage(function (view) {
       : "—"
   );
 
-  const clients = view.data.clients.slice();
-  const months = [...new Set(shutdowns.map((s) => s.commence_month).filter(Boolean))].sort();
-
-  const byClientMonth = {};
-  allTrades.forEach((t) => {
-    const c = t.client || "Unassigned";
-    const m = t.month || "Unknown";
-    byClientMonth[c] = byClientMonth[c] || {};
-    byClientMonth[c][m] = byClientMonth[c][m] || { requested: 0, filled: 0 };
-    byClientMonth[c][m].requested += t.requested || 0;
-    byClientMonth[c][m].filled += t.filled || 0;
-  });
-
+  // ---- Client × month table -------------------------------------------------
   const fthead = document.getElementById("fulfilment-thead");
   const ftbody = document.getElementById("fulfilment-tbody");
   if (fthead && ftbody) {
-    if (!shutdowns.length) {
+    if (!clients.length || !requested) {
       fthead.innerHTML = "";
-      ftbody.innerHTML = `<tr><td class="muted" style="padding:14px;">No shutdowns match the current filters.</td></tr>`;
+      ftbody.innerHTML = `<tr><td class="muted" style="padding:14px;">No requested positions in the reporting window for the current filter.</td></tr>`;
     } else {
+      const curIdx = months.indexOf(view.data.current_month);
       fthead.innerHTML = `<tr><th class="cell-left">Client</th>${months
-        .map((m) => `<th>${esc(NW.fmtMonth(m))}</th>`)
+        .map((m, i) => {
+          const cls = i < curIdx ? "month-past" : i === curIdx ? "month-cur" : "month-future";
+          return `<th class="${cls}">${esc(NW.fmtMonth(m))}</th>`;
+        })
         .join("")}<th>Total</th></tr>`;
       ftbody.innerHTML = "";
 
-      const rowOrder = [
-        ...clients,
-        ...Object.keys(byClientMonth).filter((c) => !clients.includes(c)),
-      ];
-      rowOrder.forEach((client) => {
-        const tr = document.createElement("tr");
+      clients.forEach((client) => {
         let rowReq = 0;
         let rowFill = 0;
         const cells = [
@@ -70,15 +66,15 @@ NW.bootPage(function (view) {
         ];
         months.forEach((m) => {
           const v = byClientMonth[client]?.[m] || { requested: 0, filled: 0 };
-          rowReq += v.requested;
+          rowReq  += v.requested;
           rowFill += v.filled;
-          const pct = v.requested ? Math.round((v.filled / v.requested) * 100) : null;
+          if (!v.requested) {
+            cells.push(`<td class="num muted">—</td>`);
+            return;
+          }
+          const pct = Math.round((v.filled / v.requested) * 100);
           cells.push(
-            `<td class="num" title="Requested ${v.requested} · Filled ${v.filled}">${
-              v.requested
-                ? `${NW.fmtInt(v.filled)}/${NW.fmtInt(v.requested)}${pct !== null ? ` (${pct}%)` : ""}`
-                : "—"
-            }</td>`
+            `<td class="num" title="Requested ${v.requested} · Filled ${v.filled}">${NW.fmtInt(v.filled)}/${NW.fmtInt(v.requested)} (${pct}%)</td>`
           );
         });
         const rowPct = rowReq ? Math.round((rowFill / rowReq) * 100) : null;
@@ -89,22 +85,19 @@ NW.bootPage(function (view) {
               : "—"
           }</strong></td>`
         );
+        const tr = document.createElement("tr");
         tr.innerHTML = cells.join("");
         ftbody.appendChild(tr);
       });
     }
   }
 
-  // Wire CSV export for the client × month table.
+  // ---- CSV export for the client × month table -----------------------------
   const csvBtn = document.getElementById("fulfilment-csv");
   if (csvBtn) {
     csvBtn.onclick = () => {
       const header = ["Client", ...months.map((m) => NW.fmtMonth(m)), "Requested total", "Filled total", "Fill rate"];
-      const rowOrder = [
-        ...clients,
-        ...Object.keys(byClientMonth).filter((c) => !clients.includes(c)),
-      ];
-      const body = rowOrder.map((client) => {
+      const body = clients.map((client) => {
         const cells = [client];
         let req = 0;
         let fil = 0;
@@ -121,36 +114,32 @@ NW.bootPage(function (view) {
     };
   }
 
+  // ---- Discipline / trade pressure -----------------------------------------
+  // Trade rollup is pre-computed across the *whole* JobPlanningView window;
+  // clamp here to dashboard clients via the same active-clients filter.
+  // (The python aggregation already drops non-dashboard clients, but it's
+  // not split per-client — so the chip filter just doesn't narrow this
+  // section. We surface that via the hint text.)
   const disciplineBody = document.getElementById("discipline-fulfilment-body");
   if (!disciplineBody) return;
-  const byTrade = {};
-  allTrades.forEach((t) => {
-    if (!byTrade[t.trade]) byTrade[t.trade] = { requested: 0, filled: 0 };
-    byTrade[t.trade].requested += t.requested || 0;
-    byTrade[t.trade].filled += t.filled || 0;
-  });
-
-  const rows = Object.entries(byTrade).sort(
-    (a, b) => b[1].requested - b[1].filled - (a[1].requested - a[1].filled)
-  );
 
   const summaryEl = document.getElementById("discipline-fulfilment-summary");
   if (summaryEl) {
-    summaryEl.textContent = rows.length
-      ? `${rows.length} trades · ${requested} requested · ${filled} filled`
+    summaryEl.textContent = byTrade.length
+      ? `${byTrade.length} trades · ${fulfilment.totals?.requested || 0} requested · ${fulfilment.totals?.filled || 0} filled (all dashboard clients)`
       : "No trade requests in scope";
   }
 
   disciplineBody.innerHTML = "";
-  if (!rows.length) {
+  if (!byTrade.length) {
     disciplineBody.innerHTML = `<tr><td class="muted" colspan="5" style="padding:14px;">No trade requests in scope.</td></tr>`;
   } else {
-    rows.forEach(([trade, v]) => {
-      const req = v.requested;
-      const fil = v.filled;
+    byTrade.forEach((t) => {
+      const req = t.requested;
+      const fil = t.filled;
       const gap = req - fil;
       const tr = document.createElement("tr");
-      tr.innerHTML = `<td class="cell-left">${esc(trade)}</td><td class="num">${NW.fmtInt(req)}</td><td class="num">${NW.fmtInt(fil)}</td><td class="num">${NW.fmtInt(gap)}</td><td class="num">${req ? Math.round((fil / req) * 100) + "%" : "—"}</td>`;
+      tr.innerHTML = `<td class="cell-left">${esc(t.trade)}${t.discipline ? ` <span class="small muted">(${esc(t.discipline)})</span>` : ""}</td><td class="num">${NW.fmtInt(req)}</td><td class="num">${NW.fmtInt(fil)}</td><td class="num">${NW.fmtInt(gap)}</td><td class="num">${req ? Math.round((fil / req) * 100) + "%" : "—"}</td>`;
       disciplineBody.appendChild(tr);
     });
   }
@@ -158,13 +147,14 @@ NW.bootPage(function (view) {
   const discBtn = document.getElementById("discipline-csv");
   if (discBtn) {
     discBtn.onclick = () => {
-      const header = ["Trade", "Requested", "Filled", "Gap", "Fill rate"];
-      const body = rows.map(([trade, v]) => [
-        trade,
-        v.requested,
-        v.filled,
-        v.requested - v.filled,
-        v.requested ? `${Math.round((v.filled / v.requested) * 100)}%` : "",
+      const header = ["Trade", "Discipline", "Requested", "Filled", "Gap", "Fill rate"];
+      const body = byTrade.map((t) => [
+        t.trade,
+        t.discipline || "",
+        t.requested,
+        t.filled,
+        t.requested - t.filled,
+        t.requested ? `${Math.round((t.filled / t.requested) * 100)}%` : "",
       ]);
       NW.downloadCsv(`northwest-fulfilment-discipline-${view.data.current_month}.csv`, [header, ...body]);
     };

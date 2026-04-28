@@ -254,6 +254,33 @@ def read_discipline_lookup(wb) -> dict[str, str]:
     return out
 
 
+def read_trade_id_lookup(wb) -> dict[str, tuple[str, str]]:
+    """Return {trade_id_guid_lower: (trade_name, discipline)} from DisciplineTrade.
+
+    JobPlanningView's CompetencyId column is a TradeId — this lets fulfilment
+    rows resolve to the same trade / discipline taxonomy used elsewhere.
+    """
+    if "xpbi02 DisciplineTrade" not in wb.sheetnames:
+        return {}
+    ws = wb["xpbi02 DisciplineTrade"]
+    headers, it = _read_headers(ws)
+    i_id    = _pick_header(headers, "TradeId", "Trade Id", "Trade ID", "Id")
+    i_trade = _pick_header(headers, "Trade")
+    i_disc  = _pick_header(headers, "Discipline")
+    if i_id is None or i_trade is None:
+        return {}
+    out: dict[str, tuple[str, str]] = {}
+    for row in it:
+        if row is None:
+            continue
+        tid   = _norm_text(row[i_id]).lower()
+        trade = _norm_text(row[i_trade])
+        disc  = _norm_text(row[i_disc]) if i_disc is not None else ""
+        if tid and trade:
+            out[tid] = (trade, disc)
+    return out
+
+
 def _resolve_client(raw, client_lookup: dict[str, str]) -> str | None:
     """Classify a Client cell that may be a text name or a GUID."""
     text = _norm_text(raw)
@@ -700,6 +727,96 @@ def _sheet_or_none(wb, candidates: tuple[str, ...]):
     return None
 
 
+def read_job_planning_fulfilment(
+    wb,
+    client_lookup: dict[str, str],
+    trade_lookup: dict[str, tuple[str, str]],
+    months: list[date],
+) -> dict:
+    """Aggregate Required / Filled from xpbi02 JobPlanningView.
+
+    Buckets by canonical client × StartDate month, scoped to the dashboard's
+    reporting window. Rows whose client doesn't map to one of the four
+    dashboard clients are dropped, as are rows whose StartDate falls outside
+    the window. Trade rollup is keyed by CompetencyId → DisciplineTrade.
+    """
+    ws = _sheet_or_none(wb, ("xpbi02 JobPlanningView", "JobPlanningView"))
+    window_keys = {_month_key(m) for m in months}
+    empty = {
+        "by_client_month": {c: {} for c in CLIENTS},
+        "by_trade": [],
+        "totals": {"requested": 0, "filled": 0},
+    }
+    if ws is None:
+        return empty
+
+    headers, it = _read_headers(ws)
+    i_client = _pick_header(headers, "ClientId", "Client Id", "Client ID")
+    i_start  = _pick_header(headers, "StartDate", "Start Date")
+    i_req    = _pick_header(headers, "Required")
+    i_fill   = _pick_header(headers, "Filled")
+    i_comp   = _pick_header(headers, "CompetencyId", "Competency Id", "TradeId")
+    if i_client is None or i_start is None or i_req is None or i_fill is None:
+        return empty
+
+    by_cm: dict[str, dict[str, dict[str, int]]] = {c: {} for c in CLIENTS}
+    by_trade: dict[str, dict[str, int | str]] = {}
+    total_req = 0
+    total_fill = 0
+
+    for row in it:
+        if row is None:
+            continue
+        client = _resolve_client(row[i_client], client_lookup)
+        if client not in CLIENTS:
+            continue
+        start = _coerce_date(row[i_start])
+        if start is None:
+            continue
+        mk = _month_key(start)
+        if mk not in window_keys:
+            continue
+        try:
+            req = int(row[i_req] or 0)
+            fil = int(row[i_fill] or 0)
+        except (TypeError, ValueError):
+            continue
+        # Skip placeholder rows that ask for nobody and fill nobody — they
+        # add only noise to the per-cell totals.
+        if not req and not fil:
+            continue
+
+        bucket = by_cm[client].setdefault(mk, {"requested": 0, "filled": 0})
+        bucket["requested"] += req
+        bucket["filled"]    += fil
+        total_req  += req
+        total_fill += fil
+
+        if i_comp is not None and trade_lookup:
+            cid = _norm_text(row[i_comp]).lower()
+            trade_meta = trade_lookup.get(cid)
+            if trade_meta:
+                trade, disc = trade_meta
+                t = by_trade.setdefault(trade, {
+                    "trade": trade, "discipline": disc,
+                    "requested": 0, "filled": 0,
+                })
+                t["requested"] += req
+                t["filled"]    += fil
+
+    trade_rows = sorted(
+        by_trade.values(),
+        key=lambda t: (t["requested"] - t["filled"], t["requested"]),
+        reverse=True,
+    )
+
+    return {
+        "by_client_month": by_cm,
+        "by_trade": trade_rows,
+        "totals": {"requested": total_req, "filled": total_fill},
+    }
+
+
 def read_shutdown_fulfilment(
     wb,
     client_lookup: dict[str, str],
@@ -852,6 +969,8 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
     months = build_months(current_month)
     aggs = aggregate(all_rows, personnel, months, current_month)
     shutdowns, worker_shutdown_outcomes = read_shutdown_fulfilment(wb, client_lookup)
+    trade_id_lookup = read_trade_id_lookup(wb)
+    fulfilment = read_job_planning_fulfilment(wb, client_lookup, trade_id_lookup, months)
 
     top_positions = pick_top_positions(aggs)
     # If the workbook lacks enough roles, pad with an empty placeholder so
@@ -876,6 +995,7 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
         "clients": CLIENTS,
         "workers": workers,
         "shutdowns": shutdowns,
+        "fulfilment": fulfilment,
     }
 
 
