@@ -9,7 +9,7 @@
       const { total, start } = NW.worstWindow(w, months);
       if (total < NW.FATIGUE_WARN) return;
       const window = months.slice(start, start + 3);
-      const status = total >= NW.FATIGUE_NW.FATIGUE_LIMIT ? "over" : "warn";
+      const status = total >= NW.FATIGUE_LIMIT ? "over" : "warn";
       rows.push({
         id: w.id,
         name: w.name,
