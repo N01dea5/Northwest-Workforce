@@ -78,29 +78,73 @@
 
 <main>
 
+  <!-- Fatigue rules summary -->
+  <section class="card" id="sec-fatigue-rules">
+    <header>
+      <h2><span class="section-number">01</span> Fatigue rule summary</h2>
+      <span class="hint">Dashboard flags the most restrictive applicable client rule. Evidence and approvals are managed outside this dashboard.</span>
+      <p class="section-desc">Fatigue exposure is calculated from roster-derived worker metrics including rolling 21-day hours, current-month hours, consecutive shifts, consecutive day shifts, consecutive night shifts and days on site. Status is shown as <strong>breach</strong>, <strong>stand-down required</strong>, <strong>approval required</strong> or <strong>watch</strong>.</p>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th class="cell-left">Client</th>
+              <th class="cell-left">Core fatigue rules monitored</th>
+              <th class="cell-left">Dashboard action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cell-left"><span class="dot fortescue"></span> Fortescue</td>
+              <td class="cell-left">Extended roster exposure; work beyond 14 continuous hours requires client authorisation; roster changes may trigger RCAT/FAID controls.</td>
+              <td class="cell-left">Flags extended consecutive runs as <strong>watch</strong> or <strong>approval required</strong>.</td>
+            </tr>
+            <tr>
+              <td class="cell-left"><span class="dot rio"></span> Rio Tinto</td>
+              <td class="cell-left">243 h FIFO shutdown monthly limit; 14 consecutive FIFO shifts; standard 7 consecutive FIFO night shifts; up to 10 nights only under exception controls.</td>
+              <td class="cell-left">Flags monthly hour breaches, excessive consecutive shifts, night-shift approvals and night-shift breaches.</td>
+            </tr>
+            <tr>
+              <td class="cell-left"><span class="dot bhp"></span> BHP WAIO</td>
+              <td class="cell-left">230 h over 21 consecutive days; 14 consecutive FIFO shifts; 7 consecutive FIFO night shifts; minimum rest and sleep-opportunity controls sit outside current roster-only metrics.</td>
+              <td class="cell-left">Flags 21-day hour breaches, excessive consecutive shifts and night-shift limits.</td>
+            </tr>
+            <tr>
+              <td class="cell-left"><span class="dot royhill"></span> Roy Hill / Hancock</td>
+              <td class="cell-left">21 consecutive days maximum on site; mandatory stand-down after 14 consecutive day shifts; 24 h stand-down after 10 consecutive night shifts.</td>
+              <td class="cell-left">Flags day-shift stand-downs, night-shift stand-downs and site-duration breaches.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <!-- KPI tiles -->
   <section class="card" id="sec-kpi">
     <header>
-      <h2><span class="section-number">01</span> Fatigue compliance — key metrics</h2>
+      <h2><span class="section-number">02</span> Fatigue compliance — key metrics</h2>
       <span class="hint">Filtered by client, position &amp; name above</span>
-      <p class="section-desc"><strong>In breach</strong> — workers whose worst consecutive 3-month window of hours exceeds the 836 h limit. <strong>Approaching</strong> — workers between 752 h (90 % of limit) and 836 h in their worst window. <strong>Worst overage</strong> — the largest single excess above 836 h across all flagged workers in the current filter. Hours are calculated after the 13-day stand-down rule: the 14th consecutive working day in any unbroken roster run is excluded and resets the count.</p>
+      <p class="section-desc"><strong>In breach</strong> — workers exceeding a hard client fatigue rule. <strong>Approaching limit</strong> — workers within warning range of a client threshold. <strong>Action required</strong> — workers requiring stand-down or approval outside this dashboard before continuing under the applicable client rule.</p>
     </header>
     <div class="body">
       <div class="kpi-grid">
         <div class="kpi-tile" id="kpi-fatigue-breach">
           <div class="label">In breach</div>
           <div class="value">—</div>
-          <div class="delta">≥ 836h in worst window</div>
+          <div class="delta">Hard client-rule breaches</div>
         </div>
         <div class="kpi-tile" id="kpi-fatigue-close">
           <div class="label">Approaching limit</div>
           <div class="value">—</div>
-          <div class="delta">752 – 836h</div>
+          <div class="delta">Approaching client limits</div>
         </div>
         <div class="kpi-tile" id="kpi-fatigue-worst">
-          <div class="label">Worst overage</div>
+          <div class="label">Action required</div>
           <div class="value">—</div>
-          <div class="delta">above 836h limit</div>
+          <div class="delta">Approval or stand-down required</div>
         </div>
       </div>
     </div>
@@ -109,21 +153,21 @@
   <!-- Discipline rollup -->
   <section class="card" id="sec-disc-rollup">
     <header>
-      <h2><span class="section-number">02</span> Breach by discipline</h2>
+      <h2><span class="section-number">03</span> Fatigue flags by discipline</h2>
       <span class="hint">Count of flagged workers per discipline group</span>
-      <p class="section-desc">Quick breakdown of the workers flagged in the compliance table below, grouped by their recorded discipline. Use this to identify which trade groups carry the highest fatigue exposure before drilling into the individual-level table. Counts update with the filter selections above.</p>
+      <p class="section-desc">Quick breakdown of the workers flagged in the compliance table below, grouped by recorded discipline. Use this to identify which trade groups carry the highest fatigue exposure before drilling into the individual-level table. Counts update with the filter selections above.</p>
     </header>
     <div class="body">
       <div class="discipline-rollup" id="discipline-rollup"></div>
     </div>
   </section>
 
-  <!-- Hours compliance table -->
+  <!-- Compliance table -->
   <section class="card" id="sec-compliance">
     <header>
-      <h2><span class="section-number">03</span> Hours compliance — 836h rolling 3-month limit</h2>
-      <span class="hint">Flagged workers: any consecutive 3-month window ≥ 752h (close) or ≥ 836h (breach). Highlighted cells = worst window.</span>
-      <p class="section-desc">Every possible consecutive 3-month window within the reporting period is checked against the 836 h limit. Only workers whose worst window reaches the warning threshold (752 h, 90 % of limit) appear here. Highlighted cells mark the worst window for each worker; remaining months are dimmed. <strong>Data treatment:</strong> hours come from the DailyPersonnelSchedule at 12 h/shift for onsite, mobilising, demobilised, and confirmed rows. Rejected, declined, and late-withdrawal rows are excluded. The 13-day stand-down rule removes the 14th consecutive working day in any unbroken run, then resets the streak. Workers booked for every calendar day of a month are assumed to have 50 % actual on-site attendance and their hours are halved.</p>
+      <h2><span class="section-number">04</span> Fatigue compliance — worker actions</h2>
+      <span class="hint">Flagged workers only. Uses parser-derived fatigueMetrics, not monthly-hour estimates.</span>
+      <p class="section-desc">Each worker is assessed against the relevant client rule based on the current client and roster-derived fatigue metrics. The table shows the trigger and required operational action. Approval documents, evidence registers and formal risk assessments are managed outside this dashboard.</p>
     </header>
     <div class="body">
       <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
@@ -137,10 +181,7 @@
         </table>
       </div>
       <div class="small muted" style="margin-top:8px;">
-        Limit: 836h per any rolling 3-month period &nbsp;·&nbsp;
-        <span class="badge warn">Close</span> ≥ 752h &nbsp;·&nbsp;
-        <span class="badge risk">Breach</span> ≥ 836h &nbsp;·&nbsp;
-        Stand-down applied: day 14+ in any consecutive working run is excluded.
+        Client rules are summarised above. The dashboard is a workforce planning control, not the approval/evidence register.
       </div>
     </div>
   </section>
@@ -150,6 +191,7 @@
 <script src="assets/format.js"></script>
 <script src="assets/boot.js"></script>
 <script src="assets/kpi.js"></script>
+<script src="assets/fatigue-rules.js"></script>
 <script src="assets/compliance.js"></script>
 <script src="assets/fatigue-app.js"></script>
 </body>
