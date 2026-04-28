@@ -158,20 +158,19 @@
 
     // Data rows grouped by discipline
     groupOrder.forEach((disc) => {
-      // Discipline header row
+      // Discipline header row — purely a label, no longer toggles anything.
       const discTr = document.createElement("tr");
       discTr.className = "disc-group-header";
-      const isOpen = !!expanded[tableKey][disc];
-      discTr.innerHTML = `<td class="disc-label clickable-disc" colspan="${months.length + 1}"><span class="disc-toggle">${isOpen ? "▾" : "▸"}</span> ${NW.escapeHtml(disc)}</td>`;
-      discTr.addEventListener("click", () => {
-        expanded[tableKey][disc] = !expanded[tableKey][disc];
-        buildTable(view, { scopeClient, tableEl });
-      });
+      discTr.innerHTML = `<td class="disc-label" colspan="${months.length + 1}">${NW.escapeHtml(disc)}</td>`;
       tbody.appendChild(discTr);
 
       groupPositions[disc].forEach((pos) => {
         const tr = document.createElement("tr");
-        const cells = [`<td class="pos-name pos-indent">${NW.escapeHtml(pos)}</td>`];
+        const isOpen = !!expanded[tableKey][pos];
+        const hasWorkers = effectiveWorkers.some((w) => w.position === pos);
+        const toggle = hasWorkers ? `<span class="pos-toggle">${isOpen ? "▾" : "▸"}</span>` : "";
+        const labelCls = hasWorkers ? "pos-name pos-indent clickable-pos" : "pos-name pos-indent";
+        const cells = [`<td class="${labelCls}">${toggle}${NW.escapeHtml(pos)}</td>`];
         months.forEach((m, i) => {
           const mPrev = i > 0 ? months[i - 1] : null;
           const { hc, avg, retention } = cellStats(effectiveWorkers, pos, m, mPrev);
@@ -190,6 +189,12 @@
           );
         });
         tr.innerHTML = cells.join("");
+        if (hasWorkers) {
+          tr.addEventListener("click", () => {
+            expanded[tableKey][pos] = !expanded[tableKey][pos];
+            buildTable(view, { scopeClient, tableEl });
+          });
+        }
         tbody.appendChild(tr);
 
         if (isOpen) renderWorkerRowsForPosition(pos);

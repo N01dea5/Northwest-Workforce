@@ -412,9 +412,9 @@ section.card > .body { padding: 18px 20px 20px; }
   padding: 6px 10px 5px;
   border-top: 1px solid var(--srg-border);
 }
-.tbl tr.disc-group-header td.clickable-disc { cursor: pointer; user-select: none; }
-.tbl tr.disc-group-header td.clickable-disc:hover { color: var(--srg-red); }
-.disc-toggle { display: inline-block; width: 12px; margin-right: 4px; color: var(--srg-grey-2); }
+.tbl td.clickable-pos { cursor: pointer; user-select: none; }
+.tbl tr:hover td.clickable-pos { color: var(--srg-red); }
+.pos-toggle { display: inline-block; width: 12px; margin-right: 4px; color: var(--srg-grey-2); }
 .tbl tr.disc-worker-row td { background: #fcfcfc; }
 .tbl td.worker-ret-cell .hc { font-size: 12px; }
 .tbl tr.disc-subtotal { background: var(--srg-light); border-top: 1px solid var(--srg-border); }
