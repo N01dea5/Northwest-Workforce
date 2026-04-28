@@ -1,4 +1,4 @@
-// Section 04b — Hours compliance: 724h per any rolling 3-month window.
+// Section 04b — Hours compliance: fatigue limit per any rolling 3-month window.
 (function (NW) {
   function compute(view) {
     const { data, workers } = view;
@@ -136,7 +136,7 @@
       summary.innerHTML = `<span class="badge ok">No compliance issues in current view</span>`;
     } else {
       const parts = [];
-      if (over) parts.push(`<strong>${over}</strong> over 724h`);
+      if (over) parts.push(`<strong>${over}</strong> over ${NW.FATIGUE_LIMIT}h`);
       if (warn) parts.push(`<strong>${warn}</strong> approaching limit`);
       summary.innerHTML = parts.join(" &nbsp;·&nbsp; ");
     }

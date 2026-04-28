@@ -44,6 +44,7 @@
   </div>
   <nav class="page-nav">
     <a href="index.html">Utilisation</a>
+    <a href="fulfilment.html">Fulfilment</a>
     <a href="retention.html">Retention</a>
     <span class="page-nav-active">Fatigue</span>
   </nav>
@@ -78,24 +79,24 @@
     <header>
       <h2><span class="section-number">01</span> Fatigue compliance — key metrics</h2>
       <span class="hint">Filtered by client, position &amp; name above</span>
-      <p class="section-desc"><strong>In breach</strong> — workers whose worst consecutive 3-month window of hours exceeds the 724 h limit. <strong>Approaching</strong> — workers between 652 h (90 % of limit) and 724 h in their worst window. <strong>Worst overage</strong> — the largest single excess above 724 h across all flagged workers in the current filter. Hours are calculated after the 13-day stand-down rule: the 14th consecutive working day in any unbroken roster run is excluded and resets the count.</p>
+      <p class="section-desc"><strong>In breach</strong> — workers whose worst consecutive 3-month window of hours exceeds the 836 h limit. <strong>Approaching</strong> — workers between 752 h (90 % of limit) and 836 h in their worst window. <strong>Worst overage</strong> — the largest single excess above 836 h across all flagged workers in the current filter. Hours are calculated after the 13-day stand-down rule: the 14th consecutive working day in any unbroken roster run is excluded and resets the count.</p>
     </header>
     <div class="body">
       <div class="kpi-grid">
         <div class="kpi-tile" id="kpi-fatigue-breach">
           <div class="label">In breach</div>
           <div class="value">—</div>
-          <div class="delta">≥ 724h in worst window</div>
+          <div class="delta">≥ 836h in worst window</div>
         </div>
         <div class="kpi-tile" id="kpi-fatigue-close">
           <div class="label">Approaching limit</div>
           <div class="value">—</div>
-          <div class="delta">652 – 724h</div>
+          <div class="delta">752 – 836h</div>
         </div>
         <div class="kpi-tile" id="kpi-fatigue-worst">
           <div class="label">Worst overage</div>
           <div class="value">—</div>
-          <div class="delta">above 724h limit</div>
+          <div class="delta">above 836h limit</div>
         </div>
       </div>
     </div>
@@ -116,9 +117,9 @@
   <!-- Hours compliance table -->
   <section class="card" id="sec-compliance">
     <header>
-      <h2><span class="section-number">03</span> Hours compliance — 724h rolling 3-month limit</h2>
-      <span class="hint">Flagged workers: any consecutive 3-month window ≥ 652h (close) or ≥ 724h (breach). Highlighted cells = worst window.</span>
-      <p class="section-desc">Every possible consecutive 3-month window within the reporting period is checked against the 724 h limit. Only workers whose worst window reaches the warning threshold (652 h, 90 % of limit) appear here. Highlighted cells mark the worst window for each worker; remaining months are dimmed. <strong>Data treatment:</strong> hours come from the DailyPersonnelSchedule at 12 h/shift for onsite, mobilising, demobilised, and confirmed rows. Rejected, declined, and late-withdrawal rows are excluded. The 13-day stand-down rule removes the 14th consecutive working day in any unbroken run, then resets the streak. Workers booked for every calendar day of a month are assumed to have 50 % actual on-site attendance and their hours are halved.</p>
+      <h2><span class="section-number">03</span> Hours compliance — 836h rolling 3-month limit</h2>
+      <span class="hint">Flagged workers: any consecutive 3-month window ≥ 752h (close) or ≥ 836h (breach). Highlighted cells = worst window.</span>
+      <p class="section-desc">Every possible consecutive 3-month window within the reporting period is checked against the 836 h limit. Only workers whose worst window reaches the warning threshold (752 h, 90 % of limit) appear here. Highlighted cells mark the worst window for each worker; remaining months are dimmed. <strong>Data treatment:</strong> hours come from the DailyPersonnelSchedule at 12 h/shift for onsite, mobilising, demobilised, and confirmed rows. Rejected, declined, and late-withdrawal rows are excluded. The 13-day stand-down rule removes the 14th consecutive working day in any unbroken run, then resets the streak. Workers booked for every calendar day of a month are assumed to have 50 % actual on-site attendance and their hours are halved.</p>
     </header>
     <div class="body">
       <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
@@ -132,9 +133,9 @@
         </table>
       </div>
       <div class="small muted" style="margin-top:8px;">
-        Limit: 724h per any rolling 3-month period &nbsp;·&nbsp;
-        <span class="badge warn">Close</span> ≥ 652h &nbsp;·&nbsp;
-        <span class="badge risk">Breach</span> ≥ 724h &nbsp;·&nbsp;
+        Limit: 836h per any rolling 3-month period &nbsp;·&nbsp;
+        <span class="badge warn">Close</span> ≥ 752h &nbsp;·&nbsp;
+        <span class="badge risk">Breach</span> ≥ 836h &nbsp;·&nbsp;
         Stand-down applied: day 14+ in any consecutive working run is excluded.
       </div>
     </div>
