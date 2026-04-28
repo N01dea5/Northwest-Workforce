@@ -736,14 +736,15 @@ def read_shutdown_fulfilment(
     if i_dt is None or i_status is None or i_trade is None:
         return [], {}
 
+    # Fulfilment tracking is based on job-planning pipeline states.
     REQUEST_STATUSES = {
-        "onsite", "demobilised", "mobilising", "confirmed",
-        "contacted", "planning", "short list", "rejected",
-        "declined", "late withdrawal",
+        "contacted", "planning", "short list", "confirmed", "mobilising",
+        "declined", "rejected", "late withdrawal",
     }
-    FILLED_STATUSES = {"onsite", "demobilised", "mobilising", "confirmed"}
+    FILLED_STATUSES = {"confirmed", "mobilising"}
     WORKED_STATUSES = {"onsite", "demobilised"}
     DECLINED_STATUSES = {"declined", "rejected", "late withdrawal"}
+    TRACKED_STATUSES = REQUEST_STATUSES | WORKED_STATUSES
 
     by_shutdown: dict[str, ShutdownAgg] = {}
     worker_outcomes: dict[str, dict[str, str]] = defaultdict(dict)
@@ -764,7 +765,7 @@ def read_shutdown_fulfilment(
         report_date = _coerce_date(row[i_dt])
         status = _norm_text(row[i_status]).lower()
         trade = _norm_text(row[i_trade]) or "Unknown"
-        if report_date is None or not status or status not in REQUEST_STATUSES:
+        if report_date is None or not status or status not in TRACKED_STATUSES:
             continue
 
         jid = _norm_text(row[i_jid]) if i_jid is not None else ""
@@ -787,11 +788,12 @@ def read_shutdown_fulfilment(
         if client and not agg.client:
             agg.client = client
 
-        if pid:
+        if pid and status in REQUEST_STATUSES:
             agg.requested_by_trade[trade].add(pid)
             if status in FILLED_STATUSES:
                 agg.filled_by_trade[trade].add(pid)
 
+        if pid:
             current = worker_outcomes[pid].get(shutdown_id)
             if status in WORKED_STATUSES:
                 worker_outcomes[pid][shutdown_id] = "worked"

@@ -62,6 +62,17 @@ window.NW = window.NW || {};
 
   NW.workerUrl = (id) => `worker.html?id=${encodeURIComponent(id)}`;
 
+  // Escape arbitrary text for safe interpolation into innerHTML / attribute values.
+  NW.escapeHtml = (s) => {
+    if (s === null || s === undefined) return "";
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  };
+
   // Traffic-light classifier used for retention % and churn %.
   NW.retentionClass = (pct) => {
     if (pct === null || Number.isNaN(pct)) return "";

@@ -1,12 +1,17 @@
 NW.bootPage(function (view) {
-  const shutdowns = (view.data.shutdowns || []).filter((s) => {
-    if (!view.workers.length) return true;
-    const workerIds = new Set(view.workers.map((w) => w.id));
-    return view.data.workers.some((w) => workerIds.has(w.id) && w.shutdown_outcomes && w.shutdown_outcomes[s.id]);
-  });
+  const esc = NW.escapeHtml;
+
+  // Keep shutdowns where at least one filtered worker has an outcome recorded.
+  const shutdowns = (view.data.shutdowns || []).filter((s) =>
+    view.workers.some((w) => w.shutdown_outcomes && w.shutdown_outcomes[s.id])
+  );
 
   const allTrades = [];
-  shutdowns.forEach((s) => (s.trades || []).forEach((t) => allTrades.push(t)));
+  shutdowns.forEach((s) =>
+    (s.trades || []).forEach((t) =>
+      allTrades.push({ ...t, client: s.client, month: s.commence_month })
+    )
+  );
   const requested = allTrades.reduce((n, t) => n + (t.requested || 0), 0);
   const filled = allTrades.reduce((n, t) => n + (t.filled || 0), 0);
 
@@ -17,40 +22,74 @@ NW.bootPage(function (view) {
   setVal("kpi-req", NW.fmtInt(requested));
   setVal("kpi-fill", NW.fmtInt(filled));
   setVal("kpi-gap", NW.fmtInt(Math.max(0, requested - filled)));
-  setVal("kpi-rate", requested ? `${Math.round((filled / requested) * 100)}<span class=\"unit\">%</span>` : "—");
+  setVal(
+    "kpi-rate",
+    requested
+      ? `${Math.round((filled / requested) * 100)}<span class="unit">%</span>`
+      : "—"
+  );
 
-  const byMonth = {};
-  shutdowns.forEach((s) => {
-    const mk = s.commence_month || "Unknown";
-    if (!byMonth[mk]) byMonth[mk] = [];
-    byMonth[mk].push(s);
+  const clients = view.data.clients.slice();
+  const months = [...new Set(shutdowns.map((s) => s.commence_month).filter(Boolean))].sort();
+
+  const byClientMonth = {};
+  allTrades.forEach((t) => {
+    const c = t.client || "Unassigned";
+    const m = t.month || "Unknown";
+    byClientMonth[c] = byClientMonth[c] || {};
+    byClientMonth[c][m] = byClientMonth[c][m] || { requested: 0, filled: 0 };
+    byClientMonth[c][m].requested += t.requested || 0;
+    byClientMonth[c][m].filled += t.filled || 0;
   });
 
-  const months = Object.keys(byMonth).sort();
   const fthead = document.getElementById("fulfilment-thead");
   const ftbody = document.getElementById("fulfilment-tbody");
   if (fthead && ftbody) {
-    fthead.innerHTML = `<tr><th class=\"cell-left\">Month</th><th class=\"cell-left\">Shutdown</th><th class=\"cell-left\">Trade</th><th class=\"num\">Requested</th><th class=\"num\">Filled</th><th class=\"num\">Gap</th><th class=\"num\">Fill rate</th></tr>`;
-    ftbody.innerHTML = "";
+    if (!shutdowns.length) {
+      fthead.innerHTML = "";
+      ftbody.innerHTML = `<tr><td class="muted" style="padding:14px;">No shutdowns match the current filters.</td></tr>`;
+    } else {
+      fthead.innerHTML = `<tr><th class="cell-left">Client</th>${months
+        .map((m) => `<th>${esc(NW.fmtMonth(m))}</th>`)
+        .join("")}<th>Total</th></tr>`;
+      ftbody.innerHTML = "";
 
-    months.forEach((m) => {
-      const list = byMonth[m];
-      let firstMonthRow = true;
-      list.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
-      list.forEach((s) => {
-        const trades = s.trades && s.trades.length ? s.trades : [{ trade: "(none)", requested: 0, filled: 0, gap: 0, fill_rate: null }];
-        trades.forEach((t, i) => {
-          const tr = document.createElement("tr");
-          const monthCell = firstMonthRow && i === 0 ? `<td class=\"cell-left\" rowspan=\"${list.reduce((n, x) => n + Math.max((x.trades || []).length, 1), 0)}\">${NW.fmtMonth(m)}</td>` : "";
-          const shutdownCell = i === 0
-            ? `<td class=\"cell-left\" rowspan=\"${trades.length}\">${s.name}${s.client ? ` <span class=\"small muted\">(${s.client})</span>` : ""}</td>`
-            : "";
-          tr.innerHTML = `${monthCell}${shutdownCell}<td class=\"cell-left\">${t.trade}</td><td class=\"num\">${NW.fmtInt(t.requested)}</td><td class=\"num\">${NW.fmtInt(t.filled)}</td><td class=\"num\">${NW.fmtInt((t.requested || 0) - (t.filled || 0))}</td><td class=\"num\">${t.requested ? Math.round((t.filled / t.requested) * 100) + "%" : "—"}</td>`;
-          ftbody.appendChild(tr);
-          firstMonthRow = false;
+      const rowOrder = [
+        ...clients,
+        ...Object.keys(byClientMonth).filter((c) => !clients.includes(c)),
+      ];
+      rowOrder.forEach((client) => {
+        const tr = document.createElement("tr");
+        let rowReq = 0;
+        let rowFill = 0;
+        const cells = [
+          `<td class="cell-left"><span class="dot ${esc(NW.clientSlug(client))}"></span> ${esc(client)}</td>`,
+        ];
+        months.forEach((m) => {
+          const v = byClientMonth[client]?.[m] || { requested: 0, filled: 0 };
+          rowReq += v.requested;
+          rowFill += v.filled;
+          const pct = v.requested ? Math.round((v.filled / v.requested) * 100) : null;
+          cells.push(
+            `<td class="num" title="Requested ${v.requested} · Filled ${v.filled}">${
+              v.requested
+                ? `${NW.fmtInt(v.filled)}/${NW.fmtInt(v.requested)}${pct !== null ? ` (${pct}%)` : ""}`
+                : "—"
+            }</td>`
+          );
         });
+        const rowPct = rowReq ? Math.round((rowFill / rowReq) * 100) : null;
+        cells.push(
+          `<td class="num"><strong>${
+            rowReq
+              ? `${NW.fmtInt(rowFill)}/${NW.fmtInt(rowReq)}${rowPct !== null ? ` (${rowPct}%)` : ""}`
+              : "—"
+          }</strong></td>`
+        );
+        tr.innerHTML = cells.join("");
+        ftbody.appendChild(tr);
       });
-    });
+    }
   }
 
   const disciplineBody = document.getElementById("discipline-fulfilment-body");
@@ -62,14 +101,20 @@ NW.bootPage(function (view) {
     byTrade[t.trade].filled += t.filled || 0;
   });
 
-  const rows = Object.entries(byTrade).sort((a, b) => ((b[1].requested - b[1].filled) - (a[1].requested - a[1].filled)));
+  const rows = Object.entries(byTrade).sort(
+    (a, b) => b[1].requested - b[1].filled - (a[1].requested - a[1].filled)
+  );
   disciplineBody.innerHTML = "";
+  if (!rows.length) {
+    disciplineBody.innerHTML = `<tr><td class="muted" colspan="5" style="padding:14px;">No trade requests in scope.</td></tr>`;
+    return;
+  }
   rows.forEach(([trade, v]) => {
     const req = v.requested;
     const fil = v.filled;
     const gap = req - fil;
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td class=\"cell-left\">${trade}</td><td class=\"num\">${NW.fmtInt(req)}</td><td class=\"num\">${NW.fmtInt(fil)}</td><td class=\"num\">${NW.fmtInt(gap)}</td><td class=\"num\">${req ? Math.round((fil / req) * 100) + "%" : "—"}</td>`;
+    tr.innerHTML = `<td class="cell-left">${esc(trade)}</td><td class="num">${NW.fmtInt(req)}</td><td class="num">${NW.fmtInt(fil)}</td><td class="num">${NW.fmtInt(gap)}</td><td class="num">${req ? Math.round((fil / req) * 100) + "%" : "—"}</td>`;
     disciplineBody.appendChild(tr);
   });
 });
