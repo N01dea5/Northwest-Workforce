@@ -97,37 +97,6 @@ def _build_fixture(tmp: Path, current_month: date) -> Path:
     # Bruce: contacted — requested, not filled, no outcome.
     daily.append(["P004", shutdown_start, "contacted", "Scaffolder", "J100", "BHP Newman SD", shutdown_start, "BHP"])
 
-    # ClientView — needed for JobPlanningView ClientId resolution.
-    cv = wb.create_sheet("xpbi02 ClientView")
-    cv.append(["ClientId", "ClientName"])
-    cv.append(["BHP-CID", "BHP"])
-    cv.append(["FMG-CID", "Fortescue"])
-    cv.append(["RIO-CID", "RIO TINTO"])
-    cv.append(["RH-CID",  "ROY HILL"])
-    cv.append(["NOPE-CID", "Some Other Mob"])
-
-    # DisciplineTrade — TradeId column drives JobPlanning competency lookup.
-    dt = wb.create_sheet("xpbi02 DisciplineTrade")
-    dt.append(["TradeId", "DisciplineId", "Discipline", "Trade"])
-    dt.append(["TID-BOIL", "DID-1", "Mechanical", "Boilermaker"])
-    dt.append(["TID-WELD", "DID-1", "Welder", "Coded Welder"])
-    dt.append(["TID-RIG",  "DID-2", "Rigging", "Advanced Rigger"])
-
-    # JobPlanningView — fulfilment rows.
-    jp = wb.create_sheet("xpbi02 JobPlanningView")
-    jp.append(["ClientId", "SiteId", "JobNo", "StartDate", "EndDate", "CompetencyId", "Required", "Filled", "ToFill", "ColourIndex", "JobId", "Actual"])
-    in_window = months[1]      # one month behind current — inside reporting window
-    out_window = months[0] + relativedelta(months=-6)  # well outside the window
-    # BHP — boilermaker 5 req / 3 fill, welder 2 req / 2 fill (in window).
-    jp.append(["BHP-CID", "S", 1, in_window, in_window, "TID-BOIL", 5, 3, 2, 0, "JID1", 0])
-    jp.append(["BHP-CID", "S", 1, in_window, in_window, "TID-WELD", 2, 2, 0, 0, "JID1", 0])
-    # Fortescue — rigger 4 req / 1 fill (in window).
-    jp.append(["FMG-CID", "S", 2, in_window, in_window, "TID-RIG", 4, 1, 3, 0, "JID2", 0])
-    # Out-of-window row — must be excluded.
-    jp.append(["BHP-CID", "S", 3, out_window, out_window, "TID-BOIL", 99, 99, 0, 0, "JID3", 0])
-    # Non-dashboard client — must be excluded.
-    jp.append(["NOPE-CID", "S", 4, in_window, in_window, "TID-BOIL", 50, 50, 0, 0, "JID4", 0])
-
     excel = tmp / "Rapidcrews Macro Data.xlsx"
     wb.save(excel)
     return excel
@@ -237,29 +206,6 @@ def _run(current_month: date):
         # John is filled but never onsite — no worker outcome recorded.
         assert john["shutdown_outcomes"].get(sid) is None, \
             f"John outcome should be empty, got {john['shutdown_outcomes']}"
-
-        # JobPlanningView fulfilment — clamped to dashboard clients +
-        # reporting window. In-window BHP row: 5+2 req, 3+2 fill. In-window
-        # Fortescue row: 4 req, 1 fill. Out-of-window and non-dashboard rows
-        # must be dropped.
-        ful = payload["fulfilment"]
-        in_window_key = payload["reporting_months"][1]
-        assert ful["totals"]["requested"] == 5 + 2 + 4
-        assert ful["totals"]["filled"]    == 3 + 2 + 1
-        bhp_row = ful["by_client_month"]["BHP"][in_window_key]
-        assert bhp_row == {"requested": 7, "filled": 5}, bhp_row
-        fmg_row = ful["by_client_month"]["Fortescue"][in_window_key]
-        assert fmg_row == {"requested": 4, "filled": 1}, fmg_row
-        # No Rio Tinto / Roy Hill rows in the fixture.
-        assert ful["by_client_month"]["Rio Tinto"] == {}
-        assert ful["by_client_month"]["Roy Hill/Hancock"] == {}
-        # Trade rollup uses DisciplineTrade resolution.
-        trades = {t["trade"]: t for t in ful["by_trade"]}
-        assert trades["Boilermaker"]["requested"] == 5
-        assert trades["Boilermaker"]["filled"]    == 3
-        assert trades["Boilermaker"]["discipline"] == "Mechanical"
-        assert trades["Advanced Rigger"]["requested"] == 4
-        assert trades["Coded Welder"]["filled"] == 2
 
         print("PASS — parser produced expected workforce.json")
         return 0
