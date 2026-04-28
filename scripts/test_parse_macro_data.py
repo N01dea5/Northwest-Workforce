@@ -80,6 +80,23 @@ def _build_fixture(tmp: Path, current_month: date) -> Path:
     # Non-onsite schedule type → skip
     roster.append(["P001", months[1] + timedelta(days=2), "Personal Leave", "Fortescue", "", "J", True])
 
+    # DailyPersonnelSchedule sheet — drives shutdown fulfilment.
+    daily = wb.create_sheet("xpbi02 DailyPersonnelSchedule")
+    daily.append([
+        "PersonnelId", "ReportDate", "Status", "Trade",
+        "JobId", "JobGroup", "JobStart", "Client",
+    ])
+    shutdown_start = months[1]
+    # Jane: confirmed (filled & requested), then onsite (worked).
+    daily.append(["P001", shutdown_start, "confirmed", "Boilermaker", "J100", "BHP Newman SD", shutdown_start, "BHP"])
+    daily.append(["P001", shutdown_start + timedelta(days=1), "onsite", "Boilermaker", "J100", "BHP Newman SD", shutdown_start, "BHP"])
+    # John: confirmed (filled & requested) but never onsite — counts as filled, not worked.
+    daily.append(["P002", shutdown_start, "confirmed", "Welder", "J100", "BHP Newman SD", shutdown_start, "BHP"])
+    # Mary: declined — counts as requested, not filled, declined outcome.
+    daily.append(["P003", shutdown_start, "declined", "Advanced Rigger", "J100", "BHP Newman SD", shutdown_start, "BHP"])
+    # Bruce: contacted — requested, not filled, no outcome.
+    daily.append(["P004", shutdown_start, "contacted", "Scaffolder", "J100", "BHP Newman SD", shutdown_start, "BHP"])
+
     excel = tmp / "Rapidcrews Macro Data.xlsx"
     wb.save(excel)
     return excel
@@ -163,6 +180,32 @@ def _run(current_month: date):
         john_m2 = payload["reporting_months"][2]
         assert john["monthly"][john_m2]["hours"] == 12 * 12, \
             f"RNR should not add hours, saw {john['monthly'][john_m2]}"
+
+        # Shutdown fulfilment: 4 trades requested, 2 filled (Jane + John),
+        # Jane worked, Mary declined, Bruce no outcome.
+        shutdowns = payload["shutdowns"]
+        assert len(shutdowns) == 1, f"expected 1 shutdown, got {len(shutdowns)}"
+        sd = shutdowns[0]
+        assert sd["client"] == "BHP", f"shutdown client: {sd['client']}"
+        assert sd["requested_total"] == 4, f"requested_total: {sd['requested_total']}"
+        assert sd["filled_total"] == 2, f"filled_total: {sd['filled_total']}"
+        trade_map = {t["trade"]: t for t in sd["trades"]}
+        assert trade_map["Boilermaker"]["filled"] == 1
+        assert trade_map["Welder"]["filled"] == 1
+        assert trade_map["Advanced Rigger"]["filled"] == 0
+        assert trade_map["Advanced Rigger"]["requested"] == 1
+        assert trade_map["Scaffolder"]["filled"] == 0
+
+        sid = sd["id"]
+        assert jane["shutdown_outcomes"].get(sid) == "worked", \
+            f"Jane outcome: {jane['shutdown_outcomes']}"
+        assert mary["shutdown_outcomes"].get(sid) == "declined", \
+            f"Mary outcome: {mary['shutdown_outcomes']}"
+        assert bruce["shutdown_outcomes"].get(sid) is None, \
+            f"Bruce outcome should be empty, got {bruce['shutdown_outcomes']}"
+        # John is filled but never onsite — no worker outcome recorded.
+        assert john["shutdown_outcomes"].get(sid) is None, \
+            f"John outcome should be empty, got {john['shutdown_outcomes']}"
 
         print("PASS — parser produced expected workforce.json")
         return 0

@@ -63,7 +63,7 @@ NW.bootPage = function (renderFn) {
         const b = document.createElement("span");
         b.className = "filter-chip";
         if (state.filters.clients.has(c)) b.classList.add("active");
-        b.innerHTML = `<span class="dot ${NW.clientSlug(c)}"></span> ${c}`;
+        b.innerHTML = `<span class="dot ${NW.escapeHtml(NW.clientSlug(c))}"></span> ${NW.escapeHtml(c)}`;
         b.addEventListener("click", () => {
           if (state.filters.clients.has(c)) state.filters.clients.delete(c);
           else state.filters.clients.add(c);
@@ -79,7 +79,7 @@ NW.bootPage = function (renderFn) {
     if (sel) {
       if (!sel.options.length) {
         sel.innerHTML = `<option value="">All positions</option>` +
-          state.data.positions_top20.map((p) => `<option>${p}</option>`).join("");
+          state.data.positions_top20.map((p) => `<option value="${NW.escapeHtml(p)}">${NW.escapeHtml(p)}</option>`).join("");
       }
       sel.value = state.filters.position;
       sel.onchange = () => { state.filters.position = sel.value; writeHash(); renderAll(); };

@@ -72,7 +72,7 @@
 
     el.innerHTML = sorted.map(([disc, counts]) => `
       <div class="disc-rollup-tile">
-        <div class="disc-rollup-name">${disc}</div>
+        <div class="disc-rollup-name">${NW.escapeHtml(disc)}</div>
         <div class="disc-rollup-counts">
           ${counts.over ? `<span class="badge risk">${counts.over} breach</span>` : ""}
           ${counts.warn ? `<span class="badge warn">${counts.warn} close</span>` : ""}
@@ -119,12 +119,12 @@
         : `<span class="badge warn">Close</span>`;
 
       tr.innerHTML = `
-        <td class="worker-name"><a href="${NW.workerUrl(r.id)}">${r.name}</a></td>
-        <td class="cell-left">${r.position}</td>
-        <td class="cell-left"><span class="dot ${NW.clientSlug(r.client)}"></span> ${r.client}</td>
+        <td class="worker-name"><a href="${NW.escapeHtml(NW.workerUrl(r.id))}">${NW.escapeHtml(r.name)}</a></td>
+        <td class="cell-left">${NW.escapeHtml(r.position)}</td>
+        <td class="cell-left"><span class="dot ${NW.escapeHtml(NW.clientSlug(r.client))}"></span> ${NW.escapeHtml(r.client)}</td>
         ${monthCells}
         <td class="num compliance-total"><strong>${NW.fmtInt(r.total)}h</strong></td>
-        <td class="nowrap cell-left">${r.windowLabel}</td>
+        <td class="nowrap cell-left">${NW.escapeHtml(r.windowLabel)}</td>
         <td>${badge}</td>`;
       tbody.appendChild(tr);
     });

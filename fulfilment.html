@@ -94,6 +94,10 @@
       <span class="hint">From job-planning pipeline statuses (no job-level detail)</span>
     </header>
     <div class="body">
+      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
+        <span class="muted small">Cells show filled/requested with fill-rate %</span>
+        <button id="fulfilment-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
+      </div>
       <div class="table-scroll">
         <table class="tbl" id="fulfilment-table">
           <thead id="fulfilment-thead"></thead>
@@ -109,6 +113,10 @@
       <span class="hint">Across all shutdowns in scope</span>
     </header>
     <div class="body">
+      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
+        <span id="discipline-fulfilment-summary" class="muted small">—</span>
+        <button id="discipline-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
+      </div>
       <div class="table-scroll">
         <table class="tbl" id="discipline-fulfilment-table">
           <thead>

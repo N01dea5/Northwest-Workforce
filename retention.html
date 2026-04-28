@@ -205,6 +205,10 @@
       <p class="section-desc">Matrix of filtered employees against known shutdowns. A green tick means the employee worked that shutdown. A red cross means they declined/rejected/withdrew from a request. Blank means no worked or decline/reject record for that employee/shutdown pairing.</p>
     </header>
     <div class="body">
+      <div style="display:flex; gap:12px; margin-bottom:10px; align-items:center;">
+        <span id="retention-matrix-summary" class="muted small">—</span>
+        <button id="retention-matrix-csv" class="btn small" style="margin-left:auto;">Export CSV</button>
+      </div>
       <div class="table-scroll">
         <table class="tbl" id="retention-matrix-table">
           <thead id="retention-matrix-thead"></thead>

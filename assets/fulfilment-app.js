@@ -1,10 +1,13 @@
 NW.bootPage(function (view) {
   const esc = NW.escapeHtml;
 
-  // Keep shutdowns where at least one filtered worker has an outcome recorded.
-  const shutdowns = (view.data.shutdowns || []).filter((s) =>
-    view.workers.some((w) => w.shutdown_outcomes && w.shutdown_outcomes[s.id])
-  );
+  // Honour the client chips: when set, narrow shutdowns to those clients.
+  // No outcome filter — fulfilment is about requested/filled, not who showed.
+  const activeClients = window.NW_APP?.state.filters.clients || new Set();
+  const shutdowns = (view.data.shutdowns || []).filter((s) => {
+    if (activeClients.size && !activeClients.has(s.client)) return false;
+    return true;
+  });
 
   const allTrades = [];
   shutdowns.forEach((s) =>
@@ -92,6 +95,32 @@ NW.bootPage(function (view) {
     }
   }
 
+  // Wire CSV export for the client × month table.
+  const csvBtn = document.getElementById("fulfilment-csv");
+  if (csvBtn) {
+    csvBtn.onclick = () => {
+      const header = ["Client", ...months.map((m) => NW.fmtMonth(m)), "Requested total", "Filled total", "Fill rate"];
+      const rowOrder = [
+        ...clients,
+        ...Object.keys(byClientMonth).filter((c) => !clients.includes(c)),
+      ];
+      const body = rowOrder.map((client) => {
+        const cells = [client];
+        let req = 0;
+        let fil = 0;
+        months.forEach((m) => {
+          const v = byClientMonth[client]?.[m] || { requested: 0, filled: 0 };
+          req += v.requested;
+          fil += v.filled;
+          cells.push(v.requested ? `${v.filled}/${v.requested}` : "");
+        });
+        cells.push(req, fil, req ? `${Math.round((fil / req) * 100)}%` : "");
+        return cells;
+      });
+      NW.downloadCsv(`northwest-fulfilment-${view.data.current_month}.csv`, [header, ...body]);
+    };
+  }
+
   const disciplineBody = document.getElementById("discipline-fulfilment-body");
   if (!disciplineBody) return;
   const byTrade = {};
@@ -104,17 +133,40 @@ NW.bootPage(function (view) {
   const rows = Object.entries(byTrade).sort(
     (a, b) => b[1].requested - b[1].filled - (a[1].requested - a[1].filled)
   );
+
+  const summaryEl = document.getElementById("discipline-fulfilment-summary");
+  if (summaryEl) {
+    summaryEl.textContent = rows.length
+      ? `${rows.length} trades · ${requested} requested · ${filled} filled`
+      : "No trade requests in scope";
+  }
+
   disciplineBody.innerHTML = "";
   if (!rows.length) {
     disciplineBody.innerHTML = `<tr><td class="muted" colspan="5" style="padding:14px;">No trade requests in scope.</td></tr>`;
-    return;
+  } else {
+    rows.forEach(([trade, v]) => {
+      const req = v.requested;
+      const fil = v.filled;
+      const gap = req - fil;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td class="cell-left">${esc(trade)}</td><td class="num">${NW.fmtInt(req)}</td><td class="num">${NW.fmtInt(fil)}</td><td class="num">${NW.fmtInt(gap)}</td><td class="num">${req ? Math.round((fil / req) * 100) + "%" : "—"}</td>`;
+      disciplineBody.appendChild(tr);
+    });
   }
-  rows.forEach(([trade, v]) => {
-    const req = v.requested;
-    const fil = v.filled;
-    const gap = req - fil;
-    const tr = document.createElement("tr");
-    tr.innerHTML = `<td class="cell-left">${esc(trade)}</td><td class="num">${NW.fmtInt(req)}</td><td class="num">${NW.fmtInt(fil)}</td><td class="num">${NW.fmtInt(gap)}</td><td class="num">${req ? Math.round((fil / req) * 100) + "%" : "—"}</td>`;
-    disciplineBody.appendChild(tr);
-  });
+
+  const discBtn = document.getElementById("discipline-csv");
+  if (discBtn) {
+    discBtn.onclick = () => {
+      const header = ["Trade", "Requested", "Filled", "Gap", "Fill rate"];
+      const body = rows.map(([trade, v]) => [
+        trade,
+        v.requested,
+        v.filled,
+        v.requested - v.filled,
+        v.requested ? `${Math.round((v.filled / v.requested) * 100)}%` : "",
+      ]);
+      NW.downloadCsv(`northwest-fulfilment-discipline-${view.data.current_month}.csv`, [header, ...body]);
+    };
+  }
 });

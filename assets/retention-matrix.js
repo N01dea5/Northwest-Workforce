@@ -17,9 +17,14 @@
       .filter((s) => relevantIds.has(s.id))
       .sort((a, b) => (a.commence_date || "").localeCompare(b.commence_date || ""));
 
+    const summaryEl = document.getElementById("retention-matrix-summary");
+    const csvBtn = document.getElementById("retention-matrix-csv");
+
     if (!shutdowns.length || !view.workers.length) {
       thead.innerHTML = "";
       tbody.innerHTML = `<tr><td class="muted" style="padding:14px;">No shutdown outcomes for the current filter.</td></tr>`;
+      if (summaryEl) summaryEl.textContent = "No shutdown outcomes for the current filter";
+      if (csvBtn) csvBtn.onclick = null;
       return;
     }
 
@@ -45,6 +50,8 @@
     tbody.innerHTML = "";
 
     const workers = view.workers.slice().sort((a, b) => a.name.localeCompare(b.name));
+    let workedTotal = 0;
+    let declinedTotal = 0;
     workers.forEach((w) => {
       const tr = document.createElement("tr");
       const cells = [
@@ -55,8 +62,10 @@
           const outcome = (w.shutdown_outcomes || {})[s.id] || "";
           if (outcome === "worked") {
             cells.push('<td class="matrix-worked" title="Worked">✓</td>');
+            workedTotal += 1;
           } else if (outcome === "declined") {
             cells.push('<td class="matrix-declined" title="Declined or rejected">✕</td>');
+            declinedTotal += 1;
           } else {
             cells.push('<td class="matrix-empty">&nbsp;</td>');
           }
@@ -65,5 +74,19 @@
       tr.innerHTML = cells.join("");
       tbody.appendChild(tr);
     });
+
+    if (summaryEl) {
+      summaryEl.textContent = `${workers.length} workers · ${shutdowns.length} shutdowns · ${workedTotal} worked · ${declinedTotal} declined`;
+    }
+    if (csvBtn) {
+      csvBtn.onclick = () => {
+        const header = ["Employee", ...shutdowns.map((s) => `${NW.fmtMonth(s.commence_month)} — ${s.name}`)];
+        const body = workers.map((w) => [
+          w.name,
+          ...shutdowns.map((s) => (w.shutdown_outcomes || {})[s.id] || ""),
+        ]);
+        NW.downloadCsv(`northwest-shutdown-matrix-${view.data.current_month}.csv`, [header, ...body]);
+      };
+    }
   };
 })(window.NW);

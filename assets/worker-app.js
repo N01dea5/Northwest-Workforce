@@ -1,6 +1,7 @@
 // Worker detail page bootstrap.
 (function () {
   function render(worker, data) {
+    const esc = NW.escapeHtml;
     const months = data.reporting_months;
     const cur = data.current_month;
     const curIdx = months.indexOf(cur);
@@ -11,11 +12,11 @@
     document.title = `${worker.name} — Northwest Workforce`;
     document.getElementById("worker-name").textContent = worker.name;
     document.getElementById("worker-meta").innerHTML = [
-      `<span>${worker.position}</span>`,
+      `<span>${esc(worker.position)}</span>`,
       `<span class="sep">/</span>`,
-      `<span>${worker.discipline}</span>`,
+      `<span>${esc(worker.discipline)}</span>`,
       `<span class="sep">/</span>`,
-      `<span class="dot ${NW.clientSlug(worker.primary_client)}"></span> ${worker.primary_client}`,
+      `<span class="dot ${esc(NW.clientSlug(worker.primary_client))}"></span> ${esc(worker.primary_client)}`,
     ].join(" ");
 
     // Compliance check
@@ -57,7 +58,7 @@
           ${NW.fmtMonth(m)}${isCur ? " ▲" : isFut ? " (fwd)" : ""}
         </td>
         <td class="cell-left">
-          ${mm.client ? `<span class="dot ${NW.clientSlug(mm.client)}"></span> ${mm.client}` : `<span class="muted">—</span>`}
+          ${mm.client ? `<span class="dot ${esc(NW.clientSlug(mm.client))}"></span> ${esc(mm.client)}` : `<span class="muted">—</span>`}
         </td>
         <td class="num">${hrs ? NW.fmtInt(hrs) + "h" : `<span class="muted">—</span>`}</td>
         <td>${mm.committed ? `<span class="badge warn">Scheduled</span>` : isPast ? `<span class="badge ok">Worked</span>` : `<span class="muted">—</span>`}</td>`;
@@ -91,7 +92,7 @@
       document.querySelector("main").innerHTML =
         `<div class="card" style="padding:30px;">
           <h2>Worker not found</h2>
-          <p class="muted">No record for ID: <code>${id || "(none)"}</code></p>
+          <p class="muted">No record for ID: <code>${NW.escapeHtml(id || "(none)")}</code></p>
           <p><a href="index.html">← Back to Utilisation</a></p>
         </div>`;
       return;

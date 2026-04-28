@@ -30,15 +30,16 @@
   }
 
   NW.renderAtRisk = function (view) {
+    const esc = NW.escapeHtml;
     const rows = compute(view);
     const tbody = document.querySelector("#atrisk-table tbody");
     tbody.innerHTML = "";
     rows.forEach((r) => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
-        <td class="worker-name"><a href="${NW.workerUrl(r.id)}">${r.name}</a></td>
-        <td class="cell-left">${r.position}</td>
-        <td class="cell-left"><span class="dot ${NW.clientSlug(r.client)}"></span> ${r.client}</td>
+        <td class="worker-name"><a href="${esc(NW.workerUrl(r.id))}">${esc(r.name)}</a></td>
+        <td class="cell-left">${esc(r.position)}</td>
+        <td class="cell-left"><span class="dot ${esc(NW.clientSlug(r.client))}"></span> ${esc(r.client)}</td>
         <td class="num">${NW.fmtInt(r.avg)}h</td>
         <td class="num">${NW.fmtInt(r.next)}h</td>
         <td class="num"><strong>${NW.fmtInt(r.drop)}h</strong></td>`;

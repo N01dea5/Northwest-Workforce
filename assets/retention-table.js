@@ -129,6 +129,7 @@
     expanded[tableKey] = expanded[tableKey] || {};
 
     function renderWorkerRows(disc, positionsForDisc) {
+      const esc = NW.escapeHtml;
       const posSet = new Set(positionsForDisc);
       const list = effectiveWorkers.filter((w) => posSet.has(w.position));
       list.sort((a, b) => a.name.localeCompare(b.name));
@@ -136,7 +137,7 @@
         const tr = document.createElement("tr");
         tr.className = "disc-worker-row";
         const cells = [
-          `<td class="worker-name pos-indent"><a href="${NW.workerUrl(w.id)}">${w.name}</a> <span class="small muted">(${w.position})</span></td>`,
+          `<td class="worker-name pos-indent"><a href="${esc(NW.workerUrl(w.id))}">${esc(w.name)}</a> <span class="small muted">(${esc(w.position)})</span></td>`,
         ];
         months.forEach((m, i) => {
           const h = w.monthly[m]?.hours || 0;
@@ -161,7 +162,7 @@
       const discTr = document.createElement("tr");
       discTr.className = "disc-group-header";
       const isOpen = !!expanded[tableKey][disc];
-      discTr.innerHTML = `<td class="disc-label clickable-disc" colspan="${months.length + 1}"><span class="disc-toggle">${isOpen ? "▾" : "▸"}</span> ${disc}</td>`;
+      discTr.innerHTML = `<td class="disc-label clickable-disc" colspan="${months.length + 1}"><span class="disc-toggle">${isOpen ? "▾" : "▸"}</span> ${NW.escapeHtml(disc)}</td>`;
       discTr.addEventListener("click", () => {
         expanded[tableKey][disc] = !expanded[tableKey][disc];
         buildTable(view, { scopeClient, tableEl });
@@ -172,7 +173,7 @@
 
       groupPositions[disc].forEach((pos) => {
         const tr = document.createElement("tr");
-        const cells = [`<td class="pos-name pos-indent">${pos}</td>`];
+        const cells = [`<td class="pos-name pos-indent">${NW.escapeHtml(pos)}</td>`];
         months.forEach((m, i) => {
           const mPrev = i > 0 ? months[i - 1] : null;
           const { hc, avg, retention } = cellStats(effectiveWorkers, pos, m, mPrev);
@@ -198,7 +199,7 @@
       if (groupPositions[disc].length > 1) {
         const subTr = document.createElement("tr");
         subTr.className = "disc-subtotal";
-        const subCells = [`<td class="subtotal-label">${disc} total</td>`];
+        const subCells = [`<td class="subtotal-label">${NW.escapeHtml(disc)} total</td>`];
         months.forEach((m, i) => {
           const mPrev = i > 0 ? months[i - 1] : null;
           const { hc, avg, retention } = discCellStats(effectiveWorkers, groupPositions[disc], m, mPrev);
@@ -239,8 +240,8 @@
       if (client === lastOpen) det.open = true;
       det.innerHTML = `
         <summary>
-          <span class="dot ${NW.clientSlug(client)}"></span>
-          ${client}
+          <span class="dot ${NW.escapeHtml(NW.clientSlug(client))}"></span>
+          ${NW.escapeHtml(client)}
           <span class="small muted" style="margin-left:10px;">Position × month retention &amp; utilisation</span>
         </summary>
         <div class="body">
