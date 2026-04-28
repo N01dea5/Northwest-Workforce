@@ -4,4 +4,5 @@ NW.bootPage(function (view) {
   NW.renderPositionFlow(view);
   NW.renderAtRisk(view);
   NW.renderCohortSurvival(view);
+  NW.renderRetentionMatrix(view);
 });

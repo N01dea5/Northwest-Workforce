@@ -44,6 +44,7 @@
   </div>
   <nav class="page-nav">
     <a href="index.html">Utilisation</a>
+    <a href="fulfilment.html">Fulfilment</a>
     <span class="page-nav-active">Retention</span>
     <a href="fatigue.html">Fatigue</a>
   </nav>
@@ -196,6 +197,23 @@
     </div>
   </section>
 
+  <!-- Section 06 — Employee shutdown matrix -->
+  <section class="card" id="sec-matrix">
+    <header>
+      <h2><span class="section-number">06</span> Employee shutdown matrix</h2>
+      <span class="hint">Tick = worked, red cross = declined/rejected, blank = no assignment outcome</span>
+      <p class="section-desc">Matrix of filtered employees against known shutdowns. A green tick means the employee worked that shutdown. A red cross means they declined/rejected/withdrew from a request. Blank means no worked or decline/reject record for that employee/shutdown pairing.</p>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl" id="retention-matrix-table">
+          <thead id="retention-matrix-thead"></thead>
+          <tbody id="retention-matrix-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -206,6 +224,7 @@
 <script src="assets/at-risk.js"></script>
 <script src="assets/churn-chart.js"></script>
 <script src="assets/retention-cohort.js"></script>
+<script src="assets/retention-matrix.js"></script>
 <script src="assets/retention-app.js"></script>
 </body>
 </html>

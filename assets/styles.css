@@ -412,6 +412,11 @@ section.card > .body { padding: 18px 20px 20px; }
   padding: 6px 10px 5px;
   border-top: 1px solid var(--srg-border);
 }
+.tbl tr.disc-group-header td.clickable-disc { cursor: pointer; user-select: none; }
+.tbl tr.disc-group-header td.clickable-disc:hover { color: var(--srg-red); }
+.disc-toggle { display: inline-block; width: 12px; margin-right: 4px; color: var(--srg-grey-2); }
+.tbl tr.disc-worker-row td { background: #fcfcfc; }
+.tbl td.worker-ret-cell .hc { font-size: 12px; }
 .tbl tr.disc-subtotal { background: var(--srg-light); border-top: 1px solid var(--srg-border); }
 .tbl tr.disc-subtotal td { border-top: 1px solid var(--srg-border); font-style: normal; }
 .tbl tr.disc-subtotal td.subtotal-label {
@@ -526,6 +531,11 @@ td.compliance-total    { font-variant-numeric: tabular-nums; }
 tr.compliance-over td  { border-left-color: transparent; }
 tr.compliance-over     { border-left: 3px solid var(--bad); }
 tr.compliance-warn     { border-left: 3px solid var(--warn); }
+
+/* ---------- Retention matrix ---------- */
+.matrix-worked { color: #166534; font-weight: 800; background: rgba(22,163,74,0.10); }
+.matrix-declined { color: #991b1b; font-weight: 800; background: rgba(220,38,38,0.12); }
+.matrix-empty { color: var(--srg-grey-2); }
 
 /* ---------- Charts ---------- */
 

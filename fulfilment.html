@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fulfilment — Northwest Workforce — SRG Global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=6" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-row">
+    <div class="brand-block">
+      <div class="breadcrumb">
+        <span>Fulfilment &amp; Retention</span>
+        <span class="sep">/</span>
+        <span>Northwest Workforce</span>
+        <span class="sep">/</span>
+        <span id="hdr-fy">FY26</span>
+      </div>
+      <h1>Northwest Workforce</h1>
+      <div class="subtitle">
+        Utilisation &amp; retention across Fortescue, Rio Tinto, BHP and Roy Hill/Hancock
+      </div>
+    </div>
+    <img src="assets/srg_logo.png" alt="SRG Global" class="srg-logo-img" />
+  </div>
+  <div class="meta-strip">
+    <div class="meta-item">
+      <div class="meta-label">Reporting window</div>
+      <div class="meta-value" id="hdr-window">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Current month</div>
+      <div class="meta-value" id="hdr-current">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Last refreshed</div>
+      <div class="meta-value" id="hdr-refreshed">—</div>
+    </div>
+  </div>
+  <nav class="page-nav">
+    <a href="index.html">Utilisation</a>
+    <span class="page-nav-active">Fulfilment</span>
+    <a href="retention.html">Retention</a>
+    <a href="fatigue.html">Fatigue</a>
+  </nav>
+</header>
+
+<div class="stale-banner" id="stale-banner"></div>
+
+<div class="filter-strip">
+  <div class="filter-group">
+    <label>Client</label>
+    <div id="client-chips"></div>
+  </div>
+  <div class="filter-group">
+    <label>Position</label>
+    <select id="position-select"></select>
+  </div>
+  <div class="filter-group">
+    <label>Search</label>
+    <input type="text" id="name-search" class="search-input" placeholder="Worker name…" />
+  </div>
+  <label class="toggle">
+    <input type="checkbox" id="hide-zero" />
+    Hide zero-hour workers
+  </label>
+  <button id="reset-filters" class="btn small" style="margin-left:auto;">Reset filters</button>
+</div>
+
+<main>
+  <section class="card" id="fulfilment-kpis-sec">
+    <header>
+      <h2><span class="section-number">01</span> Fulfilment — key metrics</h2>
+      <span class="hint">Requested vs filled trade positions across shutdowns</span>
+    </header>
+    <div class="body">
+      <div class="kpi-grid">
+        <div class="kpi-tile" id="kpi-req"><div class="label">Requested positions</div><div class="value">—</div></div>
+        <div class="kpi-tile" id="kpi-fill"><div class="label">Filled positions</div><div class="value">—</div></div>
+        <div class="kpi-tile" id="kpi-gap"><div class="label">Unfilled gap</div><div class="value">—</div></div>
+        <div class="kpi-tile" id="kpi-rate"><div class="label">Overall fill rate</div><div class="value">—</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="fulfilment-monthly-sec">
+    <header>
+      <h2><span class="section-number">02</span> Fulfilment by client × month</h2>
+      <span class="hint">From job planning pipeline statuses (no job-level detail)</span>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl" id="fulfilment-table">
+          <thead id="fulfilment-thead"></thead>
+          <tbody id="fulfilment-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="fulfilment-discipline-sec">
+    <header>
+      <h2><span class="section-number">03</span> Discipline fulfilment pressure</h2>
+      <span class="hint">Across all shutdowns in scope</span>
+    </header>
+    <div class="body">
+      <div class="table-scroll">
+        <table class="tbl" id="discipline-fulfilment-table">
+          <thead>
+            <tr>
+              <th class="cell-left">Discipline / Trade</th>
+              <th class="num">Requested</th>
+              <th class="num">Filled</th>
+              <th class="num">Gap</th>
+              <th class="num">Fill rate</th>
+            </tr>
+          </thead>
+          <tbody id="discipline-fulfilment-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/format.js"></script>
+<script src="assets/boot.js"></script>
+<script src="assets/fulfilment-app.js"></script>
+</body>
+</html>
