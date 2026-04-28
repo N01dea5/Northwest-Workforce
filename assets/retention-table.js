@@ -128,16 +128,16 @@
     const expanded = (window.NW_APP_TABLE_EXPANDED = window.NW_APP_TABLE_EXPANDED || {});
     expanded[tableKey] = expanded[tableKey] || {};
 
-    function renderWorkerRows(disc, positionsForDisc) {
+    function renderWorkerRowsForPosition(pos) {
       const esc = NW.escapeHtml;
-      const posSet = new Set(positionsForDisc);
-      const list = effectiveWorkers.filter((w) => posSet.has(w.position));
-      list.sort((a, b) => a.name.localeCompare(b.name));
+      const list = effectiveWorkers
+        .filter((w) => w.position === pos)
+        .sort((a, b) => a.name.localeCompare(b.name));
       list.forEach((w) => {
         const tr = document.createElement("tr");
         tr.className = "disc-worker-row";
         const cells = [
-          `<td class="worker-name pos-indent"><a href="${esc(NW.workerUrl(w.id))}">${esc(w.name)}</a> <span class="small muted">(${esc(w.position)})</span></td>`,
+          `<td class="worker-name pos-indent-2"><a href="${esc(NW.workerUrl(w.id))}">${esc(w.name)}</a></td>`,
         ];
         months.forEach((m, i) => {
           const h = w.monthly[m]?.hours || 0;
@@ -169,8 +169,6 @@
       });
       tbody.appendChild(discTr);
 
-      if (isOpen) renderWorkerRows(disc, groupPositions[disc]);
-
       groupPositions[disc].forEach((pos) => {
         const tr = document.createElement("tr");
         const cells = [`<td class="pos-name pos-indent">${NW.escapeHtml(pos)}</td>`];
@@ -193,6 +191,8 @@
         });
         tr.innerHTML = cells.join("");
         tbody.appendChild(tr);
+
+        if (isOpen) renderWorkerRowsForPosition(pos);
       });
 
       // Discipline subtotal row
