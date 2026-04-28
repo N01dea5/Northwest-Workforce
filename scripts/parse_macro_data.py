@@ -70,6 +70,28 @@ CLIENT_ALIASES: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"roy hill|hancock"), "Roy Hill/Hancock"),
 ]
 
+# Disciplines we surface in the dashboard filter chips. The workbook has more
+# (Boilermaker / Mechanical / Refractory / Rigger / Welder / Other) but
+# operationally SRG only differentiates these three; anything else gets
+# bucketed into "Other" so the worker is still navigable but doesn't pollute
+# the chip strip.
+CANONICAL_DISCIPLINES: tuple[str, ...] = ("Rope Access", "Scaffolding", "Electrical")
+_DISCIPLINE_ALIASES: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"rope access"), "Rope Access"),
+    (re.compile(r"scaffold"), "Scaffolding"),
+    (re.compile(r"electrical"), "Electrical"),
+]
+
+
+def _canonical_discipline(raw) -> str:
+    key = _norm_text(raw).lower()
+    if not key:
+        return "Other"
+    for pat, canonical in _DISCIPLINE_ALIASES:
+        if pat.search(key):
+            return canonical
+    return "Other"
+
 CLIENT_FILE_SLUG = {
     "Fortescue": "fortescue",
     "Rio Tinto": "rio-tinto",
@@ -234,7 +256,14 @@ def read_client_lookup(wb) -> dict[str, str]:
 
 
 def read_discipline_lookup(wb) -> dict[str, str]:
-    """Return {trade_name_lower: discipline} from xpbi02 DisciplineTrade."""
+    """Return {trade_name_lower: canonical_discipline} from xpbi02 DisciplineTrade.
+
+    Workbook discipline values are remapped through `_canonical_discipline` so
+    the dashboard only ever sees Rope Access / Scaffolding / Electrical /
+    Other. Trade-name fallback runs first — a trade like "Rope Access -
+    Boilermaker" sitting under the workbook's "Boilermaker" discipline gets
+    promoted to "Rope Access".
+    """
     if "xpbi02 DisciplineTrade" not in wb.sheetnames:
         return {}
     ws = wb["xpbi02 DisciplineTrade"]
@@ -249,8 +278,15 @@ def read_discipline_lookup(wb) -> dict[str, str]:
             continue
         trade = _norm_text(row[i_trade])
         disc  = _norm_text(row[i_disc])
-        if trade and disc:
-            out[trade.lower()] = disc
+        if not trade:
+            continue
+        # Prefer trade-name evidence (handles "Rope Access - Boilermaker"
+        # being filed under workbook discipline "Boilermaker"); fall back to
+        # the workbook's discipline column.
+        canonical = _canonical_discipline(trade)
+        if canonical == "Other":
+            canonical = _canonical_discipline(disc)
+        out[trade.lower()] = canonical
     return out
 
 
@@ -866,8 +902,6 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
         workers.append(w)
     workers = dedupe_ids(sorted(workers, key=lambda w: w["name"]))
 
-    disciplines = sorted({w.get("discipline") for w in workers if w.get("discipline")})
-
     return {
         "generated_at": date.today().isoformat(),
         "current_month": _month_key(current_month),
@@ -876,7 +910,7 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
         "months_ahead": MONTHS_AHEAD,
         "positions_top20": top_positions[:TOP_POSITIONS],
         "clients": CLIENTS,
-        "disciplines": disciplines,
+        "disciplines": list(CANONICAL_DISCIPLINES),
         "workers": workers,
         "shutdowns": shutdowns,
     }
