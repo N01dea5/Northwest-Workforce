@@ -1,6 +1,7 @@
 // Client fatigue rule configuration for Northwest Workforce.
 // Rules are intentionally data-driven so the compliance view can show the
 // controlling requirement and required action without hard-coding one global limit.
+// Evidence/approval document management is handled outside this dashboard.
 
 window.NW = window.NW || {};
 
@@ -27,7 +28,6 @@ window.NW = window.NW || {};
         "Permanent new roster",
         "Permanent roster change",
       ],
-      requiredEvidence: ["RCAT where roster changes", "FAID where triggered", "SSE approval over 14 continuous hours"],
     },
 
     "Rio Tinto": {
@@ -70,7 +70,6 @@ window.NW = window.NW || {};
       minBreakBetweenDayAndNightShiftHours: 22,
       rnrMinimumRatioForRosterLength6Plus: 0.5,
       preferredRotation: "Forward rotation; day before night",
-      requiredEvidence: ["Roster deviation risk assessment", "Approved roster deviation process", "Individual commute plan where required"],
     },
 
     "Roy Hill/Hancock": {
@@ -81,13 +80,6 @@ window.NW = window.NW || {};
       mandatoryNightShiftStandDownHours: 24,
       maxAdditionalNightShiftsAfterStandDown: 10,
       partialShiftDoesNotResetStandDown: true,
-      requiredEvidence: [
-        "Formal fatigue management approach submitted",
-        "Individual risk assessment after night-shift stand-down",
-        "Fatigue checklist each remaining shift after night-shift stand-down",
-        "Supervisor fit-for-work confirmation each shift",
-        "Pre-shutdown preparation stand-down where applicable",
-      ],
     },
   };
 
