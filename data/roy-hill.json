@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27",
+  "generated_at": "2026-04-28",
   "current_month": "2026-04",
   "reporting_months": [
     "2026-01",
@@ -127,7 +127,7 @@
           "committed": true
         },
         "2026-07": {
-          "client": "Fortescue",
+          "client": "Roy Hill/Hancock",
           "hours": 324,
           "committed": true
         }
@@ -389,7 +389,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 168,
+          "hours": 156,
           "committed": false
         },
         "2026-05": {
@@ -619,12 +619,12 @@
         },
         "2026-04": {
           "client": "BHP",
-          "hours": 48,
+          "hours": 60,
           "committed": false
         },
         "2026-05": {
           "client": "BHP",
-          "hours": 228,
+          "hours": 216,
           "committed": true
         },
         "2026-06": {
@@ -665,12 +665,12 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 192,
+          "hours": 252,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 240,
+          "hours": 204,
           "committed": true
         },
         "2026-06": {
@@ -1033,7 +1033,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 96,
+          "hours": 84,
           "committed": false
         },
         "2026-05": {
@@ -1079,7 +1079,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 24,
+          "hours": 12,
           "committed": false
         },
         "2026-05": {
@@ -1543,8 +1543,8 @@
           "committed": false
         },
         "2026-05": {
-          "client": "Fortescue",
-          "hours": 144,
+          "client": "BHP",
+          "hours": 168,
           "committed": true
         },
         "2026-06": {
@@ -1907,7 +1907,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 204,
+          "hours": 276,
           "committed": false
         },
         "2026-05": {
@@ -1953,12 +1953,12 @@
         },
         "2026-04": {
           "client": "Rio Tinto",
-          "hours": 120,
+          "hours": 108,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 288,
+          "hours": 300,
           "committed": true
         },
         "2026-06": {
@@ -2321,12 +2321,12 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 216,
+          "hours": 276,
           "committed": false
         },
         "2026-05": {
           "client": "Fortescue",
-          "hours": 72,
+          "hours": 60,
           "committed": true
         },
         "2026-06": {
@@ -2367,7 +2367,7 @@
         },
         "2026-04": {
           "client": "Fortescue",
-          "hours": 48,
+          "hours": 36,
           "committed": false
         },
         "2026-05": {
@@ -2413,7 +2413,7 @@
         },
         "2026-04": {
           "client": "BHP",
-          "hours": 60,
+          "hours": 96,
           "committed": false
         },
         "2026-05": {
