@@ -101,7 +101,15 @@
         "daysOnSiteCurrentRun": 9,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 600,
+        "rolling13WeekMaxHours": 744,
+        "rolling13WeekMaxPeriodStart": "2026-03-14",
+        "rolling13WeekMaxPeriodEnd": "2026-06-12",
+        "rolling13WeekBreachDate": "2026-06-11",
+        "daysToBreach": 44,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1226-2026-01-13": "declined",
@@ -176,7 +184,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 17,
         "maxConsecutiveDayShifts": 17,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 324,
+        "rolling13WeekMaxHours": 384,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -245,7 +261,15 @@
         "daysOnSiteCurrentRun": 13,
         "maxConsecutiveShifts": 17,
         "maxConsecutiveDayShifts": 17,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 300,
+        "rolling13WeekMaxHours": 600,
+        "rolling13WeekMaxPeriodStart": "2026-05-01",
+        "rolling13WeekMaxPeriodEnd": "2026-07-30",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1153-2026-05-08": "declined",
@@ -319,7 +343,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 41,
         "maxConsecutiveDayShifts": 41,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 756,
+        "rolling13WeekMaxHours": 840,
+        "rolling13WeekMaxPeriodStart": "2026-02-08",
+        "rolling13WeekMaxPeriodEnd": "2026-05-09",
+        "rolling13WeekBreachDate": "2026-04-25",
+        "daysToBreach": 0,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1226-2026-01-13": "declined",
@@ -396,7 +428,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 72,
+        "rolling13WeekMaxHours": 180,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1191-2026-03-25": "worked",
@@ -460,7 +500,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 0,
+        "rolling13WeekMaxHours": 180,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
@@ -536,7 +584,15 @@
         "daysOnSiteCurrentRun": 6,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 456,
+        "rolling13WeekMaxHours": 540,
+        "rolling13WeekMaxPeriodStart": "2026-01-17",
+        "rolling13WeekMaxPeriodEnd": "2026-04-17",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "947-2025-02-26": "declined",
@@ -606,7 +662,15 @@
         "daysOnSiteCurrentRun": 9,
         "maxConsecutiveShifts": 23,
         "maxConsecutiveDayShifts": 23,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 636,
+        "rolling13WeekMaxHours": 696,
+        "rolling13WeekMaxPeriodStart": "2026-02-09",
+        "rolling13WeekMaxPeriodEnd": "2026-05-10",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1353-2026-05-18": "declined",
@@ -691,7 +755,15 @@
         "daysOnSiteCurrentRun": 30,
         "maxConsecutiveShifts": 30,
         "maxConsecutiveDayShifts": 30,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 0,
+        "rolling13WeekMaxHours": 444,
+        "rolling13WeekMaxPeriodStart": "2026-05-02",
+        "rolling13WeekMaxPeriodEnd": "2026-07-31",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {}
     },
@@ -750,7 +822,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 204,
+        "rolling13WeekMaxHours": 432,
+        "rolling13WeekMaxPeriodStart": "2026-04-13",
+        "rolling13WeekMaxPeriodEnd": "2026-07-12",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
@@ -825,7 +905,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 0,
+        "rolling13WeekMaxHours": 180,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
@@ -897,7 +985,15 @@
         "daysOnSiteCurrentRun": 24,
         "maxConsecutiveShifts": 24,
         "maxConsecutiveDayShifts": 24,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 84,
+        "rolling13WeekMaxHours": 624,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1344-2026-04-11": "worked",
@@ -959,7 +1055,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 22,
         "maxConsecutiveDayShifts": 22,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 264,
+        "rolling13WeekMaxHours": 432,
+        "rolling13WeekMaxPeriodStart": "2026-02-25",
+        "rolling13WeekMaxPeriodEnd": "2026-05-26",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -1025,7 +1129,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 0,
+        "rolling13WeekMaxHours": 336,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1153-2026-05-08": "declined",
@@ -1094,7 +1206,15 @@
         "daysOnSiteCurrentRun": 6,
         "maxConsecutiveShifts": 10,
         "maxConsecutiveDayShifts": 10,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 276,
+        "rolling13WeekMaxHours": 276,
+        "rolling13WeekMaxPeriodStart": "2026-01-17",
+        "rolling13WeekMaxPeriodEnd": "2026-04-17",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1234-2026-03-14": "declined",
@@ -1163,7 +1283,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 492,
+        "rolling13WeekMaxHours": 600,
+        "rolling13WeekMaxPeriodStart": "2026-02-27",
+        "rolling13WeekMaxPeriodEnd": "2026-05-28",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
@@ -1236,7 +1364,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 84,
+        "rolling13WeekMaxHours": 264,
+        "rolling13WeekMaxPeriodStart": "2026-04-13",
+        "rolling13WeekMaxPeriodEnd": "2026-07-12",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1153-2026-05-08": "declined",
@@ -1303,7 +1439,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 60,
+        "rolling13WeekMaxHours": 336,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
@@ -1375,7 +1519,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 0,
+        "rolling13WeekMaxHours": 432,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1203-2026-04-30": "declined",
@@ -1437,7 +1589,15 @@
         "daysOnSiteCurrentRun": 10,
         "maxConsecutiveShifts": 24,
         "maxConsecutiveDayShifts": 24,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 660,
+        "rolling13WeekMaxHours": 660,
+        "rolling13WeekMaxPeriodStart": "2026-01-19",
+        "rolling13WeekMaxPeriodEnd": "2026-04-19",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "worked",
@@ -1516,7 +1676,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 0,
+        "rolling13WeekMaxHours": 180,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1221-2026-04-09": "declined",
@@ -1579,7 +1747,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 300,
+        "rolling13WeekMaxHours": 468,
+        "rolling13WeekMaxPeriodStart": "2026-04-13",
+        "rolling13WeekMaxPeriodEnd": "2026-07-12",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "declined",
@@ -1652,7 +1828,15 @@
         "daysOnSiteCurrentRun": 9,
         "maxConsecutiveShifts": 9,
         "maxConsecutiveDayShifts": 9,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 72,
+        "rolling13WeekMaxHours": 108,
+        "rolling13WeekMaxPeriodStart": "2026-05-02",
+        "rolling13WeekMaxPeriodEnd": "2026-07-31",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "declined",
@@ -1718,7 +1902,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 22,
         "maxConsecutiveDayShifts": 22,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 0,
+        "rolling13WeekMaxHours": 444,
+        "rolling13WeekMaxPeriodStart": "2026-04-24",
+        "rolling13WeekMaxPeriodEnd": "2026-07-23",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {}
     },
@@ -1777,7 +1969,15 @@
         "daysOnSiteCurrentRun": 6,
         "maxConsecutiveShifts": 6,
         "maxConsecutiveDayShifts": 6,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 72,
+        "rolling13WeekMaxHours": 144,
+        "rolling13WeekMaxPeriodStart": "2026-02-21",
+        "rolling13WeekMaxPeriodEnd": "2026-05-22",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1344-2026-04-11": "worked",
@@ -1839,7 +2039,15 @@
         "daysOnSiteCurrentRun": 7,
         "maxConsecutiveShifts": 24,
         "maxConsecutiveDayShifts": 24,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 552,
+        "rolling13WeekMaxHours": 636,
+        "rolling13WeekMaxPeriodStart": "2025-12-26",
+        "rolling13WeekMaxPeriodEnd": "2026-03-26",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -1919,7 +2127,15 @@
         "daysOnSiteCurrentRun": 17,
         "maxConsecutiveShifts": 17,
         "maxConsecutiveDayShifts": 17,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 372,
+        "rolling13WeekMaxHours": 612,
+        "rolling13WeekMaxPeriodStart": "2026-05-02",
+        "rolling13WeekMaxPeriodEnd": "2026-07-31",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -1990,7 +2206,15 @@
         "daysOnSiteCurrentRun": 5,
         "maxConsecutiveShifts": 18,
         "maxConsecutiveDayShifts": 18,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 444,
+        "rolling13WeekMaxHours": 516,
+        "rolling13WeekMaxPeriodStart": "2026-02-23",
+        "rolling13WeekMaxPeriodEnd": "2026-05-24",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -2066,7 +2290,15 @@
         "daysOnSiteCurrentRun": 7,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 492,
+        "rolling13WeekMaxHours": 564,
+        "rolling13WeekMaxPeriodStart": "2026-01-15",
+        "rolling13WeekMaxPeriodEnd": "2026-04-15",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -2140,7 +2372,15 @@
         "daysOnSiteCurrentRun": 7,
         "maxConsecutiveShifts": 14,
         "maxConsecutiveDayShifts": 14,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 168,
+        "rolling13WeekMaxHours": 240,
+        "rolling13WeekMaxPeriodStart": "2025-11-22",
+        "rolling13WeekMaxPeriodEnd": "2026-02-20",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "declined",
@@ -2217,7 +2457,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 516,
+        "rolling13WeekMaxHours": 540,
+        "rolling13WeekMaxPeriodStart": "2026-02-24",
+        "rolling13WeekMaxPeriodEnd": "2026-05-25",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
@@ -2284,7 +2532,15 @@
         "daysOnSiteCurrentRun": 17,
         "maxConsecutiveShifts": 22,
         "maxConsecutiveDayShifts": 22,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 516,
+        "rolling13WeekMaxHours": 888,
+        "rolling13WeekMaxPeriodStart": "2026-04-28",
+        "rolling13WeekMaxPeriodEnd": "2026-07-27",
+        "rolling13WeekBreachDate": "2026-06-13",
+        "daysToBreach": 46,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
@@ -2358,7 +2614,15 @@
         "daysOnSiteCurrentRun": 9,
         "maxConsecutiveShifts": 15,
         "maxConsecutiveDayShifts": 15,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 336,
+        "rolling13WeekMaxHours": 624,
+        "rolling13WeekMaxPeriodStart": "2026-05-02",
+        "rolling13WeekMaxPeriodEnd": "2026-07-31",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
@@ -2428,7 +2692,15 @@
         "daysOnSiteCurrentRun": 10,
         "maxConsecutiveShifts": 18,
         "maxConsecutiveDayShifts": 18,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 408,
+        "rolling13WeekMaxHours": 624,
+        "rolling13WeekMaxPeriodStart": "2026-04-10",
+        "rolling13WeekMaxPeriodEnd": "2026-07-09",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1177-2026-01-12": "declined",
@@ -2497,13 +2769,25 @@
         "currentClient": "Fortescue",
         "hoursLast21Days": 120,
         "hoursCurrentMonth": 120,
-        "consecutiveShifts": 95,
-        "consecutiveDayShifts": 95,
+        "consecutiveShifts": 0,
+        "consecutiveDayShifts": 0,
         "consecutiveNightShifts": 0,
-        "daysOnSiteCurrentRun": 95,
-        "maxConsecutiveShifts": 95,
-        "maxConsecutiveDayShifts": 95,
-        "maxConsecutiveNightShifts": 0
+        "daysOnSiteCurrentRun": 0,
+        "maxConsecutiveShifts": 0,
+        "maxConsecutiveDayShifts": 0,
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 384,
+        "rolling13WeekMaxHours": 570,
+        "rolling13WeekMaxPeriodStart": "2026-02-26",
+        "rolling13WeekMaxPeriodEnd": "2026-05-27",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": true,
+        "evenTimeAssumedMonths": [
+          "2026-05",
+          "2026-06",
+          "2026-07"
+        ]
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -2582,7 +2866,15 @@
         "daysOnSiteCurrentRun": 9,
         "maxConsecutiveShifts": 27,
         "maxConsecutiveDayShifts": 27,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 696,
+        "rolling13WeekMaxHours": 816,
+        "rolling13WeekMaxPeriodStart": "2026-05-02",
+        "rolling13WeekMaxPeriodEnd": "2026-07-31",
+        "rolling13WeekBreachDate": "2026-03-28",
+        "daysToBreach": 0,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
@@ -2655,7 +2947,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 20,
         "maxConsecutiveDayShifts": 20,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 504,
+        "rolling13WeekMaxHours": 600,
+        "rolling13WeekMaxPeriodStart": "2026-01-03",
+        "rolling13WeekMaxPeriodEnd": "2026-04-03",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -2728,7 +3028,15 @@
         "daysOnSiteCurrentRun": 9,
         "maxConsecutiveShifts": 26,
         "maxConsecutiveDayShifts": 26,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 372,
+        "rolling13WeekMaxHours": 696,
+        "rolling13WeekMaxPeriodStart": "2026-03-14",
+        "rolling13WeekMaxPeriodEnd": "2026-06-12",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
@@ -2805,7 +3113,15 @@
         "daysOnSiteCurrentRun": 22,
         "maxConsecutiveShifts": 22,
         "maxConsecutiveDayShifts": 22,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 312,
+        "rolling13WeekMaxHours": 384,
+        "rolling13WeekMaxPeriodStart": "2026-02-21",
+        "rolling13WeekMaxPeriodEnd": "2026-05-22",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -2881,7 +3197,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 18,
         "maxConsecutiveDayShifts": 18,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 240,
+        "rolling13WeekMaxHours": 552,
+        "rolling13WeekMaxPeriodStart": "2026-04-23",
+        "rolling13WeekMaxPeriodEnd": "2026-07-22",
+        "rolling13WeekBreachDate": null,
+        "daysToBreach": null,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1233-2026-02-24": "declined",
@@ -2952,7 +3276,15 @@
         "daysOnSiteCurrentRun": 15,
         "maxConsecutiveShifts": 16,
         "maxConsecutiveDayShifts": 16,
-        "maxConsecutiveNightShifts": 0
+        "maxConsecutiveNightShifts": 0,
+        "rolling13WeekCurrentHours": 648,
+        "rolling13WeekMaxHours": 828,
+        "rolling13WeekMaxPeriodStart": "2026-01-02",
+        "rolling13WeekMaxPeriodEnd": "2026-04-02",
+        "rolling13WeekBreachDate": "2026-03-25",
+        "daysToBreach": 0,
+        "evenTimeAssumed": false,
+        "evenTimeAssumedMonths": []
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
