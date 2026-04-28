@@ -42,7 +42,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Iterable
 
@@ -458,12 +458,27 @@ def build_months(current: date) -> list[date]:
 
 
 @dataclass
+class FatigueMetrics:
+    current_client: str | None = None
+    hours_last_21_days: int = 0
+    hours_current_month: int = 0
+    consecutive_shifts: int = 0
+    consecutive_day_shifts: int = 0
+    consecutive_night_shifts: int = 0
+    days_on_site_current_run: int = 0
+    max_consecutive_shifts: int = 0
+    max_consecutive_day_shifts: int = 0
+    max_consecutive_night_shifts: int = 0
+
+
+@dataclass
 class WorkerAgg:
     master: WorkerMaster
     # (month_key) -> (client -> {"days": int, "hours": int})
     buckets: dict[str, dict[str, dict]] = field(default_factory=lambda: defaultdict(lambda: defaultdict(lambda: {"days": 0, "hours": 0})))
     # Earliest schedule date seen; used as employment_start fallback.
     first_seen: date | None = None
+    fatigue_metrics: FatigueMetrics = field(default_factory=FatigueMetrics)
 
 
 MAX_CONSECUTIVE_DAYS = 13  # Day 14+ in an unbroken working run = fatigue stand-down
@@ -555,7 +570,124 @@ def aggregate(
                     b["hours"] = round(b["hours"] / 2)
                     b["days"]  = round(b["days"] / 2)
 
+    fatigue_by_worker = calculate_fatigue_metrics(roster, months, current_month)
+    for pid, metrics in fatigue_by_worker.items():
+        if pid in aggs:
+            aggs[pid].fatigue_metrics = metrics
+
     return aggs
+
+
+def calculate_fatigue_metrics(
+    roster: list[RosterRow],
+    months: list[date],
+    current_month: date,
+) -> dict[str, FatigueMetrics]:
+    """Calculate worker-level fatigue metrics from daily roster rows.
+
+    These metrics are exported for the dashboard's client-specific fatigue
+    rules. They are intentionally status/action inputs only; approvals and
+    evidence are managed outside this dashboard.
+    """
+    period_start = months[0]
+    period_end = months[-1] + relativedelta(months=1) - relativedelta(days=1)
+    current_key = _month_key(current_month)
+    current_end = current_month + relativedelta(months=1) - relativedelta(days=1)
+    rolling_21_start = current_end - timedelta(days=20)
+
+    by_worker: dict[str, dict[date, RosterRow]] = defaultdict(dict)
+
+    for r in roster:
+        if r.schedule_date < period_start or r.schedule_date > period_end:
+            continue
+        if HOURS_PER_SHIFT.get(r.schedule_type, 0) <= 0:
+            continue
+
+        # One fatigue row per worker/day. Prefer Night Shift if duplicate rows
+        # exist because night-shift limits are stricter and need visibility.
+        existing = by_worker[r.personnel_id].get(r.schedule_date)
+        if existing is None:
+            by_worker[r.personnel_id][r.schedule_date] = r
+        elif r.schedule_type == "Night Shift" and existing.schedule_type != "Night Shift":
+            by_worker[r.personnel_id][r.schedule_date] = r
+
+    out: dict[str, FatigueMetrics] = {}
+
+    for pid, day_rows in by_worker.items():
+        ordered_dates = sorted(day_rows)
+        metrics = FatigueMetrics()
+
+        client_counter: Counter[str] = Counter()
+        for d in ordered_dates:
+            row = day_rows[d]
+            if _month_key(d) == current_key:
+                client_counter[row.client] += 1
+                metrics.hours_current_month += HOURS_PER_SHIFT.get(row.schedule_type, 0)
+            if rolling_21_start <= d <= current_end:
+                metrics.hours_last_21_days += HOURS_PER_SHIFT.get(row.schedule_type, 0)
+
+        if client_counter:
+            metrics.current_client = client_counter.most_common(1)[0][0]
+
+        run = 0
+        day_run = 0
+        night_run = 0
+        prev: date | None = None
+
+        for d in ordered_dates:
+            row = day_rows[d]
+            is_consecutive = prev is not None and (d - prev).days == 1
+            run = run + 1 if is_consecutive else 1
+
+            if row.schedule_type == "Day Shift":
+                day_run = day_run + 1 if is_consecutive else 1
+                night_run = 0
+            elif row.schedule_type == "Night Shift":
+                night_run = night_run + 1 if is_consecutive else 1
+                day_run = 0
+            else:
+                day_run = 0
+                night_run = 0
+
+            metrics.max_consecutive_shifts = max(metrics.max_consecutive_shifts, run)
+            metrics.max_consecutive_day_shifts = max(metrics.max_consecutive_day_shifts, day_run)
+            metrics.max_consecutive_night_shifts = max(metrics.max_consecutive_night_shifts, night_run)
+            prev = d
+
+        # Current run is the run ending on the latest scheduled working date.
+        if ordered_dates:
+            latest = ordered_dates[-1]
+            expected = latest
+            current_run = 0
+            current_day_run = 0
+            current_night_run = 0
+
+            for d in sorted(ordered_dates, reverse=True):
+                if d != expected:
+                    break
+
+                row = day_rows[d]
+                current_run += 1
+
+                if row.schedule_type == "Day Shift":
+                    if current_night_run:
+                        break
+                    current_day_run += 1
+                elif row.schedule_type == "Night Shift":
+                    if current_day_run:
+                        break
+                    current_night_run += 1
+
+                expected = d - timedelta(days=1)
+
+            metrics.consecutive_shifts = current_run
+            metrics.consecutive_day_shifts = current_day_run
+            metrics.consecutive_night_shifts = current_night_run
+            metrics.days_on_site_current_run = current_run
+
+        out[pid] = metrics
+
+    return out
 
 
 def dominant_client_per_month(agg: WorkerAgg, month_key: str) -> tuple[str | None, int]:
@@ -616,6 +748,8 @@ def worker_payload(
     primary_client = pick_primary_client(agg)
     employment_start = agg.master.start_date or agg.first_seen or months[0]
 
+    fm = agg.fatigue_metrics
+
     return {
         "id": "w-" + _norm_name(agg.master.name)[:14],
         "name": agg.master.name,
@@ -625,6 +759,18 @@ def worker_payload(
         "employment_start": employment_start.isoformat(),
         "employment_end": None,
         "monthly": monthly,
+        "fatigueMetrics": {
+            "currentClient": fm.current_client or primary_client,
+            "hoursLast21Days": fm.hours_last_21_days,
+            "hoursCurrentMonth": fm.hours_current_month,
+            "consecutiveShifts": fm.consecutive_shifts,
+            "consecutiveDayShifts": fm.consecutive_day_shifts,
+            "consecutiveNightShifts": fm.consecutive_night_shifts,
+            "daysOnSiteCurrentRun": fm.days_on_site_current_run,
+            "maxConsecutiveShifts": fm.max_consecutive_shifts,
+            "maxConsecutiveDayShifts": fm.max_consecutive_day_shifts,
+            "maxConsecutiveNightShifts": fm.max_consecutive_night_shifts,
+        },
     }
 
 

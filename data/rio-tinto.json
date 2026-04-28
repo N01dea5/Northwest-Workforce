@@ -91,6 +91,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 204,
+        "consecutiveShifts": 9,
+        "consecutiveDayShifts": 9,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 9,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1226-2026-01-13": "declined",
         "1177-2026-01-12": "declined",
@@ -154,6 +166,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
         "1204-2026-03-08": "declined",
@@ -210,6 +234,18 @@
           "hours": 336,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 72,
+        "consecutiveShifts": 13,
+        "consecutiveDayShifts": 13,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 13,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1153-2026-05-08": "declined",
@@ -272,6 +308,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 216,
+        "hoursCurrentMonth": 324,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 41,
+        "maxConsecutiveDayShifts": 41,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1226-2026-01-13": "declined",
@@ -338,6 +386,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 12,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1191-2026-03-25": "worked",
         "1221-2026-04-09": "declined",
@@ -389,6 +449,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
@@ -454,6 +526,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 96,
+        "hoursCurrentMonth": 96,
+        "consecutiveShifts": 6,
+        "consecutiveDayShifts": 6,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 6,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "947-2025-02-26": "declined",
         "1193-2026-02-25": "declined",
@@ -511,6 +595,18 @@
           "hours": 108,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 204,
+        "hoursCurrentMonth": 204,
+        "consecutiveShifts": 9,
+        "consecutiveDayShifts": 9,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 9,
+        "maxConsecutiveShifts": 23,
+        "maxConsecutiveDayShifts": 23,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1353-2026-05-18": "declined",
@@ -585,6 +681,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 30,
+        "consecutiveDayShifts": 30,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 30,
+        "maxConsecutiveShifts": 30,
+        "maxConsecutiveDayShifts": 30,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {}
     },
     {
@@ -631,6 +739,18 @@
           "hours": 132,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 72,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
@@ -695,6 +815,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
         "1193-2026-02-25": "declined",
@@ -755,6 +887,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 84,
+        "consecutiveShifts": 24,
+        "consecutiveDayShifts": 24,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 24,
+        "maxConsecutiveShifts": 24,
+        "maxConsecutiveDayShifts": 24,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1344-2026-04-11": "worked",
         "1097-2026-02-04": "declined"
@@ -804,6 +948,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 22,
+        "maxConsecutiveDayShifts": 22,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -858,6 +1014,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1153-2026-05-08": "declined",
@@ -916,6 +1084,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 72,
+        "consecutiveShifts": 6,
+        "consecutiveDayShifts": 6,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 6,
+        "maxConsecutiveShifts": 10,
+        "maxConsecutiveDayShifts": 10,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1234-2026-03-14": "declined",
         "1144-2026-03-18": "declined",
@@ -972,6 +1152,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 96,
+        "hoursCurrentMonth": 96,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
@@ -1034,6 +1226,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 24,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1153-2026-05-08": "declined",
         "1204-2026-03-08": "declined",
@@ -1088,6 +1292,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 60,
+        "hoursCurrentMonth": 60,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "declined",
@@ -1149,6 +1365,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1203-2026-04-30": "declined",
         "1153-2026-05-08": "declined"
@@ -1198,6 +1426,18 @@
           "hours": 120,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 204,
+        "hoursCurrentMonth": 228,
+        "consecutiveShifts": 10,
+        "consecutiveDayShifts": 10,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 10,
+        "maxConsecutiveShifts": 24,
+        "maxConsecutiveDayShifts": 24,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1170-2026-02-25": "worked",
@@ -1266,6 +1506,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1221-2026-04-09": "declined",
         "1344-2026-04-11": "declined",
@@ -1316,6 +1568,18 @@
           "hours": 132,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 120,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "declined",
@@ -1378,6 +1642,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 72,
+        "consecutiveShifts": 9,
+        "consecutiveDayShifts": 9,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 9,
+        "maxConsecutiveShifts": 9,
+        "maxConsecutiveDayShifts": 9,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1193-2026-02-25": "declined",
         "1191-2026-03-25": "declined",
@@ -1432,6 +1708,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 22,
+        "maxConsecutiveDayShifts": 22,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {}
     },
     {
@@ -1478,6 +1766,18 @@
           "hours": 0,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 72,
+        "consecutiveShifts": 6,
+        "consecutiveDayShifts": 6,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 6,
+        "maxConsecutiveShifts": 6,
+        "maxConsecutiveDayShifts": 6,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1344-2026-04-11": "worked",
@@ -1528,6 +1828,18 @@
           "hours": 204,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 108,
+        "consecutiveShifts": 7,
+        "consecutiveDayShifts": 7,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 7,
+        "maxConsecutiveShifts": 24,
+        "maxConsecutiveDayShifts": 24,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -1597,6 +1909,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 84,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 17,
+        "maxConsecutiveDayShifts": 17,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
         "1204-2026-03-08": "declined",
@@ -1655,6 +1979,18 @@
           "hours": 228,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 96,
+        "consecutiveShifts": 5,
+        "consecutiveDayShifts": 5,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 5,
+        "maxConsecutiveShifts": 18,
+        "maxConsecutiveDayShifts": 18,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
@@ -1720,6 +2056,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 144,
+        "consecutiveShifts": 7,
+        "consecutiveDayShifts": 7,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 7,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
         "1153-2026-05-08": "declined",
@@ -1781,6 +2129,18 @@
           "hours": 84,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 7,
+        "consecutiveDayShifts": 7,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 7,
+        "maxConsecutiveShifts": 14,
+        "maxConsecutiveDayShifts": 14,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "declined",
@@ -1847,6 +2207,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 24,
+        "hoursCurrentMonth": 36,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
         "1233-2026-02-24": "worked",
@@ -1901,6 +2273,18 @@
           "hours": 300,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 120,
+        "consecutiveShifts": 17,
+        "consecutiveDayShifts": 17,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 17,
+        "maxConsecutiveShifts": 22,
+        "maxConsecutiveDayShifts": 22,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
@@ -1964,6 +2348,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 0,
+        "consecutiveShifts": 9,
+        "consecutiveDayShifts": 9,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 9,
+        "maxConsecutiveShifts": 15,
+        "maxConsecutiveDayShifts": 15,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
         "1193-2026-02-25": "worked",
@@ -2021,6 +2417,18 @@
           "hours": 108,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 216,
+        "hoursCurrentMonth": 216,
+        "consecutiveShifts": 10,
+        "consecutiveDayShifts": 10,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 10,
+        "maxConsecutiveShifts": 18,
+        "maxConsecutiveDayShifts": 18,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1177-2026-01-12": "declined",
@@ -2084,6 +2492,18 @@
           "hours": 174,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 120,
+        "hoursCurrentMonth": 120,
+        "consecutiveShifts": 95,
+        "consecutiveDayShifts": 95,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 95,
+        "maxConsecutiveShifts": 95,
+        "maxConsecutiveDayShifts": 95,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "worked",
@@ -2152,6 +2572,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 84,
+        "hoursCurrentMonth": 108,
+        "consecutiveShifts": 9,
+        "consecutiveDayShifts": 9,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 9,
+        "maxConsecutiveShifts": 27,
+        "maxConsecutiveDayShifts": 27,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
         "1233-2026-02-24": "worked",
@@ -2213,6 +2645,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 0,
+        "hoursCurrentMonth": 36,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 20,
+        "maxConsecutiveDayShifts": 20,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
         "1153-2026-05-08": "declined",
@@ -2273,6 +2717,18 @@
           "hours": 0,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 108,
+        "hoursCurrentMonth": 216,
+        "consecutiveShifts": 9,
+        "consecutiveDayShifts": 9,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 9,
+        "maxConsecutiveShifts": 26,
+        "maxConsecutiveDayShifts": 26,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1143-2026-02-25": "declined",
@@ -2339,6 +2795,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 156,
+        "consecutiveShifts": 22,
+        "consecutiveDayShifts": 22,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 22,
+        "maxConsecutiveShifts": 22,
+        "maxConsecutiveDayShifts": 22,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1193-2026-02-25": "worked",
         "1153-2026-05-08": "declined",
@@ -2403,6 +2871,18 @@
           "committed": true
         }
       },
+      "fatigueMetrics": {
+        "currentClient": "Fortescue",
+        "hoursLast21Days": 96,
+        "hoursCurrentMonth": 96,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 18,
+        "maxConsecutiveDayShifts": 18,
+        "maxConsecutiveNightShifts": 0
+      },
       "shutdown_outcomes": {
         "1233-2026-02-24": "declined",
         "1337-2026-03-10": "declined",
@@ -2461,6 +2941,18 @@
           "hours": 168,
           "committed": true
         }
+      },
+      "fatigueMetrics": {
+        "currentClient": "Rio Tinto",
+        "hoursLast21Days": 72,
+        "hoursCurrentMonth": 96,
+        "consecutiveShifts": 15,
+        "consecutiveDayShifts": 15,
+        "consecutiveNightShifts": 0,
+        "daysOnSiteCurrentRun": 15,
+        "maxConsecutiveShifts": 16,
+        "maxConsecutiveDayShifts": 16,
+        "maxConsecutiveNightShifts": 0
       },
       "shutdown_outcomes": {
         "1150-2026-01-03": "worked",
