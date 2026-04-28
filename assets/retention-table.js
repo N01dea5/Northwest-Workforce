@@ -124,13 +124,51 @@
       groupPositions[disc].push(pos);
     });
 
+    const tableKey = scopeClient || "all";
+    const expanded = (window.NW_APP_TABLE_EXPANDED = window.NW_APP_TABLE_EXPANDED || {});
+    expanded[tableKey] = expanded[tableKey] || {};
+
+    function renderWorkerRows(disc, positionsForDisc) {
+      const posSet = new Set(positionsForDisc);
+      const list = effectiveWorkers.filter((w) => posSet.has(w.position));
+      list.sort((a, b) => a.name.localeCompare(b.name));
+      list.forEach((w) => {
+        const tr = document.createElement("tr");
+        tr.className = "disc-worker-row";
+        const cells = [
+          `<td class="worker-name pos-indent"><a href="${NW.workerUrl(w.id)}">${w.name}</a> <span class="small muted">(${w.position})</span></td>`,
+        ];
+        months.forEach((m, i) => {
+          const h = w.monthly[m]?.hours || 0;
+          const clsBits = ["ret-cell", "worker-ret-cell"];
+          if (i > curIdx) clsBits.push("future");
+          if (i === curIdx) clsBits.push("current");
+          if (i === curIdx + 1) clsBits.push("div-future");
+          cells.push(
+            `<td class="${clsBits.join(" ")}">
+              <div class="hc">${h ? NW.fmtInt(h) + "h" : "·"}</div>
+            </td>`
+          );
+        });
+        tr.innerHTML = cells.join("");
+        tbody.appendChild(tr);
+      });
+    }
+
     // Data rows grouped by discipline
     groupOrder.forEach((disc) => {
       // Discipline header row
       const discTr = document.createElement("tr");
       discTr.className = "disc-group-header";
-      discTr.innerHTML = `<td class="disc-label" colspan="${months.length + 1}">${disc}</td>`;
+      const isOpen = !!expanded[tableKey][disc];
+      discTr.innerHTML = `<td class="disc-label clickable-disc" colspan="${months.length + 1}"><span class="disc-toggle">${isOpen ? "▾" : "▸"}</span> ${disc}</td>`;
+      discTr.addEventListener("click", () => {
+        expanded[tableKey][disc] = !expanded[tableKey][disc];
+        buildTable(view, { scopeClient, tableEl });
+      });
       tbody.appendChild(discTr);
+
+      if (isOpen) renderWorkerRows(disc, groupPositions[disc]);
 
       groupPositions[disc].forEach((pos) => {
         const tr = document.createElement("tr");

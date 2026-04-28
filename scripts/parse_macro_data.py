@@ -177,6 +177,16 @@ class CalendarEntry:
 
 
 @dataclass
+class ShutdownAgg:
+    shutdown_id: str
+    shutdown_name: str
+    client: str | None
+    commence_date: date
+    requested_by_trade: dict[str, set[str]] = field(default_factory=lambda: defaultdict(set))
+    filled_by_trade: dict[str, set[str]] = field(default_factory=lambda: defaultdict(set))
+
+
+@dataclass
 class WorkerMaster:
     personnel_id: str
     name: str
@@ -437,6 +447,9 @@ def aggregate(
     aggs: dict[str, WorkerAgg] = {}
     # Track distinct dates per (pid, month_key) for full-roster detection.
     dates_seen: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
+    # Preserve original coverage before stand-down adjustment so "booked every
+    # day of month" halving still applies even when stand-down removes day 14s.
+    raw_dates_seen: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
     # Per-day detail for 13-day consecutive rule: {pid: {date: (client, hrs)}}
     day_detail: dict[str, dict[date, tuple[str, int]]] = defaultdict(dict)
 
@@ -456,6 +469,7 @@ def aggregate(
         mk = _month_key(r.schedule_date)
         hrs = HOURS_PER_SHIFT.get(r.schedule_type, 0)
         dates_seen[r.personnel_id][mk].add(r.schedule_date)
+        raw_dates_seen[r.personnel_id][mk].add(r.schedule_date)
         day_detail[r.personnel_id][r.schedule_date] = (r.client, hrs)
         bucket = a.buckets[mk][r.client]
         bucket["days"] += 1
@@ -500,10 +514,10 @@ def aggregate(
         for mk, by_client in agg.buckets.items():
             yr, mo = int(mk[:4]), int(mk[5:7])
             _, days_in_month = monthrange(yr, mo)
-            if len(dates_seen[pid][mk]) >= days_in_month:
+            if len(raw_dates_seen[pid][mk]) >= days_in_month:
                 for b in by_client.values():
-                    b["hours"] = b["hours"] // 2
-                    b["days"]  = b["days"]  // 2
+                    b["hours"] = round(b["hours"] / 2)
+                    b["days"]  = round(b["days"] / 2)
 
     return aggs
 
@@ -679,6 +693,144 @@ def dedupe_ids(workers: list[dict]) -> list[dict]:
     return workers
 
 
+def _sheet_or_none(wb, candidates: tuple[str, ...]):
+    for c in candidates:
+        if c in wb.sheetnames:
+            return wb[c]
+    return None
+
+
+def read_shutdown_fulfilment(
+    wb,
+    client_lookup: dict[str, str],
+) -> tuple[list[dict], dict[str, dict[str, str]]]:
+    """Extract shutdown requested/filled counts and worker outcomes.
+
+    Source: DailyPersonnelSchedule rows. Rows are daily, so counts are deduped
+    to unique (shutdown, trade, worker) to represent positions.
+    """
+    ws = _sheet_or_none(
+        wb,
+        (
+            "xpbi02 DailyPersonnelSchedule",
+            "xpbipr DailyEmployeeSchedule",
+            "xpbi0r DailyEmployeeSchedule",
+            "xpbi02 DailyEmployeeSchedule",
+            "DailyEmployeeSchedule",
+        ),
+    )
+    if ws is None:
+        return [], {}
+
+    headers, it = _read_headers(ws)
+    i_pid    = _pick_header(headers, "PersonnelId", "Personnel Id", "EmployeeId", "Employee Id")
+    i_dt     = _pick_header(headers, "ReportDate", "Report Date", "Date", "Schedule Date")
+    i_status = _pick_header(headers, "Status")
+    i_trade  = _pick_header(headers, "Trade", "Primary Role", "Role")
+    i_jid    = _pick_header(headers, "JobId", "Job No", "JobNo")
+    i_jname  = _pick_header(headers, "JobGroup", "Job Group", "Shutdown", "Project")
+    i_jstart = _pick_header(headers, "JobStart", "Start", "Start Date")
+    i_client_name = _pick_header(headers, "Client", "Client Name", "ClientName")
+    i_client_id   = _pick_header(headers, "ClientId", "Client Id", "Client ID")
+
+    if i_dt is None or i_status is None or i_trade is None:
+        return [], {}
+
+    REQUEST_STATUSES = {
+        "onsite", "demobilised", "mobilising", "confirmed",
+        "contacted", "planning", "short list", "rejected",
+        "declined", "late withdrawal",
+    }
+    FILLED_STATUSES = {"onsite", "demobilised", "mobilising", "confirmed"}
+    WORKED_STATUSES = {"onsite", "demobilised"}
+    DECLINED_STATUSES = {"declined", "rejected", "late withdrawal"}
+
+    by_shutdown: dict[str, ShutdownAgg] = {}
+    worker_outcomes: dict[str, dict[str, str]] = defaultdict(dict)
+
+    def _row_client(row):
+        for idx in (i_client_name, i_client_id):
+            if idx is None:
+                continue
+            c = _resolve_client(row[idx], client_lookup)
+            if c:
+                return c
+        return None
+
+    for row in it:
+        if row is None:
+            continue
+        pid = _norm_text(row[i_pid]) if i_pid is not None else ""
+        report_date = _coerce_date(row[i_dt])
+        status = _norm_text(row[i_status]).lower()
+        trade = _norm_text(row[i_trade]) or "Unknown"
+        if report_date is None or not status or status not in REQUEST_STATUSES:
+            continue
+
+        jid = _norm_text(row[i_jid]) if i_jid is not None else ""
+        jname = _norm_text(row[i_jname]) if i_jname is not None else ""
+        jstart = _coerce_date(row[i_jstart]) if i_jstart is not None else None
+        commence = jstart or report_date
+        shutdown_id = f"{jid or jname or 'unknown'}-{commence.isoformat()}"
+        shutdown_name = jname or (f"Job {jid}" if jid else f"Shutdown {commence.isoformat()}")
+        client = _row_client(row)
+
+        agg = by_shutdown.get(shutdown_id)
+        if agg is None:
+            agg = ShutdownAgg(
+                shutdown_id=shutdown_id,
+                shutdown_name=shutdown_name,
+                client=client,
+                commence_date=commence,
+            )
+            by_shutdown[shutdown_id] = agg
+        if client and not agg.client:
+            agg.client = client
+
+        if pid:
+            agg.requested_by_trade[trade].add(pid)
+            if status in FILLED_STATUSES:
+                agg.filled_by_trade[trade].add(pid)
+
+            current = worker_outcomes[pid].get(shutdown_id)
+            if status in WORKED_STATUSES:
+                worker_outcomes[pid][shutdown_id] = "worked"
+            elif status in DECLINED_STATUSES and current != "worked":
+                worker_outcomes[pid][shutdown_id] = "declined"
+
+    shutdowns = []
+    for s in sorted(by_shutdown.values(), key=lambda x: (x.commence_date, x.shutdown_name)):
+        all_trades = sorted(set(s.requested_by_trade) | set(s.filled_by_trade))
+        trades = []
+        req_total = 0
+        fill_total = 0
+        for t in all_trades:
+            requested = len(s.requested_by_trade.get(t, set()))
+            filled = len(s.filled_by_trade.get(t, set()))
+            req_total += requested
+            fill_total += filled
+            trades.append({
+                "trade": t,
+                "requested": requested,
+                "filled": filled,
+                "gap": requested - filled,
+                "fill_rate": (filled / requested) if requested else None,
+            })
+        shutdowns.append({
+            "id": s.shutdown_id,
+            "name": s.shutdown_name,
+            "client": s.client,
+            "commence_date": s.commence_date.isoformat(),
+            "commence_month": _month_key(s.commence_date),
+            "requested_total": req_total,
+            "filled_total": fill_total,
+            "gap_total": req_total - fill_total,
+            "fill_rate": (fill_total / req_total) if req_total else None,
+            "trades": trades,
+        })
+    return shutdowns, worker_outcomes
+
+
 def build_payload(excel_path: Path, current_month: date) -> dict:
     wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
     client_lookup = read_client_lookup(wb)
@@ -697,6 +849,7 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
     personnel = read_personnel(wb, discipline_lookup)
     months = build_months(current_month)
     aggs = aggregate(all_rows, personnel, months, current_month)
+    shutdowns, worker_shutdown_outcomes = read_shutdown_fulfilment(wb, client_lookup)
 
     top_positions = pick_top_positions(aggs)
     # If the workbook lacks enough roles, pad with an empty placeholder so
@@ -704,12 +857,12 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
     while len(top_positions) < TOP_POSITIONS:
         top_positions.append(f"(Unassigned {len(top_positions) + 1})")
 
-    workers = dedupe_ids(
-        sorted(
-            (worker_payload(a, months, current_month) for a in aggs.values()),
-            key=lambda w: w["name"],
-        )
-    )
+    workers = []
+    for pid, agg in aggs.items():
+        w = worker_payload(agg, months, current_month)
+        w["shutdown_outcomes"] = worker_shutdown_outcomes.get(pid, {})
+        workers.append(w)
+    workers = dedupe_ids(sorted(workers, key=lambda w: w["name"]))
 
     return {
         "generated_at": date.today().isoformat(),
@@ -720,6 +873,7 @@ def build_payload(excel_path: Path, current_month: date) -> dict:
         "positions_top20": top_positions[:TOP_POSITIONS],
         "clients": CLIENTS,
         "workers": workers,
+        "shutdowns": shutdowns,
     }
 
 

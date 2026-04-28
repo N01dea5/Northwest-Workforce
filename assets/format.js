@@ -101,8 +101,8 @@ window.NW = window.NW || {};
   // Centralised here so compliance.js, worker-app.js, kpi.js, at-risk.js,
   // and position-flow.js all reference the same values.
 
-  NW.FATIGUE_LIMIT = 724;       // h — max in any rolling 3-month window
-  NW.FATIGUE_WARN  = 652;       // h — 90% warning threshold
+  NW.FATIGUE_LIMIT = 836;       // h — max in any rolling 3-month window
+  NW.FATIGUE_WARN  = 752;       // h — 90% warning threshold
   NW.ATRISK_MIN_TRAILING = 120; // h/month — trailing avg to be considered at-risk
   NW.ATRISK_MAX_NEXT     = 40;  // h — next-month committed ceiling to be flagged
   NW.CHURN_OK   = 0.05;         // churn rate below this → green
